@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Pass/Gift Certificate Price/Quantity
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="pass askamount">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
+        Account
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Gift Certificates
+      </li>
+     </ul>
+     <h2 class="title">
+      Gift Certificate
+     </h2>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" width="95%">
+       <tr>
+        <td>
+         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+          <div align="center">
+           <!--<P><B class="text-center text-warning"><field>F_HTML_PAGE_MESSAGE</field></B></P>-->
+           <table border="0" cellpadding="2" width="390">
+            <tr class="tablerowheader">
+             <td class="tablerowheader" width="128">
+              <p align="right">
+               Pass Type
+              </p>
+             </td>
+             <td class="main" width="248">
+              <p>
+               <input id="MT_DESCRIPTION_EXTERNAL" maxlength="30" name="MT_DESCRIPTION_EXTERNAL" readonly="true" size="30" type="text" value="<field>MT_DESCRIPTION_EXTERNAL</field>"/>
+              </p>
+             </td>
+            </tr>
+            <tr class="tablerowheader">
+             <td class="tablerowheader" width="128">
+              <p align="right">
+               Pass Quantity
+              </p>
+             </td>
+             <td>
+              <p>
+               <input id="PS_QUANTITY" maxlength="5" name="PS_QUANTITY" readonly="true" size="5" type="text" value="<field>PS_QUANTITY</field>"/>
+              </p>
+             </td>
+            </tr>
+            <tr>
+             <td align="right" class="tablerowheader">
+              Pass Amount Each
+             </td>
+             <td class="tablerowdetail">
+              <input id="M_PURCHASE_AMOUNT" maxlength="25" name="M_PURCHASE_AMOUNT" size="25" type="text" value="<field>M_PURCHASE_AMOUNT</field>"/>
+             </td>
+            </tr>
+            <tr>
+             <td align="right" class="tablerowheader" valign="top">
+              Personalized Message
+             </td>
+             <td align="left" class="tablerowdetail">
+              <textarea cols="50" name="M_NOTES" rows="5">
+               <field>M_NOTES</field>
+              </textarea>
+             </td>
+            </tr>
+            <p>
+            </p>
+            <tr class="tablerowheader">
+             <td align="center" colspan="2">
+              <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+              <input id="MT_SEQ" maxlength="30" name="MT_SEQ" readonly="true" size="30" type="hidden" value="<field>MT_SEQ</field>"/>
+              <input class="btn" name="btnPassAmountAccept" onclick="process()" type="submit" value="Add to Shopping Cart"/>
+              <input class="btn" name="btnPassAmountCancel" type="submit" value="Cancel Purchase"/>
+             </td>
+            </tr>
+           </table>
+          </div>
+         </form>
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

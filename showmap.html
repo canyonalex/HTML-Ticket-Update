@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Apache Ticket Stats (automatically refreshes every few seconds)
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="5" http-equiv="REFRESH"/>
+ </head>
+ <body>
+  <!-- replace tickets.yourvenue.org with your web ticketing url.
+
+	This will refresh the stats every five seconds into an iFrame in the page.  If you want to change the
+	refresh rate, change the neta tag where it says CONTENT="5" above to some other value.  Time is in seconds.
+	
+	THIS IS A CONCEPT ONLY ...  you may need to play with parameters and other settings in your browser and
+	change the TM_SEQ= and PMB_SEQ= to work for your current upcoming show.	
+-->
+  <iframe frameborder="0" height="100%" src="https://tickets.yourvenue.org/TheatreManager/1/seatmap?TM_SEQ=5&PB_SEQ=48&selected_only=no&img_quality=50" width="100%">
+  </iframe>
+ </body>
+</html>

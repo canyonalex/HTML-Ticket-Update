@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Order Fee
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="order fee popup">
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <div class="span12 page-content img-rounded">
+     <h1>
+      Order Fee
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <table align="center" border="0" cellpadding="4" cellspacing="0" width="90%">
+      <tr>
+       <td class="tablerowheader">
+        <b>
+         <field>D_ORDER_DESC</field> Fee
+        </b>
+       </td>
+      </tr>
+      <tr>
+       <td align="center" class="tablerowdetail">
+        The <field>low(D_ORDER_DESC)</field> fee is charged to cover the cost
+              of our box office and maintaining a web site that offers you the convenience to purchase 
+              tickets 24 hours a day, 7 days a week.
+        <br/>
+        <br/>
+        <!--#include virtual="TMtemplates/tmContactHours.html" -->
+       </td>
+      </tr>
+     </table>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

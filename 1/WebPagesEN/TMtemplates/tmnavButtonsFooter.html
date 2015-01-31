@@ -1,0 +1,74 @@
+  <div class="row-fluid">
+   <div class="span4 form-actions">
+    <h4>
+     My <field>D_PATRON</field> Services
+    </h4>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>online?btnFutureTickets">
+     <i class="icon-print icon-white">
+     </i>
+     Tickets for Upcoming <field>tEditCheck.$setPlural(D_PERF_DESC)</field>
+    </a>
+    <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if enabled to redeem passes','')</field>
+    <a class="btn btn-block" href="<field>F_HTML_FIREWALL</field>online?btnPassRemainingValues">
+     <i class="icon-gift">
+     </i>
+     My Passes/Gift Certificate
+    </a>
+    <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
+    <!--<a href="<field>F_HTML_FIREWALL</field>online?btnSubscription" class="btn btn-block"><i class="icon-star"></i> My Subscriptions</a>-->
+    <!--<a href="<field>F_HTML_FIREWALL</field>online?btnCart" class="btn btn-block btn-primary"><i class="icon-shopping-cart"></i> My Current Shopping Cart</a>-->
+    <a class="btn btn-block" href="<field>F_HTML_FIREWALL</field>online?btnMailList">
+     <i class="icon-envelope">
+     </i>
+     My E-Mail Lists
+    </a>
+    <!--<a href="<field>F_HTML_FIREWALL</field>btnVolunteerActivities" class="btn btn-block"><i class="icon-calendar"></i> Activity Calendar</a>-->
+    <a class="btn btn-block" href="<field>F_HTML_FIREWALL</field>online?btnHistoricalCart">
+     <i class="icon-shopping-cart">
+     </i>
+     Past Shopping Carts
+    </a>
+   </div>
+   <div class="span4 form-actions">
+    <h4>
+     Account Management
+    </h4>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>online?btnAccount">
+     <i class="icon-user icon-white">
+     </i>
+     My Account
+    </a>
+    <a class="btn btn-block" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
+     <i class="icon-info-sign">
+     </i>
+     Box Office Policy
+    </a>
+    <a class="btn btn-block" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
+     <i class="icon-eye-open">
+     </i>
+     Our Privacy Policy
+    </a>
+   </div>
+   <div class="span4 form-actions">
+    <h4>
+     Contact Us
+    </h4>
+    <a class="btn btn-block" href="mailto:<field>D_EMAIL_ADDR</field>?subject=General%20Information%20Question">
+     <i class="icon-envelope">
+     </i>
+     Send us an E-mail
+    </a>
+    <a class="btn btn-block" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmtermsandconditions.html" onclick="return popup(this, 'notes')">
+     <i class="icon-info-sign">
+     </i>
+     Sale Terms and Conditions
+    </a>
+    <!--<a href="http://maps.google.com/maps?q=<field>D_ADDRESS1</field> <field>D_ADDRESS2</field> <field>D_CITY</field> <field>D_PROVINCE</field> <field>D_POSTAL_CODE</field>" target="_blank" class="btn btn-block"><i class="icon-map-marker"></i> Directions to our Box Office</a>-->
+    <a class="btn btn-block" href="http://<field>D_WEB_SITE</field>" target="_blank">
+     <i class="icon-globe">
+     </i>
+     Our Main Website
+    </a>
+    <!--#include virtual="TMTemplates/tmSocialMedia.html" -->
+   </div>
+  </div>

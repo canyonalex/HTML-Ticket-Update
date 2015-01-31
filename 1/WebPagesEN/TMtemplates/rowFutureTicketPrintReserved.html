@@ -1,0 +1,95 @@
+  <div align="center" class="page-break" width="700">
+   <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/pageHeader.gif"/>
+   <table border="1" cellpadding="5" cellspacing="0" class="tablerowticketprint" width="700">
+    <tr>
+     <td align="center" rowspan="6" valign="top">
+      <field>pick(PB_PRINT_AT_HOME,'<!-- comment: not printing at home, do not show bar code to avoid server hits')</field>
+      <img src="<field>F_HTML_TIX_BAR_CODE</field>&img_angle=270"/>
+      <field>pick(PB_PRINT_AT_HOME,'-->')</field>
+<field>PS_SEQ</field>
+     </td>
+     <td align="center" valign="top">
+      <div class="ticketlineprint">
+       event
+      </div>
+      <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
+       <field>P_PLAY_TITLE</field>
+      </a>
+     </td>
+    </tr>
+    <tr>
+     <td align="center" valign="top">
+      <div class="ticketlineprint">
+       venue
+      </div>
+      <a class="link muted" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+       <field>VE_NAME</field>
+      </a>
+      <br/>
+      <div style="font-size: 12px">
+       <field>con(VE_ADDRESS1,' ',VE_ADDRESS2,' ',VE_CITY)</field>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td align="center" valign="top">
+      <div class="ticketlineprint">
+       date
+      </div>
+      <field>cap(dat(PB_PERFORM_DATE,'w m D y'))</field> @ <field>PB_PERFORM_TIME</field>
+     </td>
+    </tr>
+    <tr>
+     <td align="center" valign="top">
+      <div class="ticketlineprint">
+       seat
+      </div>
+      <field>D_SECTION_DESC</field>: <field>MS_SECTION</field> <field>D_ROW_DESC</field>: <field>MS_ROW_NUMBER</field> <field>D_SEAT_DESC</field>: <field>MS_SEAT_NUMBER</field>
+      <em>
+       <field>pick(MS_NOTE_USE_FLAG,'',con('<br>',MS_SEAT_NOTE))</field>
+      </em>
+     </td>
+    </tr>
+    <tr>
+     <td align="center" valign="top">
+      <div class="ticketlineprint">
+       price
+      </div>
+      <field>pick(D_WEB_SHOW_PROMOTION,'',con(SC_DESCRIPTION,' '))</field>
+<field>pick(D_WEB_SHOW_PRICE_CODE,'',PC_DESCRIPTION)</field>
+     </td>
+    </tr>
+    <tr>
+     <td align="center" valign="top">
+      <div class="ticketlineprint">
+       patron
+      </div>
+      <field>con(C_FIRST_NAME,' ',C_LAST_NAME)</field>
+     </td>
+    </tr>
+    <tr>
+     <td class="tablerowdetailprint" colspan="2">
+      Please print this ticket and bring it with you to the event
+    <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'<!-- comment: do not show bar code to avoid server hits')</field>
+      <img align="right" src="<field>F_HTML_TIX_BAR_CODE</field>"/>
+      <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'-->')</field>
+        <field>PS_SEQ</field>
+     </td>
+    </tr>
+   </table>
+   <p>
+    <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/ticketAd.png"/>
+   </p>
+  </div>
+  <!-- comment: parameters to F_HTML_TIX_BAR_CODE
+quiet_zone			spate to left and right of bar code.  default is 2
+img_angle			the rotation of the image in degrees (valid values 0, 90,180, 270, default 0)
+bar_stem_width		the width of the barcode stem in mils* 0.1 is the default
+bar_height			the height of the barcode characters in mils* 2.5 is the default
+txt_on				specifies  to print text below barcode (valid values 1=on, 0=off)
+txt_point_size		size of text in points.  10 is the default (valid range 4 to 72)
+
+for QR codes
+box_size			size of area where bar code box is displayed.  Default 6
+border				border around the box with white space
+-->

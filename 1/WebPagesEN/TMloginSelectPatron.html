@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Select Household Member
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="login selectpatron">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Tickets by <field>D_COMPANY</field> Box Office
+     </h1>
+     <div class="main_content">
+      <p class="text-center text-warning">
+       <field>F_HTML_PAGE_MESSAGE</field>
+      </p>
+      <form action="<field>F_HTML_FIREWALL</field>login" method="POST">
+       <div align="center">
+        <table border="0" cellpadding="1" cellspacing="2" class="tablerowheader" width="410">
+         <tr>
+          <td colspan="2">
+           <input name="e" type="hidden" value="<field>F_EMAIL_ADDRESS</field>"/>
+           The email address
+           <b>
+            <field>F_EMAIL_ADDRESS</field>
+           </b>
+           is shared amongst  the following 
+              <field>low(tEditCheck.$setPlural(D_PATRON))</field> 
+            and you will need to tell us whom to associate this shopping cart to. Please select the appropriate name from the list below.
+           <p>
+            You must also re-enter your password for your own safety and security.
+            <br/>
+            <br/>
+           </p>
+          </td>
+         </tr>
+         <tr>
+          <td align="left" valign="top" width="82">
+           <field>D_PATRON</field>
+          </td>
+          <td align="Left" width="314">
+           <select name="C_SEQ" size="5">
+            <field>F_HTML_LOGIN_PATRON_LIST</field>
+           </select>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" valign="top">
+           <div align="left">
+            Password
+           </div>
+          </td>
+          <td align="left">
+           <input autocomplete="off" maxlength="20" name="p" size="20" type="Password" value="<field>F_EMAIL_PASSWORD</field>"/>
+           <input class="btn" name="btnLoginAccount" type="submit" value="Login"/>
+          </td>
+         </tr>
+        </table>
+        <table align="Center" border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="410">
+         <tr>
+          <td align="justify">
+           Click
+           <input class="btn" name="btnLoginAccount" type="submit" value="Login"/>
+           after selecting yourself from the list and entering your password.
+          </td>
+         </tr>
+         <tr class="tablerowdetail">
+          <td align="justify">
+           Click
+           <input class="btn" name="btnLogoutCancelOrder" type="submit" value="Logout"/>
+           if you wish to leave the online ticket sales without continuing. Any items that you have in your shopping cart will be discarded.
+          </td>
+         </tr>
+        </table>
+        <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+       </div>
+      </form>
+     </div>
+     <!--span-->
+     <!--#include virtual="tmScripts/venue_footer.html" -->
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

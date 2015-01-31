@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Theatre Manager Online Ticketing
+  </title>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <!-- Pragma content set to no-cache tells the browser not to cache the page
+		This may or may not work in IE -->
+  <meta content="0" http-equiv="expires"/>
+  <!-- Setting the page to expire at 0 means the page is immediately expired
+		Any vales less then one will set the page to expire some time in past and
+		not be cached. This may not work with Navigator -->
+  <link href="/1/WebPagesEN/tmGifs/styleButtons.css" rel="stylesheet" type="text/css"/>
+  <link href="/1/WebPagesEN/tmGifs/stylePages.css" rel="stylesheet" type="text/css"/>
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <script language="Javascript" type="text/javascript">
+   <!--//--><![CDATA[//><!--
+  var delay = 25;
+  var timer;
+
+  function countdown() {
+  	if( delay == 0 ) {
+		clearTimeout( timer );
+  		autoRefresh();
+  	} else timer = setTimeout( "countdown()", 1000 );
+	document.getElementById( "countdown_timer" ).value = delay;
+  	delay--;
+  }
+
+  function autoRefresh() {
+  	window.location.href="https://tickets.yourvenue.org/TheatreManager/1/login?btnCart";
+  }
+  
+//--><!]]>
+  </script>
+  <!--  please replace 'tickets.yourvenue.org' above with the direct URL of the ticketing link.
+	  you can also chnage where the page goes form the cart to the ticket link page 
+	  or any other page as desired -->
+ </head>
+ <body class="background" onload="countdown()">
+  <div align="center">
+   <table border="0" cellpadding="0" cellspacing="0" width="90%">
+    <tr>
+     <td>
+      <h2>
+      </h2>
+      <p align="center" class="title">
+       Theatre Manager Online Ticketing
+      </p>
+      <h3 align="center" class="message">
+       Welcome to the online waiting room.
+      </h3>
+      <table align="center" border="0" cellpadding="2" class="tablerowdetail" width="75%">
+       <tr>
+        <td width="93%">
+         We are experiencing an unusually high volume of requests at the moment.  If you have tickets in your shopping cart, they will still be there unless you fail to connect to the web site again within a reasonable time frame (approximately 10-15 minutes).
+         <p>
+          The number below will count down to zero and then attempt to show you the shopping cart. If you are prompted to confirm the refresh, please agree to the prompt.
+         </p>
+         <p align="center" class="message">
+          Show shopping cart in
+          <input id="countdown_timer" style="vertical-align: top; background-color: inherit;  width: 1.5em; border-width: 0px;" type="text" value="25"/>
+          seconds
+         </p>
+         <p align="center" class="main">
+          <a class="link" href="javascript:autoRefresh()">
+           Click to view your shopping cart at any time
+          </a>
+         </p>
+         <!-- head back to the shopping cart page or whatever is in the window.location.href above -->
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>

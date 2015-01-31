@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Pass and Gift Certificate Detail
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="background">
+  <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+   <div align="center">
+    <table border="0" cellpadding="5" cellspacing="1" width="100%">
+     <tr>
+      <td align="center" class="tablerowheader" colspan="7">
+       <input name="MT_SEQ" type="hidden" value="1"/>
+       Passes and Gift Certificates
+      </td>
+     </tr>
+     <tr>
+      <td class="title" colspan="7">
+       <div align="center">
+        <span class="playinfo">
+         <b>
+          In addition to tickets 
+            to shows and donations,
+          <br/>
+          <field>D_COMPANY</field> also sells event passes and Gift Certificates.
+         </b>
+        </span>
+        <br/>
+        <br/>
+        <span class="main">
+         <b>
+          Passes are available for specific shows, amounts 
+            and ticket quantities.
+         </b>
+        </span>
+        <b>
+         <br/>
+         <br/>
+         <span class="playinfo">
+          Gift Certificates make the perfect gift!
+         </span>
+         <span class="main">
+          <br/>
+          You may redeem them for tickets, or use them to purchase items from 
+            the Gift Shop!
+         </span>
+        </b>
+        <br/>
+        <br/>
+       </div>
+       <p align="center">
+        <a class="link" href="<field>F_HTML_FIREWALL</field>login&pass=1">
+         Click 
+            here to purchase a pass
+        </a>
+       </p>
+       <p align="center">
+        <input class="new" id="btnLoginFromDetailPage" name="btnLoginFromDetail" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Purchase Pass"/>
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+  </form>
+ </body>
+</html>

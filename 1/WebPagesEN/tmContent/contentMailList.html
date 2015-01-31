@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Mail List Detail
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="background">
+  <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+   <div align="center">
+    <table border="0" cellpadding="5" cellspacing="1" width="100%">
+     <tr>
+      <td bgcolor="#CCCCCC" class="title" colspan="7">
+       <div align="center">
+        <input name="PM_SEQ" type="hidden" value="1"/>
+        Mailing Lists
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td class="title" colspan="7">
+       <div align="center">
+        <span class="playinfo">
+         <b>
+          <br/>
+          <br/>
+          To be kept abreast of the latest information and updates as to what
+             is happening with <field>D_COMPANY</field>, you can subscribe to different
+             Mail Lists!
+         </b>
+        </span>
+        <br/>
+        <br/>
+       </div>
+       <p align="center">
+        <a class="link" href="<field>F_HTML_FIREWALL</field>login&maillist=1">
+         Click 
+            here to subscribe to Mail Lists
+        </a>
+       </p>
+       <p align="center">
+        <input class="new" id="btnLoginFromDetailPage" name="btnLoginFromDetail" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Subscribe to Mail Lists"/>
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+  </form>
+ </body>
+</html>

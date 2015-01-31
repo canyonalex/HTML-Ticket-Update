@@ -1,0 +1,18 @@
+  <tr class="rowcart pass">
+   <td>
+    <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
+    <input name="SCD_PURCHASE_GROUP" type="hidden" value="0"/>
+    <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="checkbox" value="1"/>
+   </td>
+   <td>
+    <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
+     <field>MT_DESCRIPTION_EXTERNAL</field>
+    </a>
+    <field>pick(len(M_NOTES)=0,con('Notes: ',M_NOTES))</field>
+   </td>
+   <td>
+    <field>SCD_QUANTITY</field> Pass
+    <br/>
+    <field>SCD_TOTAL_COST</field>
+   </td>
+  </tr>

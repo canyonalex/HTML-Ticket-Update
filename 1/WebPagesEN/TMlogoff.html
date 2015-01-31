@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Goodbye !
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="logoff">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Logout
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <form action="<field>F_HTML_FIREWALL</field>logoff" class="text-center" method="post">
+      <h5>
+       You have signed off of <field>D_COMPANY</field> and left the secure area.
+       <br/>
+       Any items that were in your shopping cart have been discarded. To purchase other tickets, you must sign on again.
+       <br/>
+       Thank you for using Tickets by <field>D_COMPANY</field> and we hope you enjoyed your online shopping experience!
+       <br/>
+       Have a Great Day!
+      </h5>
+      <div class="form-actions">
+       <input name="e" type="hidden" value="<field>F_EMAIL_ADDRESS</field>"/>
+       <input class="btn" name="btnLogin" type="submit" value="Return to Sign On"/>
+      </div>
+     </form>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

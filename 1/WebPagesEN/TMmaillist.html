@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Mail Lists
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="maillist">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
+        Account
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Mailing Lists
+      </li>
+     </ul>
+     <h1>
+      My Mailing Lists
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <form action="<field>F_HTML_FIREWALL</field>online" method="post">
+      <div class="span6">
+       <h4>
+        Not subscribed to these lists:
+       </h4>
+       <field>F_HTML_SUBSCRIBE_LIST</field>
+       <p>
+        <input class="btn btn-primary" name="btnMailListAdd" type="submit" value="Subscribe"/>
+       </p>
+       <p>
+        <select id="PM_SEQ" multiple="" name="PM_SEQ" size="7">
+         <field>F_HTML_SUBSCRIBE_LIST</field>
+        </select>
+       </p>
+      </div>
+      <div class="span6">
+       <h4>
+        Currently subscribed to these lists:
+       </h4>
+       <field>F_HTML_UNSUBSCRIBE_LIST</field>
+       <p>
+        <input class="btn btn-info" name="btnMailListRemove" type="submit" value="Unsubscribe"/>
+       </p>
+       <p>
+        <select id="ML_PM_SEQ" multiple="" name="ML_PM_SEQ" size="7">
+         <field>F_HTML_UNSUBSCRIBE_LIST</field>
+        </select>
+       </p>
+      </div>
+      <div class="form-actions">
+       <!--<input name="btnLogout" type="submit" value="Confirm and Logout" class="btn btn-success">-->
+       <p>
+        Click on the list you wish to subscribe / unsubscribe to and click the button above it.
+       </p>
+      </div>
+     </form>
+     <!--<p>
+	
+	<strong>Live Events</strong> - monthly news and special offers.<br />
+	<strong>Movies</strong> - regular news about upcoming movies to be shown.<br />
+	<strong>Education</strong> - Arts Education programs, School Day performances & student/teacher opportunities.<br />
+	<strong>Special Events</strong> - news and invitations to fundraising events.</p>-->
+     <dl class="dl-horizontal">
+      <dt>
+       Everything <field>D_COMPANY</field>
+      </dt>
+      <dd>
+       Sign up here to get everything, all the news, all the deals, everything!
+      </dd>
+      <dt>
+       Broadway
+      </dt>
+      <dd>
+       News, information and Deals on all we present from the Great White Way
+      </dd>
+      <dt>
+       Comedy
+      </dt>
+      <dd>
+       If you love to laugh, heres  the list you'll want to be on
+      </dd>
+      <dt>
+       Dance
+      </dt>
+      <dd>
+       From Ballet to Modern, you'll hear about every move we make
+      </dd>
+      <dt>
+       Education
+      </dt>
+      <dd>
+       Arts Education Programs, School Day Performances and student/teacher opportunities
+      </dd>
+      <dt>
+       Family Friendly
+      </dt>
+      <dd>
+       Shows and Events that are guaranteed to be fun for the whole family
+      </dd>
+      <dt>
+       Festivals & Special Events
+      </dt>
+      <dd>
+       Who wants to party? Here's your inviation to all the details on special events and fun-tastic festivals
+      </dd>
+      <dt>
+       Movies
+      </dt>
+      <dd>
+       <field>D_COMPANY</field> loves movies and you do too! Weekly film listings and special announcements
+      </dd>
+      <dt>
+       Opera
+      </dt>
+      <dd>
+       Sign up here for information to sing about
+      </dd>
+      <dt>
+       theREP
+      </dt>
+      <dd>
+       Information and News on theREP's Season of Seriously Good Theatre, including STAGES, the monthly newsletter
+      </dd>
+     </dl>
+     <p>
+      <strong>
+       <em>
+        Our
+        <a href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
+         Privacy Policy
+        </a>
+        :
+       </em>
+      </strong>
+      <em>
+       Tickets by <field>D_COMPANY</field> does not sell or exchange any information provided on this web site. We will keep all information confidential.
+      </em>
+     </p>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

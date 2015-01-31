@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Pass/Gift Certificate Selection
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="pass">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
+        Account
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Gift Certificates
+      </li>
+     </ul>
+     <div class="hero-unit">
+      <h1>
+       Gift Certificates
+      </h1>
+      <p class="text-center text-warning">
+       <field>F_HTML_PAGE_MESSAGE</field>
+      </p>
+      <h3 class="text-center">
+       Trouble deciding? Give  Gift Certificates!
+      </h3>
+      <p>
+       Make someone happy and give the gift of entertainment. Purchase gift certificates for everyone - family, friends and business colleagues. We will be happy to send them directly to you or your gift recipients. (Just indicate recipients name and address in the comment box at the end of checkout).
+      </p>
+      <p class="text-center">
+       Visit our box office at <field>D_COMPANY</field> on State Street, order by phone or purchase online 24 hours a day at tickets.yourvenue.org.*
+      </p>
+      <p>
+       <em>
+        *Please note, gift certificates can not be printed at home.
+       </em>
+      </p>
+     </div>
+     <!--/.hero-unit-->
+     <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal" method="POST">
+      <!--  <P><B class="text-center text-warning"><field>F_HTML_PAGE_MESSAGE</field></B></P>-->
+      <div class="control-group">
+       <label class="control-label" for="MT_SEQ">
+        Type
+       </label>
+       <div class="controls">
+        <select id="MT_SEQ" multiple="multiple" name="MT_SEQ">
+         <field>F_HTML_PASS_LIST</field>
+        </select>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="M_PURCHASE_AMOUNT">
+        Certificate Amount Each
+       </label>
+       <div class="controls">
+        <div class="input-prepend">
+         <span class="add-on">
+          $
+         </span>
+         <input id="M_PURCHASE_AMOUNT" maxlength="25" name="M_PURCHASE_AMOUNT" size="25" type="text" value="<field>M_PURCHASE_AMOUNT</field>"/>
+        </div>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="PS_QUANTITY">
+        Quantity
+       </label>
+       <div class="controls">
+        <select id="PS_QUANTITY" name="PS_QUANTITY">
+         <option selected="" value="1">
+          1
+         </option>
+         <option value="2">
+          2
+         </option>
+         <option value="3">
+          3
+         </option>
+         <option value="4">
+          4
+         </option>
+         <option value="5">
+          5
+         </option>
+         <option value="6">
+          6
+         </option>
+         <option value="7">
+          7
+         </option>
+         <option value="8">
+          8
+         </option>
+         <option value="9">
+          9
+         </option>
+         <option value="10">
+          10
+         </option>
+         <option value="11">
+          11
+         </option>
+         <option value="12">
+          12
+         </option>
+         <option value="13">
+          13
+         </option>
+         <option value="14">
+          14
+         </option>
+         <option value="15">
+          15
+         </option>
+         <option value="16">
+          16
+         </option>
+         <option value="17">
+          17
+         </option>
+         <option value="18">
+          18
+         </option>
+         <option value="19">
+          19
+         </option>
+         <option value="20">
+          20
+         </option>
+        </select>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="M_NOTES">
+        Personalized Message
+       </label>
+       <div class="controls">
+        <textarea name="M_NOTES">
+         <field>M_NOTES</field>
+        </textarea>
+       </div>
+      </div>
+      <div class="form-actions">
+       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+       <input class="btn btn-primary" name="btnReservePass" onclick="process()" type="submit" value="Add to Shopping Cart"/>
+       <input class="btn" name="<field>pick(F_LOGGED_IN=2,'btnHome','btnGetEventList')</field>" type="submit" value="Cancel Purchase"/>
+      </div>
+      <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if enabled to redeem passes','')</field>
+      <div class="control-group">
+       <label class="control-label" for="btnPassCheckBalance">
+        Check the balance remaining on an existing Pass or Gift Certificate
+       </label>
+       <div class="controls">
+        <input class="btn" name="btnPassCheckBalance" onclick="process()" type="submit" value="Check Pass Values"/>
+       </div>
+      </div>
+      <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
+     </form>
+     <!--<p><b>Note: Gift Certificates cannot be used to purchase tickets on line. Please call the Box Office for assistance.</b></p>-->
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

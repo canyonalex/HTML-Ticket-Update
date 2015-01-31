@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Historical Shopping Cart Detail
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="oldcart details">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
+        Account
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnHistoricalCart">
+        Past Shopping Carts
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Cart Details
+      </li>
+     </ul>
+     <h1>
+      Shopping Cart Details
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <dl class="dl-horizontal">
+      <dt>
+       Cart Number
+      </dt>
+      <dd>
+       <field>SCH_SEQ</field>
+      </dd>
+      <dt>
+       Date Entered
+      </dt>
+      <dd>
+       <field>SCH_DATE_ENTERED</field>
+      </dd>
+      <dt>
+       Date Updated
+      </dt>
+      <dd>
+       <field>SCH_DATE_UPDATED</field>
+      </dd>
+      <dt>
+       Date Checked Out
+      </dt>
+      <dd>
+       <field>SCH_DATE_CHECKOUT</field>
+      </dd>
+      <dt>
+       Total Ticket Count
+      </dt>
+      <dd>
+       <field>SCH_TIX_QUANTITY</field>
+      </dd>
+      <dt>
+       Order Notes
+      </dt>
+      <dd>
+       <field>SCH_ORD_NOTES</field>
+      </dd>
+      <dt>
+       Total Cost
+      </dt>
+      <dd>
+       <strong>
+        $<field>SCH_TOTAL_COST</field> <field>F_HTML_CURRENCY</field>
+       </strong>
+      </dd>
+     </dl>
+     <br/>
+     <table class="table table-hover table-striped">
+      <tr>
+       <th>
+        Item
+       </th>
+       <th>
+        Qty
+       </th>
+       <th>
+        Description
+       </th>
+       <th>
+        Total
+       </th>
+      </tr>
+      <field>F_HTML_HISTORICAL_CART_DETAIL_LIST</field>
+      <tr class="info">
+       <td colspan="3">
+        <b>
+         GRAND TOTAL
+        </b>
+       </td>
+       <td>
+        <b>
+         <field>SCH_TOTAL_COST</field>
+        </b>
+       </td>
+      </tr>
+      <tr class="info">
+       <td colspan="5">
+        <strong>
+         <field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','Prices shown include all applicable taxes.')</field>
+        </strong>
+       </td>
+      </tr>
+     </table>
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+      <div class="form-actions">
+       <input class="btn" name="btnHistoricalCart" type="submit" value="Return to Shopping Cart History"/>
+       <input class="btn btn-primary" onclick="window.open('<field>F_HTML_FIREWALL</field>login?historicalprint=<field>SCH_SEQ</field>','Tickets','width=700,height=500')" type="button" value="Print Your Cart"/>
+       <field>pick(SCH_TIX_PRINT_STATUS=0,'<!-- comment: ')</field>
+       <input class="btn" onclick="window.open(
+                        '<field>F_HTML_FIREWALL</field>login?cartticketsprint=<field>SCH_SEQ</field>',
+                        'Print','width=700,height=500')" type="button" value="Reprint Tickets"/>
+       <p class="message">
+        You selected E-Ticket delivery. If you have not done so,
+        <br/>
+        please print the tickets in this order and bring them to the event.
+       </p>
+       <field>pick(SCH_TIX_PRINT_STATUS=0,' -->')</field>
+      </div>
+     </form>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

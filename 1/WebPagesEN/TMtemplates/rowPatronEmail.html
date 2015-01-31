@@ -1,0 +1,40 @@
+  <div class="control-group">
+   <label class="control-label" for="CI_CONTENTS_<field>F_HTML_ROW</field>">
+    <field>pick(MKT_PRIMARY_EMAIL_CI_SEQ=0,con(F_HTML_CONTACT_LOCATION,' ',F_HTML_CONTACT_TYPE),'Email Address')</field>
+   </label>
+   <div class="controls">
+    <input name="CI_SEQ_<field>F_HTML_ROW</field>" type="hidden" value="<field>CI_SEQ</field>"/>
+    <input name="CCL_LOCATION_FC_SEQ_<field>F_HTML_ROW</field>" type="hidden" value="<field>CCL_LOCATION_FC_SEQ</field>"/>
+    <input name="CI_TYPE_<field>F_HTML_ROW</field>" type="hidden" value="<field>CI_TYPE</field>"/>
+    <input maxlength="100" name="CI_CONTENTS_<field>F_HTML_ROW</field>" size="50" type="text" value="<field>CI_CONTENTS</field>"/>
+    <span class="text-error">
+     <field>F_HTML_REQUIRE_EMAIL</field>
+    </span>
+    <field>pick(CI_SEQ>0&F_HTML_ALLOW_PASSWORD_CHANGE,'<!-- comment: when editing, change password is a link','')</field>
+    <a class="link" href="<field>F_HTML_FIREWALL</field>login?<field>F_HTML_PASSWORD_RESET</field>">
+     Change Password
+    </a>
+    <field>pick(CI_SEQ>0&F_HTML_ALLOW_PASSWORD_CHANGE,'-->','')</field>
+   </div>
+  </div>
+  <field>pick(CI_SEQ<=0,'<!-- comment: if inserting, password is an entry field in the row','')</field>
+  <div class="control-group">
+   <label class="control-label" for="CI_PASSWORD_<field>F_HTML_ROW</field>">
+    Password
+   </label>
+   <div class="controls">
+    <input autocomplete="off" maxlength="20" name="CI_PASSWORD_<field>F_HTML_ROW</field>" size="15" type="password" value="<field>CI_PASSWORD</field>"/>
+   </div>
+  </div>
+  <div class="control-group">
+   <label class="control-label" for="p_<field>F_HTML_ROW</field>">
+    Re-type for Verification
+   </label>
+   <div class="controls">
+    <input autocomplete="off" maxlength="20" name="p_{{" size="15" type="password" value="<field>F_WEBPAGE_PASSWORD</field>"/>
+    <span class="text-error">
+     <field>F_HTML_REQUIRE_PASSWORD</field>
+    </span>
+   </div>
+  </div>
+  <field>pick(CI_SEQ<=0,'-->','')</field>

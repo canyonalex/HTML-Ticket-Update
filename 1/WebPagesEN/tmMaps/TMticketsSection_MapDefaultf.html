@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Ticket Price Selection
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body>
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <!--sectionmapdefaultf-->
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>login&event=">
+        Tickets
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnSelectEvent&P_SEQ=<field>P_SEQ</field>" title="click here to see more performances of this show">
+        <field>P_PLAY_TITLE</field>
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Ticket Select
+      </li>
+     </ul>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <div class="hero-unit">
+      <h1>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnSelectEvent&P_SEQ=<field>P_SEQ</field>" title="click here to see more performances of this show">
+        <field>P_PLAY_TITLE</field>
+       </a>
+      </h1>
+      <h3>
+       <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field>  <field>PB_PERFORM_TIME</field>
+       <br/>
+       in <field>VE_NAME</field> <field>VE_ADDRESS1</field> <field>VE_ADDRESS2</field>
+      </h3>
+      <field>pick(len(PB_PERF_NOTES)>0, '', con('<p>',PB_PERF_NOTES,'</p>'))</field>
+      <p>
+       <field>P_SALES_NOTES</field>
+      </p>
+      <field>pick(D_WEB_SHOW_TT_IMAGES,'<!-- comment: Ticket Trove Image ')</field>
+      <p>
+       <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>P_SEQ</field>.html" onclick="return popup(this, 'notes')">
+        <img align="center" src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>" valign="center" width="100"/>
+       </a>
+      </p>
+      <field>pick(D_WEB_SHOW_TT_IMAGES,' -->')</field>
+     </div>
+     <!--/.hero-unit-->
+     <form action="<field>F_HTML_FIREWALL</field>online" method="post">
+      <div class="row">
+       <div class="span5 offset1">
+        <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
+        <p>
+         Select the number of tickets you want to purchase.
+        </p>
+       </div>
+       <div class="span3">
+        <select class="span8" id="PS_QUANTITY" name="PS_QUANTITY">
+         <field>F_HTML_TICKET_QTY_LIST</field>
+        </select>
+       </div>
+       <div class="span3">
+        <input class="btn btn-primary" name="btnBestAvail" type="submit" value="Find Tickets"/>
+       </div>
+       <!--	<div align="center">
+		<input name="btnBestAvailCancel" type="submit" value="Go Back">
+	</div>
+-->
+      </div>
+      <!--/.row-->
+     </form>
+     <!--<p>This is a &quot;<field>low(D_FESTIVAL_DESC)</field>&quot; performance - the seats are on a first come,<br>
+    first serve basis when you arrive for the performance.<br>
+    Doors open 1/2 hour prior to start of performance.</p>-->
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

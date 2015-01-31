@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Checkout Window
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="checkout">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Checkout
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal" id="TMForm" method="POST">
+      <!-- comment: following fields used for hidden submit
+	  remove the input field for 'param' if you want to go to the default page TMcart.html as we usually go there
+	  after making changes to the shopping cart.  If you prefer to stay on this page and process the credit, the
+	  leave the hidden param field and set is value to 'btnCheckoutProcessing'
+	-->
+      <input name="pg" type="hidden" value="checkout"/>
+      <input name="fee" type="hidden" value="<field>D_WEB_MAIL_FEE_SEQ</field>"/>
+      <input name="param" type="hidden" value="altbtn=btnCheckoutProcessing"/>
+      <input name="hiddenSubmit" type="hidden" value=""/>
+      <div class="control-group ticket-hide">
+       <label class="control-label">
+        Ticket Handling Delivery Method
+       </label>
+       <!-- <p class="text-center"><strong>ON BLACK FRIDAY, NOV 23RD INTERNET FEES ARE WAIVED BUT THE $2 TRADITIONAL TICKET PRINT FEE STILL APPLIES.</strong></p>-->
+       <div class="controls container-fluid">
+        <!--#include virtual="TMtemplates/tmTicketHandling.html" -->
+        <small>
+         If you have indicated that you want us to mail your tickets then use the
+         <a href="<field>F_HTML_FIREWALL</field>online?btnAccount">
+          "My Patron Details"
+         </a>
+         link in the menu to verify we have your correct mailing address.
+        </small>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        Payment Amount
+       </label>
+       <div class="controls">
+        <p class="lead">
+         <b>
+          $<field>SCH_TOTAL_COST</field> <field>F_HTML_CURRENCY</field>
+         </b>
+        </p>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        Payment Method
+       </label>
+       <div class="controls">
+        <select name="PAY_METHOD_FC_SEQ">
+         <field>F_HTML_PAYMENT_LIST</field>
+        </select>
+        <field>pick(len(F_HTML_MERCHANT_LIST)>0,'<!-- comment:')</field>
+			Currency:
+        <select name="MM_SEQ" onchange="submitForm('TMForm','btnCheckoutMerchant','YES');" size="1">
+         <field>F_HTML_MERCHANT_LIST</field>
+        </select>
+        <field>pick(len(F_HTML_MERCHANT_LIST)>0,' -->')</field>
+		 <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if redeem passes ok','')</field>
+        <input class="btn" name="btnPassRemainingValues" type="submit" value="Redeem Gift Certificates"/>
+        <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        Card Number
+       </label>
+       <div class="controls">
+        <input autocomplete="off" maxlength="30" name="PAY_CARD_NO" type="text" value="<field>PAY_CARD_NO</field>"/>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        Month
+       </label>
+       <div class="controls">
+        <select name="ExpireMonth">
+         <field>F_HTML_MONTH_LIST</field>
+        </select>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        Year
+       </label>
+       <div class="controls">
+        <select name="ExpireYear">
+         <field>F_HTML_YEAR_LIST</field>
+        </select>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        Name as it appears on the Credit Card
+       </label>
+       <div class="controls">
+        <input maxlength="25" name="CD_NAME_ON_CARD" type="text" value="<field>CD_NAME_ON_CARD</field>"/>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        Card CID/CVV2 Number
+        <br/>
+        <img alt="cvv2" src="tmGifs/cvv2.gif"/>
+       </label>
+       <div class="controls">
+        <input maxlength="4" name="PAY_CARD_CID_NO" type="text" value="<field>PAY_CARD_CID_NO</field>"/>
+        <span class="help-block">
+         3 or 4 digits located (per the illustrations):
+         <ul>
+          <li>
+           on the back of the credit card below the magnetic strip for Visa and MasterCard
+          </li>
+          <li>
+           on the front of the card for Amex
+          </li>
+         </ul>
+        </span>
+       </div>
+      </div>
+      <field>pick(F_POST_DATED_PLAN_ALLOWED&(SCH_TOTAL_COST-F_POST_DATED_AMOUNT_DUE_TODAY)>0,'<!-- comment: installment plan options')</field>
+      <fieldset class="installment">
+       <legend>
+        Installment Payments
+       </legend>
+       <!--#include virtual="TMtemplates/tmCheckoutPostDatedPayments.html" -->
+      </fieldset>
+      <field>pick(F_POST_DATED_PLAN_ALLOWED&(SCH_TOTAL_COST-F_POST_DATED_AMOUNT_DUE_TODAY)>0,'-->')</field>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        How did you first hear about this event?
+       </label>
+       <div class="controls">
+        <select name="ORD_REASON_BUY_FC_SEQ" size="5">
+         <field>F_HTML_REASON_TO_BUY_LIST</field>
+        </select>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        Additional comments about your order
+       </label>
+       <div class="controls">
+        <textarea cols="40" name="ORD_NOTES" rows="5">
+         <field>ORD_NOTES</field>
+        </textarea>
+        <!-- GeoTrust QuickSSL [tm] Smart Icon tag. Do not edit. -->
+        <script language="JavaScript" src="//smarticon.geotrust.com/si.js" type="text/javascript">
+        </script>
+        <!-- end GeoTrust Smart Icon tag -->
+        <!--                <TR> 
+		<TD valign="top" class="tablerowheader" align="right">Security Advisory</TD>
+		<TD valign="top" class="tablerowdetail">
+			For your own security, if you do not see a GEOTRUST security certificate on this page,
+			please call the box office and do not continue with the checkout process.
+		</TD>
+	  </TR>
+-->
+        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+        <field>pick(D_REQD_ACKNOWLEDGE_CRITERIA,'<!-- comment:')</field>
+        <input id="conditions" name="ORD_ACKNOWLEDGED_CONDITIONS" type="checkbox" value="1"/>
+        <label for="conditions">
+         I Accept
+        </label>
+        <a href="<field>F_HTML_FIREWALL</field>TMtemplates/tmtermsandconditions.html" onclick="return popup(this, 'notes')">
+         Terms and Conditions
+        </a>
+        <field>pick(D_REQD_ACKNOWLEDGE_CRITERIA,'-->')</field>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="DD_DC_SEQ">
+        <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html">
+         Box Office Policies
+        </a>
+        <br/>
+        <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html">
+         Privacy Policy
+        </a>
+       </label>
+       <div class="controls">
+        <input class="btn btn-primary" name="btnCheckoutProcessing" onclick="process()" type="submit" value="Click to Continue"/>
+        <input class="btn" name="btnHome" type="submit" value="Cancel"/>
+        <br/>
+        <b>
+         All ticket sales are final. No refunds or exchanges.
+        </b>
+       </div>
+      </div>
+     </form>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

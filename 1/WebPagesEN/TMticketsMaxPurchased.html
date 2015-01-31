@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Maximum Tickets in Cart
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body>
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Buy Tickets
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <div align="center">
+      <!-- <P align="center" class="text-center text-warning"><B><field>F_HTML_PAGE_MESSAGE</field></B> -->
+      <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+       <tr>
+        <td>
+         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+          <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
+          <p align="center" class="main">
+           We're sorry, the maximum number 
+            of tickets you are able to purchase online to this performance has been reached.
+          </p>
+          <p align="center" class="main">
+           If you wish to purchase additional tickets, 
+            please contact our box office
+           <br/>
+           and our representatives will be more than happy to assist you.
+          </p>
+          <p align="center">
+           <input class="btn" name="btnGetEventList" type="submit" value="Select another Performance"/>
+          </p>
+         </form>
+         <center>
+          <!--#include virtual="TMtemplates/tmContactHours.html" -->
+         </center>
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

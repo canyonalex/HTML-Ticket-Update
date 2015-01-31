@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Mailing Fee
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="mail fee popup">
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <div class="span12 page-content img-rounded">
+     <h1>
+      Mailing Fee
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <p class="text-center">
+      Mailing fees are charged to cover the costs of sending 
+  you your tickets and/or passes in the mail.
+  Tickets and Passes are mailed via 1st Class Postage. 
+  Delivery may take 7 to 10 business days to arrive.
+      <br/>
+      <br/>
+      It is important to note that no tickets will be mailed for
+  performances within 10 days of the purchase date.
+      <br/>
+      <br/>
+      <field>D_COMPANY_LONG</field> is not responsible for lost or stolen tickets
+   in the mail.
+     </p>
+     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

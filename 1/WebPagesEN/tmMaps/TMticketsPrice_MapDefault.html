@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Ticket Seating Selection
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body>
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <!--ticketspricemapdefault-->
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>login&event=0">
+        Tickets
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnSelectEvent&P_SEQ=<field>P_SEQ</field>" title="click here to see more performances of this show">
+        <field>P_PLAY_TITLE</field>
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Ticket Price
+      </li>
+     </ul>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <div class="hero-unit">
+      <h1 align="center">
+       <a href="<field>F_HTML_FIREWALL</field>online?btnSelectEvent&P_SEQ=<field>P_SEQ</field>" title="click here to see more performances of this show">
+        <field>P_PLAY_TITLE</field>
+       </a>
+      </h1>
+      <h3>
+       <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field>
+	  at
+	  <field>PB_PERFORM_TIME</field>
+       <br/>
+       at
+	  <field>VE_NAME</field>
+	  <field>VE_ADDRESS1</field>
+	  <field>VE_ADDRESS2</field>
+      </h3>
+     </div>
+     <!--/.hero-unit-->
+     <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal ticket-form" method="POST">
+      <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
+      <input id="F_HTML_NEXT_BEST_SEAT" name="F_HTML_NEXT_BEST_SEAT" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT</field>"/>
+      <input id="F_HTML_NEXT_BEST_AREA" name="F_HTML_NEXT_BEST_AREA" type="hidden" value="<field>F_HTML_NEXT_BEST_AREA</field>"/>
+      <input id="F_HTML_BEST_PRICE_CODE" name="F_HTML_BEST_PRICE_CODE" type="hidden" value="<field>F_HTML_BEST_PRICE_CODE</field>"/>
+      <input id="F_TOGETHER" name="F_TOGETHER" type="hidden" value="<field>F_TOGETHER</field>"/>
+      <input id="F_HTML_NEXT_BEST_PASS_NUMBER" name="F_HTML_NEXT_BEST_PASS_NUMBER" type="hidden" value="<field>F_HTML_NEXT_BEST_PASS_NUMBER</field>"/>
+      <input id="F_HTML_NEXT_BEST_TWO_PASS_OK" name="F_HTML_NEXT_BEST_TWO_PASS_OK" type="hidden" value="<field>F_HTML_NEXT_BEST_TWO_PASS_OK</field>"/>
+      <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY" name="F_HTML_NEXT_BEST_SEAT_PRIORITY" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY</field>"/>
+      <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" name="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE</field>"/>
+      <!--   <p><strong>Please use the drop-down box to select the appropriate promotional pricing.</strong></p>-->
+      <!--<P align="center" class="text-center text-warning"><B><field>F_HTML_PAGE_MESSAGE</field></B></P>-->
+      <div class="control-group">
+       <!--<label class="control-label" for="inputEmail"><field>D_SECTION_DESC</field><br />
+		  <field>D_ROW_DESC</field> & <field>D_SEAT_DESC</field></label>-->
+       <div class="controls">
+       </div>
+      </div>
+      <field>F_HTML_BEST_SEATS_LIST</field>
+    
+     <field>pick(len(MS_SEAT_VIEW)>1,'<!-- comment: view from your seat')</field>
+      <div class="controls view-from-seat" style="background-image: url('https://s3.amazonaws.com/tourwrist/tours/<field>MS_SEAT_VIEW</field>/images/1280x640/equirect.jpg');">
+       <a class="link" href="https://www.thesphere.com/direct_embed/<field>MS_SEAT_VIEW</field>?autoplay=true" onclick="return popup(this, 'notes')" target="_blank">
+        <img src="https://www.yourvenue.org/sites/all/themes/tickets/view-sphere.png"/>
+       </a>
+      </div>
+      <field>pick(len(MS_SEAT_VIEW)>1,'-->')</field>
+      <div class="form-actions">
+       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+       <!-- <input name="btnReserveTicket" type=submit value="Add Tickets to Shopping Cart" class="btn" onclick="process()" />-->
+       <field>pick(PB_SALES_METHOD=2,'<!-- comment:')</field>
+       <input class="btn" name="btnBestAvail" onclick="process()" type="submit" value="Find Next Best Seats"/>
+       <field>pick(PB_SALES_METHOD=2,'-->')</field>
+       <input class="btn btn-primary" name="btnReserveTicket" onclick="process()" type="submit" value="Add Tickets to Shopping Cart"/>
+       <input class="btn" name="btnReserveCancel" type="submit" value="Cancel Tickets and Start Over"/>
+      </div>
+     </form>
+     <!-- comment:
+selected_only = if true, the image returned is a blown up version around the selected seats (can be yes,y,no,n,1 or 0)
+selected_border = specifies the extra space around the selected seats in points (72 = 1 inch).  Set to 999 to see entire map
+selected_color = specifies the fill color of the selected seats as a RGB hex string, i.e. FF0000 means bright red  007700 is green
+border = a black line around the image.  0 = none.
+img_quality = the jpeg quality 1 to 100, 100 is best.  -->
+     <p align="center" class="text-center">
+      <img border="0" src="<field>F_HTML_SEATMAP</field>&selected_only=yes&selected_border=999&selected_color=FF0000&img_quality=95"/>
+     </p>
+    </div>
+    <div align="center">
+     <!--span-->
+     <!--#include virtual="tmScripts/venue_footer.html" -->
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

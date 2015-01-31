@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Renew Subscription Options
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="subscriptions renew">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <!--todo-->
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
+        Account
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Renew Subscription
+      </li>
+     </ul>
+     <h1>
+      Renew Subscription
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+      <table align="center" border="0" cellspacing="1" class="main" width="97%">
+       <tr align="left" class="tablerowheader">
+        <td align="center" colspan="2">
+         <h3 align="center">
+          You are about to renew your subscription.
+         </h3>
+         <em>
+          If you would like to make changes to your renewal, please contact the Tickets by <field>D_COMPANY</field> Box Office <field>D_SWITCH_BOARD</field> and one of our Ticket Agents will be happy to assist you.
+          <strong>
+           (all discounts will be taken at checkout)
+          </strong>
+         </em>
+        </td>
+       </tr>
+       <!-- <tr>
+          <td class="tablerowheader" width="15%" align="right" valign="top">Seat Change Request</td>
+          <td class="tablerowdetail"><textarea name="SS_SEATING_REQUEST" cols="60" rows="10"><field>SS_SEATING_REQUEST</field></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablerowheader" align="right">If we are unable to accommodate
+              the requested change</td>
+          <td class="tablerowdetail">
+		  	<input name="SS_ACCOMMODATE_CHANGE" type="radio" id="retain" value="0" checked>
+		  	<label for="retain">Please retain my original seats</lablel><BR>
+     		<input name="SS_ACCOMMODATE_CHANGE" type="radio" id="closest" value="1">
+     		<label for="closest">I am willing to take the next best seats or closest seats to accomodate my request</label><br>
+      		<input name="SS_ACCOMMODATE_CHANGE" type="radio" id="callfirst" value="2">
+      		<label for="callfirst">Please call me before making any changes</label>
+		  </td>
+        </tr>-->
+       <tr>
+        <td class="tablerowheader">
+         <input name="SS_SEQ" type="hidden" value="<field>SS_SEQ</field>"/>
+         <input name="F_HTML_SUBSCRIPTION_TOTAL_COST" type="hidden" value="<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>"/>
+         <input name="F_HTML_SUBSCRIPTION_SEATS_ARE_OK" type="hidden" value="<field>F_HTML_SUBSCRIPTION_SEATS_ARE_OK</field>"/>
+        </td>
+        <td align="center" class="tablerowdetail">
+         <div align="center" class="login-green">
+          <field>
+           pick((SS_RENEWAL_STATUS_FC_SEQ
+           <input class="btn" name="btnSubscriptionReserve" onclick="process()" type="submit" value="Renew Subscription"/>
+           <input class="btn" name="btnSubscriptionCancel" onclick="process()" type="submit" value="Cancel Subscription"/>
+           <field>
+            pick((SS_RENEWAL_STATUS_FC_SEQ
+      ')
+           </field>
+          </field>
+         </div>
+        </td>
+       </tr>
+       <tr align="center" class="tablerowdetail">
+        <td colspan="2">
+         <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+        </td>
+       </tr>
+      </table>
+      <table align="center" border="0" cellspacing="1" class="main" width="90%">
+       <tr class="tablerowheader">
+        <td colspan="3">
+         Subscription:
+         <a class="link" href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html">
+          <field>SG_DESCRIPTION</field>
+         </a>
+         <br/>
+         <field>D_PERF_DESC</field> code: <field>PB_SERIES_CODE</field>
+         <br/>
+         This subscription since: <field>cap(SS_SEATS_SINCE)</field>
+        </td>
+        <td colspan="2">
+         <field>D_EVENT</field>(s) are in
+         <br/>
+         <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html">
+          <field>VE_NAME</field>
+         </a>
+        </td>
+        <td>
+         Status:
+         <strong class="text-center text-warning">
+          <field>F_HTML_RENEWAL_STATUS</field>
+         </strong>
+         <br/>
+         Printed: <field>SS_DATE_PRINTED</field>
+        </td>
+       </tr>
+       <tr class="tablerowheader">
+        <td align="center">
+         Qty
+        </td>
+        <td>
+         Seat Code
+        </td>
+        <td>
+         <field>D_SECTION_DESC</field>/<field>D_ROW_DESC</field>/<field>D_SEAT_DESC</field>
+        </td>
+        <td>
+         Promotion
+        </td>
+        <td align="right">
+         Price
+        </td>
+        <td>
+         Notes
+        </td>
+       </tr>
+       <field>F_HTML_FAVOURITE_SEAT_LIST</field>
+       <tr class="tablerowheader">
+        <td colspan="3">
+        </td>
+        <td align="right">
+         <b>
+          Total
+         </b>
+        </td>
+        <td align="right">
+         <b>
+          $<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>
+         </b>
+        </td>
+        <td align="center">
+        </td>
+       </tr>
+      </table>
+     </form>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

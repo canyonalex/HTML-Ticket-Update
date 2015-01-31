@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Checkout Processing
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="checkout processing">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <form action="<field>F_HTML_FIREWALL</field>ccauth" class="form-horizontal" method="POST">
+      <div class="hero-unit">
+       <h1>
+        Checkout Processing
+       </h1>
+       <input name="cc" type="hidden" value="<field>F_HTML_CHECKOUT_INFO</field>"/>
+       <input name="pg" type="hidden" value="checkout"/>
+       <p class="lead">
+        You are about to charge $<field>pick(F_POST_DATED_PLAN_ACCEPTED,SCH_TOTAL_COST,F_POST_DATED_AMOUNT_DUE_TODAY)</field> 
+	<field>F_HTML_CURRENCY</field> to your credit card
+       </p>
+       <p class="text-center text-warning">
+        <field>pick(SCH_TIX_PRINT_STATUS,'and selected E-Ticket delivery (print at home)','and your tickets will be mailed (subject to post office deadlines)','and you can pick up your tickets at Will Call')</field>
+       </p>
+      </div>
+      <!--/.hero-unit-->
+      <p>
+       <strong>
+        Do not click the browser BACK 
+  button and resubmit your order for processing again
+  or you may see a second authorization on your credit card.
+       </strong>
+      </p>
+      <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+      <div class="control-group">
+       <label class="control-label">
+        Complete your order
+       </label>
+       <div class="controls">
+        <input class="btn btn-primary" name="btnCheckoutAccept" onclick="process()" type="submit" value="Submit Payment for Authorization"/>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label">
+        Review or change payment information
+       </label>
+       <div class="controls">
+        <input class="btn btn-warning" name="btnCheckout" type="submit" value="Cancel"/>
+        <p>
+         When the processing has completed,
+			a confirmation notice will appear. You will also receive an email confirming
+			your order and instructions for retrieving your ticket information at any time in the future.
+        </p>
+        <p>
+         If this page does not change after
+		  one (1) minute, please contact our
+         <a class="link" href="mailto:<field>D_EMAIL_ADDR</field>">
+          box
+		  office
+         </a>
+         to verify if your order
+		  was processed and to avoid erroneous credit card charges.
+        </p>
+       </div>
+      </div>
+     </form>
+     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

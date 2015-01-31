@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Account Information Updated
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="background patron update email">
+  <!--#include virtual="tmScripts/venue_header_email.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <div class="span12 page-content img-rounded">
+     <h1>
+      Account Information Updated
+     </h1>
+     <p>
+      Dear
+      <b>
+       <field>con(C_FIRST_NAME,' ',C_LAST_NAME,pick(len(C_COMPANY)=0,' - '),C_COMPANY)</field>
+      </b>
+      ,
+     </p>
+     <p>
+      Some of your account information was recently updated when you visited the online ticketing web site
+  or recently talked to the staff at <field>D_COMPANY_LONG</field>.  If you are not aware of this recent activity,
+  please contact the box office or log in, verify your account and change your password.
+     </p>
+     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
+     <p>
+      You also clicked some checkboxes to tell us how you want us to notify you about our programs and events.
+     <field>D_COMPANY_LONG</field> uses a double-opt-in confirmation approach for the notifications.   It means you
+     must confirm your choices by clicking:
+     </p>
+     <p>
+      <a class="link" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
+       Confirm my notification changes
+      </a>
+     </p>
+     <p>
+      If you do not click the link, then our system will respect your wishes and remove you from those notifications
+     approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> hours after you receive this email.
+     </p>
+     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
+     <p>
+      For your convenience,
+      <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
+       click here
+      </a>
+      to connect to the web site - or type the URL of our site in your web browser directly if your preference is additional browsing safety.
+     </p>
+     <p>
+      Unless you provide express consent or disclosure is required pursuant to a legal power,
+    all information kept by Tickets by <field>D_COMPANY</field> regarding you, is confidential
+    and may not be disclosed by Tickets by <field>D_COMPANY</field> to anyone.
+     </p>
+     <p class="text-center">
+      Please contact us via telephone or e-mail for more information.
+     </p>
+     <p class="text-center">
+      <!--#include virtual="TMtemplates/tmContactHours.html" -->
+     </p>
+    </div>
+    <!--span-->
+   </div>
+  </div>
+ </body>
+</html>

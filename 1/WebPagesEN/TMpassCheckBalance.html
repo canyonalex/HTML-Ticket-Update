@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   Check Pass Balance
+  </title>
+  <!-- comment: Created by: Arts Management Systems Limited - Calgary Alberta Canada (403) 536-1214 http://www.artsman.com
+    This web page integrates with Theatre Manager to support online ticket sales and donations and provide a single
+    intregrated database for online and inhouse sales for arts and entertainment venues.  If you see this and want to
+    use for your own venue, please check us out at http://www.artsman.com
+    Alter this source code as you see fit to suit your needs, but if you do, Arts Management Systems is not responsible
+    for supporting or debugging errors that may occur  -->
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <!-- Pragma content set to no-cache tells the browser not to cache the page This may or may not work in IE -->
+  <meta content="0" http-equiv="expires"/>
+  <!-- Setting the page to expire at 0 means the page is immediately expired Any vales less then one will set the page to expire some time in past and not be cached. This may not work with Navigator -->
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="pass checkbalance">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
+        Account
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Check Pass Balance
+      </li>
+     </ul>
+     <h1>
+      Pass/Gift Certificate Balance Verification
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <ul>
+      <li>
+       Check the balance remaining on an existing Pass or Gift Certificate
+      </li>
+      <li>
+       Apply a Gift Certificate towards payment of the order balance
+      </li>
+      <li>
+       Apply a Pass redemption towards payment of applicable tickets
+      </li>
+     </ul>
+     <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal" method="POST">
+      <div class="control-group">
+       <label class="control-label" for="M_CONTROL_NUMBER">
+        Control Number
+        <em>
+         (omit first two zeros)
+        </em>
+       </label>
+       <div class="controls">
+        <input id="M_CONTROL_NUMBER" maxlength="30" name="M_CONTROL_NUMBER" size="50" value="<field>M_CONTROL_NUMBER</field>"/>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="M_PASSWORD">
+        Security Code
+       </label>
+       <div class="controls">
+        <input autocomplete="off" id="M_PASSWORD" maxlength="30" name="M_PASSWORD" size="50" value="<field>M_PASSWORD</field>"/>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="F_HTML_PASS_LOOKUP_DESCRIPTION">
+        Description
+       </label>
+       <div class="controls">
+        <field>F_HTML_PASS_LOOKUP_DESCRIPTION</field>
+       </div>
+      </div>
+      <div class="control-group">
+       <label class="control-label" for="F_HTML_PASS_LOOKUP_VALUE">
+        Remaining Value
+       </label>
+       <div class="controls">
+        <field>F_HTML_PASS_LOOKUP_VALUE</field>
+       </div>
+      </div>
+      <div class="form-actions">
+       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+       <input class="btn btn-primary" name="btnPassCheckBalance" onclick="process()" type="submit" value="Check Balance"/>
+       <input class="btn btn-primary" name="btnPassForRedemption" onclick="process()" type="submit" value="Apply to Cart"/>
+       <input class="btn btn-warning" name="<field>pick(F_LOGGED_IN=2,'btnHome','btnGetEventList')</field>" type="submit" value="Cancel Verification"/>
+      </div>
+     </form>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

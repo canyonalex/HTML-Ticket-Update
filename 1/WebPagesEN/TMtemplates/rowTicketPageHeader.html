@@ -1,0 +1,15 @@
+  <!-- comment: this handles the pagination for the event list.   look at rowTicketPageList.html for each page -->
+  <p>
+   <field>pick(len(F_HTML_PAGE_LIST)>0,'<!-- comment: no need to have pagination count if no pages')</field>
+  </p>
+  <table class="table table-condensed table-bordered ticket-table">
+   <tr>
+    <td class="pager pagination pagination-mini">
+     <field>con(D_EVENT,' ',F_LINE_FIRST_DISPLAYED,'-',F_LINE_LAST_DISPLAYED,' of ',F_LINE_COUNT,' displayed')</field>
+     <span style="float:right;">
+      Select page: <field>F_HTML_PAGE_LIST</field>
+     </span>
+    </td>
+   </tr>
+  </table>
+  <field>pick(len(F_HTML_PAGE_LIST)>0,' -->')</field>

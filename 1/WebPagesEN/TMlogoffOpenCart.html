@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Confirm Logoff and Close Carts
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="logoff opencart">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Logoff
+     </h1>
+     <div class="main_content">
+      <p class="text-center text-warning">
+       <field>F_HTML_PAGE_MESSAGE</field>
+      </p>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <input name="e" type="hidden" value="<field>F_EMAIL_ADDRESS</field>"/>
+       <div align="center">
+        <p>
+         You have selected to sign off Tickets by <field>D_COMPANY</field> Online Box Office.
+         <br/>
+         You have an open shopping cart containing items selected for purchase.
+        </p>
+        <p>
+         What would you like to do:
+         <input class="btn" name="btnCart" type="submit" value="Review my order"/>
+         ,
+         <input class="btn" name="btnCheckout" type="submit" value="Pay for my order"/>
+         , or
+         <input class="btn" name="btnLogoutCancelOrder" type="submit" value="Cancel the order and logout"/>
+        </p>
+       </div>
+      </form>
+     </div>
+     <!--span-->
+     <!--#include virtual="tmScripts/venue_footer.html" -->
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

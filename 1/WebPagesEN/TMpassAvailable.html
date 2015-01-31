@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Available Passes and Gift Certificates
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="pass available">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <ul class="breadcrumb">
+      <li>
+       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
+        Account
+       </a>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       Gift Certificates
+      </li>
+     </ul>
+     <div class="hero-unit">
+      <h1>
+       Available Gift Certificates
+      </h1>
+      <p class="text-center text-warning">
+       <field>F_HTML_PAGE_MESSAGE</field>
+      </p>
+      <p>
+       Passes or Gift Certificates displayed below are associated with your account and may be applied to certain purchases in the cart. The list only includes items that you purchased (for yourself or as a gift to others).  You might be able to:
+      </p>
+      <ul>
+       <li>
+        Apply a Gift Certificate as a payment of the order balance
+       </li>
+       <li>
+        Redeem a Pass for applicable tickets
+       </li>
+      </ul>
+     </div>
+     <!--/.hero-unit-->
+     <dl>
+      <dt>
+       <a class="link" href="<field>F_HTML_FIREWALL</field>login?btnPassCheckBalance=btnPassCheckBalance">
+        Use a Pass or Gift Certificate I've been given
+       </a>
+      </dt>
+      <dd>
+       If you received a gift certificate or pass applicable for <field>D_COMPANY_LONG</field> from somebody else -and- you know
+       <u>
+        <b>
+         both the control number and personal redemption code
+        </b>
+       </u>
+       ; you may be able to apply it to this shopping cart
+		or verify the remaining balance.
+      </dd>
+     </dl>
+     <table class="table table-striped table-hover table-condensed table-bordered ticket-table">
+      <tr>
+       <th align="left">
+        Description
+       </th>
+       <th align="center" width="70">
+        Expiry
+       </th>
+       <th align="right" width="50">
+        Control Number
+       </th>
+       <th align="right" colspan="2" width="80">
+        Purchase Amount/Qty
+       </th>
+       <th align="right" colspan="2" width="80">
+        Redeemed Amount/Qty
+       </th>
+       <th align="right" colspan="2" width="80">
+        Remaining Amount/Qty
+       </th>
+       <th width="125">
+       </th>
+      </tr>
+      <field>F_HTML_PASS_REMAINING_VALUES</field>
+     </table>
+     <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal" method="POST">
+      <div class="form-actions">
+       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+       <input class="btn btn-primary" name="btnHome" type="submit" value="Return to Main Page"/>
+      </div>
+     </form>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

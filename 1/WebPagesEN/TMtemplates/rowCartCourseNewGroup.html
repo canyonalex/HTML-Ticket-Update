@@ -1,0 +1,41 @@
+  <tr class="rowcart course newgroup">
+   <td>
+    <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
+    <input name="SCD_PURCHASE_GROUP" type="hidden" value="<field>SCD_PURCHASE_GROUP</field>"/>
+    <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="checkbox" value="1"/>
+   </td>
+   <td>
+    <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html?PB_P_SEQ=<field>PB_P_SEQ</field>" onclick="return popup(this, 'notes')">
+     <field>P_PLAY_TITLE</field>
+    </a>
+    <br/>
+    on
+    <b>
+     <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> at <field>PB_PERFORM_TIME</field>
+    </b>
+    <br/>
+    in the
+    <a class="link muted" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+     <field>VE_NAME</field>
+    </a>
+    <br/>
+    <field>D_COURSE_DESC</field>
+<field>pick(D_WEB_SHOW_PROMOTION,'',con(' ',SC_DESCRIPTION))</field>
+<field>pick(D_WEB_SHOW_PRICE_CODE,'',con(' ',PC_DESCRIPTION))</field>
+<field>pick(F_HTML_SHOW_GIFT_SELECTION,'<!-- comment: trick. If only one patron in the household then do not show the selection list','')</field>
+    <p>
+     Attendee:
+     <select name="SCD_INTENDED_FOR_C_SEQ_<field>SCD_SEQ</field>" onchange="submitForm('TMForm','btnCartIntendedFor','YES');" size="1">
+      <field>$cinst.$getHtmlHouseholdPatronSelectionList(SCD_SEQ)</field>
+     </select>
+    </p>
+    <field>pick(F_HTML_SHOW_GIFT_SELECTION,'-->','')</field>
+    <!--#include virtual="tmTemplates/cellCartPassMaxRedemptionExceeded.html" -->
+    <br/>
+    <field>PB_PERF_NOTES</field>
+   </td>
+   <td>
+    <field>SCD_QUANTITY</field> <field>D_COURSE_DESC</field>
+  <field>SCD_TOTAL_COST</field>
+   </td>
+  </tr>

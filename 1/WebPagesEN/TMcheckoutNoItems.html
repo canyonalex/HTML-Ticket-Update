@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Checkout Window
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="checkout noitems">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Checkout
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     No items have been selected to purchase.
+     <p>
+      If you wish to purchase tickets, gift certificates
+<field>pick(F_DONATION_ALLOWED,'<!-- comment: based on setting in company preferences','')</field>
+      <a class="link" href="<field>F_HTML_FIREWALL</field>login&donation=0">
+       , or make a donation
+      </a>
+      <field>pick(F_DONATION_ALLOWED,'-->','')</field>
+	then please select the item from the menu.
+     </p>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

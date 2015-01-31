@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <base target="main"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Main Page
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="background">
+  <div align="center" id="content">
+   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td>
+      <h1 class="title">
+       Theatre Manager Integrated Web Module
+      </h1>
+      <p class="main">
+       This page is explains the structure of the Theatre Manager 
+          web module.
+      </p>
+      <p class="main">
+       All interaction with the Theatre Manager web module is 
+          HTML pages using FORMS and either POST or GET methods. They are relatively 
+          simple to create with any editor and because they are HTML only, you 
+          can integrate any of the pages into your existing web site and colour 
+          them or add graphics in a number of ways.
+      </p>
+      <p class="main">
+       There are 4 frames in this example:
+      </p>
+      <ul>
+       <li class="main">
+        The left frame is called <field>F_HTML_FIREWALL</field>tmnavSide.html
+       </li>
+       <li class="main">
+        The top frame is called tmnavTop.html
+       </li>
+       <li class="main">
+        This frame is called tmnavMain.html
+       </li>
+       <li class="main">
+        The bottom frame is called tmnavBottom.html
+       </li>
+      </ul>
+      <p class="main">
+       All pages in the demo are sent back to the frame that 
+          they came from. In this case, the replies from the server will be in 
+          the frame called 'main' and will replace this window.
+      </p>
+      <p class="main">
+       To begin, click the Online Sales button on the side frame.
+      </p>
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>

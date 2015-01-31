@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Backup in Progress
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="backup">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Box Office Offline
+     </h1>
+     <div class="main_content">
+      <p class="text-center text-warning">
+       <field>F_HTML_PAGE_MESSAGE</field>
+      </p>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="post">
+       <div align="center">
+        <!-- comment:
+		<p>We are temporarily off line so that the box office can be backed up starting at <field>SPR_FORCE_LOGOFF_DAILY_AT</field> for <field>SPR_BACKUP_ELAPSED_TIME</field> minutes.</p>
+-->
+        <p>
+         Please contact our box office listed below and our representatives will be more than happy to assist you.
+        </p>
+       </div>
+       <!--#include virtual="TMtemplates/tmContactHours.html" -->
+       <p>
+        You can try to continue and access your shopping cart by clicking on any of the menu items on the screen. If you receive this message again, the system is still in the process of being backed up.
+       </p>
+      </form>
+     </div>
+     <!--span-->
+     <!--#include virtual="tmScripts/venue_footer.html" -->
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

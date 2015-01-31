@@ -1,0 +1,6 @@
+  <p>
+   <field>pick(F_SOLD_PERCENT<80,'','Good')</field>
+<field>pick(F_SOLD_PERCENT>=80&F_SOLD_PERCENT<90,'','<span class="label label-warning">Limited</span>')</field>
+<field>pick(F_SOLD_PERCENT>=90&F_SOLD_PERCENT<100,'','<span class="label label-important">Very Limited</span>')</field>
+<field>pick(F_SOLD_PERCENT>=100,'','<span class="label label-inverse">Sold Out</span>')</field>
+  </p>

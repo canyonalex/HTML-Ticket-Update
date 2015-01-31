@@ -1,0 +1,21 @@
+  <tr class="rowfutureticket reserved">
+   <td>
+    <field>MS_SECTION</field>/<field>MS_ROW_NUMBER</field>/<field>MS_SEAT_NUMBER</field>
+    <span class="muted">
+     <em>
+      <field>pick(MS_NOTE_USE_FLAG,'',MS_SEAT_NOTE)</field>
+     </em>
+     <br/>
+     <field>pick(D_WEB_SHOW_PROMOTION,'',con(SC_DESCRIPTION,' '))</field>
+		<field>pick(D_WEB_SHOW_PRICE_CODE,'',PC_DESCRIPTION)</field>
+     <br/>
+     $<field>PS_TOTAL_COST</field>
+    </span>
+   </td>
+   <td>
+    <field>ORD_SEQ</field>
+   </td>
+   <td>
+    <field>cap(dat(PS_DATE_BOUGHT,'w m D y @ h:N A'))</field>
+   </td>
+  </tr>

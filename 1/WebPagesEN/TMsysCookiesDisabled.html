@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Cookies are Disabled
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="cookies">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Cookies Disabled
+     </h1>
+     <p class="text-center text-warning">
+      <field>F_HTML_PAGE_MESSAGE</field>
+     </p>
+     <form action="<field>F_HTML_FIREWALL</field>login" method="post">
+      <table align="Center" border="0" cellpadding="1" cellspacing="2" width="410">
+       <tr class="tablerowheader">
+        <td align="center">
+         <h4 align="center">
+          <field>D_COMPANY</field> requires that cookies are enabled in your web browser
+          <br/>
+          in order to purchase online.
+         </h4>
+        </td>
+       </tr>
+       <tr class="tablerowdetail">
+        <td align="justify">
+         <p>
+          You may need to change the security level for this site in your web browser, or to accept any cookies if you have been getting a prompt about cookies.
+         </p>
+         <p>
+          We value your privacy. Cookies from this site are encrypted and contain only sufficient information to assist the ticket buying process. The cookie also expires in 24 hours and automatically disappears from your web browser after that.
+         </p>
+         <p>
+          When you  have enabled cookies in your web browser and are ready to log in, please click the login button.
+         </p>
+        </td>
+       </tr>
+       <tr class="tablerowheader">
+        <td align="center">
+         <input class="button" id="btnLogin" name="btnLogin" type="submit" value="Login"/>
+         <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+        </td>
+       </tr>
+      </table>
+     </form>
+    </div>
+    <!--span-->
+    <!--#include virtual="tmScripts/venue_footer.html" -->
+   </div>
+  </div>
+ </body>
+</html>

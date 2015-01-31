@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Mail List Disallow
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!-- comment: Must be after CSS -->
+  <!--#include virtual="tmScripts/html5shiv.html" -->
+ </head>
+ <body class="maillist disallow">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <!--#include virtual="tmScripts/venue_header.html" -->
+    <div class="span9 page-content img-rounded">
+     <h1>
+      Mailing Lists
+     </h1>
+     <div class="main_content">
+      <p class="text-center text-warning">
+       <field>F_HTML_PAGE_MESSAGE</field>
+      </p>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="post">
+       <h2 align="center" class="title">
+        E-Mail Lists
+       </h2>
+       <p align="center">
+        We're sorry. Access to subscribing and 
+		unsubscribing is limited to the Primary Account Holder only.
+       </p>
+       <p align="center">
+        To make any changes, please log on as <field>CI_CONTENTS</field>.
+       </p>
+       <div align="center">
+        <input class="btn" id="Reset" name="btnHome" type="submit" value="Return to Main Page"/>
+       </div>
+      </form>
+     </div>
+     <!--span-->
+     <!--#include virtual="tmScripts/venue_footer.html" -->
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
