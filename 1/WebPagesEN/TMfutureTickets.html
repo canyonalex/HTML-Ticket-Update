@@ -7,75 +7,51 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="futuretickets">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <ul class="breadcrumb">
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
-        Account
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <li class="active">
-       Upcoming Performances
-      </li>
-     </ul>
-     <h1>
-      Tickets for <field>tEditCheck.$setPlural(D_EVENT)</field> in the future
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <meta content="no-cache" http-equiv="Pragma"/>
-     <!-- Pragma content set to no-cache tells the browser not to cache the page
-		This may or may not work in IE -->
-     <meta content="0" http-equiv="expires"/>
-     <!-- Setting the page to expire at 0 means the page is immediately expired
-		Any values less then one will set the page to expire some time in past and
-		not be cached. This may not work with Navigator -->
-     <!--  <B class="text-center text-warning"><field>F_HTML_PAGE_MESSAGE</field></B>-->
-     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-      <p>
-       The list of tickets below are the ones that we have on file under your name for upcoming <field>low(D_PERF_DESC)</field>.
-   These are organized by <field>low(D_PERF_DESC)</field>.  If you have any concerns about the tickets or would like to
-   exchange any of them pursuant to our
-       <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
-        box office policies
-       </a>
-       , please
-       <a class="link" href="<field>F_HTML_FIREWALL</field>tmContent/contentContact.html" onclick="return popup(this, 'notes')">
-        contact us
-       </a>
-       .
-       <br/>
-       <br/>
-       Note: only completed ticket sales are in this list. Anything that is currently in a shopping cart where the purchase
-   is not yet complete will not appear in this list until the purchase is completed.
-      </p>
-      <field>F_HTML_HISTORICAL_CART_LIST</field>
-      <div class="form-actions">
-       <input class="btn" name="btnHome" type="submit" value="Return To Main Page"/>
-       <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'<!-- comment: hide button if not able to print at home')</field>
-       <input class="btn btn-primary" onclick="window.open('<field>F_HTML_FIREWALL</field>login?futureticketsprint','Print All Future Tickets','width=700,height=500')" type="button" value="Print All <field>F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT</field> Future Tickets"/>
-       <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'-->')</field>
-      </div>
-     </form>
-     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+  <div class="container">
+   <div id="content">
+    <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+    <div class="alert alert-info">
+     These are the tickets under your name for upcoming <field>low(D_PERF_DESC)</field>, organized by <field>low(D_PERF_DESC)</field>. 
+         If you have any question about the tickets or would like to 
+            exchange any of them pursuant to our
+     <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
+      box office policies,
+     </a>
+     please
+     <a class="link" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmContactPopup.html" onclick="return popup(this, 'notes')">
+      contact us.
+     </a>
+     <br/>
+     <br/>
+     Note: only completed ticket sales are in this list. Tickets currently in a shopping cart do not appear
+         until the purchase is completed.
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <field>F_HTML_HISTORICAL_CART_LIST</field>
+    <p>
+    &nbsp;
+    </p>
+    <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>online?btnHome=Home">
+     Return to Main Page
+    </a>
+    <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'<!-- comment: hide button if not able to print at home')</field>
+    <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?futureticketsprint" target="_blank">
+     Print All <field>F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT</field> Future Tickets
+    </a>
+    <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?futureticketspdf">
+     Download All <field>F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT</field> Tickets to PDF
+    </a>
+    <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'-->')</field>
+    <!--#include virtual="TMtemplates/tmContactHours.html" -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!-- comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

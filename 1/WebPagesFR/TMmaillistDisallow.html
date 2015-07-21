@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Listes de diffusion
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <p class="message">
+    <field>F_HTML_PAGE_MESSAGE</field>
+   </p>
+   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td align="center">
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <p>
+        Nous sommes d&eacute;sol&eacute;s, mais seul le titulaire principal du compte est habilit&eacute; &agrave; s'abonner aux listes de diffusion ou &agrave; s'en d&eacute;sabonner.
+       </p>
+       <p>
+        Pour modifier vos abonnements, veuillez ouvrir une session en tant que <field>CI_CONTENTS</field>.
+       </p>
+       <input class="new" id="Reset" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Revenir &agrave; la page principale"/>
+      </form>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

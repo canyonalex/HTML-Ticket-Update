@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Notification demande de confirmation
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <h2 align="center" class="message">
+   Notification demande de confirmation
+  </h2>
+  <div align="left" class="tablerowdetail">
+   <p>
+    Cher
+    <b>
+     <field>con(C_FIRST_NAME,' ',C_LAST_NAME,pick(len(C_COMPANY)=0,' - '),C_COMPANY)</field>
+    </b>
+    ,
+   </p>
+   <p>
+    Notre personnel vous a r&eacute;cemment ajout&eacute; &agrave; une liste sp&eacute;cifique de notification que nous allons utiliser pour envoyer pour
+  les fins mentionn&eacute;es. Tr&egrave;s probablement, vous avez &eacute;t&eacute; ajout&eacute; &agrave; la suite d'une conversation que nous avons eue avec 
+  vous ou pass&eacute; avec notre organisation.
+   </p>
+   <p>
+    <field>D_COMPANY_LONG</field> utilise un
+    <b>
+     m&eacute;canisme de double opt-in
+    </b>
+    et vous devez confirmer votre participation.
+  Si vous n'avez pas, vous serez automatiquement retir&eacute; de la notification d'environ <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> 
+  heures apr&egrave;s que vous recevez cet e-mail.  Si vous ignorez l'e-mail, vous pouvez opter, &agrave; l'avenir que vous souhaitez.
+   </p>
+   <p>
+    &nbsp;
+   </p>
+   <div align="center">
+    <table border="1" width="80%">
+     <tr align="center" class="tablerowheader">
+      <td>
+       <a class="link" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
+        Confirmer la participation
+       </a>
+       &agrave;
+       <b>
+        <field>PM_DESCRIPTION_EXTERNAL</field>
+       </b>
+      </td>
+     </tr>
+     <tr align="left" class="tablerowdetail">
+      <td>
+       <b>
+        But:
+       </b>
+       <field>PM_DESCRIPTION</field>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <p>
+    &nbsp;
+   </p>
+   <p>
+    Si jamais vous souhaitez consulter votre compte et modifier les param&egrave;tres &agrave; l'avenir,
+    <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
+     cliquez ici
+    </a>
+    -
+  ou tapez l'URL du site dans votre navigateur Web directement si votre pr&eacute;f&eacute;rence est une s&eacute;curit&eacute; suppl&eacute;mentaire de navigation.
+   </p>
+   <p>
+    Sauf si vous consentez express&eacute;ment ou la divulgation est n&eacute;cessaire en vertu d'un pouvoir l&eacute;gal, tous les renseignements que 
+  <field>D_COMPANY_LONG</field> vous concernant sont confidentiels et ne peuvent &ecirc;tre divulgu&eacute;s par 
+  <field>D_COMPANY_LONG</field> &agrave; personne.
+   </p>
+   <p align="center">
+    S'il vous pla&icirc;t contactez-nous par t&eacute;l&eacute;phone ou par e-mail pour plus d'informations.
+   </p>
+   <center>
+    <!--#include virtual="TMtemplates/tmContactHours.html" -->
+   </center>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

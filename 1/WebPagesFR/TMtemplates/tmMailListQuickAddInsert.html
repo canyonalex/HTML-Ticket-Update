@@ -1,0 +1,139 @@
+  <script language="JavaScript">
+   <!-- Begin
+	function verify() {
+		var themessage = "";
+		if (document.form.C_FIRST_NAME.value=="") {
+			themessage = themessage + " - Prénom";
+			}
+		if (document.form.C_LAST_NAME.value=="") {
+			themessage = themessage + " - Nom";
+			}
+		if (document.form.e.value=="") {
+			themessage = themessage + " - Adresse courriel";
+			}
+		//alert if fields are empty and cancel form submit
+		if (themessage == "") {
+			document.form.submit();
+			return true;
+			}
+		else {
+			themessage = "Vous êtes tenu de remplir les champs suivants: " + themessage;
+			alert(themessage);
+			return false;
+		   }
+		}
+	//  End -->
+  </script>
+  <form action="<field>F_HTML_FIREWALL</field>login" method="POST" name="form">
+   <table border="0" cellpadding="1" cellspacing="2" class="tablerowheader">
+    <field>pick(F_LOGGED_IN=2,'<!-- comment: trick. if not logged on, 3 entry fields show','')</field>
+    <tr>
+     <td width="127">
+      <p align="right">
+       Pr&eacute;nom
+      </p>
+     </td>
+     <td>
+      <input name="C_FIRST_NAME" size="30" type="text" value="<field>C_FIRST_NAME</field>"/>
+     </td>
+    </tr>
+    <tr>
+     <td width="127">
+      <p align="right">
+       Nom
+      </p>
+     </td>
+     <td width="">
+      <input name="C_LAST_NAME" size="30" type="text" value="<field>C_LAST_NAME</field>"/>
+     </td>
+    </tr>
+    <tr>
+     <td width="127">
+      <p align="right">
+       Adresse courriel
+      </p>
+      <p>
+      </p>
+     </td>
+     <td>
+      <input name="e" size="60" type="text" value="<field>CI_CONTENTS</field>"/>
+      <input name="C_SEQ" type="hidden" value="<field>C_SEQ</field>"/>
+     </td>
+    </tr>
+    <tr>
+     <td colspan="2">
+      <br/>
+     </td>
+    </tr>
+    <field>pick(F_LOGGED_IN=2,'-->','')</field>
+    <tr>
+     <td>
+     </td>
+     <td>
+      Veuillez s&eacute;lectionner les listes de diffusion auxquelles vous souhaitez vous abonner.
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <input name="PM_SEQ" type="checkbox" value="6"/>
+      Je veux conna&icirc;tre les pi&egrave;ces classiques
+      <br/>
+      <input name="PM_SEQ" type="checkbox" value="7"/>
+      Musicals m'int&eacute;ressent
+      <br/>
+      <input name="PM_SEQ" type="checkbox" value="38"/>
+      Informations sur l'&eacute;v&eacute;nement &agrave; venir
+      <br/>
+      <input name="PM_SEQ" type="checkbox" value="42"/>
+      Les fans de hockey
+      <br/>
+      <input name="PM_SEQ" type="checkbox" value="35"/>
+      2008 abonn&eacute;s (devraient &ecirc;tre en mesure d'ajouter)
+      <br/>
+      <!--       	<select name="PM_SEQ" size="10" multiple id="PM_SEQ">
+       		<field>F_HTML_SUBSCRIBE_LIST</field>         		                                                                          
+       	</select> -->
+      <!--comment: 
+    The location of the email address is set to code table default, however it can be specified here by passing a hidden parameter:
+    	<input type=hidden name="CCL_LOCATION_FC_SEQ" value="5"> 
+      Where 5 is the code table number associated with that location.
+  
+  	Options for passing parameters:
+  	Multiple 'hidden' inputs (The below would add the patron to mail list #5 and #10):
+  		<input type=hidden name="PM_SEQ" value=5>
+  		<input type=hidden name="PM_SEQ" value=10>
+  		
+  	Checkbox support (The below would display checkboxes for mail list #5 and #10):
+  		<input type=checkbox name="PM_SEQ" value="5"> Ajoutez-moi à la liste de courrier #5<br>
+  		<input type=checkbox name="PM_SEQ" value="10"> Ajoutez-moi à la liste de courrier #10<br>
+  		
+  	List support (The below would display a list of options for mail list #5 and #10):
+  		<select name="PM_SEQ" size="10" multiple id="PM_SEQ">
+  			<option value="5">Liste de diffusion #5</option>
+  			<option value="10">Liste de diffusion #10</option>
+  		</select>
+  		
+  		If you wish Theatre Manager to build the list of available mail lists you can use
+        the following construct almost anywhere in the web pages as long as the button sent is the
+        one to join selected mail lists:
+  		<select name="PM_SEQ" size="10" multiple id="PM_SEQ">
+        	<field>F_HTML_SUBSCRIBE_LIST</field>         		                                                                          
+        </select>
+  -->
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <input name="C_SEQ" type="hidden" value="<field>C_SEQ</field>"/>
+      <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+      <input name="btnAccountMailListAdd" type="hidden" value="btnAccountMailListAdd"/>
+      <!-- comment: trick for javascript submit() -->
+      <input class="new" name="btnAccountMailListAdd" onclick="return verify();" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="S'abonner aux listes de diffusion s&eacute;lectionn&eacute;es"/>
+     </td>
+    </tr>
+   </table>
+  </form>

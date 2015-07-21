@@ -9,59 +9,43 @@
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="invalidcall">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <h1>
-      Error
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div align="center">
-      <!-- <B class="text-center text-warning"><field>F_HTML_PAGE_MESSAGE</field></B> -->
-      <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-       <tr>
-        <td>
-         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-          <h2>
-           <div align="center">
-            <p class="title">
-             <field>D_COMPANY</field>
-            </p>
-           </div>
-          </h2>
-          <p align="center" class="main">
-           <field>D_COMPANY</field> 
-            could not locate a requested page.
-          </p>
-          <p align="center" class="main">
-           Please contact our box office listed 
-            below and our representatives will be more than happy to assist you.
-          </p>
-          <center>
-           <!--#include virtual="TMtemplates/tmContactHours.html" -->
-          </center>
-          <p class="main">
-           You can try to continue and access your shopping cart 
-            by clicking on any of the tabs above. If you receive this message 
-            again, the system is still unable to access the requested page.
-          </p>
-         </form>
-        </td>
-       </tr>
-      </table>
-     </div>
-    </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Page Missing
+    </h1>
    </div>
+   <div class="row">
+    <div class="col-md-4">
+     <div class="lead alert alert-info">
+      <field>D_COMPANY_LONG</field> web services
+            could not locate a requested page.
+     </div>
+     <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert alert-text">
+      <p>
+       You can try to continue by clicking on any of the menu items above. If you receive this message 
+        again, the system is still unable to access the requested page.
+      </p>
+      <p>
+       Or, you can contact the box office and our representatives will be more than happy to assist you.
+      </p>
+     </div>
+     <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?btnCart=Cart">
+      Show my Shopping Cart
+     </a>
+     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

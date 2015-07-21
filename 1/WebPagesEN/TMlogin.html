@@ -7,108 +7,74 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="login">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <h1>
-      Box Office
-     </h1>
-     <!--<h3>Welcome to the Tickets by <field>D_COMPANY</field> online sales site.</h3>-->
-     <h4 class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </h4>
-     <!--<p class="message text-center">Please enter your login ID and password - or choose from one of the following options.</p>-->
-     <form action="<field>F_HTML_FIREWALL</field>login" class="form-horizontal" method="post">
-      <div class="control-group">
-       <label class="control-label" for="e">
-        Email Address
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     <field>D_COMPANY_LONG</field> Login
+    </h1>
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+      <div class="form-group">
+       <label for="e">
+        Email
        </label>
-       <div class="controls">
-        <input id="e" name="e" placeholder="Email" type="text" value="<field>F_EMAIL_ADDRESS</field>"/>
-       </div>
+       <input class="form-control" id="e" maxlength="100" name="e" type="text" value="<field>F_EMAIL_ADDRESS</field>"/>
       </div>
-      <div class="control-group">
-       <label class="control-label" for="p">
+      <div class="form-group">
+       <label for="p">
         Password
        </label>
-       <div class="controls">
-        <input autocomplete="off" id="p" maxlength="20" name="p" placeholder="Password" type="Password" value=""/>
-       </div>
+       <input autocomplete="off" class="form-control" id="p" maxlength="<field>SPR_PASSWORD_MAX_LENGTH</field>" name="p" type="Password" value=""/>
       </div>
-      <div class="control-group">
-       <div class="controls">
-        <input class="btn btn-primary" name="btnLoginAccount" type="submit" value="Login"/>
-        <input class="btn" name="btnPasswordRequest" type="submit" value="Forgot My Password"/>
-       </div>
-      </div>
-      <br/>
-      <div class="control-group">
-       <div class="controls">
-        <p>
-         <strong>
-          Do we already have your email address?
-         </strong>
-         <br/>
-         If you believe 
-	<field>D_COMPANY_LONG</field> has your email address on file and would like to login for the first time, a temporary login password will be emailed to you.
-        </p>
-        <input class="btn btn-info" name="btnPasswordRequest" type="submit" value="Temporary Password"/>
-       </div>
-      </div>
-      <div class="control-group">
-       <div class="controls">
-        <p>
-         <strong>
-          Not registered? Sign up.
-         </strong>
-        </p>
-        <input class="btn btn-success" name="btnAccountRequest" type="submit" value="New <field>D_PATRON</field>"/>
-       </div>
-      </div>
-      <!-- comment: the following fields are the contact information fields new patron form.
-					If you wish to display a variable number of entry fields with a pre-specified location then 
-					you must specify 'NumContactInfo' as the number of fields to display and the location codetable 
-					number(FC_SEQ) for that piece of contact information.  Note that a 'NumContactInfo' of 0 or no values at all will display the default.
-					Change the value of xxx, yyy, or zzz to be the codetable number of the appropriate location.  Also, uncomment 
-					and modify the desired code below
-					<INPUT NAME="NumContactInfo" TYPE=hidden id="NumContactInfo" value="4">
-			 		<INPUT NAME="CI_TYPE_1" TYPE=hidden id="CI_TYPE" value="1">
-             		<INPUT NAME="CCL_LOCATION_FC_SEQ_1" TYPE=hidden id="CCL_LOCATION_FC_SEQ" value="xxx">
-             		<INPUT NAME="CI_TYPE_2" TYPE=hidden id="CI_TYPE" value="1">
-             		<INPUT NAME="CCL_LOCATION_FC_SEQ_2" TYPE=hidden id="CCL_LOCATION_FC_SEQ" value="yyy">
-             		<INPUT NAME="CI_TYPE_3" TYPE=hidden id="CI_TYPE" value="4">
-             		<INPUT NAME="CCL_LOCATION_FC_SEQ_3" TYPE=hidden id="CCL_LOCATION_FC_SEQ" value="zzz"> -->
-      <!-- <td align="justify">Click
-                      <input name="btnAccountRequest" type=submit value="New <field>D_PATRON</field>" class="btn" >
-                       to set up an account If this is the first time purchasing tickets from us, </td>-->
-      <div class="control-group">
-       <div class="controls">
-        <p>
-         <strong>
-          Privacy Protected
-         </strong>
-         <br/>
-         We do not sell your personal information.
-        </p>
-        <p>
-         Members and subscribers must login in order to be eligible for preferred seating and ticket discounts.
-        </p>
-        <input name="C_SEQ" type="hidden" value="<field>C_SEQ</field>"/>
-        <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
-       </div>
-      </div>
+      <input class="btn btn-success" name="btnLoginAccount" type="submit" value="Login"/>
+      <input name="C_SEQ" type="hidden" value="<field>C_SEQ</field>"/>
+      <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
      </form>
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <div class="col-md-8">
+     <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+      <div class="form-group">
+       <input class="form-control btn btn-primary" name="btnAccountRequest" type="submit" value="New <field>D_PATRON</field>"/>
+       <input name="C_SEQ" type="hidden" value="<field>C_SEQ</field>"/>
+       <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+       <p class="help-block">
+        Create a new account.
+       </p>
+      </div>
+     </form>
+     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+      <div class="form-group">
+       <input class="form-control btn btn-primary" name="btnPasswordRequest" type="submit" value="Forgot My Password"/>
+       <p class="help-block">
+        Reset your password.
+       </p>
+      </div>
+     </form>
+     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+      <div class="form-group" style="margin-top: 15px;">
+       <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"<!-- comment:","")</field>
+       <input class="form-control btn btn-primary" name="btnGetEventList" type="submit" value="Browse Anonymously"/>
+       <p class="help-block">
+        If you wish to browse for tickets without logging in yet.  
+              Please note that you will be required to sign in with a valid Email ID (or create an account) prior to completing your 
+              <field>low(D_ORDER_DESC)</field>.
+       </p>
+       <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"-->","")</field>
+      </div>
+     </form>
+     <!--#include virtual="TMtemplates/tmPoweredBy.html" -->
+    </div>
    </div>
   </div>
+  <!-- .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

@@ -1,0 +1,152 @@
+  <!-- comment: 
+     For each of the fields below, you can make a hidden import field with a static value (if you do not want the user to enter values in the fields),
+     or you can enable the field for data entry by the user.  In either case, Theatre Manager will validate the inputs given when they are sent
+     to the server.
+      
+     Marketing 1 & 2 are numbers
+     Marketing 3 & 4 are upper case letters
+     Marketing 5 is a text field, free format.
+     Age Code, Marketing 6, 7, and 8 are pre-populated dropdown menus
+     
+     If the input is optional in the Theatre Manager database, feel free to uncomment the sections that you wish customers to see.
+     
+     If the input mandatory in the Theatre Manager database - enable the field or make hidden <input> with a static value.
+-->
+  <!-- comment: Static Value
+
+   <input name="MKT_AGE_CODE_FC_SEQ" type=hidden id="MKT_AGE_CODE_FC_SEQ" value="Value">
+   <input name="MKT_FIELD_1" type=hidden id="MKT_FIELD_1" value="[Static Value]">
+   <input name="MKT_FIELD_2" type=hidden id="MKT_FIELD_2" value="[Static Value]">
+   <input name="MKT_FIELD_3" type=hidden id="MKT_FIELD_3" value="[Static Value]">
+   <input name="MKT_FIELD_4" type=hidden id="MKT_FIELD_4" value="[Static Value]">
+   <input name="MKT_FIELD_5" type=hidden id="MKT_FIELD_5" value="[Static Value]">
+   <input name="MKT_FIELD_6_FC_SEQ" type=hidden id="MKT_FIELD_6_FC_SEQ" value="[Static Value]">
+   <input name="MKT_FIELD_7_FC_SEQ" type=hidden id="MKT_FIELD_7_FC_SEQ" value="[Static Value]">
+   <input name="MKT_FIELD_8_FC_SEQ" type=hidden id="MKT_FIELD_8_FC_SEQ" value="[Static Value]">
+-->
+  <!-- comment: gender as popup list (includes male/female and unspecified)
+<TR> 
+	<TD WIDTH=127 class="tablerowheader" align="right">Gender</TD>
+	<TD class="tablerowdetail" align="left">
+	<select name="C_SEX" size="1" id="C_SEX"><field>F_HTML_GENDER_LIST</field></select>
+</TD>
+</TR>
+-->
+  <!-- comment: gender as radio buttons (alternate)
+<TR> 
+	<TD WIDTH=127 class="tablerowheader" align="right">Gender</TD>
+	<TD class="tablerowdetail" align="left">
+	<input name="C_SEX" type="radio" id="Female" value="F" <field>pick(C_SEX='F','','checked')</field> >
+	<label for="Female">Female</label> &nbsp;&nbsp;&nbsp;
+	<input name="C_SEX" type="radio" id="Male" value="M" <field>pick(C_SEX='F','checked','')</field> >
+	<label for="Male">Male</label>
+</TD>
+</TR>
+-->
+  <!-- comment: Age Code 
+<TR>
+<TD WIDTH=127 class="tablerowheader" align="right">Age Code</TD>
+<TD class="tablerowdetail"> 
+	<select name="MKT_AGE_CODE_FC_SEQ" size="1" id="MKT_AGE_CODE_FC_SEQ"><field>F_HTML_AGE_CODE_LIST</field></select>
+	<span class=missingfield><field>F_HTML_REQUIRE_AGE_CODE</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: birthday
+<TR>
+<TD WIDTH=127 class="tablerowheader" align="right">Birthday</TD>
+<TD class="tablerowdetail"> 
+	<INPUT NAME="C_BIRTHDAY" TYPE=text id="C_BIRTHDAY" value="<field>dat(C_BIRTHDAY, 'M/d/y')</field>" SIZE=30 MAXLENGTH=60/> (mm/dd/yyyy)
+</TD>
+</TR>
+-->
+  <!-- comment: Marketing #1 (numbers)
+<TR> 
+<TD WIDTH=127 class="tablerowheader" align="right"><field>D_MKT1</field></TD>
+<TD class="tablerowdetail"> 
+	<INPUT NAME="MKT_FIELD_1" TYPE=text id="MKT_FIELD_1" value="<field>MKT_FIELD_1</field>" SIZE=30 MAXLENGTH=15>
+	<span class=missingfield><field>F_HTML_REQUIRE_MARKETING_1</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: Marketing #2 (numbers)
+<TR> 
+<TD WIDTH=127 class="tablerowheader" align="right"><field>D_MKT2</field></TD>
+<TD class="tablerowdetail"> 
+	<INPUT NAME="MKT_FIELD_2" TYPE=text id="MKT_FIELD_1" value="<field>MKT_FIELD_2</field>" SIZE=30 MAXLENGTH=15>
+	<span class=missingfield><field>F_HTML_REQUIRE_MARKETING_2</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: Marketing #3 (upper case text)
+<TR> 
+<TD WIDTH=127 class="tablerowheader" align="right"><field>D_MKT3</field></TD>
+<TD class="tablerowdetail"> 
+	<INPUT NAME="MKT_FIELD_3" TYPE=text id="MKT_FIELD_3" value="<field>MKT_FIELD_3</field>" SIZE=30 MAXLENGTH=10 onblur="this.value=this.value.toUpperCase()">
+	<span class=missingfield><field>F_HTML_REQUIRE_MARKETING_3</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: Marketing #4 (upper case text)
+<TR> 
+<TD WIDTH=127 class="tablerowheader" align="right"><field>D_MKT4</field></TD>
+<TD class="tablerowdetail"> 
+	<INPUT NAME="MKT_FIELD_4" TYPE=text id="MKT_FIELD_4" value="<field>MKT_FIELD_4</field>" SIZE=30 MAXLENGTH=10 onblur="this.value=this.value.toUpperCase()">
+	<span class=missingfield><field>F_HTML_REQUIRE_MARKETING_4</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: Marketing #5 (text)
+<TR> 
+<TD WIDTH=127 class="tablerowheader" align="right"><field>D_MKT5</field></TD>
+<TD class="tablerowdetail"> 
+	<INPUT NAME="MKT_FIELD_5" TYPE=text id="MKT_FIELD_5" value="<field>MKT_FIELD_5</field>" SIZE=30 MAXLENGTH=60>
+	<span class=missingfield><field>F_HTML_REQUIRE_MARKETING_5</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: Marketing #6 (dropdown)
+<TR>
+<TD WIDTH=127 class="tablerowheader" align="right"><field>D_MKT6</field></TD>
+<TD WIDTH=590 class="tablerowdetail"> 
+	<select name="MKT_FIELD_6_FC_SEQ" size="1" id="MKT_FIELD_6_FC_SEQ"><field>F_HTML_MARKETING_6_LIST</field></select>
+	<span class=missingfield><field>F_HTML_REQUIRE_MARKETING_6</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: Marketing #7 (dropdown)
+<TR>
+<TD WIDTH=127 class="tablerowheader" align="right"><field>D_MKT7</field></TD>
+<TD WIDTH=590 class="tablerowdetail"> 
+	<select name="MKT_FIELD_7_FC_SEQ" size="1" id="MKT_FIELD_7_FC_SEQ"><field>F_HTML_MARKETING_7_LIST</field></select>
+	<span class=missingfield><field>F_HTML_REQUIRE_MARKETING_7</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: Marketing #8 (dropdown)
+<TR>
+<TD WIDTH=127 class="tablerowheader" align="right"><field>D_MKT8</field></TD>
+<TD WIDTH=590 class="tablerowdetail"> 
+	<select name="MKT_FIELD_8_FC_SEQ" size="1" id="MKT_FIELD_8_FC_SEQ"><field>F_HTML_MARKETING_8_LIST</field></select>
+	<span class=missingfield><field>F_HTML_REQUIRE_MARKETING_8</field></span>
+</TD>
+</TR>
+-->
+  <!-- comment: the do not trade checkbox if you are using it for some reason
+<tr>
+	<td align="right" class="tablerowheader" width="127">
+	Do Not Trade
+	</td>
+	<td align="left" class="tablerowdetail">
+	<input id="mailyes" name="MKT_DO_NOT_TRADE" type="radio" value="NO" <field>pick(MKT_DO_NOT_TRADE='YES','checked','')</field>/>
+	<label for="mailyes">
+	Uncheck off the do not trade field
+	</label>
+	<br/>
+	<input id="mailno" name="MKT_DO_NOT_TRADE" type="radio" value="YES" <field>pick(MKT_DO_NOT_TRADE='YES','','checked')</field>/>
+	<label for="mailno">
+	Check the DO NOT trade field
+	</label>
+	</td>
+</tr>
+-->

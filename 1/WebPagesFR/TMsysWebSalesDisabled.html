@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Service de billetterie en ligne
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <div align="center" class="message">
+    <b>
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </div>
+   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <h2>
+       </h2>
+       <p align="center" class="title">
+        Service de billetterie en ligne du <field>D_COMPANY_LONG</field>
+       </p>
+       <p align="center" class="main">
+        Le service de billetterie en ligne du <field>D_COMPANY_LONG</field> 
+          n'est pas accessible pour l'instant.
+       </p>
+       <p align="center" class="main">
+        Veuillez prendre contact avec notre service de billetterie en ligne 
+          ci-dessous pendant les heures d'ouverture. Nos repr&eacute;sentants se feront un plaisir de vous aider.
+       </p>
+       <p align="center" class="main">
+        Vous pouvez essayer de continuer et d'acc&eacute;der &agrave; votre panier 
+          en cliquant sur un des onglets ci-dessus. Si ce message s'affiche de nouveau, le syst&egrave;me est toujours
+          inaccessible.
+       </p>
+       <center>
+        <!--#include virtual="TMtemplates/tmContactHours.html" -->
+       </center>
+      </form>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

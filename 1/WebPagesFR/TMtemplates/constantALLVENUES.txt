@@ -1,0 +1,7 @@
+#	Entrez le texte correspondant à la recherche de 'tous les lieux'.
+#	Ce texte se place en haut de la fenÍtre de recherche d'événements.
+#
+#	Enter the text to represent searching for 'All Venues'
+#	it goes at the top of the search window for events
+
+Tous les <field>tEditCheck.$setPlural(D_VENUE)</field>

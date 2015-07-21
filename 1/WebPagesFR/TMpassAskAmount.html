@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Entr&eacute;e des laissez-passer
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <div align="center">
+        <p>
+         <b class="message">
+          <field>F_HTML_PAGE_MESSAGE</field>
+         </b>
+        </p>
+        <table border="0" cellpadding="2" width="390">
+         <tr class="tablerowheader">
+          <td align="right" class="tablerowheader" width="128">
+           Type de laissez-passer
+          </td>
+          <td class="main" width="248">
+           <input id="MT_DESCRIPTION_EXTERNAL" maxlength="30" name="MT_DESCRIPTION_EXTERNAL" readonly="true" size="30" type="text" value="<field>MT_DESCRIPTION_EXTERNAL</field>"/>
+          </td>
+         </tr>
+         <tr class="tablerowheader">
+          <td align="right" class="tablerowheader" width="128">
+           Quantit&eacute;
+          </td>
+          <td>
+           <input id="PS_QUANTITY" maxlength="2" name="PS_QUANTITY" size="5" type="text" value="<field>PS_QUANTITY</field>"/>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader">
+           Montant unitaire
+          </td>
+          <td class="tablerowdetail">
+           <input id="M_PURCHASE_AMOUNT" maxlength="25" name="M_PURCHASE_AMOUNT" size="25" type="text" value="<field>M_PURCHASE_AMOUNT</field>"/>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" valign="top">
+           Message personnalis&eacute;
+          </td>
+          <td align="left" class="tablerowdetail">
+           <textarea cols="50" name="M_NOTES" rows="5"><field>M_NOTES</field></textarea>
+          </td>
+         </tr>
+         <p>
+         </p>
+         <tr class="tablerowheader">
+          <td align="center" colspan="2">
+           <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+           <input id="MT_SEQ" maxlength="30" name="MT_SEQ" readonly="true" size="30" type="hidden" value="<field>MT_SEQ</field>"/>
+           <input class="new" name="btnPassAmountAccept" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ajouter au panier"/>
+           &nbsp;
+           <input class="new" name="btnPassAmountCancel" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler l'achat"/>
+          </td>
+         </tr>
+        </table>
+       </div>
+      </form>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

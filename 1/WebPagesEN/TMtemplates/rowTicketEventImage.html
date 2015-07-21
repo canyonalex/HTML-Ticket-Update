@@ -1,9 +1,7 @@
-  <p>
-   <field>pick(D_WEB_SHOW_TT_IMAGES,'<!-- comment: Ticket Trove Image on lists in a column ')</field>
-  </p>
-  <td align="center" height="60" valign="middle" width="50">
-   <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
-    <img align="center" src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>" valign="middle" width="50"/>
-   </a>
-  </td>
+  <field>pick(D_WEB_SHOW_TT_IMAGES,'<!-- comment: Ticket Trove Image on event list')</field>
+  <a class="pull-left" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html">
+   <img class="media-object visible-lg" src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>" style="width: 64px;"/>
+   <img class="media-object visible-md" src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>" style="width: 90px;"/>
+   <img class="media-object visible-sm visible-xs" src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>" style="width: 130px;"/>
+  </a>
   <field>pick(D_WEB_SHOW_TT_IMAGES,' -->')</field>

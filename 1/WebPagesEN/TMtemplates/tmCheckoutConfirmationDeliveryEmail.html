@@ -1,0 +1,15 @@
+  <!-- comment: This is a little different than the web page one - because we don't worry about opening a window 
+			everything is direct URLs -->
+  <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)>0&SCH_TIX_PRINT_STATUS=0,'<!-- comment:')</field>
+  <div class="alert alert-success">
+   If you have not done so, you must download your bar-coded tickets as a PDF, print them, and bring them to the event in order to be admitted.  You may be asked to sign in.
+  </div>
+  <div>
+   <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>login?futureticketspdf&order=<field>SCH_ORD_SEQ</field>">
+    Download Tickets to PDF
+   </a>
+   <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?cartticketsprint=<field>SCH_SEQ</field>" target="_blank">
+    Reprint Tickets
+   </a>
+  </div>
+  <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)>0&SCH_TIX_PRINT_STATUS=0,'-->')</field>

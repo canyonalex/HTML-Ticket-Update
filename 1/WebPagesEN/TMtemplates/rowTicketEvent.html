@@ -1,21 +1,14 @@
-  <tr class="rowticket event <field>pick(F_SOLD_PERCENT>=80&F_SOLD_PERCENT<100,'','warning')</field><field>pick(F_SOLD_PERCENT>=100,'','error')</field>">
-   <!--could put an image here (TMtemplates/rowTicketEventName.html), or line numbers <td width="15" valign="middle" class="hidden-phone"><field>F_LINE_LAST_DISPLAYED</field>.</td>-->
-   <td>
+  <div class="media">
+   <!--#include virtual="TMtemplates/rowTicketEventImage.html" -->
+   <div class="media-body">
     <!--#include virtual="TMtemplates/rowTicketEventName.html" -->
-   </td>
-   <td class="hidden-phone">
-    <!--#include virtual="TMtemplates/rowTicketEventAvailability.html" -->
-   </td>
-   <td>
-    <field>cap(dat(PB_PERFORM_DATE,'w m D y'))</field>
-   </td>
-   <td>
-    <field>PB_PERFORM_TIME</field>
-   </td>
-   <td>
-    <form action="<field>F_HTML_FIREWALL</field>online" method="get">
-     <input class="btn btn-primary" name="btnSelectEvent" type="submit" value="Buy"/>
-     <input name="PB_SEQ" type="hidden" value="{{"/>
-    </form>
-   </td>
-  </tr>
+    <div class="row">
+     <!--#include virtual="TMtemplates/rowTicketEventVenue.html" -->
+     <!-- /col -->
+     <!--#include virtual="TMtemplates/rowTicketEventBuyButton.html" -->
+     <!-- /col -->
+    </div>
+    <!-- /row -->
+   </div>
+  </div>
+  <!-- /.media -->

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | R&eacute;sum&eacute; des paniers d'achat
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <p class="message">
+    <b>
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </p>
+   <table border="0" cellpadding="0" cellspacing="0" width="90%">
+    <tr>
+     <td>
+      <table align="center" border="0" cellpadding="2">
+       <tr class="tablerowheader">
+        <td align="center" class="tablerowheader" colspan="8">
+         La liste ci-dessous r&eacute;capitule vos paniers d'achat pr&eacute;c&eacute;dents et leur statut.
+        </td>
+       </tr>
+       <tr class="tablerowheader">
+        <td width="70">
+         &nbsp;
+        </td>
+        <td align="right" width="50">
+         Num&eacute;ro de panier
+        </td>
+        <td align="left" width="100">
+         Date de cr&eacute;ation
+        </td>
+        <td align="left" width="100">
+         Date de mise &agrave; jour
+        </td>
+        <td align="right" width="50">
+         Nombre de billets
+        </td>
+        <td align="right" width="68">
+         Valeur totale
+        </td>
+        <td align="center" width="79">
+         Statut
+        </td>
+        <td align="left">
+         Commentaires sur la commande
+        </td>
+       </tr>
+       <field>F_HTML_HISTORICAL_CART_LIST</field>
+       <tr class="tablerowheader">
+        <td align="center" colspan="8">
+         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+          <input class="new" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Revenir &agrave; la page principale"/>
+         </form>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

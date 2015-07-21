@@ -1,43 +1,50 @@
   <tr>
    <td>
+    <b>
+    Pass # <field>M_CONTROL_NUMBER</field>
+    </b>
+   <br/>
     <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>MT_DESCRIPTION_EXTERNAL</field>
     </a>
+    <field>pick(len(M_NOTES)>0,'<!-- comment: pass notes')</field>
+    <br/>
+    <field>M_NOTES</field>
+    	 <field>pick(len(M_NOTES)>0,'-->')</field>
+	 <field>pick(len(MT_NOTES)>0,'<!-- comment: pass type notes')</field>
+    <br/>
     <field>MT_NOTES</field>
+    	 <field>pick(len(MT_NOTES)>0,'-->')</field>
    </td>
-   <field>pick(len(M_DATE_EXPIRY)>0,'<!-- comment: Expiry date on pass','')</field>
-   <td align="center" width="70">
-    <field>jst(M_DATE_EXPIRY,'D:m D, y')</field>
+   <td>
+    <field>pick(len(M_DATE_EXPIRY)>0,'<!-- comment: Expiry date on pass','')</field>
+		<field>jst(M_DATE_EXPIRY,'D:m D, y')</field>
+	   <field>pick(len(M_DATE_EXPIRY)>0,'-->','')</field>
+	  <field>pick(len(M_DATE_EXPIRY)=0,'<!-- comment: No expiration date on pass','')</field>
+		Does Not Expire
+	   <field>pick(len(M_DATE_EXPIRY)-0,'-->','')</field>
    </td>
-   <field>pick(len(M_DATE_EXPIRY)>0,'-->','')</field>
-  
-  <field>pick(len(M_DATE_EXPIRY)=0,'<!-- comment: No expiration date on pass','')</field>
-   <td align="center" width="70">
-    Does Not Expire
-   </td>
-   <field>pick(len(M_DATE_EXPIRY)-0,'-->','')</field>
-   <td align="right" width="50">
-    <field>M_CONTROL_NUMBER</field>
-   </td>
-   <td align="right" width="60">
+   <td class="text-right">
     <field>M_ISSUED_PASS_AMOUNT</field>
    </td>
-   <td align="right" width="20">
+   <td class="text-right">
     <field>M_ISSUED_PASS_QTY</field>
    </td>
-   <td align="right" width="60">
+   <!-- comment:  the used amounts
+   <td class="text-right">
     <field>M_USED_PASS_AMOUNT+M_IN_CART_REDEEM_AMOUNT</field>
    </td>
-   <td align="right" width="20">
+   <td class="text-right">
     <field>M_USED_PASS_QTY+M_IN_CART_REDEEM_QTY</field>
    </td>
-   <td align="right" width="60">
+   -->
+   <td class="text-right">
     <field>M_REMAIN_PASS_AMOUNT-M_IN_CART_REDEEM_AMOUNT</field>
    </td>
-   <td align="right" width="20">
+   <td class="text-right">
     <field>M_REMAIN_PASS_QTY-M_IN_CART_REDEEM_QTY</field>
    </td>
-   <td align="center">
+      <td class="text-center">
     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
      <field>pick(M_IN_CART_REDEEM_SCH_SEQ=0,'<!-- comment: nothing left to redeem so hide button after message')</field>
      <input class="btn btn-success" name="btnPassForRedemption" onclick="process()" type="submit" value="Apply to Cart"/>

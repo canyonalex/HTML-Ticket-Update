@@ -3,253 +3,151 @@
  <head>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Box Office Policy
+   <field>D_COMPANY_LONG</field> | Box Office Policies
   </title>
-  <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="boxoffice policy popup">
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
-     <h1>
-      Box Office Policy
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
+ <body class="backgroundPopup">
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+   <tr align="left">
+    <td class="tablerowheader">
+     Box Office Policies:
      <p>
-      <strong>
-       CHECK YOUR TICKETS
-      </strong>
-      carefully for the correct date, time and seat location. Tickets by <field>D_COMPANY</field> is not responsible for errors not reported within 24 hours of receipt.
      </p>
-     <p>
-      <strong>
-       EVERY PERSON, REGARDLESS OF AGE, MUST HAVE A TICKET
-      </strong>
-      to be admitted to a performance.
-      <strong>
-       (NO EXCEPTIONS)
-      </strong>
-      . A ticket is a revocable license valid only for the event and seat printed on it. Management may, without refund, revoke this license or refuse admission for unlawful sale, attempted resale, or for disorderly conduct.
-     </p>
-     <p>
-      <strong>
-       NO REFUNDS OR EXCHANGES. ALL TICKET SALES ARE FINAL
-      </strong>
-      . Events, dates and times are subject to change. No retroactive discounts will be permitted. Patrons who choose not to attend a performance, despite adverse weather conditions, will not be eligible for ticket refunds or credit.
-     </p>
-     <p>
-      <strong>
-       LATECOMERS MAY NOT BE ADMITTED INTO THE THEATRE ONCE THE PERFORMANCE HAS BEGUN, OR MAY NOT BE SEATED AT ALL
-      </strong>
-      . At the request of the show&rsquo;s producers, latecomers may be seated at a suitable break in the performance, in the rear of the theatre, or at intermission.
-     </p>
-     <p>
-      <strong>
-       PERSONAL RESPONSIBILITY STATEMENT:
-      </strong>
-      <field>D_COMPANY</field> prides itself on offering a diverse selection of arts entertainment. Not all productions may appeal to, or be appropriate for, every person or for all ages. Patrons are encouraged to familiarize themselves with the shows we offer in order to make informed decisions.
-     </p>
-     <p>
-      <strong>
-       GIFT CERTIFICATES
-      </strong>
-      are redeemable at the Box Office (over the phone and online) and our Gift Shops, but cannot be used at our concessions or bars.
-     </p>
-     <p>
-      <strong>
-       SERVICES FOR THE DISABLED:
-      </strong>
-      To best assist patrons with special needs (wheelchairs, hearing devices, assistance dogs, visual impairments, etc.),  please contact the Box Office at <field>D_SWITCH_BOARD</field> or email
-      <a href="mailto: boxoffice@yourvenue.org">
-       boxoffice@yourvenue.org
-      </a>
-      and describe the need(s) at the time of purchase.
-     </p>
-     <p>
-      <strong>
-       DOCTORS AND PATRONS ON CALL:
-      </strong>
-      Please leave your pager or cell phone with a house manager along with your seat location. You will be alerted if you are called.
-     </p>
-     <p>
-      <strong>
-       CAMERAS, AUDIO, VISUAL RECORDING EQUIPMENT,
-      </strong>
-      including cell phone cameras, are strictly prohibited inside the theatre.
-     </p>
-     <p>
-      <strong>
-       theREP:
-      </strong>
-      We ask that children under 6 years of age not be brought to the theatre, unless prior arrangements are made with management.
-     </p>
-     <p>
-      <strong>
-       SMOKING IS NOT PERMITTED IN ANY OF OUR BUILDINGS
-      </strong>
-     </p>
-     <h3>
-      TICKETING AND SERVICE FEES
-     </h3>
-     <dl>
-      <dt>
-       Online (tickets.yourvenue.org)
-      </dt>
-      <dd>
-       $8 Processing Fee
-      </dd>
-      <dd>
-       $2 Gift Certificate Processing Fee
-      </dd>
-      <dd>
-       $2 per order for traditional tickets, or no charge if you print your tickets at home.
-      </dd>
-      <dt>
-       At the Box Office
-      </dt>
-      <dd>
-       No Order Fee
-      </dd>
-      <dd>
-       No Processing Fee
-      </dd>
-      <dt>
-       On the Phone
-      </dt>
-      <dd>
-       $2 Order Fee
-      </dd>
-      <dd>
-       $4 Per Ticket Processing Fee (not to exceed $16)
-      </dd>
-      <dt>
-       Mail/Fax
-      </dt>
-      <dd>
-       No Order Fee
-      </dd>
-      <dd>
-       $8 Processing Fee
-       <sup>
-        *
-       </sup>
-      </dd>
-     </dl>
-     <ul>
-      <li>
-       <strong>
-        TICKET REPRINT FEE
-       </strong>
-       : $4 per ticket (not to exceed $20).
-      </li>
-      <li>
-       <strong>
-        EXCHANGE FEE
-       </strong>
-       <sup>
-        **
-       </sup>
-       : $4 per ticket (not to exceed $16).
-      </li>
-      <li>
-       <strong>
-        GROUP ORDER FEE
-       </strong>
-       : $10
-      </li>
-      <li>
-       <strong>
-        EDUCATION GROUP ORDER FEE
-       </strong>
-       : $5
-      </li>
-      <li>
-       <strong>
-        KEY PRIVATE BANK SUBSCRIPTION FEE
-       </strong>
-       : $18 per order
-      </li>
-     </ul>
-     <p>
-      <sup>
-       *
-      </sup>
-      There is a $5 per order charge on
-      <strong>
-       MOVIES AND SCHOOL DAYS
-      </strong>
-      ticket orders placed by phone, fax or mail, in place of the above processing fees. (the $2 phone order fee still applies)
-     </p>
-     <p>
-      <sup>
-       **
-      </sup>
-      Select member and subscriber orders only.
-     </p>
-     <!--        <table class="table table-bordered">
-          <tr>
-            <td><strong>Order<br />
-Method</strong></td>
-            <td><strong>Order<br />
-Fee</strong></td>
-            <td><strong>Processing<br />
-Fee</strong></td>
-            <td><strong>Gift<br />
-Certificates</strong></td>
-            <td><strong>Exchange Fee</strong></td>
-          </tr>
-          <tr>
-            <td>Phone</td>
-            <td>$2.00</td>
-            <td>$3.00/ticket<br />
-(not to exceed $15.00)</td>
-            <td>$2.00<br />
-per Gift Certificate</td>
-            <td>$3.50/ticket**</td>
-          </tr>
-          <tr>
-            <td>yourvenue.org</td>
-            <td>n/a</td>
-            <td>$6.00*</td>
-            <td>n/a</td>
-            <td>n/a</td>
-          </tr>
-          <tr>
-            <td>Mail/Fax</td>
-            <td>n/a</td>
-            <td>$6.00</td>
-            <td>n/a</td>
-            <td>$3.50/ticket**</td>
-          </tr>
-          <tr>
-            <td>At the Box Office</td>
-            <td>n/a</td>
-            <td>n/a</td>
-            <td>n/a</td>
-            <td>$3.50/ticket**</td>
-          </tr>
-        </table>-->
-     <p>
-      <strong>
-       PRIVACY POLICY
-      </strong>
-      : Tickets by <field>D_COMPANY</field> does not sell or exchange any information provided on this web site. We will keep all information confidential.
-      <a href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html">
-       <em>
-        Read the entire privacy policy.
-       </em>
-      </a>
-     </p>
-    </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
-   </div>
-  </div>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <span class="title">
+      Ticket Policy
+     </span>
+     <br/>
+     <blockquote>
+      <span class="main">
+       Each person
+       <b>
+        REGARDLESS OF AGE
+       </b>
+       must have a valid ticket to enter a <field>low(D_PERF_DESC)</field>.
+      </span>
+     </blockquote>
+     <br/>
+     <span class="title">
+      Exchange Policy
+     </span>
+     <br/>
+     <blockquote>
+      <span class="main">
+       <b>
+        NO REFUNDS.
+       </b>
+      </span>
+      <br/>
+      <span class="main">
+       <b>
+        EXCHANGES only subject to the following conditions:
+       </b>
+      </span>
+      <br/>
+      <span class="main">
+       1) Tickets may be exchanged by simply calling the <field>D_COMPANY_LONG</field> Box Office at 
+     <a href="tel:<field>D_SWITCH_BOARD</field>">
+     <field>D_SWITCH_BOARD</field>
+     </a>
+      </span>
+      <br/>
+      <br/>
+      <span class="main">
+       2) An exchange fee will be applied as follows:
+      </span>
+      <br/>
+      <blockquote>
+       <span class="main">
+        Subscription tickets: No Charge
+       </span>
+       <br/>
+       <span class="main">
+        Non-Subscription tickets: may have a fee per ticket.
+       </span>
+       <br/>
+       <span class="main">
+        Please
+        <b>
+         retain
+        </b>
+        your original tickets to redeem your new
+            tickets upon presentation at the <field>D_COMPANY_LONG</field> Box Office.
+       </span>
+      </blockquote>
+      <span class="main">
+       3) Requests for ticket exchanges will be accepted up to
+       <b>
+        48 hours
+       </b>
+       prior to the <field>low(D_PERF_DESC)</field> date of the tickets
+              you are holding. This provides the <field>D_COMPANY_LONG</field> Box Office the
+              opportunity to resell the exchanged tickets.
+      </span>
+      <br/>
+      <br/>
+      <span class="main">
+       4) The difference in ticket price will be charged when upgrading
+              your tickets to a more expensive night or <field>low(D_SEAT_DESC)</field>.
+      </span>
+     </blockquote>
+     <br/>
+     <span class="title">
+      Lost Tickets
+     </span>
+     <blockquote>
+      <span class="main">
+       In the event that you have lost your tickets, please visit the
+              <field>D_COMPANY_LONG</field> Box Office or call 
+     <a href="tel:<field>D_SWITCH_BOARD</field>">
+     <field>D_SWITCH_BOARD</field>
+     </a>
+              before your <field>low(D_PERF_DESC)</field>
+              date.
+       <br/>
+      </span>
+     </blockquote>
+     <br/>
+     <span class="title">
+      Order Fees
+     </span>
+     <br/>
+     <blockquote>
+      <span class="main">
+       Refer to
+       <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmOrderFeeDefault.html" onclick="return popup(this, 'notes')">
+        Order Fee
+       </a>
+       for the policy description.
+      </span>
+     </blockquote>
+     <br/>
+     <span class="title">
+      Mailing Fees
+     </span>
+     <br/>
+     <blockquote>
+      <span class="main">
+       <div>
+        Refer to
+        <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmMailFeeDefault.html" onclick="return popup(this, 'notes')">
+         Mailing Fee
+        </a>
+        for the policy description.
+       </div>
+      </span>
+     </blockquote>
+     <center>
+      <!--#include virtual="TMtemplates/tmContactHours.html" -->
+     </center>
+    </td>
+   </tr>
+  </table>
  </body>
 </html>

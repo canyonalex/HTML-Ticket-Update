@@ -1,103 +1,90 @@
-  <h4>
-   <em>
-    Renew your subscription without any changes.
-   </em>
-  </h4>
-  <p>
-   For your convenience, we have created a subscription package based on your previous preferences. To purchase simply click the
-   <em>
-    <strong>
-     RENEW
-    </strong>
-   </em>
-   button below.
-  </p>
-  <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-   <dl class="dl-horizontal">
-    <dt>
-     Subscription
-    </dt>
-    <dd>
-     <a class="link" href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
-      <field>SG_DESCRIPTION</field>
-     </a>
-    </dd>
-    <dt>
-     <field>D_PERF_DESC</field> code
-    </dt>
-    <dd>
-     <field>PB_SERIES_CODE</field>
-    </dd>
-    <dt>
-     This subscription since
-    </dt>
-    <dd>
-     <field>cap(SS_SEATS_SINCE)</field>
-    </dd>
-    <dt>
-     <field>D_EVENT</field>(s) are in
-    </dt>
-    <dd>
-     <a class="link muted" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
-      <field>VE_NAME</field>
-     </a>
-    </dd>
-    <dt>
-     Status
-    </dt>
-    <dd>
-     <strong class="text-warning">
-      <field>F_HTML_RENEWAL_STATUS</field>
-     </strong>
-    </dd>
-    <dt>
-     Date Printed
-    </dt>
-    <dd>
-     <field>SS_DATE_PRINTED</field>
-    </dd>
-   </dl>
-   <table class="table table-striped table-condensed">
+  <table class="table table-striped">
+   <thead>
     <tr>
+     <td colspan="3" width="35%">
+      Subscription:
+      <a class="link" href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
+       <field>SG_DESCRIPTION</field>
+      </a>
+      <br/>
+      <field>D_PERF_DESC</field> code: <field>PB_SERIES_CODE</field>
+      <br/>
+      This subscription since: <field>cap(SS_SEATS_SINCE)</field>
+     </td>
+     <td colspan="2">
+      <field>tEditCheck.$setPlural(D_EVENT)</field> are in
+      <br/>
+      <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+       <field>VE_NAME</field>
+      </a>
+     </td>
+     <td>
+      Status:
+      <strong class="message">
+       <field>F_HTML_RENEWAL_STATUS</field>
+      </strong>
+      <br/>
+      Printed: <field>SS_DATE_PRINTED</field>
+     </td>
+    </tr>
+   </thead>
+  </table>
+  <table class="table table-striped">
+   <thead>
+    <tr>
+     <th class="text-center">
+      Qty
+     </th>
      <th>
       Seat Code
-      <br/>
+     </th>
+     <th>
       <field>D_SECTION_DESC</field>/<field>D_ROW_DESC</field>/<field>D_SEAT_DESC</field>
-      <br/>
-      Notes
      </th>
      <th>
       Promotion
      </th>
-     <th>
+     <th class="text-right">
       Price
      </th>
+     <th>
+      Notes
+     </th>
     </tr>
+   </thead>
+   <tbody>
     <field>F_HTML_FAVOURITE_SEAT_LIST</field>
-    <tr class="info">
-     <td>
-      <input name="SS_SEQ" type="hidden" value="<field>SS_SEQ</field>"/>
-      <input name="F_HTML_SUBSCRIPTION_TOTAL_COST" type="hidden" value="<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>"/>
-      <input name="F_HTML_SUBSCRIPTION_SEATS_ARE_OK" type="hidden" value="<field>F_HTML_SUBSCRIPTION_SEATS_ARE_OK</field>"/>
-      <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'<!-- comment: if not started, or notice printed, can be renewed or cancelled')</field>
-      <input class="btn btn-success" name="btnSubscriptionRenew" onclick="process()" type="submit" value="Renew"/>
-      <input class="btn btn-warning" name="btnSubscriptionCancel" onclick="process()" type="submit" value="Do Not Renew"/>
-      <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,' -->')</field>
-		<field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,'<!-- comment: if state is cancelled-season, or cancelled-internet, it can be reinstated so it can be booked.')</field>
-      <input class="btn btn-success" name="btnSubscriptionReinstate" onclick="process()" type="submit" value="Re-Instate Subscription"/>
-      <field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,' -->')</field>
+   </tbody>
+   <tfoot>
+    <tr>
+     <td colspan="3">
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <input name="SS_SEQ" type="hidden" value="<field>SS_SEQ</field>"/>
+       <input name="F_HTML_SUBSCRIPTION_TOTAL_COST" type="hidden" value="<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>"/>
+       <input name="F_HTML_SUBSCRIPTION_SEATS_ARE_OK" type="hidden" value="<field>F_HTML_SUBSCRIPTION_SEATS_ARE_OK</field>"/>
+       <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'<!-- comment: if not started, or notice printed, can be renewed or cancelled')</field>
+       <input class="btn btn-success" name="btnSubscriptionRenew" type="submit" value="Renew"/>
+       &nbsp;
+       <input class="btn btn-danger" name="btnSubscriptionCancel" type="submit" value="Cancel Subscription"/>
+       <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,' -->')</field>
+<field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,'<!-- comment: if state is cancelled-season, or cancelled-internet, it can be reinstated so it can be booked.')</field>
+       <input class="btn btn-success" name="btnSubscriptionReinstate" type="submit" value="Re-Instate Subscription"/>
+       <field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,' -->')</field>
+      </form>
      </td>
-     <td>
+     <td align="right">
       <b>
        Total
       </b>
      </td>
-     <td>
+     <td align="right">
       <b>
        $<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>
       </b>
      </td>
+     <td align="center">
+     </td>
     </tr>
-   </table>
-  </form>
+   </tfoot>
+  </table>
   <br/>

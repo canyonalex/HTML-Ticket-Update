@@ -14,12 +14,11 @@
 		not be cached. This may not work with Navigator -->
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="background futuretickets print" onload="window.print()">
+ <body class="background" onload="window.print()">
   <div align="center">
    <b class="messageprint">
     <field>D_COMPANY_LONG</field>
@@ -33,19 +32,12 @@
     <tr>
      <td>
       <div align="left">
-       <p align="left" class="mainprint">
+       <p align="left" class="message">
         TICKETS MUST BE PRINTED ON WHITE PAPER
+        <br/>
        </p>
        <p align="left" class="mainprint">
-        These 'print-at-home' tickets are on file under your name for upcoming
-  <field>low(tEditCheck.$setPlural(D_EVENT))</field> 
-             and are organized by 
-             <field>low(D_PERF_DESC)</field> 
-             and date.  If you have tickets for multiple 
-             <field>low(tEditCheck.$setPlural(D_PERF_DESC))</field>
-             , please make sure to bring the correct tickets to the correct 
-             <field>low(D_PERF_DESC)</field>
-             .
+        These 'print-at-home' tickets are on file under your name for upcoming <field>low(tEditCheck.$setPlural(D_EVENT))</field> and are organized by <field>low(D_PERF_DESC)</field> and date.  If you have tickets for multiple <field>low(tEditCheck.$setPlural(D_PERF_DESC))</field>, please make sure to bring the correct tickets to the correct <field>low(D_PERF_DESC)</field>.
        </p>
        <p>
         If you have any questions of concerns about the tickets or would like to exchange any of them
@@ -95,6 +87,8 @@
      </td>
     </tr>
    </table>
+   <p style="page-break-after:always;">
+   </p>
    <field>F_HTML_HISTORICAL_CART_LIST</field>
   </div>
  </body>

@@ -1,0 +1,38 @@
+  <tr class="tablerowdetail">
+   <td>
+    <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
+    <input name="SCD_PURCHASE_GROUP" type="hidden" value="0"/>
+    Don
+   </td>
+   <td align="center">
+    &nbsp;
+   </td>
+   <td align="left">
+    <a class="link" href="<field>F_HTML_FIREWALL</field>tmCampaign/tmCampaign<field>DC_SEQ</field>.html" onclick="return popup(this, 'notes')">
+     <field>DC_DESCRIPTION_EXTERNAL</field>
+    </a>
+    <field>pick(len(SCD_PROGRAM_NAME)<=1,con('Votre contribution sera publiée dans nos programmes comme suit: "<em>',SCD_PROGRAM_NAME,'</em>".'),'Votre contribution sera mentionnée ultérieurement et associée à votre nom.')</field>
+	<field>pick(DD_REPEAT_FREQ<>0,'<!-- comment: trick.  Only show the donation payment frequency if a frequency is used.','')</field>
+    <br/>
+    Votre contribution sera mentionn&eacute;e ult&eacute;rieurement et associ&eacute;e &agrave; votre nom.
+    <em>
+     <field>pick(DD_REPEAT_FREQ,'','Chaque mois','Deux fois par mois','Chaque trimestre','Chaque année')</field>
+    </em>
+    du
+    <em>
+     <field>dat(DD_REPEAT_START_DATE,'n D y')</field>
+    </em>
+    au
+    <em>
+     <field>dat(DD_REPEAT_STOP_DATE,'n D y')</field>
+    </em>
+    jusqu&iacute;au paiement total de la somme.
+	<field>pick(DD_REPEAT_FREQ<>0,'-->','')</field>
+   </td>
+   <td align="right">
+    <field>SCD_DON_AMOUNT</field>
+   </td>
+   <td align="center">
+    <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="checkbox" value="1"/>
+   </td>
+  </tr>

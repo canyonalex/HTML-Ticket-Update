@@ -79,21 +79,21 @@ Click here to make a donation - https://tickets.myserver.com/TheatreManager/1/lo
 
 
 This will take you to the pass/Gift Certificate/merchandise page.
-Click here to purchase a gift certificate -Êhttps://tickets.myserver.com/TheatreManager/1/login&pass
+Click here to purchase a gift certificate -Â https://tickets.myserver.com/TheatreManager/1/login&pass
 
 
 This will take you to the mail list page.
-Click here to purchase subscribe or be removed from a mail list -Êhttps://tickets.myserver.com/TheatreManager/1/login&maillist
+Click here to purchase subscribe or be removed from a mail list -Â https://tickets.myserver.com/TheatreManager/1/login&maillist
 Keep in mind, with this link, the user MUST log in first before their mail list options will appear.
 
 
 this will take oyu to a window to re-print tickets by shopping cart, or by performance:
 https://tickets.myserver.com/TheatreManager/1/login?historicalprint= [ Cart # To Look At ]
-https://tickets.myserver.com/TheatreManager/1/login?futureticketsprint= [Performance # to Filter ByÊ]
+https://tickets.myserver.com/TheatreManager/1/login?futureticketsprint= [Performance # to Filter ByÂ ]
 
 to get the non-print version you would use similar calls:
-https://tickets.myserver.com/TheatreManager/1/login?historical=Ê[ Cart # To Look At ]
-https://tickets.myserver.com/TheatreManager/1/login?futuretickets=Ê[Performance # to Filter ByÊ]
+https://tickets.myserver.com/TheatreManager/1/login?historical=Â [ Cart # To Look At ]
+https://tickets.myserver.com/TheatreManager/1/login?futuretickets=Â [Performance # to Filter ByÂ ]
 
 
 All of the above are version 7/8 API's.  If you have converted version 6 webpages, you may substitue the following as they also work:

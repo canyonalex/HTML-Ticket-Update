@@ -1,12 +1,11 @@
-  <tr class="rowoldcart reserve">
+  <tr>
    <td>
-    <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
     Tickets
    </td>
-   <td align="center">
+   <td class="text-center">
     <field>SCD_QUANTITY</field>
    </td>
-   <td align="left">
+   <td>
     <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html?PB_P_SEQ=<field>PB_P_SEQ</field>" onclick="return popup(this, 'notes')">
      <field>P_PLAY_TITLE</field>
     </a>
@@ -17,7 +16,7 @@
     </b>
     <br/>
     at
-    <a class="link muted" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+    <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>VE_NAME</field>
     </a>
     <br/>
@@ -28,7 +27,7 @@
      <field>pick(MS_NOTE_USE_FLAG,'',MS_SEAT_NOTE)</field>
     </em>
    </td>
-   <td align="right">
+   <td class="text-right">
     <field>SCD_TOTAL_COST</field>
    </td>
   </tr>

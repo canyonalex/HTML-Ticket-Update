@@ -7,107 +7,89 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body>
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <!--subscriptionpricemapdefault-->
-     <ul class="breadcrumb">
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>login&event=">
-        Tickets
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>online?btnSelectEvent&P_SEQ=<field>P_SEQ</field>" title="click here to see more performances of this show">
-        <field>P_PLAY_TITLE</field>
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <li class="active">
-       Subscription Price
-      </li>
-     </ul>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div class="hero-unit">
-      <h1>
-       <field>SG_DESCRIPTION</field>
-      </h1>
-      <h3>
-       at 
-	  <field>VE_NAME</field> 
-	  <field>VE_ADDRESS1</field> 
-	  <field>VE_ADDRESS2</field>
-      </h3>
-      <p>
-       <field>SG_NOTES</field>
-      </p>
-     </div>
-     <!--/.hero-unit-->
-     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-      <input id="SG_SEQ" name="SG_SEQ" type="hidden" value="<field>SG_SEQ</field>"/>
-      <!-- comment: Subscription Package -->
-      <input id="PB_SERIES_CODE" name="PB_SERIES_CODE" type="hidden" value="<field>PB_SERIES_CODE</field>"/>
-      <!-- comment: Performance Series Code -->
-      <input id="F_HTML_NEXT_BEST_SEAT" name="F_HTML_NEXT_BEST_SEAT" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT</field>"/>
-      <input id="F_HTML_NEXT_BEST_AREA" name="F_HTML_NEXT_BEST_AREA" type="hidden" value="<field>F_HTML_NEXT_BEST_AREA</field>"/>
-      <input id="F_HTML_BEST_PRICE_CODE" name="F_HTML_BEST_PRICE_CODE" type="hidden" value="<field>F_HTML_BEST_PRICE_CODE</field>"/>
-      <input id="F_HTML_NEXT_BEST_PASS_NUMBER" name="F_HTML_NEXT_BEST_PASS_NUMBER" type="hidden" value="<field>F_HTML_NEXT_BEST_PASS_NUMBER</field>"/>
-      <input id="F_HTML_NEXT_BEST_TWO_PASS_OK" name="F_HTML_NEXT_BEST_TWO_PASS_OK" type="hidden" value="<field>F_HTML_NEXT_BEST_TWO_PASS_OK</field>"/>
-      <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY" name="F_HTML_NEXT_BEST_SEAT_PRIORITY" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY</field>"/>
-      <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" name="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE</field>"/>
-      <table class="table">
-       <tr>
-        <th>
-         <field>D_SECTION_DESC</field>
-         <br/>
-         <field>D_ROW_DESC</field> /
-			<field>D_SEAT_DESC</field>
-        </th>
-        <th>
-         Pricing
-        </th>
-       </tr>
-       <field>F_HTML_BEST_SEATS_LIST</field>
-      </table>
-      <div class="form-actions">
-       <field>
-        pick(PB_SALES_METHOD=2,'','
-        <input class="btn" name="btnSubscriptionBestAvail" onclick="process()" type="submit" value="Find Next Best Seats"/>
-        ')
-       </field>
-       <input class="btn" name="btnSubscription" type="submit" value="Cancel & Start Over"/>
-       <input class="btn btn-primary" name="btnSubscriptionNewReserve" type="submit" value="Add Subscription to Shopping Cart"/>
-      </div>
-     </form>
-     <p class="text-center">
-      <!-- comment:
-				selected_only = if true, the image returned is a blown up version around the selected seats (can be yes,y,no,n,1 or 0)
-				selected_border = specifies the extra space around the selected seats in points (72 = 1 inch).
-				selected_color = specifies the fill color of the selected seats as a RGB hex string, i.e. FF0000 means bright red  007700 is green
-				img_quality = the jpeg quality 1 to 100, 100 is best.  -->
-      STAGE
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Subscription Seat Selection
       <br/>
-      <img border="0" src="<field>F_HTML_SEATMAP</field>&selected_only=yes&selected_border=999&selected_color=FF0000&img_quality=95"/>
-     </p>
+      <span class="text-muted">
+       <field>SG_DESCRIPTION</field> <field>PB_SERIES_CODE</field>
+      </span>
+     </h1>
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+      <!--#include virtual="tmMaps/tmChangeSubscriptionSeatingNote.html" -->
+     </div>
+     <div class="col-md-8">
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <input id="SG_SEQ" name="SG_SEQ" type="hidden" value="<field>SG_SEQ</field>"/>
+       <!-- comment: Subscription Package -->
+       <input id="PB_SERIES_CODE" name="PB_SERIES_CODE" type="hidden" value="<field>PB_SERIES_CODE</field>"/>
+       <!-- comment: Performance Series Code -->
+       <input id="F_HTML_NEXT_BEST_SEAT" name="F_HTML_NEXT_BEST_SEAT" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT</field>"/>
+       <input id="F_HTML_NEXT_BEST_AREA" name="F_HTML_NEXT_BEST_AREA" type="hidden" value="<field>F_HTML_NEXT_BEST_AREA</field>"/>
+       <input id="F_HTML_BEST_PRICE_CODE" name="F_HTML_BEST_PRICE_CODE" type="hidden" value="<field>F_HTML_BEST_PRICE_CODE</field>"/>
+       <input id="F_HTML_NEXT_BEST_PASS_NUMBER" name="F_HTML_NEXT_BEST_PASS_NUMBER" type="hidden" value="<field>F_HTML_NEXT_BEST_PASS_NUMBER</field>"/>
+       <input id="F_HTML_NEXT_BEST_TWO_PASS_OK" name="F_HTML_NEXT_BEST_TWO_PASS_OK" type="hidden" value="<field>F_HTML_NEXT_BEST_TWO_PASS_OK</field>"/>
+       <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY" name="F_HTML_NEXT_BEST_SEAT_PRIORITY" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY</field>"/>
+       <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" name="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE</field>"/>
+       <table class="table table-striped table-condensed table-responsive">
+        <thead>
+         <tr>
+          <th>
+           <field>D_SECTION_DESC</field>
+          </th>
+          <th>
+           <field>D_ROW_DESC</field>
+          </th>
+          <th>
+           <field>D_SEAT_DESC</field>
+          </th>
+          <th>
+           Seat Notes
+          </th>
+          <th>
+           Price Selection
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <field>F_HTML_BEST_SEATS_LIST</field>
+        </tbody>
+       </table>
+       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+       <input class="btn btn-success" name="btnSubscriptionNewReserve" onclick="process()" type="submit" value="Add Subscription to Shopping Cart"/>
+       <field>pick(PB_SALES_METHOD=2,'<!-- comment:')</field>
+       <input class="btn btn-info" name="btnSubscriptionBestAvail" onclick="process()" type="submit" value="Suggest Other Seats"/>
+       <field>pick(PB_SALES_METHOD=2,'-->')</field>
+       <input class="btn btn-danger" name="btnSubscription" type="submit" value="Cancel and Start Over"/>
+      </form>
+      <!-- comment:
+	selected_only = if true, the image returned is a blown up version around the selected seats (can be yes,y,no,n,1 or 0)
+	selected_border = specifies the extra space around the selected seats in points (72 = 1 inch).
+	selected_color = specifies the fill color of the selected seats as a RGB hex string, i.e. FF0000 means bright red
+	img_quality = the jpeg quality 1 to 100, 100 is best but creates larger/slower downloading jpegs.
+				between 50 and 75 are good values. 
+	format=svg (pick your own seats and interactive) png or jpg
+-->
+      <img align="center" alt="selected seats" border="0" src="<field>F_HTML_SEATMAP</field>&selected_only=yes&selected_border=999&selected_color=007700&img_quality=75&format=svg" width="80%"/>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

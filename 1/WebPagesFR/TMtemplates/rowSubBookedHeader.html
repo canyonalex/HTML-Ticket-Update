@@ -1,0 +1,50 @@
+  <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+   <table width="100%">
+    <tr class="tablerowheader">
+     <td colspan="3" width="35%">
+      Abonnement:
+      <a class="link" href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
+       <field>SG_DESCRIPTION</field>
+      </a>
+      <br/>
+      Code <field>D_PERF_DESC</field>: <field>PB_SERIES_CODE</field>
+      <br/>
+      Abonnement depuis le: <field>cap(SS_SEATS_SINCE)</field>
+     </td>
+     <td colspan="1">
+      Lieu du ou des &eacute;v&eacute;nement(s):
+      <br/>
+      <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+       <field>VE_NAME</field>
+      </a>
+     </td>
+     <td>
+      Statut :
+      <strong class="message">
+       <field>F_HTML_RENEWAL_STATUS</field>
+      </strong>
+      <br/>
+      Imprim&eacute; le: <field>SS_DATE_PRINTED</field>
+     </td>
+    </tr>
+    <tr class="tablerowheader">
+     <td align="center" width="5%">
+      Qt&eacute;
+     </td>
+     <td width="10%">
+      Code de si&egrave;ge
+     </td>
+     <td width="25%">
+      <field>D_SECTION_DESC</field>/<field>D_ROW_DESC</field>/<field>D_SEAT_DESC</field>
+     </td>
+     <td width="27%">
+      Promotion
+     </td>
+     <td width="33%">
+      Observations
+     </td>
+    </tr>
+    <field>F_HTML_FAVOURITE_SEAT_LIST</field>
+   </table>
+  </form>
+  <br/>

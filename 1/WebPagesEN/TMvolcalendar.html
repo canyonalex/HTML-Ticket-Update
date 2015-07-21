@@ -7,38 +7,31 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body>
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <h1>
-      <field>D_VOLUNTEER</field> Calendar
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div align="center">
-      <table border="0" cellpadding="0" cellspacing="0" width="95%">
-       <tr>
-        <td>
-         <!--<P align="center" class="text-center text-warning"><B><field>F_HTML_PAGE_MESSAGE</field></B>-->
-         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-          <table border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="100%">
-           <tr align="center">
-            <td>
-             Search for your volunteer schedule any (or all) of the parameters below
-             <table align="center" border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="95%">
-              <!-- comment: Use the hidden variable 'search' for any additional search criteria.
+  <div align="center" id="content">
+   <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+     <td>
+      <div align="center" class="message">
+       <b>
+        <field>F_HTML_PAGE_MESSAGE</field>
+       </b>
+      </div>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <table border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="100%">
+        <tr align="center">
+         <td>
+          Search for your volunteer schedule any (or all) of the parameters below
+          <table align="center" border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="95%">
+           <!-- comment: Use the hidden variable 'search' for any additional search criteria.
 		
                      The criteria that are added must be a valid SQL statement or part of a statement that can
 					 be added to whatever Theatre Manager starts with.  Your statement will be added with an  'and' condition  -->
-              <!-- comment: Sample usage of this extra parameter are:
+           <!-- comment: Sample usage of this extra parameter are:
 		
 						Sample 1: Using the Performance flag to find out which performances match a particular letter
 						
@@ -70,7 +63,7 @@
 								class=link>Click here to buy Broadway tickets</a>
 		
 						 -->
-              <!-- comment: the following is a real life example from a customer site that works
+           <!-- comment: the following is a real life example from a customer site that works
 				 <tr>
                     <td>Performance Type </td>
                     <td><select name="search" id="search">
@@ -79,63 +72,62 @@
          							 <option value="PB_PERF_FLAG in ('X','Y')">Non Broadway</option>
               						  </select></td>
                   </tr> -->
-              <tr>
-               <td align="left" width="10%">
-               </td>
-               <td align="center" width="15%">
-                <select id="month" name="month">
-                 <field>F_HTML_MONTH_LIST</field>
-                </select>
-               </td>
-               <td align="center" width="15%">
-                <select id="year" name="year">
-                 <field>F_HTML_YEAR_LIST</field>
-                </select>
-               </td>
-               <td align="center" width="40%">
-                <select id="activity" name="activity">
-                 <field>F_HTML_ACTIVITY_LIST</field>
-                </select>
-                <input class="btn" id="Search" name="btnGetVolunteerTable" type="submit" value="Search"/>
-               </td>
-               <td align="right" width="10%">
-               </td>
-              </tr>
-              <tr>
-               <td align="center" colspan="4">
-                <input class="btn" name="listcalendar" onclick="document.getElementById('Search').click(); " type="radio" value="0"/>
-                View as list
-                <input checked="" class="btn" name="listcalendar" onclick="document.getElementById('Search').click();" type="radio" value="1"/>
-                View as calendar
-               </td>
-              </tr>
-             </table>
+           <tr>
+            <td align="left" width="10%">
+            </td>
+            <td align="center" width="15%">
+             <select id="month" name="month">
+              <field>F_HTML_MONTH_LIST</field>
+             </select>
+            </td>
+            <td align="center" width="15%">
+             <select id="year" name="year">
+              <field>F_HTML_YEAR_LIST</field>
+             </select>
+            </td>
+            <td align="center" width="40%">
+             <select id="activity" name="activity">
+              <field>F_HTML_ACTIVITY_LIST</field>
+             </select>
+             <input class="new" id="Search" name="btnGetVolunteerTable" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Search"/>
+            </td>
+            <td align="right" width="10%">
+            </td>
+           </tr>
+           <tr>
+            <td align="center" colspan="4">
+             <input class="new" name="listcalendar" onclick="document.getElementById('Search').click(); " onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="radio" value="0"/>
+             View as list
+             <input checked="" class="new" name="listcalendar" onclick="document.getElementById('Search').click();" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="radio" value="1"/>
+             View as calendar
             </td>
            </tr>
           </table>
-         </form>
-         <table align="center" border="0" cellpadding="0" cellspacing="0" width="95%">
-          <tbody align="center">
-           <tr>
-            <td>
-             <!--<p class="text-center text-warning" align="center"><b><field>F_HTML_PAGE_MESSAGE</field></b>
-						</p>-->
-             <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-              <br/>
-             </form>
-             <field>F_HTML_VOLUNTEERS_LIST</field>
-            </td>
-           </tr>
-          </tbody>
-         </table>
-        </td>
-       </tr>
+         </td>
+        </tr>
+       </table>
+      </form>
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width="95%">
+       <tbody align="center">
+        <tr>
+         <td>
+          <p align="center" class="message">
+           <b>
+            <field>F_HTML_PAGE_MESSAGE</field>
+           </b>
+          </p>
+          <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+           <br/>
+          </form>
+          <field>F_HTML_VOLUNTEERS_LIST</field>
+         </td>
+        </tr>
+       </tbody>
       </table>
-     </div>
-    </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
-   </div>
+     </td>
+    </tr>
+   </table>
   </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

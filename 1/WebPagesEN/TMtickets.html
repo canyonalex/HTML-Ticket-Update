@@ -7,74 +7,40 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
+  <!--#include virtual="tmScripts/adaptiveMenuFunctions.html" -->
  </head>
- <body class="tickets">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <div class="hero-unit">
-      <h1>
-       Events Ticket Purchase
-      </h1>
-      <p class="text-center text-warning">
-       <field>F_HTML_PAGE_MESSAGE</field>
-      </p>
-      <p>
-       Search by event title, or by a performance's month and year:
-      </p>
-      <!--#include virtual="TMtemplates/tmTicketsSearch.html" -->
-      <p>
-      </p>
-     </div>
-     <!--/.hero-unit-->
-     <!--#include virtual="TMtemplates/rowTicketPageHeader.html" -->
-     <table class="table table-striped table-hover table-condensed table-bordered ticket-table">
-      <tr>
-       <th width="50%">
-        <field>D_EVENT</field>
-       </th>
-       <th class="hidden-phone">
-        Availability
-       </th>
-       <th>
-        <div align="left">
-         Date
-        </div>
-       </th>
-       <th>
-        <div align="left">
-         Time
-        </div>
-       </th>
-       <th>
-       </th>
-      </tr>
-      <field>F_HTML_PERFORMANCE_LIST</field>
-     </table>
-     <!--#include virtual="TMtemplates/rowTicketPageHeader.html" -->
-     <table class="table table-striped table-hover table-condensed table-bordered ticket-table">
-      <tr>
-       <td>
-        <form action="<field>F_HTML_FIREWALL</field>online" method="post">
-         <field>pick(F_LOGGED_IN=1,'<!-- comment: trick. if not logged on, home doesnt show','')</field>
-         <input class="btn btn-warning" name="btnHome" type="submit" value="Cancel Buying Tickets"/>
-         <field>pick(F_LOGGED_IN=1,'-->','')</field>
-				<field>pick(F_LOGGED_IN=2,'<!-- comment: and if not logged on, show logout button','')</field>
-         <input class="button btn btn-warning" id="btnLogout" name="btnLogout" type="submit" value="Logout and Empty Shopping Cart"/>
-         <field>pick(F_LOGGED_IN=2,'-->','')</field>
-        </form>
-       </td>
-      </tr>
-     </table>
+  <div class="container">
+   <div id="content">
+    <!--#include virtual="tmTemplates/tmTicketCustomPatronInstructions.html" -->
+    <!--#include virtual="tmSearch/searchTop.html" -->
+    <small class="text-muted">
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </small>
+    <!--#include virtual="TMtemplates/rowTicketLegend.html" -->
+    <!--#include virtual="TMtemplates/rowTicketPageHeader.html" -->
+    <!-- Begin restructured event list -->
+    <div class="clearfix add-border-bottom">
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <field>F_HTML_PERFORMANCE_LIST</field>
+    <!-- END restructured event list -->
+    <!--#include virtual="TMtemplates/rowTicketPageHeader.html" -->
+    <!-- comment: an extra search as the bottom if you want (or you can comment the top and only have one at the bottom) -->
+	<!-- comment: #include virtual="tmSearch/searchBottom.html" -->
+    <div align="center">
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+      <input class="btn btn-danger" id="btnLogout" name="btnLogout" type="submit" value="Logout and Empty Shopping Cart"/>
+     </form>
+    </div>
+    <!--#include virtual="TMtemplates/rowTicketTroveLink.html" -->
    </div>
+   <!-- /#content -->
   </div>
+  <!-- /.container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

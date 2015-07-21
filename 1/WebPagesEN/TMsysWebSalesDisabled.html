@@ -9,56 +9,45 @@
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="invalidcall">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <h1>
-      Box Office Offline
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div align="center">
-      <!--<P class="text-center text-warning" align="center"><B><field>F_HTML_PAGE_MESSAGE</field></B></P>-->
-      <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-       <tr>
-        <td>
-         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-          <h2>
-          </h2>
-          <p align="center" class="title">
-           <field>D_COMPANY</field>
-          </p>
-          <p align="center" class="main">
-           <field>D_COMPANY</field> 
-            is currently unaccessable.
-          </p>
-          <p align="center" class="main">
-           Please contact our box office <field>D_SWITCH_BOARD</field> during business hours and our representatives will be more than happy to assist you.
-          </p>
-          <p align="center" class="main">
-           You can try to continue and access your shopping cart 
-            by clicking on any of the menu options on the screen. If you receive this message 
-          again, the system is still unaccessable.
-          </p>
-          <center>
-           <!--#include virtual="TMtemplates/tmContactHours.html" -->
-          </center>
-         </form>
-        </td>
-       </tr>
-      </table>
-     </div>
-    </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+  <div align="center" id="content">
+   <div align="center" class="message">
+    <b>
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
    </div>
+   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <h2>
+       </h2>
+       <p align="center" class="title">
+        <field>D_COMPANY_LONG</field> Online Ticketing
+       </p>
+       <p align="center" class="main">
+        <field>D_COMPANY_LONG</field> Online Ticketing 
+            is currently inaccessable.
+       </p>
+       <p align="center" class="main">
+        Please contact our box office at the numbers listed 
+            below during business hours and our representatives will be more than happy to assist you.
+       </p>
+       <p align="center" class="main">
+        You can try to continue and access your shopping cart 
+            by clicking on any of the tabs above. If you receive this message 
+          again, the system is still inaccessable.
+       </p>
+       <center>
+        <!--#include virtual="TMtemplates/tmContactHours.html" -->
+       </center>
+      </form>
+     </td>
+    </tr>
+   </table>
   </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

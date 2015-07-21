@@ -7,66 +7,51 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
- <body class="background patron update email">
-  <!--#include virtual="tmScripts/venue_header_email.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
+ <body class="background">
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
      <h1>
       Account Information Updated
+      <br/>
+      <small class="text-muted">
+       <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
+      </small>
      </h1>
-     <p>
-      Dear
-      <b>
-       <field>con(C_FIRST_NAME,' ',C_LAST_NAME,pick(len(C_COMPANY)=0,' - '),C_COMPANY)</field>
-      </b>
-      ,
-     </p>
-     <p>
-      Some of your account information was recently updated when you visited the online ticketing web site
-  or recently talked to the staff at <field>D_COMPANY_LONG</field>.  If you are not aware of this recent activity,
-  please contact the box office or log in, verify your account and change your password.
-     </p>
-     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
-     <p>
-      You also clicked some checkboxes to tell us how you want us to notify you about our programs and events.
-     <field>D_COMPANY_LONG</field> uses a double-opt-in confirmation approach for the notifications.   It means you
-     must confirm your choices by clicking:
-     </p>
-     <p>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-       Confirm my notification changes
-      </a>
-     </p>
-     <p>
-      If you do not click the link, then our system will respect your wishes and remove you from those notifications
-     approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> hours after you receive this email.
-     </p>
-     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
-     <p>
-      For your convenience,
-      <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
-       click here
-      </a>
-      to connect to the web site - or type the URL of our site in your web browser directly if your preference is additional browsing safety.
-     </p>
-     <p>
-      Unless you provide express consent or disclosure is required pursuant to a legal power,
-    all information kept by Tickets by <field>D_COMPANY</field> regarding you, is confidential
-    and may not be disclosed by Tickets by <field>D_COMPANY</field> to anyone.
-     </p>
-     <p class="text-center">
-      Please contact us via telephone or e-mail for more information.
-     </p>
-     <p class="text-center">
-      <!--#include virtual="TMtemplates/tmContactHours.html" -->
-     </p>
     </div>
-    <!--span-->
+    <div class="alert">
+     Recently, your account information was updated when you visited our online web site
+  or talked to the staff at <field>D_COMPANY_LONG</field>.  If you are not aware of this recent activity,
+  please contact the box office or log in, verify your account and change your password.
+     <br/>
+     <br/>
+     You may wish to directly type the URL of our site in your web browser if you prefer additional browsing safety.
+    </div>
+    <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
+     Review My Account
+    </a>
+    <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
+    <div class="alert alert-info">
+     You made some selections asking to be kept informed about our programs and events.
+     <field>D_COMPANY_LONG</field> uses a double opt-in confirmation so you must confirm 
+     your choices by clicking the button.  If you do not, our system respects your wishes and removes you from those notifications
+     approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> hours after you receive this email.
+    </div>
+    <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
+     Confirm my email notification choices
+    </a>
+    <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
+    <p>
+     &nbsp;
+    </p>
+    <!--#include virtual="TMtemplates/tmPrivacyNoteEmail.html" -->
+    <!--#include virtual="TMtemplates/tmContactHours.html" -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

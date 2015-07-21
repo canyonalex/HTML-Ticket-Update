@@ -7,161 +7,133 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="patron new">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <h1>
-      New Account Window
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <p class="text-center text-error">
-      *=Required Fields
-     </p>
-     <form action="<field>F_HTML_FIREWALL</field>patronnew" class="form-horizontal" method="POST">
-      <!-- comment: set the altbtn=btnHome& (to go to home page), btnCart& (to go to cart)
-		  btnMailList& (to go to mail list window if not using tmNotificationHeader or 
-		  **leave blank to follow default path which may be determined by user action -->
-      <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
-      <fieldset>
-       <legend>
-        Account Information
-       </legend>
+  <div class="container">
+   <div id="content">
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+     </div>
+     <div class="col-md-8">
+      <!-- comment: if use enters email that exists, then show the password request button -->
+      <field>pick(F_HTML_EMAIL_EXISTS=1,'<!-- comment: entered email exists')</field>
+      <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?btnPasswordRequest=forgot">
+       Forgot My Password
+      </a>
+      <field>pick(F_HTML_EMAIL_EXISTS=1,'-->')</field>
+      <h4>
+       Account Information
+      </h4>
+      <form action="<field>F_HTML_FIREWALL</field>patronnew" method="POST" role="form">
+       <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
        <field>F_HTML_EMAIL_LIST</field>
-       <!--subform-->
-       <div class="control-group">
-        <label class="control-label" for="C_SALTUTATION">
+       <div class="form-group">
+        <label for="C_SALUTATION">
          Salutation
         </label>
-        <div class="controls">
-         <select class="input-small" id="C_SALUTATION" name="C_SALUTATION">
-          <field>F_HTML_SALUTATION_LIST</field>
-         </select>
-        </div>
+        <select class="form-control" id="C_SALUTATION" name="C_SALUTATION" size="1">
+         <field>F_HTML_SALUTATION_LIST</field>
+        </select>
        </div>
-       <div class="control-group">
-        <label class="control-label" for="C_FIRST_NAME">
+       <div class="form-group">
+        <label for="C_FIRST_NAME">
          First Name
         </label>
-        <div class="controls">
-         <input id="C_FIRST_NAME" maxlength="60" name="C_FIRST_NAME" type="text" value="<field>C_FIRST_NAME</field>"/>
-         <span class="text-error">
-          <field>F_HTML_REQUIRE_FIRST_NAME</field>
-         </span>
-        </div>
+        <input class="form-control" id="C_FIRST_NAME" maxlength="60" name="C_FIRST_NAME" placeholder="first name <field>F_HTML_REQUIRE_FIRST_NAME</field>" type="text" value="<field>C_FIRST_NAME</field>"/>
        </div>
-       <div class="control-group">
-        <label class="control-label" for="C_INITIAL">
+       <div class="form-group">
+        <label for="C_INITIAL">
          Middle Name
         </label>
-        <div class="controls">
-         <input class="input-small" id="C_INITIAL" maxlength="60" name="C_INITIAL" type="text" value="<field>C_INITIAL</field>"/>
-        </div>
+        <input class="form-control" id="C_INITIAL" maxlength="60" name="C_INITIAL" placeholder="middle name" type="text" value="<field>C_INITIAL</field>"/>
        </div>
-       <div class="control-group">
-        <label class="control-label" for="C_LAST_NAME">
+       <div class="form-group">
+        <label for="C_LAST_NAME">
          Last Name
         </label>
-        <div class="controls">
-         <input id="C_LAST_NAME" maxlength="30" name="C_LAST_NAME" type="text" value="<field>C_LAST_NAME</field>"/>
-         <span class="text-error">
-          <field>F_HTML_REQUIRE_LAST_NAME</field>
-         </span>
-        </div>
+        <input class="form-control" id="C_LAST_NAME" maxlength="60" name="C_LAST_NAME" placeholder="last name <field>F_HTML_REQUIRE_LAST_NAME</field>" type="text" value="<field>C_LAST_NAME</field>"/>
        </div>
-       <div class="control-group">
-        <label class="control-label" for="C_COMPANY">
+       <!-- comment: Suffix is also available
+              <div class="form-group">
+        <label for="C_SUFFIX">
+        Suffix
+        </label>
+           <select name="C_SUFFIX" size="1" id="C_SUFFIX"><field>F_HTML_SUFFIX_LIST</field></select>
+       </div>
+              -->
+       <div class="form-group">
+        <label for="C_COMPANY">
          Company Name
         </label>
-        <div class="controls">
-         <input id="C_COMPANY" maxlength="60" name="C_COMPANY" type="text" value="<field>C_COMPANY</field>"/>
-         <span class="text-error">
-          <field>F_HTML_REQUIRE_COMPANY</field>
-         </span>
-        </div>
+        <input class="form-control" id="C_COMPANY" maxlength="60" name="C_COMPANY" placeholder="company <field>F_HTML_REQUIRE_COMPANY</field>" type="text" value="<field>C_COMPANY</field>"/>
        </div>
-      </fieldset>
-      <field>F_HTML_ADDRESS_LIST</field>
-      <fieldset>
-       <legend>
-        Contact Information
-       </legend>
-       <field>F_HTML_CONTACT_LIST</field>
-       <!--several of these-->
-      </fieldset>
-      <fieldset>
-       <legend>
+       <field>F_HTML_ADDRESS_LIST</field>
+          <field>F_HTML_CONTACT_LIST</field>
+       <h3>
         Notifications
-       </legend>
-       <div class="control-group">
-        <label class="control-label">
-         Mail Notifications
+       </h3>
+       <h4>
+        Mail Notifications
+       </h4>
+       <div class="radio">
+        <label>
+         <input id="mailyes" name="MKT_DO_NOT_MAILP" type="radio" value="NO" <field>pick(MKT_DO_NOT_MAILP='YES','checked','')</field>/>
+         Please mail me periodic news and event updates
         </label>
-        <div class="controls">
-         <label class="radio" for="mailyes">
-          <input id="mailyes" name="MKT_DO_NOT_MAILP" type="radio" value="NO"/>
-          Please mail me periodic news and event information
-         </label>
-         <label class="radio" for="mailno">
-          <input id="mailno" name="MKT_DO_NOT_MAILP" type="radio" value="YES"/>
-          Please do not mail me news and event information
-         </label>
-        </div>
+       </div>
+       <div class="radio">
+        <label>
+         <input id="mailno" name="MKT_DO_NOT_MAILP" type="radio" value="YES" <field>pick(MKT_DO_NOT_MAILP='YES','','checked')</field>/>
+         Please do not mail me updates
+        </label>
        </div>
        <field>pick(D_COUNTRY='USA','<!-- comment: do not email is now notifications for all but USA')</field>
-       <div class="control-group">
-        <label class="control-label">
-         E-Mail Notifications
+       <h4>
+        E-Mail Notifications
+       </h4>
+       <div class="radio">
+        <label>
+         <input id="emailyes" name="MKT_DO_NOT_EMAIL" type="radio" value="NO" <field>pick(MKT_DO_NOT_EMAIL='YES','checked','')</field>/>
+         Please E-Mail me periodic news and event updates
         </label>
-        <div class="controls">
-         <label class="radio" for="emailyes">
-          <input id="emailyes" name="MKT_DO_NOT_EMAIL" type="radio" value="NO"/>
-          Please E-Mail me periodic news and event updates
-         </label>
-         <label class="radio" for="emailno">
-          <input id="emailno" name="MKT_DO_NOT_EMAIL" type="radio" value="YES"/>
-          Please do not E-Mail me updates
-         </label>
-         <span class="help-inline">
-          After creating an account, you can visit
-          <b>
-           My Email Notifications
-          </b>
-          at any time to fine tune how you wish to be informed of
-               events and activities at <field>D_COMPANY_LONG</field> that interest you.  Please make
-               an initial selection below:
-          <!--#include virtual="TMtemplates/tmNotificationHeader.html" -->
-          Any contact information provided will be held confidential per our
-          <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
-           privacy policy
-          </a>
-          .
-         </span>
-        </div>
+       </div>
+       <div class="radio">
+        <label>
+         <input id="emailno" name="MKT_DO_NOT_EMAIL" type="radio" value="YES" <field>pick(MKT_DO_NOT_EMAIL='YES','','checked')</field>/>
+         Please do not E-Mail me updates
+        </label>
        </div>
        <field>pick(D_COUNTRY='USA','-->')</field>
-      </fieldset>
-      <div class="form-actions">
+       <div class="well">
+        Visit
+        <a class="link" href="<field>F_HTML_FIREWALL</field>login?maillist=0">
+         My Email Notifications
+        </a>
+        at any time to fine tune how you wish to be informed of events and activities at
+         <field>D_COMPANY_LONG</field> that interest you. Any contact information provided will be held confidential per our
+        <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
+         privacy policy.
+        </a>
+        <!--#include virtual="TMtemplates/tmNotificationHeader.html" -->
+       </div>
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-       <input class="btn btn-primary" name="btnAccountAdd" onclick="process()" type="submit" value="Create Account"/>
-       <input class="btn" name="btnLogin" type="submit" value="Cancel"/>
-       <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
-      </div>
-     </form>
+       <input class="btn btn-success" name="btnAccountAdd" onclick="process()" type="submit" value="Create Account"/>
+       <input class="btn btn-danger" name="btnLogin" type="submit" value="Cancel Adding Account"/>
+      </form>
+     </div>
+     <!-- comment: .col-md-8 -->
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <!-- comment: .row -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

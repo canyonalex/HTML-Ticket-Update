@@ -7,150 +7,92 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body>
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <!--sectionmapdefault-->
-     <ul class="breadcrumb">
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>login&event=">
-        Tickets
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>online?btnSelectEvent&P_SEQ=<field>P_SEQ</field>" title="click here to see more performances of this show">
-        <field>P_PLAY_TITLE</field>
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <li class="active">
-       Ticket Select
-      </li>
-     </ul>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <p class="text-center">
-      <a href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" target="_blank">
-       Please review our ticket policies.
-      </a>
-     </p>
-     <div class="hero-unit">
-      <h1>
-       <a href="<field>F_HTML_FIREWALL</field>online?event=<field>P_SEQ</field>" title="click here to see more performances of this show">
-        <field>P_PLAY_TITLE</field>
-       </a>
-      </h1>
-      <h3>
-       on
-		  <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> 
-		  at 
-		  <field>PB_PERFORM_TIME</field> 
-		  at 
-			<field>VE_NAME</field> 
-			<field>VE_ADDRESS1</field> 
-			<field>VE_ADDRESS2</field>
-      </h3>
-      <field>pick(len(PB_PERF_NOTES)>0, '', con('<p>',PB_PERF_NOTES,'</p>'))</field>
-      <p>
-       <field>P_SALES_NOTES</field>
-      </p>
-      <field>pick(D_WEB_SHOW_TT_IMAGES,'<!-- comment: Ticket Trove Image ')</field>
-      <p>
-       <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>P_SEQ</field>.html" onclick="return popup(this, 'notes')">
-        <img align="center" src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>" valign="center" width="100"/>
-       </a>
-      </p>
-      <field>pick(D_WEB_SHOW_TT_IMAGES,' -->')</field>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <!--#include virtual="tmMaps/tmTicketsEventTitle.html" -->
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+      <!--#include virtual="tmMaps/tmChangePerformanceDate.html" -->
+      <!--#include virtual="tmMaps/tmChangePerformanceMap.html" -->
      </div>
-     <!--/.hero-unit-->
-     <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal ticket-form" method="post">
-      <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
-      <div class="control-group">
-       <label class="control-label step1" for="section">
-        Select the price and or section you wish to sit in
-       </label>
-       <div class="controls">
+     <div class="col-md-8">
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST" role="form">
+       <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
+       <div class="form-group">
+        <label for="section">
+         <h4>
+          <img src="tmGifs/step1.gif"/>
+          Where would you like to sit?
+         </h4>
+        </label>
+        <br/>
+        <!-- comment: should have class="form-control" in select -->
         <field>F_HTML_BEST_AREA_SEARCH_LIST</field>
-        <field>F_HTML_BEST_PRICE_CODE_SEARCH_LIST</field>
+       <field>F_HTML_BEST_PRICE_CODE_SEARCH_LIST</field>
+        <p class="help-block">
+         Select the section you wish to sit in.
+        </p>
        </div>
-      </div>
-      <!-- comment:  The best area seatch comes from pairs of text in the theatre map screen that define the
-						best seat search area and what the user sees.  Optonally, you could replace the
-						F_HTML_BEST_AREA_SEARCH_LIST with a selection list of your own that might look like:
-						<select name="section" size="1" id="section">
-							<option value="" selected>**Any Section**</option>
-							<option value="1">Red</option>
-							<option value="2">Pink</option>
-							<option value="3">Blue</option>
-						</select>
-						The best price code list looks like
-						<select name="pricecode" size="1" id="pricecode">
-							<option value="" selected>**Any Price Code**</option>
-							<option value="A">Price Code A</option>
-							<option value="B">Price Code B</option>
-						</select>-->
-      <div class="control-group">
-       <label class="control-label step2" for="PS_QUANTITY">
-        Select the number of tickets you want to purchase
-       </label>
-       <div class="controls">
-        <select id="PS_QUANTITY" name="PS_QUANTITY" size="1">
+       <div class="form-group">
+        <label for="PS_QUANTITY">
+         <h4>
+          <img src="tmGifs/step2.gif"/>
+          How many tickets do you want?
+         </h4>
+        </label>
+        <br/>
+        <select class="form-control" id="PS_QUANTITY" name="PS_QUANTITY" size="1">
          <field>F_HTML_TICKET_QTY_LIST</field>
         </select>
        </div>
-      </div>
-      <div class="control-group">
-       <label class="control-label step3" for="F_TOGETHER">
-        Do the tickets need to be together?
-       </label>
-       <div class="controls">
-        <label class="radio">
-         <input id="together" name="F_TOGETHER" type="radio" value="0"/>
-         Keep my seats together
-        </label>
-        <label class="radio">
-         <input id="separate" name="F_TOGETHER" type="radio" value="1"/>
-         My seats may be separated if none can be found together
+       <div class="form-group">
+        <strong>
+         <h4>
+          <img src="tmGifs/step3.gif"/>
+          Keep seats together or can they be separated?
+         </h4>
+        </strong>
+       </div>
+       <div class="radio">
+        <label>
+         <input id="together" name="F_TOGETHER" type="radio" value="0" <field>pick(F_TOGETHER,"checked","")</field>/>
+         Keep My Seats Together
         </label>
        </div>
-      </div>
-      <div class="control-group">
-       <label class="control-label step4" for="btnBestAvail">
-        Click Find Best Seats Available
-       </label>
-       <div class="controls">
-        <input class="btn btn-primary" name="btnBestAvail" onclick="process()" type="submit" value="Find Best Seats Available"/>
+       <div class="radio">
+        <label>
+         <input id="separate" name="F_TOGETHER" type="radio" value="1" <field>pick(F_TOGETHER,"","checked")</field>/>
+         My Seats Can be Separated
+        </label>
+       </div>
+       <div class="form-group" style="margin-top: 15px;">
         <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-        <input class="btn" name="btnBestAvailCancel" type="submit" value="Cancel to Start Over"/>
+        <field>pick(PB_SALES_METHOD=2&not(F_HTML_ALLOW_PICK_YOUR_OWN),'<!-- comment: when not pick your own')</field>
+        <input class="btn btn-success" name="btnBestAvail" onclick="process()" type="submit" value="Suggest Some Seats"/>
+        <field>pick(PB_SALES_METHOD=2&not(F_HTML_ALLOW_PICK_YOUR_OWN),'-->')</field>
+      <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN,'<!-- comment: when it is pick your own venue')</field>
+        <input class="btn btn-success" name="btnBestAvail" onclick="process()" type="submit" value="Choose Your Seats"/>
+        <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN,'-->')</field>
+        <input class="btn btn-danger" name="btnBestAvailCancel" type="submit" value="Cancel and Start Over"/>
        </div>
-      </div>
-     </form>
-     <div class="text-center">
-      <!-- comment:
-			selected_only = if true, the image returned is a blown up version around the selected seats (can be yes,y,no,n,1 or 0)
-			selected_border = specifies the extra space around the selected seats in points (72 = 1 inch).
-			selected_color = specifies the fill color of the selected seats as a RGB hex string, i.e. FF0000 means bright red
-			img_quality = the jpeg quality 1 to 100, 100 is best.  -->
-      <img border="0" id="map" src="<field>F_HTML_SEATMAP</field>&selected_only=no&img_quality=90"/>
+      </form>
      </div>
+     <!-- comment: .col-md-8 -->
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <!-- comment: .row -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

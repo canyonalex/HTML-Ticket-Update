@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Confirmation d'achat de billet(s)
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <div align="center" id="content">
+   <table background="tmGifs/background.gif" width="90%">
+    <tr>
+     <td>
+      <div align="center">
+       <p>
+        <b>
+         <span class="message">
+          Merci d'avoir fait appel au service de billetterie en ligne de <field>D_COMPANY_LONG</field>.
+          <br/>
+          Ce courriel confirme votre achat et la r&eacute;ception de votre paiement.
+          <br/>
+          Veuillez le conserver dans vos dossiers.
+          <br/>
+          Vous devrez le pr&eacute;senter &agrave; la billetterie avec votre carte de cr&eacute;dit et, le cas &eacute;ch&eacute;ant, tout justificatif d'age exig&eacute; pour obtenir un billet &agrave; prix r&eacute;duit, pour retirer vos billets.
+         </span>
+        </b>
+       </p>
+       <table border="0" width="90%">
+        <tr>
+         <td align="center" class="tablerowdetail">
+          <p>
+           Pour en savoir plus sur un <field>low(D_EVENT)</field>, veuillez visiter notre
+           <a class="link" href="http://<field>D_WEB_SITE</field>">
+            site Web
+           </a>
+           .
+           <br/>
+           <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&historical=<field>SCH_SEQ</field>&C_SEQ=<field>C_SEQ</field>">
+            Cliquez ici pour vous connecter au site Web de la billetterie en ligne et consulter &agrave; tout moment votre commande.
+           </a>
+           <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)>0&SCH_TIX_PRINT_STATUS=0,'<!-- comment: show reprint status if tix')</field>
+           <br/>
+           Apr&egrave;s vous &ecirc;tre connect&eacute; au site web et vous connectez, vous pouvez r&eacute;imprimer vos billets imprim&eacute;s &agrave; domicile si vous le souhaitez.
+          <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)>0&SCH_TIX_PRINT_STATUS=0,' -->')</field>
+          </p>
+         </td>
+        </tr>
+       </table>
+       <br/>
+       <table border="0" width="90%">
+        <tr>
+         <td class="tablerowheader" width="29%">
+          <div align="right">
+           Pr&eacute;nom / Initiale / Nom
+          </div>
+         </td>
+         <td class="tablerowdetail" width="71%">
+          <field>C_FIRST_NAME</field> <field>C_INITIAL</field> <field>C_LAST_NAME</field>
+         </td>
+        </tr>
+        <tr>
+         <td class="tablerowheader">
+          <div align="right">
+           Adresse
+          </div>
+         </td>
+         <td class="tablerowdetail">
+          <field>AD_ADDRESS1</field>
+         </td>
+        </tr>
+        <tr>
+         <td class="tablerowheader">
+          <div align="right">
+           Ville
+          </div>
+         </td>
+         <td class="tablerowdetail">
+          <field>AD_CITY</field>
+         </td>
+        </tr>
+        <tr>
+         <td class="tablerowheader">
+          <div align="right">
+           Province/&eacute;tat
+          </div>
+         </td>
+         <td class="tablerowdetail">
+          <field>AD_PROVINCE</field>
+         </td>
+        </tr>
+        <tr>
+         <td class="tablerowheader">
+          <div align="right">
+           Code postal
+          </div>
+         </td>
+         <td class="tablerowdetail">
+          <field>AD_POSTAL_CODE</field>
+         </td>
+        </tr>
+       </table>
+       <br/>
+       <table border="0" width="90%">
+        <tr class="tablerowheader">
+         <td height="25" width="56">
+          Article
+         </td>
+         <td align="center" width="42">
+          Qt&eacute;
+         </td>
+         <td align="left" width="274">
+          Description
+         </td>
+         <td align="right" width="89">
+          Total
+         </td>
+        </tr>
+        <field>F_HTML_CURRENT_CART_LIST</field>
+        <tr class="tablerowheader">
+         <td align="right" class="main" colspan="3" height="26">
+          <b>
+           TOTAL <field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','(Les prix indiqués comprennent toutes les taxes applicables.)')</field>
+          </b>
+         </td>
+         <td align="right" class="main">
+          <b>
+           <field>SCH_TOTAL_COST</field>
+          </b>
+         </td>
+        </tr>
+       </table>
+       <br/>
+       <table width="90%">
+        <tr>
+         <td class="tablerowheader" width="29%">
+          <div align="right">
+           Num&eacute;ro de la commande
+          </div>
+         </td>
+         <td class="tablerowdetail" width="71%">
+          <field>C_SEQ</field>-<field>ORD_SEQ</field>
+         </td>
+        </tr>
+        <tr>
+         <td class="tablerowheader">
+          <div align="right">
+           Date de la commande
+          </div>
+         </td>
+         <td class="tablerowdetail">
+          <field>ORD_DATE_ENTERED</field>
+         </td>
+        </tr>
+        <tr>
+         <td class="tablerowheader">
+          <div align="right">
+           Montant du paiement
+          </div>
+         </td>
+         <td class="tablerowdetail">
+          <strong>
+           <field>SCH_TOTAL_PAID</field>$ <field>F_HTML_CURRENCY</field>
+          </strong>
+         </td>
+        </tr>
+        <field>pick(PAY_TOTAL_PAID>0,'<!-- comment: remove card number and authorization if no payment')</field>
+        <tr>
+         <td class="tablerowheader">
+          <div align="right">
+           Num&eacute;ro de carte
+          </div>
+         </td>
+         <td class="tablerowdetail">
+          <field>PAY_CARD_NO</field>
+         </td>
+        </tr>
+        <tr>
+         <td class="tablerowheader">
+          <div align="right">
+           Code d'autorisation
+          </div>
+         </td>
+         <td class="tablerowdetail">
+          <field>PAY_AUTH_NO</field>
+         </td>
+        </tr>
+        <field>pick(PAY_TOTAL_PAID>0,'-->')</field>
+        <tr>
+         <td align="right" class="tablerowheader">
+          Observations
+         </td>
+         <td class="tablerowdetail">
+          <field>ORD_NOTES</field>
+         </td>
+        </tr>
+        <field>pick(F_POST_DATED_PLAN_ACCEPTED,'<!-- comment: installment payment options')</field>
+        <tr>
+         <td align="right" class="tablerowheader" valign="top">
+          Paiements &eacute;chelonn&eacute;s
+         </td>
+         <td class="tablerowdetail">
+          <table align="left" border="0" cellpadding="1" width="240">
+           <tr class="tablerowheader">
+            <td align="left" width="140">
+             Date de pr&eacute;autoris&eacute;
+            </td>
+            <td align="right">
+             Amount
+            </td>
+           </tr>
+           <field>F_HTML_PAYMENT_PLAN_LIST</field>
+          </table>
+         </td>
+        </tr>
+        <field>pick(F_POST_DATED_PLAN_ACCEPTED,'-->')</field>
+       </table>
+       <p>
+       </p>
+      </div>
+      <table align="center" border="0" width="90%">
+       <tr>
+        <td align="center" class="tablerowdetail">
+         <field>pick(PAY_TOTAL_PAID>0|F_POST_DATED_PLAN_ACCEPTED,'<!-- comment: remove card holder agreement if no payment')</field>
+                Le titulaire de la carte de cr&eacute;dit doit payer <field>D_COMPANY_LONG</field> conform&eacute;ment &agrave; la convention d'utilisation de sa carte de cr&eacute;dit.
+         <br/>
+         <field>pick(PAY_TOTAL_PAID>0|F_POST_DATED_PLAN_ACCEPTED,'-->')</field>
+        Pour toute question relative &agrave; votre achat, veuillez prendre contact avec nous par t&eacute;l&eacute;phone ou par courriel.
+         <!--#include virtual="TMtemplates/tmContactHours.html" -->
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

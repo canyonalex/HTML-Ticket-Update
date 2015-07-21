@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | V&eacute;rification d'abonnement &agrave; une liste de diffusion
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+ </head>
+ <body class="background">
+  <div align="center" id="content">
+   <h2 align="center" class="message">
+    Demande d'abonnement &agrave; une liste de diffusion du <field>D_COMPANY_LONG</field>
+   </h2>
+   <div align="left" class="tablerowdetail">
+    <p>
+     <b>
+      <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
+     </b>
+     ,
+    </p>
+    <p>
+     Merci de votre int&eacute;r&ecirc;t pour le <field>D_COMPANY_LONG</field>. Vous avez demand&eacute; &agrave; vous abonner &agrave; une ou plusieurs listes de diffusion, afin de recevoir en temps utile de l'information relative au th&egrave;me de chacune de ces listes de diffusion.
+    </p>
+    <p>
+     Pour achever le processus, veuillez choisir l'une des options suivantes:
+    </p>
+    <ol>
+     <li>
+      <a class="link" href="<field>F_HTML_FIREWALL</field>login&verifyEmail=yes&C_SEQ=<field>C_SEQ</field>&e=<field>CI_CONTENTS</field>&vpw=<field>CCL_VALIDATE_PASS</field>" target="_top">
+       Confirmer votre adresse courriel
+      </a>
+      dans les <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> prochaines heures pour terminer le processus d'abonnement.
+     </li>
+     <li>
+      <a class="link" href="<field>F_HTML_FIREWALL</field>login&removeEmail=yes&C_SEQ=<field>C_SEQ</field>&e=<field>CI_CONTENTS</field>" target="_top">
+       Retirer votre adresse courriel
+      </a>
+      imm&eacute;diatement de la liste de diffusion si vous n'&ecirc;tes pas &agrave; l'origine de cette demande d'abonnement.
+     </li>
+     <li>
+      Ne rien faire: pour votre protection, votre adresse courriel
+      <em>
+       sera retir&eacute;e automatiquement de la liste de diffusion au bout de <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures si vous ne r&eacute;pondez pas ou ne faites rien.
+      </em>
+     </li>
+    </ol>
+    <p>
+     Vous pouvez vous connecter directement &agrave; notre site Web pour acheter des billets en
+     <a class="link" href="<field>F_HTML_FIREWALL</field>login&event=0" target="_top">
+      cliquant ici
+     </a>
+     .
+    </p>
+    <p>
+     Politique de confidentialit&eacute;&nbsp;:  tous les renseignements personnels que vous fournissez au <field>D_COMPANY_LONG</field> sont consid&eacute;r&eacute;s comme confidentiels et ne peuvent &ecirc;tre communiqu&eacute;s &agrave; quiconque, sauf si vous y avez express&eacute;ment consenti ou si nous y sommes tenus par une autorit&eacute; l&eacute;gale.
+    </p>
+    <p align="center">
+     Pour en savoir plus, veuillez prendre contact avec nous par t&eacute;l&eacute;phone ou par courriel.
+    </p>
+    <center>
+     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+    </center>
+   </div>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

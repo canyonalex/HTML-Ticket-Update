@@ -3,247 +3,39 @@
  <head>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Purchase Confirmation
+   <field>D_COMPANY_LONG</field> | Purchase Confirmation for order <field>SCH_ORD_SEQ</field>
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="background checkout invoice email">
-  <!--#include virtual="tmScripts/venue_header_email.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
+ <body class="background">
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
      <h1>
-      Order Confirmation
-     </h1>
-     <div align="left">
-      <p>
-       Dear
-       <b>
-        <field>C_FIRST_NAME</field>
-		<field>C_LAST_NAME</field>
-       </b>
-       ,
-      </p>
-      <p>
-       Thank you for using <field>D_COMPANY</field>.
-       <br/>
-       This email confirms your purchase and receipt
-              of your payment. Please save this receipt for your records. If you have not already printed your tickets, please log in to your account and do so.
-      </p>
-     </div>
-     <table border="0" width="90%">
-      <tr>
-       <td align="center" class="tablerowdetail" height="40">
-        <!--Visit our <a href="http://<field>D_WEB_SITE</field>" class=link>web site</a>
-			for more information about any <field>low(D_EVENT)</field><br>-->
-        <!--<a href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&historical=<field>SCH_SEQ</field>&C_SEQ=<field>C_SEQ</field>" class=link>Click
-          to connect to the online ticketing web site and review your order at any time. </a></B>
-          <field>pick(tStringFields.$getBitField(D_PRINT_AT_HOME,1),' comment:')</field>
-          <br>After you connect to the web site, you can reprint your tickets if you wish.
-          <field>pick(tStringFields.$getBitField(D_PRINT_AT_HOME,1),'')</field>-->
-        <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&historical=<field>SCH_SEQ</field>&C_SEQ=<field>C_SEQ</field>">
-         <h3>
-          <strong>
-           CLICK HERE TO
-           <br/>
-           PRINT TICKETS
-          </strong>
-         </h3>
-        </a>
-       </td>
-      </tr>
-     </table>
-     <br/>
-     <table border="0" width="90%">
-      <tr>
-       <td class="tablerowheader" width="29%">
-        <div align="right">
-         Name
-        </div>
-       </td>
-       <td class="tablerowdetail" width="71%">
-        <field>C_FIRST_NAME</field> <field>C_INITIAL</field> <field>C_LAST_NAME</field>
-       </td>
-      </tr>
-      <tr>
-       <td class="tablerowheader">
-        <div align="right">
-         Address
-        </div>
-       </td>
-       <td class="tablerowdetail">
-        <field>AD_ADDRESS1</field>
-       </td>
-      </tr>
-      <tr>
-       <td class="tablerowheader">
-        <div align="right">
-         City
-        </div>
-       </td>
-       <td class="tablerowdetail">
-        <field>AD_CITY</field>
-       </td>
-      </tr>
-      <tr>
-       <td class="tablerowheader">
-        <div align="right">
-         State
-        </div>
-       </td>
-       <td class="tablerowdetail">
-        <field>AD_PROVINCE</field>
-       </td>
-      </tr>
-      <tr>
-       <td class="tablerowheader">
-        <div align="right">
-         Zip Code
-        </div>
-       </td>
-       <td class="tablerowdetail">
-        <field>AD_POSTAL_CODE</field>
-       </td>
-      </tr>
-     </table>
-     <br/>
-     <table border="0" width="90%">
-      <tr class="tablerowheader">
-       <td height="25" width="56">
-        Item
-       </td>
-       <td align="left" width="42">
-        Qty
-       </td>
-       <td align="left" width="274">
-        Description
-       </td>
-       <td align="right" width="89">
-        Total
-       </td>
-      </tr>
-      <field>F_HTML_CURRENT_CART_LIST</field>
-      <tr class="tablerowheader">
-       <td align="right" class="main" colspan="3" height="26">
-        <b>
-         GRAND TOTAL <field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','(includes all applicable taxes)')</field>
-        </b>
-       </td>
-       <td align="right" class="main">
-        <b>
-         <field>SCH_TOTAL_COST</field>
-        </b>
-       </td>
-      </tr>
-     </table>
-     <br/>
-     <table width="90%">
-      <tr>
-       <td class="tablerowheader" width="29%">
-        <div align="right">
-         Order Reference
-        </div>
-       </td>
-       <td class="tablerowdetail" width="71%">
-        <field>C_SEQ</field>-<field>ORD_SEQ</field>
-       </td>
-      </tr>
-      <tr>
-       <td class="tablerowheader">
-        <div align="right">
-         Order Date
-        </div>
-       </td>
-       <td class="tablerowdetail">
-        <field>ORD_DATE_ENTERED</field>
-       </td>
-      </tr>
-      <tr>
-       <td class="tablerowheader">
-        <div align="right">
-         Payment Amount
-        </div>
-       </td>
-       <td class="tablerowdetail">
-        <strong>
-         $<field>PAY_TOTAL_PAID</field> <field>F_HTML_CURRENCY</field>
-        </strong>
-       </td>
-      </tr>
-      <field>pick(PAY_TOTAL_PAID>0,'<!-- comment: remove card number and authorization if no payment')</field>
-      <tr>
-       <td class="tablerowheader">
-        <div align="right">
-         Card Number
-        </div>
-       </td>
-       <td class="tablerowdetail">
-        <field>PAY_CARD_NO</field>
-       </td>
-      </tr>
-      <tr>
-       <td class="tablerowheader">
-        <div align="right">
-         Authorization Code
-        </div>
-       </td>
-       <td class="tablerowdetail">
-        <field>PAY_AUTH_NO</field>
-       </td>
-      </tr>
-      <field>pick(PAY_TOTAL_PAID>0,'-->')</field>
-      <tr>
-       <td align="right" class="tablerowheader">
-        Notes
-       </td>
-       <td class="tablerowdetail">
-        <field>ORD_NOTES</field>
-       </td>
-      </tr>
-      <field>pick(F_POST_DATED_PLAN_ACCEPTED,'<!-- comment: installment payment options')</field>
-      <tr>
-       <td align="top" class="tablerowheader">
-        Installment Payments
-       </td>
-       <td class="tablerowdetail">
-        <table align="left" border="0" cellpadding="1" width="240">
-         <tr class="tablerowheader">
-          <td align="left" width="140">
-           Pre-Authorized Date
-          </td>
-          <td align="right">
-           Amount
-          </td>
-         </tr>
-         <field>F_HTML_PAYMENT_PLAN_LIST</field>
-        </table>
-       </td>
-      </tr>
-      <field>pick(F_POST_DATED_PLAN_ACCEPTED,'-->')</field>
-     </table>
-     <p>
-      <strong>
-       NO REFUNDS.
-      </strong>
-      Events, dates and times are subject to change.  No retroactive discounts will be permitted.  If the performance takes place, despite adverse weather conditions, Tickets by <field>D_COMPANY</field> will not give refunds to customers unable to use tickets.
-Latecomers will not be seated until a suitable break in the performance and may be required, at the request of the show's producers, to be seated in the rear of the theatre.
-Every person, regardless of age, must have a ticket to be admitted to a performance.  One ticket per person.  One person per seat.
-     </p>
-     <p class="text-center">
-      <field>pick(PAY_TOTAL_PAID>0|F_POST_DATED_PLAN_ACCEPTED,'<!-- comment: remove card holder agreement if no payment')</field>
-            Cardholder will pay <field>D_COMPANY_LONG</field> in accordance with the cardholder agreement.
+      Web Order <field>ORD_SEQ</field> Confirmation
       <br/>
-      <field>pick(PAY_TOTAL_PAID>0|F_POST_DATED_PLAN_ACCEPTED,'-->')</field>
-        Please contact us via telephone or e-mail if you have any questions about your purchase.
-      <!--#include virtual="TMtemplates/tmContactHours.html" -->
-     </p>
+      <small class="text-muted">
+       <field>D_COMPANY_LONG</field>
+      </small>
+     </h1>
     </div>
-    <!--span-->
+    <div class="alert alert-info">
+     This email confirms your purchase and receipt
+          of your payment. Save it for your records.  It is not a ticket.
+    </div>
+    <!--#include virtual="TMtemplates/tmCheckoutConfirmationDeliveryEmail.html" -->
+    <!--#include virtual="TMtemplates/tmCheckoutCartList.html" -->
+    <!--#include virtual="TMtemplates/tmCheckoutPaymentInformation.html" -->
+    <!--#include virtual="TMtemplates/tmCheckoutPostDatedPaymentsAccepted.html" -->
+    <!--#include virtual="TMtemplates/tmCheckoutCardHolderNotice.html" -->
+    <!--#include virtual="TMtemplates/tmContactHours.html" -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
  </body>
 </html>

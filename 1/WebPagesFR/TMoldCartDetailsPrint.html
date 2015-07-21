@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Contenu du panier d'achat
+  </title>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <!-- Pragma content set to no-cache tells the browser not to cache the page
+		This may or may not work in IE -->
+  <meta content="0" http-equiv="expires"/>
+  <!-- Setting the page to expire at 0 means the page is immediately expired
+		Any values less then one will set the page to expire some time in past and
+		not be cached. This may not work with Navigator -->
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="backgroundprint" onload="window.print()">
+  <div align="center">
+   <table border="0" cellpadding="0" cellspacing="0" width="700">
+    <tr>
+     <td>
+      <div align="center">
+       <p>
+        <b class="messageprint">
+         <field>F_HTML_PAGE_MESSAGE</field>
+        </b>
+       </p>
+       <table border="0" class="tableheaderprint" width="650">
+        <tr>
+         <td align="right" class="tablerowheaderprint" height="26">
+          Num&eacute;ro de panier
+         </td>
+         <td class="tablerowdetailprint">
+          <field>SCH_SEQ</field>
+         </td>
+        </tr>
+        <tr>
+         <td align="right" class="tablerowheaderprint" height="25" width="140">
+          Date de cr&eacute;ation
+         </td>
+         <td align="left" class="tablerowdetailprint" width="417">
+          <field>SCH_DATE_ENTERED</field>
+         </td>
+        </tr>
+        <tr>
+         <td align="right" class="tablerowheaderprint" height="25">
+          Date de mise &agrave; jour
+         </td>
+         <td class="tablerowdetailprint">
+          <field>SCH_DATE_UPDATED</field>
+         </td>
+        </tr>
+        <tr>
+         <td align="right" class="tablerowheaderprint" height="25">
+          Date de paiement
+         </td>
+         <td class="tablerowdetailprint">
+          <field>SCH_DATE_CHECKOUT</field>
+         </td>
+        </tr>
+        <tr>
+         <td align="right" class="tablerowheaderprint" height="25">
+          Nombre total de billets
+         </td>
+         <td class="tablerowdetailprint">
+          <field>SCH_TIX_QUANTITY</field>
+         </td>
+        </tr>
+        <tr>
+         <td align="right" class="tablerowheaderprint" height="25">
+          Commentaires sur la commande
+         </td>
+         <td class="tablerowdetailprint">
+          <field>SCH_ORD_NOTES</field>
+         </td>
+        </tr>
+        <tr>
+         <td align="right" class="tablerowheaderprint" height="25">
+          Co&ucirc;t total
+         </td>
+         <td class="tablerowdetailprint">
+          <strong>
+           <field>SCH_TOTAL_COST</field>$ <field>F_HTML_CURRENCY</field>
+          </strong>
+         </td>
+        </tr>
+       </table>
+       <br/>
+       <table border="0" width="650">
+        <tr class="tablerowheaderprint">
+         <td height="25" width="50">
+          Article
+         </td>
+         <td align="center" width="25">
+          Qt&eacute;
+         </td>
+         <td align="left">
+          Description
+         </td>
+         <td align="right" width="89">
+          Total
+         </td>
+        </tr>
+        <field>F_HTML_HISTORICAL_CART_DETAIL_LIST</field>
+        <tr class="tablerowheaderprint">
+         <td align="right" class="main" colspan="3" height="26">
+          <b>
+           TOTAL 
+                  <field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','(Les prix indiqués comprennent toutes les taxes applicables.)')</field>
+          </b>
+         </td>
+         <td align="right" class="main">
+          <b>
+           <field>SCH_TOTAL_COST</field>
+          </b>
+         </td>
+        </tr>
+       </table>
+       <br/>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

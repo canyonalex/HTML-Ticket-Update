@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Contenu du panier d&iacute;achat
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <table border="0" cellpadding="0" cellspacing="0" width="90%">
+    <tr>
+     <td>
+      <p>
+       <b class="message">
+        <field>F_HTML_PAGE_MESSAGE</field>
+       </b>
+      </p>
+      <table border="0" width="650">
+       <tr>
+        <td align="right" class="tablerowheader" height="26">
+         Num&eacute;ro de panier
+        </td>
+        <td class="tablerowdetail">
+         <field>SCH_SEQ</field>
+        </td>
+       </tr>
+       <tr>
+        <td align="right" class="tablerowheader" height="25" width="140">
+         Date de cr&eacute;ation
+        </td>
+        <td align="left" class="tablerowdetail" width="417">
+         <field>SCH_DATE_ENTERED</field>
+        </td>
+       </tr>
+       <tr>
+        <td align="right" class="tablerowheader" height="25">
+         Date de mise &agrave; jour
+        </td>
+        <td class="tablerowdetail">
+         <field>SCH_DATE_UPDATED</field>
+        </td>
+       </tr>
+       <tr>
+        <td align="right" class="tablerowheader" height="25">
+         Date de paiement
+        </td>
+        <td class="tablerowdetail">
+         <field>SCH_DATE_CHECKOUT</field>
+        </td>
+       </tr>
+       <tr>
+        <td align="right" class="tablerowheader" height="25">
+         Nombre total de billets
+        </td>
+        <td class="tablerowdetail">
+         <field>SCH_TIX_QUANTITY</field>
+        </td>
+       </tr>
+       <tr>
+        <td align="right" class="tablerowheader" height="25">
+         Commentaires sur la commande
+        </td>
+        <td class="tablerowdetail">
+         <field>SCH_ORD_NOTES</field>
+        </td>
+       </tr>
+       <tr>
+        <td align="right" class="tablerowheader" height="25">
+         Co&ucirc;t total
+        </td>
+        <td class="tablerowdetail">
+         <strong>
+          <field>SCH_TOTAL_COST</field>$ <field>F_HTML_CURRENCY</field>
+         </strong>
+        </td>
+       </tr>
+      </table>
+      <br/>
+      <table border="0" width="650">
+       <tr class="tablerowheader">
+        <td height="25" width="56">
+         Article
+        </td>
+        <td align="center" width="42">
+         Qt&eacute;
+        </td>
+        <td align="left">
+         Description
+        </td>
+        <td align="right" width="89">
+         Total
+        </td>
+       </tr>
+       <field>F_HTML_HISTORICAL_CART_DETAIL_LIST</field>
+       <tr class="tablerowheader">
+        <td align="right" class="main" colspan="3" height="26">
+         <b>
+          TOTAL 
+                  <field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','(Les prix indiqués comprennent toutes les taxes applicables.)')</field>
+         </b>
+        </td>
+        <td align="right" class="main">
+         <b>
+          <field>SCH_TOTAL_COST</field>
+         </b>
+        </td>
+       </tr>
+       <tr class="tablerowheader">
+        <td colspan="4">
+         <br/>
+         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+          <div align="center">
+           <input class="new" name="btnHistoricalCart" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Revenir &agrave; l&iacute;historique du panier d&iacute;achat"/>
+           &nbsp;
+           <input class="new" onclick="window.open('<field>F_HTML_FIREWALL</field>login?historicalprint=<field>SCH_SEQ</field>','Billets','width=700,height=500')" type="button" value="Imprimer le contenu du panier d&iacute;achat"/>
+           <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)>0&SCH_TIX_PRINT_STATUS=0,'<!-- comment: ')</field>
+			  &nbsp;
+           <input class="new" onclick="window.open(
+                        '<field>F_HTML_FIREWALL</field>login?cartticketsprint=<field>SCH_SEQ</field>',
+                        'Print','width=700,height=500')" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="button" value="R&eacute;imprimer des billets"/>
+           <p class="message">
+            Vous avez s&eacute;lectionn&eacute; livraison E-Ticket. Si vous ne l'avez pas fait,
+            <br/>
+            s'il vous pla&icirc;t imprimer les billets dans cet ordre et de les amener &agrave; l'&eacute;v&eacute;nement.
+           </p>
+           <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)>0&SCH_TIX_PRINT_STATUS=0,' -->')</field>
+          </div>
+         </form>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

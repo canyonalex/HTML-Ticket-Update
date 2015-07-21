@@ -1,0 +1,7 @@
+#	Entrez la valeur correspondant à la recherche de 'tous les genres'.
+#	Cette valeur se place en haut de la fenÍtre de recherche par genres.
+#
+#	enter the value to represent searching for 'All Genres'
+#	it goes at the top of the search window for genres
+
+Tous les genres

@@ -1,0 +1,24 @@
+  <form action="<field>F_HTML_FIREWALL</field>login" method="POST">
+   <table align="center" border="0" cellpadding="4" cellspacing="0" width="100%">
+    <tr class="tablerowheader">
+     <td align="right" width="127">
+      Adresse courriel
+     </td>
+     <td width="">
+      <input name="e" size="60" type="text" value="<field>F_EMAIL_ADDRESS</field>"/>
+     </td>
+    </tr>
+    <tr class="tablerowheader">
+     <td align="right" width="127">
+      Mot de passe
+     </td>
+     <td>
+      <input autocomplete="off" maxlength="<field>SPR_PASSWORD_MAX_LENGTH</field>" name="p" size="20" type="Password" value=""/>
+      <input class="new" name="btnLoginAccount" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ouvrir une session"/>
+      &nbsp; &nbsp; &nbsp;
+      <input class="new" name="btnPasswordRequest" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="J'ai oubli&eacute; mon mot de passe"/>
+      <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+     </td>
+    </tr>
+   </table>
+  </form>

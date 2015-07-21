@@ -7,71 +7,60 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="oldcart headers">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <ul class="breadcrumb">
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
-        Account
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <li class="active">
-       Past Shopping Carts
-      </li>
-     </ul>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
      <h1>
-      Shopping Carts
+      Previous Shopping Carts
      </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <table class="table table-striped table-hover">
-      <caption>
-       Here is a list of your previous shopping carts and their status
-      </caption>
-      <tr>
-       <th>
-        Cart #
-       </th>
-       <th class="hidden-phone">
-        Date Created
-        <br/>
-        Date Updated
-       </th>
-       <th>
-        Ticket Count
-        <br/>
-        Total Value
-       </th>
-       <th>
-        Status
-        <br/>
-        Order Notes
-       </th>
-      </tr>
-      <field>F_HTML_HISTORICAL_CART_LIST</field>
-     </table>
-     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-      <div class="form-actions">
-       <input class="btn btn-primary" name="btnHome" type="submit" value="Return to main page"/>
-      </div>
-     </form>
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+      <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>online?btnHome=Home">
+       Return to Main Page
+      </a>
+     </div>
+     <div class="col-md-8">
+      <table class="table table-striped table-condensed table-responsive">
+       <thead>
+        <tr>
+         <th>
+          Cart
+         </th>
+         <th>
+          Date
+         </th>
+         <th class="text-right">
+          Tickets
+         </th>
+         <th class="text-right">
+          Value
+         </th>
+         <th>
+          Special Notes
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <field>F_HTML_HISTORICAL_CART_LIST</field>
+       </tbody>
+      </table>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

@@ -7,120 +7,69 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="home">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <ul class="breadcrumb">
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
-        Account
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <li class="active">
-       Home
-      </li>
-     </ul>
-     <h1>
-      Account Home:
-      <br/>
-      <field>C_FIRST_NAME</field> <field>C_INITIAL</field> <field>C_LAST_NAME</field>
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <h3>
-      Welcome to <field>D_COMPANY</field>
-     </h3>
-     <p>
-      <b>
-       <field>C_FIRST_NAME</field> <field>C_INITIAL</field> <field>C_LAST_NAME</field>
-      </b>
-      ; you
-		 have successfully logged in using the email address
-      <b>
-       <field>CI_CONTENTS</field>
-      </b>
-      . Is your email address correct? If not, please update it by using
-  the
-      <a href="<field>F_HTML_FIREWALL</field>online?btnAccount">
-       "My Patron Details"
-      </a>
-      menu option at the top. The email address needs to be accurate to
-  send your purchase confirmations.
-     </p>
-     <h6>
-      How to begin:
-     </h6>
-     <ol>
-      <li>
-       Subscribers and or Members must login to their Tickets by <field>D_COMPANY</field> account to access features, performances, discounts, etc. available to them.
-      </li>
-      <li>
-       Choose the appropriate item from the menu.
-       <strong>
-        NOTE:
-       </strong>
-       your session will time out after
-<field>D_WEB_TIMEOUT</field>
-minutes of inactivity.
-      </li>
-     </ol>
-     <table align="center" border="0" cellpadding="2" cellspacing="0">
-      <tr>
-       <td align="center">
-        <img alt="" height="50" src="tmGifs/stop.gif" width="50"/>
-       </td>
-       <td class="main" valign="middle">
-        DO NOT USE the BACK, FORWARD, OR REFRESH Buttons.
-		  When searching for tickets to add to your cart, this  causes the current ticket selection to be released
-		  and you will end up back at this web page. Items already in your cart will be untouched.
-        <br/>
-        <br/>
-        Use the navigation buttons provided on the top of each page you are viewing - 
-		  this is provided for your browsing safety.
-       </td>
-      </tr>
-      <tr>
-       <td align="center">
-        <img height="50" src="tmGifs/handicapped.gif" width="50"/>
-       </td>
-       <td class="main" valign="middle" width="90%">
-        To purchase tickets for wheelchair or limited access seating, we suggest calling our Box Office at <field>D_SWITCH_BOARD</field>.
-		 We are better able to handle special needs in person or over the phone.
-		 <field>pick(D_COUNTRY='USA','<!-- comment: only include ADA note for USA venues')</field>
-		However, due to recent ADA changes, you may be able to buy online.  We may require that you attest to your need for any seats set aside for ADA by agreeing to terms and conditions.
-		<field>pick(D_COUNTRY='USA','-->')</field>
-       </td>
-      </tr>
-     </table>
-     <p>
-      If you need support,
-      <a class="link" href="mailto:<field>D_EMAIL_ADDR</field>?subject=Online%20Sales%20Support">
-       send
-	  us an e-mail
-      </a>
-      or call the box office during normal business hours (<field>D_SWITCH_BOARD</field>) with your question.
-     </p>
-     <!--#include virtual="TMtemplates/tmnavButtonsFooter.html" -->
-     <!-- <tr class="tablerowdetail">
-			<td>Buy 2010/11 Broadway Subscriptions:</td>
-			<td><input name="btnSubscription" type="submit" class="btn" value="Key Private Bank Subscriptions"></td>
-		</tr>-->
+  <div class="container">
+   <div id="content">
+    <div class="pull-right">
+     <a class="btn btn-success" href="mailto:<field>D_EMAIL_ADDR</field>?subject=Online%20Sales%20Support%20Question">
+      <i class="fa fa-support">
+      </i>
+      Need Help?
+     </a>
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <div class="page-header">
+     <h1>
+      Home Page
+      <br/>
+      <small class="text-mute">
+       <field>C_FIRST_NAME</field> <field>C_INITIAL</field> <field>C_LAST_NAME</field>
+      </small>
+     </h1>
+    </div>
+    <div class="text">
+     You are currently logged in using the email address
+     <b>
+      <field>CI_CONTENTS</field>.
+     </b>
+     <p>
+      &nbsp;
+     </p>
+     If you would prefer another email address,
+     <a href="<field>F_HTML_FIREWALL</field>online?btnAccount=Account">
+      please update it now.
+     </a>
+     The email address needs to be accurate to send purchase confirmations and instructions for print at home tickets.
+    </div>
+    <!--#include virtual="TMtemplates/tmnavButtonsFooter.html" -->
+    <p>
+     &nbsp;
+    </p>
+    <div class="text">
+     Your session will be terminated and tickets released after <field>D_WEB_TIMEOUT</field> minutes of inactivity.
+    </div>
+    <br/>
+    <div class="text">
+     <img align="left" height="35" src="tmGifs/handicapped.gif" width="35"/>
+     To purchase tickets for wheelchair or limited
+    access seating, we suggest calling our Box Office at 
+     <a href="tel:<field>D_SWITCH_BOARD</field>">
+     <field>D_SWITCH_BOARD</field>.
+     </a>
+    We are better able to handle special needs in person or over the phone.
+    <field>pick(D_COUNTRY='USA','<!-- comment: only include ADA note for USA venues')</field>
+    We support the ADA act and enable you to buy online.  We require that you attest to your need for any seats set aside for ADA by agreeing to terms and conditions.
+    <field>pick(D_COUNTRY='USA','-->')</field>
+    </div>
+    <!--#include virtual="TMtemplates/tmPoweredBy.html" -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

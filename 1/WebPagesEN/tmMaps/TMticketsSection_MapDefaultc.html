@@ -7,101 +7,75 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
-  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body>
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <!--sectionmapdefaultc-->
-     <ul class="breadcrumb">
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>login&event=">
-        Tickets
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <!--<li><a href="<field>F_HTML_FIREWALL</field>online?btnSelectEvent&P_SEQ=<field>P_SEQ</field>" title="click here to see more performances of this show"><field>P_PLAY_TITLE</field></a> <span class="divider">/</span></li>-->
-      <li class="active">
-       <field>D_COURSE_DESC</field> Registration
-      </li>
-     </ul>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <p class="text-center">
-      <a href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" target="_blank">
-       Please review our ticket policies.
-      </a>
-     </p>
-     <div class="hero-unit">
-      <h1>
-       <a href="<field>F_HTML_FIREWALL</field>online?event=<field>P_SEQ</field>" title="click here to see more performances of this show">
-        <field>P_PLAY_TITLE</field>
-       </a>
-      </h1>
-      <h3>
-       starting on <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> at <field>PB_PERFORM_TIME</field>
-       <br/>
-       in <field>VE_NAME</field> <field>VE_ADDRESS1</field> <field>VE_ADDRESS2</field>
-      </h3>
-      <!--<field>pick(D_WEB_SHOW_TT_IMAGES,'<!-- comment: Ticket Trove Image ')</field>
-
-  <p>
-    <a href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>P_SEQ</field>.html" class="link" onClick="return popup(this, 'notes')">
-    <img src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>" width="100" align="center" valign="center">
-    </a>
-  </p>
-<field>pick(D_WEB_SHOW_TT_IMAGES,' -->')</field>-->
-     </div>
-     <!--/.hero-unit-->
-     <div class="text-center">
-      <!--<p>This class requires additional registration information before completing the sale
-      such as  attendee names (if it will not be yourself ). You may need to add other member(s) to your household
-      in your account details.</p>
-  <p><em>This is done after you have logged in and prior to paying for the sale.
-      You will be prompted as neccessary.</em></p>
-      
-  <h4>Notes/Registration Information</h4>-->
-      <p>
-       <field>P_SALES_NOTES</field>
-      </p>
-     </div>
-     <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal ticket-form" method="POST">
+  <div class="container">
+   <div class="page-header">
+    <!--#include virtual="tmMaps/tmTicketsEventTitle.html" -->
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+     <!--#include virtual="tmMaps/tmChangePerformanceDate.html" -->
+    </div>
+    <div class="col-md-8">
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST" role="form">
       <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
-      <div class="control-group">
-       <label class="control-label step1" for="PS_QUANTITY">
-        Enter the number of attendees that you want to enroll
+      <div class="form-group">
+       <label for="PS_QUANTITY">
+        <h4>
+         Select the number of attendees that you want to enroll
+        </h4>
        </label>
-       <div class="controls">
-        <select id="PS_QUANTITY" name="PS_QUANTITY" size="1">
-         <field>F_HTML_TICKET_QTY_LIST</field>
-        </select>
-       </div>
+       <br/>
+       <select class="form-control" id="PS_QUANTITY" name="PS_QUANTITY" size="1">
+        <field>F_HTML_TICKET_QTY_LIST</field>
+       </select>
       </div>
-      <div class="control-group">
-       <label class="control-label step2" for="btnBestAvail">
-        Click Register
-       </label>
-       <div class="controls">
-        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-        <input class="btn btn-primary" name="btnBestAvail" onclick="process()" type="submit" value="Register"/>
-        <input class="btn" name="btnBestAvailCancel" type="submit" value="Cancel to Start Over"/>
-       </div>
+      <div class="form-group" style="margin-top: 15px;">
+       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+       <input class="btn btn-success" name="btnBestAvail" onclick="process()" type="submit" value="Register"/>
+       <input class="btn btn-danger" name="btnBestAvailCancel" type="submit" value="Cancel and Start Over"/>
       </div>
      </form>
+     <div class="alert alert-info">
+      <p>
+       This
+       <b>
+        <field>D_COURSE_DESC</field>
+       </b>
+       requires additional registration information before completing the sale
+       such as  attendee names (if it will not be yourself). You may need to add other
+       member(s) to your household in your account details.
+      </p>
+      <field>pick(F_LOGGED_IN=1,'','<!-- comment: only show comment if not logged in)')</field>
+      <p>
+       <em>
+        This is done after you have logged in and prior to paying for the sale. You will be prompted as neccessary.
+       </em>
+      </p>
+      <field>pick(F_LOGGED_IN=1,'','-->')</field>
+     </div>
+     <field>pick(len(P_SALES_NOTES)>0,'<!-- comment: no sales notes')</field>
+     <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title">
+        <field>D_COURSE_DESC</field> Notes/Registration Information
+       </h3>
+      </div>
+      <div class="panel-body">
+       <field>P_SALES_NOTES</field>
+      </div>
+     </div>
+     <field>pick(len(P_SALES_NOTES)>0,'-->')</field>
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
    </div>
   </div>
+  <!-- .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

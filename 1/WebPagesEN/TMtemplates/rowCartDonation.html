@@ -1,12 +1,13 @@
-  <tr class="rowcart donation">
+  <tr class="tablerowdetail">
    <td>
     <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
     <input name="SCD_PURCHASE_GROUP" type="hidden" value="0"/>
-    <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="checkbox" value="1"/>
-   </td>
-   <td>
     <field>D_DONATION_DESC</field>
-    <br/>
+   </td>
+   <td align="center">
+    &nbsp;
+   </td>
+   <td align="left">
     <a class="link" href="<field>F_HTML_FIREWALL</field>tmCampaign/tmCampaign<field>DC_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>DC_DESCRIPTION_EXTERNAL</field>
     </a>
@@ -28,7 +29,10 @@
     until the total amount is paid.
 	<field>pick(DD_REPEAT_FREQ<>0,'-->','')</field>
    </td>
-   <td>
+   <td align="right">
     <field>SCD_DON_AMOUNT</field>
+   </td>
+   <td align="center">
+    <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="checkbox" value="1"/>
    </td>
   </tr>

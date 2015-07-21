@@ -1,0 +1,57 @@
+  <script language="JavaScript">
+   <!--
+  function process() {
+  var processingMessage = '<b>Traitement en cours, veuillez patienter... Le processus demande quelques instants.</b>';
+  var messageHeight = '25px';
+  
+  if (navigator.appName=="Microsoft Internet Explorer") {
+    pleaseWait.innerHTML = processingMessage;
+    document.all.pleaseWait.style.height = messageHeight;
+    document.all.pleaseWait.style.visibility = 'visible';
+    }
+
+  if (navigator.appName=="Netscape") {
+    document.getElementById("pleaseWait").innerHTML = processingMessage;
+    document.getElementById("pleaseWait").style.height = messageHeight;
+    document.getElementById("pleaseWait").style.visibility = 'visible';
+
+    }
+    
+   if (navigator.appName=="Safari") {
+    document.getElementById("pleaseWait").innerHTML = processingMessage;
+    document.getElementById("pleaseWait").style.height = messageHeight;
+    document.getElementById("pleaseWait").style.visibility = 'visible';
+    }
+  } 
+  //-->
+  </script>
+  <script type="text/javascript">
+   <!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+   
+window.open(href, windowname, 'width=400,height=500,scrollbars=yes');
+return false;
+}
+//-->
+  </script>
+  <script type="text/javascript">
+   <!--
+function openInParent(mylink)
+{
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+   
+window.opener.location.href = href;
+return false;
+}
+//-->
+  </script>

@@ -1,20 +1,25 @@
   <div align="center" class="page-break" width="700">
    <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/pageHeader.gif"/>
+   <p>
+   </p>
+   <p>
+   </p>
    <table border="1" cellpadding="5" cellspacing="0" class="tablerowticketprint" width="700">
     <tr>
      <td align="center" rowspan="6" valign="top">
       <field>pick(PB_PRINT_AT_HOME,'<!-- comment: not printing at home, do not show bar code to avoid server hits')</field>
       <img src="<field>F_HTML_TIX_BAR_CODE</field>&img_angle=270"/>
+      <br/>
+      <center>
+       <field>con(PS_SEQ,'-',PS_C_SEQ)</field>
+      </center>
       <field>pick(PB_PRINT_AT_HOME,'-->')</field>
-<field>PS_SEQ</field>
      </td>
      <td align="center" valign="top">
       <div class="ticketlineprint">
        event
       </div>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
-       <field>P_PLAY_TITLE</field>
-      </a>
+      <field>P_PLAY_TITLE</field>
      </td>
     </tr>
     <tr>
@@ -22,9 +27,7 @@
       <div class="ticketlineprint">
        venue
       </div>
-      <a class="link muted" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
-       <field>VE_NAME</field>
-      </a>
+      <field>VE_NAME</field>
       <br/>
       <div style="font-size: 12px">
        <field>con(VE_ADDRESS1,' ',VE_ADDRESS2,' ',VE_CITY)</field>
@@ -46,7 +49,10 @@
       </div>
       <field>D_SECTION_DESC</field>: <field>MS_SECTION</field> <field>D_ROW_DESC</field>: <field>MS_ROW_NUMBER</field> <field>D_SEAT_DESC</field>: <field>MS_SEAT_NUMBER</field>
       <em>
-       <field>pick(MS_NOTE_USE_FLAG,'',con('<br>',MS_SEAT_NOTE))</field>
+       <field>pick(MS_NOTE_USE_FLAG,'<!-- comment:')</field>
+       <br/>
+       <field>pick(MS_NOTE_USE_FLAG,'-->')</field>
+         <field>MS_SEAT_NOTE</field>
       </em>
      </td>
     </tr>
@@ -73,12 +79,13 @@
     <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'<!-- comment: do not show bar code to avoid server hits')</field>
       <img align="right" src="<field>F_HTML_TIX_BAR_CODE</field>"/>
       <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'-->')</field>
-        <field>PS_SEQ</field>
      </td>
     </tr>
    </table>
    <p>
     <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/ticketAd.png"/>
+   </p>
+   <p style="page-break-after:always;">
    </p>
   </div>
   <!-- comment: parameters to F_HTML_TIX_BAR_CODE

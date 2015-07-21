@@ -1,10 +1,13 @@
-  <tr class="rowcart passredemption">
+  <tr class="tablerowdetail">
    <td>
     <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
     <input name="SCD_PURCHASE_GROUP" type="hidden" value="<field>SCD_PURCHASE_GROUP</field>"/>
-    <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="checkbox" value="1"/>
+    Redemption
    </td>
-   <td>
+   <td align="center">
+    <field>pick(SCD_QUANTITY>0,'',SCD_QUANTITY)</field>
+   </td>
+   <td align="left">
     <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>MT_DESCRIPTION_EXTERNAL</field>
     </a>
@@ -42,8 +45,10 @@
     and is unable be applied to this cart.
   <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0,'-->','')</field>
    </td>
-   <td>
-    <field>pick(SCD_QUANTITY>0,'',SCD_QUANTITY)</field> Redemption
-  <field>SCD_TOTAL_COST</field>
+   <td align="right">
+    <field>SCD_TOTAL_COST</field>
+   </td>
+   <td align="center">
+    <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="checkbox" value="1"/>
    </td>
   </tr>

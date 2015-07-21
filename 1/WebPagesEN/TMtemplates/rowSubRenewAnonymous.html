@@ -1,7 +1,9 @@
-  <p class="text-center text-warning">
-   You are not currently logged in. Subscriptions can be renewed here after login.
-  </p>
+  <field>pick(F_LOGGED_IN=2,'<!-- comment: show when logged OUT','')</field>
+  <div class="alert alert-danger">
+   Any existing subscriptions may be renewed after login.
+  </div>
   <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-   <input class="button btn btn-info" id="btnLoginAccount" name="btnLoginAccount" type="submit" value="Login to see any existing subscriptions"/>
+   <input class="btn btn-primary" id="btnLoginAccount" name="btnLoginAccount" type="submit" value="Login to renew existing subscriptions"/>
    <input name="param" type="hidden" value="SG_SEQ=0"/>
   </form>
+  <field>pick(F_LOGGED_IN=2,'-->','')</field>

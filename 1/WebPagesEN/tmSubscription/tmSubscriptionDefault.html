@@ -8,92 +8,23 @@
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="subscription popup">
-  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
-     <h1>
-      Subscriptions
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div align="center" id="content">
-      <table border="0" cellpadding="0" cellspacing="0" class="main" width="90%">
-       <tr>
-        <td>
-         <div align="center">
-          <table border="0" cellpadding="0" class="tablerowdetail" width="100%">
-           <tr class="tablerowheader">
-            <td align="Center">
-             <p>
-              <field>SG_DESCRIPTION</field>
-              <br/>
-             </p>
-            </td>
-           </tr>
-           <tr>
-            <td align="left">
-             <field>SG_NOTES</field>
-             <br/>
-             <br/>
-            </td>
-           </tr>
-           <tr>
-            <td align="center">
-             <field>VE_NAME</field>
-             <br/>
-             <field>VE_ADDRESS1</field>
-             <br/>
-             <field>pick(len(VE_ADDRESS2)=0,con(VE_ADDRESS2,'<br>'))</field>
-            <field>VE_CITY</field>, <field>VE_PROVINCE</field> <field>VE_POSTAL_CODE</field>
-             <p>
-              Phone: <field>VE_WORK_PHONE</field> Fax: <field>Ve_FAX_PHONE</field>
-             </p>
-            </td>
-           </tr>
-           <tr>
-            <td align="center">
-             <strong>
-              <field>D_VENUE</field>
-                        Notes
-             </strong>
-             <br/>
-            </td>
-           </tr>
-           <tr>
-            <td align="center">
-             Capacity: <field>TM_SEATS_REPORT</field>
-             <br/>
-             <field>VE_NOTES</field>
-            </td>
-           </tr>
-           <tr class="tablerowheader">
-            <td align="center">
-             <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-              <input name="VE_SEQ" type="hidden" value="<field>VE_SEQ</field>"/>
-              <input name="SG_SEQ" type="hidden" value="{{"/>
-              <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>online?SG_SEQ=<field>SG_SEQ</field>" onclick="return openInParent(this);">
-               Buy a <field>SG_DESCRIPTION</field>
-              </a>
-             </form>
-            </td>
-           </tr>
-          </table>
-         </div>
-        </td>
-       </tr>
-      </table>
-     </div>
-    </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
-   </div>
-  </div>
+ <body class="backgroundPopup">
+  <table align="center" border="0" cellpadding="4" cellspacing="0" width="90%">
+   <tr class="tablerowheader">
+    <td align="center">
+     <a class="link" href="<field>F_HTML_FIREWALL</field>login?subscription=<field>SG_SEQ</field>&VE_SEQ=<field>VE_SEQ</field>" onclick="return openInParent(this);">
+      Buy the <field>SG_DESCRIPTION</field>
+     </a>
+    </td>
+   </tr>
+   <tr align="left" class="tablerowdetail">
+    <td>
+     <field>SG_NOTES</field>
+    </td>
+   </tr>
+  </table>
  </body>
 </html>

@@ -1,4 +1,4 @@
-  <script type="text/javascript">
+  <script language="JavaScript">
    <!-- Begin
 	function verify() {
 		var themessage = "";
@@ -77,32 +77,20 @@
      <td>
      </td>
      <td>
-      <input name="PM_SEQ" type="checkbox" value="502"/>
-      Everything <field>D_COMPANY</field>
+      <input name="PM_SEQ" type="checkbox" value="6"/>
+      I want to know about classic plays
       <br/>
-      <input name="PM_SEQ" type="checkbox" value="3150"/>
-      Broadway
+      <input name="PM_SEQ" type="checkbox" value="7"/>
+      Musicals interest me
       <br/>
-      <input name="PM_SEQ" type="checkbox" value="3148"/>
-      Comedy
+      <input name="PM_SEQ" type="checkbox" value="38"/>
+      Upcoming event info
       <br/>
-      <input name="PM_SEQ" type="checkbox" value="3146"/>
-      Dance
+      <input name="PM_SEQ" type="checkbox" value="42"/>
+      Hockey Fans
       <br/>
-      <input name="PM_SEQ" type="checkbox" value="507"/>
-      Education
-      <br/>
-      <input name="PM_SEQ" type="checkbox" value="3145"/>
-      Family Friendly
-      <br/>
-      <input name="PM_SEQ" type="checkbox" value="508"/>
-      Festivals & Special Events
-      <br/>
-      <input name="PM_SEQ" type="checkbox" value="503"/>
-      Movies
-      <br/>
-      <input name="PM_SEQ" type="checkbox" value="3147"/>
-      Opera
+      <input name="PM_SEQ" type="checkbox" value="35"/>
+      2008 subscribers (should be able to add)
       <!--       	<select name="PM_SEQ" size="10" multiple id="PM_SEQ">
        		<field>F_HTML_SUBSCRIBE_LIST</field>         		                                                                          
        	</select> -->
@@ -143,7 +131,7 @@
       <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
       <input name="btnAccountMailListAdd" type="hidden" value="btnAccountMailListAdd"/>
       <!-- comment: trick for javascript submit() -->
-      <input class="btn btn-primary" name="btnAccountMailListAdd" onclick="return verify();" type="submit" value="Subscribe to Selected Mail Lists"/>
+      <input class="new" name="btnAccountMailListAdd" onclick="return verify();" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Add to Selected Email Notifications"/>
      </td>
     </tr>
    </table>

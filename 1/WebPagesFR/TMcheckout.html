@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Paiement
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" id="TMForm" method="POST">
+       <!-- comment: following fields used for hidden submit
+        			  remove the input field for 'param' if you want to go to the default page TMcart.html as we usually go there
+					  after making chances to the shopping cart.  If you prefer to stay on this page and process the credit, the
+					  leave the hidden param field and set is value to 'btnCheckoutProcessing'
+					-->
+       <input name="pg" type="hidden" value="checkout"/>
+       <input name="fee" type="hidden" value="<field>D_WEB_MAIL_FEE_SEQ</field>"/>
+       <input name="param" type="hidden" value="altbtn=btnCheckoutProcessing"/>
+       <input name="hiddenSubmit" type="hidden" value=""/>
+       <div align="center">
+        <p class="message">
+         <b>
+          <field>F_HTML_PAGE_MESSAGE</field>
+         </b>
+        </p>
+        <table border="0" cellpadding="5" class="main" colspan="2" width="100%">
+         <tr>
+          <td align="center" class="tablerowheader" valign="middle" width="15%">
+           <img src="tmGifs/step1.gif"/>
+          </td>
+          <td class="tablerowdetail" style="font-size:25px" valign="top" width="85%">
+           <b>
+            &Eacute;tape 1 de 3 : fournir des informations de carte de cr&eacute;dit
+           </b>
+          </td>
+         </tr>
+         <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'<!-- comment: no tix which needs handling')</field>
+         <!--#include virtual="TMtemplates/tmTicketHandling.html" -->
+         <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'-->')</field>
+         <tr>
+          <td align="right" class="tablerowheader" valign="middle">
+           Payment Amount
+          </td>
+          <td class="tablerowdetail" style="font-size:25px" valign="middle">
+           <b>
+            $<field>SCH_TOTAL_COST</field> <field>F_HTML_CURRENCY</field>
+           </b>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" valign="middle">
+           Mode de paiement
+          </td>
+          <td class="tablerowdetail" valign="middle">
+           <table border="0" cellpadding="0" width="100%">
+            <tr class="tablerowdetail">
+             <td width="200">
+              <select name="PAY_METHOD_FC_SEQ">
+               <field>F_HTML_PAYMENT_LIST</field>
+              </select>
+             </td>
+             <td>
+              <field>pick(len(F_HTML_MERCHANT_LIST)>0,'<!-- comment: add multiple merchant popup')</field>
+							Currency:
+              <select name="MM_SEQ" onchange="submitForm('TMForm','btnCheckoutMerchant','YES');" size="1">
+               <field>F_HTML_MERCHANT_LIST</field>
+              </select>
+              <field>pick(len(F_HTML_MERCHANT_LIST)>0,' -->')</field>
+                   <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if redeem passes ok','')</field>
+              <input class="new" name="btnPassRemainingValues" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="&Eacute;changez Certificats-cadeaux"/>
+              <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" height="43" valign="top">
+           Num&eacute;ro de carte
+          </td>
+          <td class="tablerowdetail" valign="top">
+           <table border="0" cellpadding="0" width="100%">
+            <tr class="tablerowdetail">
+             <td width="200">
+              <input autocomplete="off" maxlength="30" name="PAY_CARD_NO" size="30" type="text" value="<field>PAY_CARD_NO</field>"/>
+             </td>
+             <td>
+              Mois
+              <select name="ExpireMonth">
+               <field>F_HTML_MONTH_LIST</field>
+              </select>
+              Ann&eacute;e
+              <select name="ExpireYear">
+               <field>F_HTML_YEAR_LIST</field>
+              </select>
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" height="43" valign="top">
+           Nom figurant sur la carte de cr&eacute;dit
+          </td>
+          <td class="tablerowdetail" valign="top">
+           <input maxlength="25" name="CD_NAME_ON_CARD" size="30" type="text" value="<field>CD_NAME_ON_CARD</field>"/>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" height="43" valign="top">
+           Code CID ou CVV2 de la carte
+          </td>
+          <td class="tablerowdetail" valign="top">
+           <table border="0" cellpadding="0" width="100%">
+            <tr class="tablerowdetail">
+             <td valign="top" width="200">
+              <input maxlength="4" name="PAY_CARD_CID_NO" size="10" type="text" value="<field>PAY_CARD_CID_NO</field>"/>
+             </td>
+             <td>
+              <table border="0" width="100%">
+               <tr class="tablerowdetail">
+                <td valign="top">
+                 <img align="top" alt="cvv2" height="67" src="tmGifs/cvv2.gif" width="218"/>
+                </td>
+                <td>
+                 Il s'agit du code &agrave; trois ou quatre chiffres indiqu&eacute; (voir illustrations)&nbsp;:
+                 <ul>
+                  <li>
+                   au dos de la carte de cr&eacute;dit, en dessous de la bande magn&eacute;tique, dans le cas d'une carte Visa ou MasterCard, ou
+                  </li>
+                  <li>
+                   au recto de la carte, dans le cas d'une carte Amex.
+                  </li>
+                 </ul>
+                </td>
+               </tr>
+              </table>
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
+         <field>pick(F_POST_DATED_PLAN_ALLOWED&(SCH_TOTAL_COST-F_POST_DATED_AMOUNT_DUE_TODAY)>0,'<!-- comment: installment plan options')</field>
+         <!--#include virtual="tmTemplates/tmCheckoutPostDatedPayments.html" -->
+         <field>pick(F_POST_DATED_PLAN_ALLOWED&(SCH_TOTAL_COST-F_POST_DATED_AMOUNT_DUE_TODAY)>0,'-->')</field>
+
+              <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)=0,'<!-- comment: for donation only, may need reason to buy')</field>
+         <input name="ORD_REASON_BUY_FC_SEQ" type="hidden" value="0"/>
+         <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)=0,'-->')</field>
+
+              <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'<!-- comment: if more than donations, show reason to buy')</field>
+         <!--#include virtual="TMtemplates/tmCheckoutReasonToBuy.html" -->
+         <!--#include virtual="TMtemplates/tmCheckoutOrderNotes.html" -->
+         <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'-->')</field>
+         <!--#include virtual="TMtemplates/tmCheckoutSecurityAdvisory.html" -->
+         <tr>
+          <td class="tablerowheader" height="25" valign="top">
+           &nbsp;
+          </td>
+          <td align="left" class="tablerowdetail" valign="top">
+           <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+           <field>pick(D_REQD_ACKNOWLEDGE_CRITERIA,'<!-- comment:')</field>
+           <input id="conditions" name="ORD_ACKNOWLEDGED_CONDITIONS" type="checkbox" value="1" <field>pick(SCH_ACKNOWLEDGED_CONDITIONS,'','checked')</field>/>
+           <label for="conditions">
+            J'accepte
+           </label>
+           <a class="link" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmtermsandconditions.html" onclick="return popup(this, 'notes')">
+            les Conditions de Vente
+           </a>
+           <field>pick(D_REQD_ACKNOWLEDGE_CRITERIA,'-->')</field>
+           <input class="new" name="btnCheckoutProcessing" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Continuer &agrave; Paiement &Eacute;tape 2"/>
+           &nbsp;&nbsp;&nbsp;&nbsp;
+           <input class="new" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler"/>
+          </td>
+         </tr>
+        </table>
+        <br/>
+        <span class="message">
+         <b>
+          Toutes les ventes de billet sont d&eacute;finitives. Aucun &eacute;change ni remboursement.
+         </b>
+         <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
+          Politiques du service de billetterie en ligne
+         </a>
+         <br/>
+         <br/>
+        </span>
+       </div>
+      </form>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Available Passes and Gift Certificates
+  </title>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <!-- Pragma content set to no-cache tells the browser not to cache the page
+		This may or may not work in IE -->
+  <meta content="0" http-equiv="expires"/>
+  <!-- Setting the page to expire at 0 means the page is immediately expired
+		Any values less then one will set the page to expire some time in past and
+		not be cached. This may not work with Navigator -->
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+     <td>
+      <p align="center" class="message">
+       <b>
+        <field>F_HTML_PAGE_MESSAGE</field>
+       </b>
+      </p>
+      <table align="center" border="0" cellpadding="4" cellspacing="1" width="100%">
+       <tr class="tablerowdetail">
+        <td align="left" colspan="10">
+         Passes ou certificats-cadeaux affich&eacute;es ci-dessous sont associ&eacute;s &agrave; votre compte et
+          peut &ecirc;tre appliqu&eacute; &agrave; certains achats dans le panier. La liste ne comprend que les articles que vous avez achet&eacute;s
+        (pour vous-m&ecirc;me ou comme un cadeau pour les autres).  Vous pourriez &ecirc;tre en mesure de:
+         <ul>
+          <li>
+           Appliquer un ch&egrave;que-cadeau en paiement du solde de la commande
+          </li>
+          <li>
+           Racheter un laissez-passer pour les billets applicables
+          </li>
+         </ul>
+         <table border="0" cellpadding="2" cellspacing="0" width="100%">
+          <tr class="main">
+           <td valign="middle">
+            <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+             <input class="new" name="btnPassCheckBalance" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Utilisez un col ou un ch&egrave;que-cadeau m'a donn&eacute;"/>
+            </form>
+           </td>
+           <td valign="top">
+            Si vous avez re&ccedil;u un certificat-cadeau ou passer applicable pour <field>D_COMPANY_LONG</field>
+				de quelqu'un d'autre et vous savez
+            <u>
+             <b>
+              e nombre de commande et le code de la r&eacute;demption personnelle
+             </b>
+            </u>
+            ; vous pourriez &ecirc;tre en
+				mesure de l'appliquer &agrave; ce panier ou v&eacute;rifier le solde restant.
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr class="tablerowheader">
+        <td align="left">
+         Description
+         <br/>
+         et But
+        </td>
+        <td align="left" width="100">
+         Expiration et
+         <br/>
+         Notes Personnelles
+        </td>
+        <td align="right" width="50">
+         Num&eacute;ro de Contr&ocirc;le
+        </td>
+        <td align="right" colspan="2" width="80">
+         Montant de l'achat/Qt&eacute;
+        </td>
+        <td align="right" colspan="2" width="80">
+         Le montant du rachat/Qt&eacute;
+        </td>
+        <td align="right" colspan="2" width="80">
+         Montant restant/Qt&eacute;
+        </td>
+        <td width="125">
+         &nbsp;
+        </td>
+       </tr>
+       <field>F_HTML_PASS_REMAINING_VALUES</field>
+       <tr class="tablerowheader">
+        <td align="center" colspan="10" height="40" valign="middle">
+         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+          <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+          <input class="new" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Retour &agrave; la Page Principale"/>
+         </form>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

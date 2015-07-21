@@ -1,0 +1,21 @@
+#	Les données ci-dessous vont par paire : le numéro de mois et le nom de mois
+#	Assurez-vous de toujours avoir 13 lignes (0 à 12) lorsque vous localisez l'application
+#	Les colonnes sont délimitées par des tabulations, avec un CR ou un LF en fin de ligne
+#
+#	these are in pairs for month number and month name
+#	please make sure that there are 13 rows when you customize for languages
+#	columns are separated by tabs, end of line is a CR or LF
+
+0	tous les mois
+1	janvier
+2	février
+3	mars
+4	avril
+5	mai
+6	juin
+7	juillet
+8	août
+9	septembre
+10	octobre
+11	novembre
+12	décembre

@@ -1,44 +1,21 @@
-  <p class="alert alert-info">
-   Your Purchase Qualifies for a Deferred Payment Plan
-  </p>
-  <dl class="tmcheckoutpostdatedpaymentrules">
-   <dt>
-    Some items in your shopping cart qualify for installment payments.
-   </dt>
-   <dd class="help-block">
-    <small>
-     Due to the possibility of having different products within the shopping cart each 
-    having their own unique date to be completely paid in full, the amounts listed below 
-    for each installment date may not be identical.  As well, some items in your cart may not be 
-    applicable for the Deferred Payment Plan.
-    </small>
-   </dd>
-   <dt>
-    Participating in the Deferred Payment Plan is
+  <div class="alert alert-warning">
+   <div style="font-size:20px">
+    <b>
+     Your Purchase Qualifies for a Deferred Payment Plan
+    </b>
+   </div>
+   <p>
+    Some items in your cart qualify for installment payments.  Participating means you agree to allow <field>D_COMPANY</field> to charge your credit card today for
+    <b>
+     $<field>F_POST_DATED_AMOUNT_DUE_TODAY</field>
+    </b>
+    and charge the same card according to the payment schedule below.
     <u>
-     completely optional
+     Otherwise you will be charged for the full amount of
+     <b>
+      $<field>SCH_TOTAL_COST</field>
+     </b>
+     today.
     </u>
-    .
-   </dt>
-   <dd class="help-block">
-    <small>
-     By
-     <em>
-      particpating
-     </em>
-     in the Deferred Payment Plan, you agree to allow <field>D_COMPANY</field> to 
-    charge the credit card you are providing today for $<field>F_POST_DATED_AMOUNT_DUE_TODAY</field> 
-    and automatically on each of the Pre-Authorized Installment Dates, for the amount associated 
-    with that date.
-    </small>
-   </dd>
-   <dd class="help-block">
-    <small>
-     <em>
-      Otherwise
-     </em>
-     your credit card will be charged for the full purchase amount
-	of $<field>SCH_TOTAL_COST</field>.
-    </small>
-   </dd>
-  </dl>
+   </p>
+  </div>

@@ -7,60 +7,81 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="event popup">
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
-     <!--eventdefault-->
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div class="hero-unit">
-      <h1>
-       <field>P_PLAY_TITLE</field>
-      </h1>
-      <p class="text-center">
-       <field>pick(P_PERFORMANCES=1,'runs from','occurs on')</field>
-	<field>cap(dat(P_SHOW_FIRST,'w n D y'))</field>
-	<field>pick(P_PERFORMANCES=1,con('to ',cap(dat(P_SHOW_LAST,'w n D y'))))</field>
-	in the
-       <br/>
-       <field>VE_NAME</field>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container">
+   <div id="content">
+    <div class="row">
+     <div class="col-md-4">
+      <p>
+       <field>pick(PP_SEQ>0,'<!-- comment: use picture if avail')</field>
+       <img class="img-responsive" src="<field>F_HTML_FIREWALL</field>picture?id=<field>PP_SEQ</field>"/>
+       <field>pick(PP_SEQ>0,' -->')</field>
+        <field>pick(PP_SEQ=0,'<!-- comment: no picture, use TT icon instead')</field>
+       <img class="img-responsive" src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>"/>
+       <field>pick(PP_SEQ=0,' -->')</field>
+      </p>
+     </div>
+     <div class="col-md-8">
+      <div class="page-header">
+       <h1>
+        <field>P_PLAY_TITLE</field>
+       </h1>
+      </div>
+      <h3>
+       When
+      </h3>
+      <p>
+       <field>pick(P_PERFORMANCES=1,'Runs from','Occurs on')</field>
+        <field>cap(dat(P_SHOW_FIRST,'w n D y'))</field>
+        <field>pick(P_PERFORMANCES=1,con('to ',cap(dat(P_SHOW_LAST,'w n D y'))))</field>
+      </p>
+      <h3>
+       Venue
+      </h3>
+      <p>
+       <strong>
+        <field>VE_NAME</field>
+       </strong>
        <br/>
        <field>VE_ADDRESS1</field>
        <br/>
-       <field>pick(len(VE_ADDRESS2)=0,con(VE_ADDRESS2,'<br>'))</field>
-	<field>VE_CITY</field> <field>VE_PROVINCE</field> <field>VE_POSTAL_CODE</field>
+       <field>pick(len(VE_ADDRESS2)>0,'<!-- comment: two lines of address')</field>
+         <field>VE_ADDRESS2</field>
        <br/>
-       <br/>
-       Approximate running time: <field>P_PLAY_DURATION</field> minutes
+       <field>pick(len(VE_ADDRESS2)>0,'-->')</field>
+        <field>VE_CITY</field> <field>VE_PROVINCE</field> <field>VE_POSTAL_CODE</field>
       </p>
-      <h4>
+      <field>pick(len(P_SALES_NOTES)>0,'<!-- comment: no sales notes')</field>
+      <h3>
        <field>D_PERF_DESC</field> Notes
-      </h4>
+      </h3>
       <p>
        <field>P_SALES_NOTES</field>
       </p>
-      <field>pick(PP_SEQ>0,'<!-- comment: no picture')</field>
-      <p align="center">
-       <img align="absmiddle" src="<field>F_HTML_FIREWALL</field>picture?id=<field>PP_SEQ</field>"/>
+      <field>pick(len(P_SALES_NOTES)>0,'-->')</field>
+      <p class="text-muted">
+       Approximate running time: <field>P_PLAY_DURATION</field> minutes
       </p>
-      <field>pick(PP_SEQ>0,' -->')</field>
       <p>
-       <a class="link" href="<field>F_HTML_FIREWALL</field>login?event=<field>P_SEQ</field>" onclick="return openInParent(this);">
-        Buy Tickets to this <field>D_EVENT</field>
+       <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>login?event=<field>P_SEQ</field>">
+        Buy Tickets To This Event
+       </a>
+       <a class="btn btn-info" href="http://maps.google.com/maps?q=<field>VE_ADDRESS1</field> <field>VE_ADDRESS2</field> <field>VE_CITY</field> <field>VE_PROVINCE</field>
+          <field>VE_POSTAL_CODE</field> <field>VE_COUNTRY</field>" target="_blank">
+        Directions
        </a>
       </p>
      </div>
-     <!--/hero-->
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
    </div>
+   <!-- /#content -->
   </div>
+  <!-- .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Nouveau compte
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <p align="center" class="message">
+    <b>
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </p>
+   <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td align="center" colspan="3">
+      <b>
+       Pour poursuivre votre op&eacute;ration, veuillez s&eacute;lectionner une des options ci-dessous et fournir les renseignements demand&eacute;s.
+      </b>
+     </td>
+    </tr>
+    <tr>
+     <td align="center" valign="middle" width="8%">
+      <img src="tmGifs/step1.gif"/>
+     </td>
+     <td>
+      <!--#include virtual="TMtemplates/tmLoginForm.html" -->
+     </td>
+    </tr>
+   </table>
+   <hr align="center" width="80%"/>
+   <table align="center" border="0" cellpadding="4" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td align="center" valign="top" width="8%">
+      <img src="tmGifs/step2.gif"/>
+     </td>
+     <td valign="top">
+      <form action="<field>F_HTML_FIREWALL</field>login" method="POST">
+       <input class="new" name="btnAccountRequest" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Cr&eacute;er un compte"/>
+       <input name="param" type="hidden" value="altbtn=btnCheckout"/>
+      </form>
+     </td>
+     <!--#include virtual="TMtemplates/tmLoginLimitedPatronNewAccount.html" -->
+    </tr>
+   </table>
+   <hr align="center" width="80%"/>
+   <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td align="center" valign="top" width="8%">
+      <img src="tmGifs/step3.gif"/>
+     </td>
+     <td>
+      Vous pouvez compl&eacute;ter votre achat
+      <b>
+       sans cr&eacute;er de compte
+      </b>
+      .  Cela limite un peu
+services &agrave; la client&egrave;le comme le remplacement du billet (s'il est perdu ou vol&eacute;),
+les remboursements (si l'&eacute;v&eacute;nement d'annulation), notification (si l'&eacute;v&eacute;nement report&eacute;), etc.
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <!--#include virtual="TMtemplates/tmLoginLimitedPatron.html" -->
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

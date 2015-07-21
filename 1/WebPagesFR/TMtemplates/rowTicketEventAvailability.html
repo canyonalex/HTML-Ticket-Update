@@ -1,0 +1,11 @@
+  <field>pick(F_SOLD_PERCENT<80,'','Bon')</field>
+<field>pick(F_SOLD_PERCENT>=80&F_SOLD_PERCENT<90,'','<font color="#FF00FF">Limité</font>')</field>
+<field>pick(F_SOLD_PERCENT>=90&F_SOLD_PERCENT<95,'','<font color="#FF00FF">Très limité</font>')</field>
+
+<field>pick(F_SOLD_PERCENT>=95&F_SOLD_PERCENT<100,'<!-- comment: show remaining if we are close to sold out','')</field>
+  <font color="#FF0000">
+   environ <field>pick(PB_SEATS_AVAIL-PB_TOTAL_SOLD-PB_TOTAL_HELD>0,'0',PB_SEATS_AVAIL-PB_TOTAL_SOLD-PB_TOTAL_HELD)</field> restant
+  </font>
+  <field>pick(F_SOLD_PERCENT>=98&F_SOLD_PERCENT<100,'-->','')</field>
+
+<field>pick(F_SOLD_PERCENT>=100,'','<font color="#FF0000">Complet</font>')</field>

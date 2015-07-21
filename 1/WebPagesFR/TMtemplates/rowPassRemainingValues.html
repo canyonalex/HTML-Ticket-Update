@@ -1,0 +1,60 @@
+  <tr class="tablerowdetail">
+   <td>
+    <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
+     <field>MT_DESCRIPTION_EXTERNAL</field>
+    </a>
+    <br/>
+    <field>MT_NOTES</field>
+   </td>
+   <field>pick(len(M_DATE_EXPIRY)>0,'<!-- comment: Expiry date on pass','')</field>
+   <td align="left" width="70">
+    <field>jst(M_DATE_EXPIRY,'D:m D, y')</field>
+    <br/>
+    <field>M_NOTES</field>
+   </td>
+   <field>pick(len(M_DATE_EXPIRY)>0,'-->','')</field>
+  
+  <field>pick(len(M_DATE_EXPIRY)=0,'<!-- comment: No expiration date on pass','')</field>
+   <td align="left" width="70">
+    Ne pas expirer
+    <br/>
+    <field>M_NOTES</field>
+   </td>
+   <field>pick(len(M_DATE_EXPIRY)-0,'-->','')</field>
+   <td align="right" width="50">
+    <field>M_CONTROL_NUMBER</field>
+   </td>
+   <td align="right" width="60">
+    <field>M_ISSUED_PASS_AMOUNT</field>
+   </td>
+   <td align="right" width="20">
+    <field>M_ISSUED_PASS_QTY</field>
+   </td>
+   <td align="right" width="60">
+    <field>M_USED_PASS_AMOUNT+M_IN_CART_REDEEM_AMOUNT</field>
+   </td>
+   <td align="right" width="20">
+    <field>M_USED_PASS_QTY+M_IN_CART_REDEEM_QTY</field>
+   </td>
+   <td align="right" width="60">
+    <field>M_REMAIN_PASS_AMOUNT-M_IN_CART_REDEEM_AMOUNT</field>
+   </td>
+   <td align="right" width="20">
+    <field>M_REMAIN_PASS_QTY-M_IN_CART_REDEEM_QTY</field>
+   </td>
+   <td align="center">
+    <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+     <field>pick(M_IN_CART_REDEEM_SCH_SEQ=0,'<!-- comment: nothing left to redeem so hide button after message')</field>
+     <input class="new" name="btnPassForRedemption" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Appliquer au panier"/>
+     <input name="M_SEQ" type="hidden" value="<field>M_SEQ</field>"/>
+     <field>pick(M_IN_CART_REDEEM_SCH_SEQ=0,' -->')</field>
+   
+   <field>pick(M_IN_CART_REDEEM_SCH_SEQ>0,'<!-- comment: already in cart')</field>
+     <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
+     <input name="SCD_PURCHASE_GROUP" type="hidden" value="<field>SCD_PURCHASE_GROUP</field>"/>
+     <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="hidden" value="1"/>
+     <input class="new" name="btnCartRemoveItem" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Retirer du panier"/>
+     <field>pick(M_IN_CART_REDEEM_SCH_SEQ>0,' -->')</field>
+    </form>
+   </td>
+  </tr>

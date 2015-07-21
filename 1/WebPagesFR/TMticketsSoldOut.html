@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Achat de billets
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <div align="center" class="message">
+    <b>
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </div>
+   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <input id="event" name="event" type="hidden" value="<field>P_SEQ</field>"/>
+       <p align="center" class="main">
+        Nous sommes d&eacute;sol&eacute;s, mais les billets que vous souhaitiez pour la <field>low(D_PERF_DESC)</field> de
+        <br/>
+        <field>P_PLAY_TITLE</field> le <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> &agrave; <field>PB_PERFORM_TIME</field> ont tous &eacute;t&eacute; vendus OU ne sont plus en vente sur Internet en raison de la proximit&eacute; du d&eacute;but de la repr&eacute;sentation.
+        <br/>
+        Il devient impossible d'acheter des billets par l'interm&eacute;diaire de notre site Web 60&nbsp;minutes avant le lever de rideau. Vous pouvez toutefois encore en obtenir, s'il en reste, par t&eacute;l&eacute;phone ou en personne &agrave; la billetterie.
+        <br/>
+       </p>
+       <p align="center" class="main">
+        Si vous souhaitez prendre contact avec la billetterie, au
+        <fiel>
+         D_SWITCH_BOARD, nos repr&eacute;sentants se feront un plaisir de vous aider.
+        </fiel>
+       </p>
+       <br/>
+       <p align="center" class="main">
+        Si vous d&eacute;sirez assister &agrave; une autre <field>low(D_PERF_DESC)</field>, veuillez cliquer sur le bouton 'Choisir une autre repr&eacute;sentation' ci-dessous.
+       </p>
+       <p align="center">
+        <input class="new" name="btnGetEventList" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="S&eacute;lectionner une autre repr&eacute;sentation"/>
+       </p>
+      </form>
+      <center>
+       <!--#include virtual="TMtemplates/tmContactHours.html" -->
+      </center>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

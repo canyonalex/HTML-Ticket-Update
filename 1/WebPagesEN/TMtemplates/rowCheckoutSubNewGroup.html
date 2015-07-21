@@ -1,4 +1,4 @@
-  <tr class="rowcheckout sub newgroup">
+  <tr class="tablerowdetail">
    <td>
     <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
     <input name="SCD_PURCHASE_GROUP" type="hidden" value="<field>SCD_PURCHASE_GROUP</field>"/>
@@ -32,20 +32,3 @@
     <field>SCD_TOTAL_COST</field>
    </td>
   </tr>
-  <script>
-   var item = <field>SG_SEQ</field>; //numeric ID
-if(tm_checkout_items[item]) {
-  tm_checkout_items[item].qty = parseInt(tm_checkout_items[item].qty) + parseInt(<field>SCD_QUANTITY</field>);
-  //console.log('subscription exists ' + item);
-}
-else {
-	tm_checkout_items[item] = 
-	{
-		title:'Subscription <field>SG_DESCRIPTION</field>',
-		variation:'<field>SG_DESCRIPTION</field>',
-		price:'<field>SCD_TOTAL_COST</field>',
-		qty:'<field>SCD_QUANTITY</field>'
-	};
-	//console.log('new subscription ' + item);
-}
-  </script>

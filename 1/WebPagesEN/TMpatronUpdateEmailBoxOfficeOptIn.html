@@ -8,73 +8,57 @@
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="patron update email boxoffice optin">
-  <!--#include virtual="tmScripts/venue_header_email.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
+ <body class="background">
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
      <h1>
       Notification Confirmation Request
+      <br/>
+      <small class="text-muted">
+       <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
+      </small>
      </h1>
-     <p>
-      Dear
-      <b>
-       <field>con(C_FIRST_NAME,' ',C_LAST_NAME,pick(len(C_COMPANY)=0,' - '),C_COMPANY)</field>
-      </b>
-      ,
-     </p>
-     <p>
-      Our staff recently added you to a specific notification list which we will use to email to you for the purposes outlined.
-  Most likely, you were added as a result of a conversation that we had with you or past history with our organization.
-     </p>
-     <p>
-      <field>D_COMPANY_LONG</field> uses a
-      <b>
-       double-opt-in mechanism
-      </b>
-      and you must confirm your participation.
-  If you do not, you will automatically be removed from the notification approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field>
-  hours after you receive this email.  If you ignore the email, you can opt in at some future time you wish.
-     </p>
-     <p>
-     </p>
-     <a class="link" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-      Confirm participation
-     </a>
-     in
-     <b>
-      <field>PM_DESCRIPTION_EXTERNAL</field>
-     </b>
-     <b>
-      Purpose:
-     </b>
-     <field>PM_DESCRIPTION</field>
-     <p>
-     </p>
-     <p>
-      If you ever wish to review your account and change any settings in the future,
-      <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
-       click here
-      </a>
-      - or type the URL of our site in your web browser directly if your preference is additional browsing safety.
-     </p>
-     <p>
-      Unless you provide express consent or disclosure is required pursuant to a legal power,
-    all information kept by <field>D_COMPANY_LONG</field> regarding you, is confidential
-    and may not be disclosed by <field>D_COMPANY_LONG</field> to anyone.
-     </p>
-     <p class="text-center">
-      Please contact us via telephone or e-mail for more information.
-     </p>
-     <p class="text-center">
-      <!--#include virtual="TMtemplates/tmContactHours.html" -->
-     </p>
     </div>
-    <!--span-->
+    <div class="alert">
+     Our staff recently added you to a specific email notification list which we will use to email to you for the purposes outlined.
+  Most likely, you were added as a result of a conversation that we had with you or past history with our organization.
+     <br/>
+     <br/>
+     <field>D_COMPANY_LONG</field> uses a
+     <b>
+      double-opt-in mechanism
+     </b>
+     and you must confirm your participation.
+     <br/>
+     <br/>
+     If you do not, you will automatically be removed from the notification approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field>
+  hours after you receive this email.  If you ignore the email, you can opt in at some future time you wish.
+    </div>
+    <p>
+     &nbsp;
+    </p>
+    <div class="alert alert-info">
+     Purpose:
+     <br/>
+     <field>PM_DESCRIPTION</field>
+    </div>
+    <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
+     Confirm participation in <field>PM_DESCRIPTION_EXTERNAL</field>
+    </a>
+    <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>F_EMAIL_ADDRESS</field>&tmsource=accountupdate">
+     Review My Account
+    </a>
+    <p>
+     &nbsp;
+    </p>
+    <!--#include virtual="TMtemplates/tmPrivacyNoteEmail.html" -->
+    <!--#include virtual="TMtemplates/tmContactHours.html" -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

@@ -7,144 +7,91 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="cart">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
      <h1>
-      Your Shopping Cart
+      Shopping Cart
      </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <p class="ticket-hide text-center">
-      <strong>
-       BARCODE TICKETS - Print your tickets at home!
-      </strong>
-      You can now print-out the barcodes from the confirmation window or, at any time, your upcoming performances and just hand them to the usher at the door of the theatre as your ticket.
-      <br/>
-      <strong>
-       - OR-
-      </strong>
-      <br/>
-      <strong>
-       TRADITIONAL TICKETS - For an additional $2.00
-      </strong>
-      Tickets by <field>D_COMPANY</field> will print traditional tickets for you. If there are at least 10 business days until your first performance, we will mail your tickets but if there are fewer than 10 business days, we will hold the tickets for pickup at Will Call.
-      <br/>
-      <em>
-       some restrictions apply
-      </em>
-     </p>
-     <p class="text-center">
-      <strong>
-       Don't forget your <field>D_COMPANY</field>
-       <a href="<field>F_HTML_FIREWALL</field>login&pass=0">
-        Gift Certificate!
-       </a>
-      </strong>
-      With something for EVERYONE, a Gift Certificate is the perfect gift - and they never expire!
-     </p>
-     <form action="<field>F_HTML_FIREWALL</field>online" id="TMForm" method="POST">
-      <!--
-		<P class="text-center text-warning"><b><field>F_HTML_PAGE_MESSAGE</field></b></P> -->
-      <table class="table table-bordered table-condensed">
-       <tr>
-        <th>
-         Remove
-        </th>
-        <th>
-         Description
-        </th>
-        <th>
-         Total
-        </th>
-       </tr>
-       <field>pick(F_DONATION_ALLOWED,'<!-- comment: based on setting in company preferences','')</field>
-       <tr>
-        <td colspan="3">
-         Please consider making a
-         <a class="link" href="<field>F_HTML_FIREWALL</field>login&donation=0">
-          donation
-         </a>
-         .&nbsp;We are a registered charity and your donation is completely deductible to the full extent of the law.
-        </td>
-       </tr>
-       <field>pick(F_DONATION_ALLOWED,'-->','')</field>
-		  <field>F_HTML_CURRENT_CART_LIST</field>
-       <tr class="info carttotal">
-        <td>
-         <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'<!-- comment: only show remove cart item button if need to','')</field>
-         <input class="btn btn-warning" name="btnCartRemoveItem" onclick="process()" type="submit" value="Remove"/>
-         <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'-->','')</field>
-        </td>
-        <td>
-         <b>
-          GRAND TOTAL
-				<field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','(includes all applicable taxes)')</field>
-         </b>
-        </td>
-        <td>
-         <b>
-          $<field>SCH_TOTAL_COST</field>
-         </b>
-        </td>
-       </tr>
-      </table>
-      <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-      <div class="form-actions">
-       <input class="btn btn-primary" name="btnCheckout" onclick="process()" type="submit" value="Go to Checkout and make Payment"/>
-       <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if enabled to redeem passes','')</field>
-       <input class="btn" name="btnPassRemainingValues" onclick="process()" type="submit" value="Redeem My Passes/Gift Certificates"/>
-       <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
-       <!-- comment: Update the hidden "fee" field with the Fee Number with the matching Mailing Fee Number 
-                    in Theatre Manager.  If you do not want the mailing option at all on your web pages, 
-                    comment out the following section  or remove the fee number from company preferences.
-                    If you want the patron to go to the checkout page right away, then add the input field
-                    <input type=hidden name=param value="altbtn=btnCheckoutProcessing"> after the 
-                    D_WEB_MAIL_FEE_SEQ input field.
-      -->
-       <a class="btn" href="<field>F_HTML_FIREWALL</field>login&event=">
-        Continue Shopping
-       </a>
-      </div>
-      <input name="hiddenSubmit" type="hidden" value=""/>
-      <!--comment: hidden input used to submit drop-down selections-->
-     </form>
-     <!-- comment: This section to allow coupon acceptance from the cart page.
-                The hidden parameter 'param' can be set to 'btnCart' to return to the cart window 
-                when an error occurs or can be removed to be directed to a seperate entry page 
-                or can be set to 'btnGetEventList' to go to the ticket page showing only the 
-                events that the coupon opens up for pre-sales access.
-  -->
-     <field>pick(F_COUPON_ALLOWED,'<!-- comment: based on setting in company preferences')</field>
-     <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal" method="post">
-      <input name="param" type="hidden" value="altbtn=btnCart"/>
-      <div class="control-group">
-       <label class="control-label" for="btnCouponAccept">
-        Coupon Code
-       </label>
-       <div class="controls">
-        <div class="input-append">
-         <input id="CH_CODE" name="CH_CODE" onblur="this.value=this.value.toUpperCase()" type="text" value="<field>CH_CODE</field>"/>
-         <input class="btn" name="btnCouponAccept" onclick="process()" type="submit" value="Add Coupon"/>
-        </div>
-       </div>
-      </div>
-     </form>
-     <field>pick(F_COUPON_ALLOWED,'-->')</field>
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+     <field>pick(not(F_REMOVE_CART_ITEM_ALLOWED),'<!-- comment: there is no cart')</field>
+      <!--#include virtual="TMtemplates/tmCartEmpty.html" -->
+     <field>pick(not(F_REMOVE_CART_ITEM_ALLOWED),'-->')</field>
+     </div>
+     <div class="col-md-8">
+      <!--#include virtual="TMtemplates/rowCartDonationSuggestion.html" -->
+     <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'<!-- comment: there is a cart')</field>
+      <!--#include virtual="TMtemplates/tmCartWithItems.html" -->
+     <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'-->')</field>
+         <form action="<field>F_HTML_FIREWALL</field>online" id="TMForm" method="POST">
+          <div align="center">
+<div style="clear: both;">
+         <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+         <input class="btn btn-primary" id="btnGetEventList" name="btnGetEventList" onclick="process()" type="submit" value="Continue Shopping"/>
+         <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if enabled to redeem passes','')</field>
+         <input class="btn btn-primary" name="btnPassRemainingValues" onclick="process()" type="submit" value="Redeem My Passes/Gift Certificates"/>
+         <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
+         <!-- comment: Update the hidden "fee" field with the Fee Number with the matching Mailing Fee Number 
+                              in Theatre Manager.  If you do not want the mailing option at all on your web pages, 
+                              comment out the following section  or remove the fee number from company preferences.
+                              If you want the patron to go to the checkout page right away, then add the input field
+                              <input type=hidden name=param value="altbtn=btnCheckoutProcessing"> after the 
+                              D_WEB_MAIL_FEE_SEQ input field.
+                -->
+         <field>pick(F_MAIL_FEE_ALLOWED,'<!-- comment: only show mail button if required')</field>
+         <input class="btn btn-primary" name="btnMailFeeAdd" onclick="process()" type="submit" value="Mail Me My Tickets"/>
+         <input name="fee" type="hidden" value="<field>D_WEB_MAIL_FEE_SEQ</field>"/>
+         <field>pick(F_MAIL_FEE_ALLOWED,'-->')</field>
+         <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'<!-- comment: only need checkout button if cart has things')</field>
+          <input class="btn btn-success" name="btnCheckout" onclick="process()" type="submit" value="Checkout & Pay"/>
+         <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'-->')</field>
+         <br/>
+         <br/>
+        </div>
+        <input name="hiddenSubmit" type="hidden" value=""/>
+        <!--comment: hidden input used to submit drop-down selections-->
+        <!-- comment: This section to allow coupon acceptance from the cart page.
+                          The hidden parameter 'param' can be set to 'btnCart' to return to the cart window
+                          when an error occurs or can be removed to be directed to a seperate entry page
+                          or can be set to 'btnGetEventList' to go to the ticket page showing only the
+                          events that the coupon opens up for pre-sales access.
+            -->
+       </div>
+      </form>
+      <div align="center">
+       <field>pick(F_COUPON_ALLOWED,'<!-- comment: based on setting in company preferences')</field>
+       <form action="<field>F_HTML_FIREWALL</field>online" class="form-inline" method="post">
+        <input name="param" type="hidden" value="altbtn=btnCart"/>
+        <div class="form-group">
+         <input class="form-control" id="CH_CODE" maxlength="40" name="CH_CODE" onblur="this.value=this.value.toUpperCase()" placeholder="Coupon Code" size="40" type="text" value="<field>CH_CODE</field>"/>
+        </div>
+        <input class="btn btn-success" name="btnCouponAccept" onclick="process()" type="submit" value="Add Coupon"/>
+       </form>
+       <field>pick(F_COUPON_ALLOWED,'-->')</field>
+      </div>
+      <div class="text-muted" style="margin: 10px 0;">
+       If you wish to purchase another ticket, <field>low(D_MEMBER_DESC)</field>
+      or make a <field>low(D_DONATION_DESC)</field>, select from the menu options
+      at the top of the window.
+      </div>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

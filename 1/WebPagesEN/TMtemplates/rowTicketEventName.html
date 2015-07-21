@@ -1,12 +1,8 @@
-  <p>
-   <a class="link" href="<field>F_HTML_FIREWALL</field>online?btnSelectEvent&PB_SEQ=<field>PB_SEQ</field>" onclick="return popup(this, 'notes')">
+  <h4 class="media-heading">
+   <a href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html">
     <field>P_PLAY_TITLE</field>
    </a>
-   <span>
-    at
-    <a class="link muted" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
-     <field>VE_NAME</field>
-    </a>
+   <span class="pull-right text-muted">
+    <field>cap(dat(PB_PERFORM_DATE,'w m D y'))</field> <field>PB_PERFORM_TIME</field>
    </span>
-  </p>
-  <field>PB_PERF_NOTES</field>
+  </h4>

@@ -1,0 +1,34 @@
+  <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+   <tr align="center">
+    <td>
+     <p>
+      <b>
+       <field>D_COMPANY_LONG</field>
+       <br/>
+       <field>D_ADDRESS1</field>
+       <br/>
+       <field>pick(len(D_ADDRESS2)=0,'','<!-- comment:')</field>
+       <br/>
+       <field>pick(len(D_ADDRESS2)=0,'',' -->')</field>
+			<field>D_ADDRESS2</field>
+		<field>D_CITY</field> <field>D_PROVINCE</field>, <field>D_POSTAL_CODE</field>
+       <br/>
+       <a class="link" href="http://maps.google.com/maps?q=<field>D_ADDRESS1</field> <field>D_ADDRESS2</field> <field>D_CITY</field> <field>D_PROVINCE</field> <field>D_POSTAL_CODE</field>" target="_blank">
+        Itin&eacute;raire jusqu'&agrave; notre billetterie
+       </a>
+       <br/>
+       T&eacute;l.: <field>D_SWITCH_BOARD</field> T&eacute;l&eacute;c.: <field>D_FAX_PHONE</field>
+       <br/>
+       <br/>
+       <a class="link" href="http://<field>D_WEB_SITE</field>" target="_blank">
+        <field>D_WEB_SITE</field>
+       </a>
+       <br/>
+       <a class="link" href="mailto:<field>D_EMAIL_ADDR</field>?subject=Online%20Website%20Inquiry">
+        <field>D_EMAIL_ADDR</field>
+       </a>
+      </b>
+     </p>
+    </td>
+   </tr>
+  </table>

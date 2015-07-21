@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Saisie de coupon
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <div align="center">
+        <p>
+         <b class="message">
+          <field>F_HTML_PAGE_MESSAGE</field>
+         </b>
+        </p>
+        <table border="0" cellpadding="1">
+         <tr>
+          <td class="tablerowheader">
+          </td>
+          <td align="left" class="tablerowheader">
+           Coupon Information
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowdetail" width="100">
+           Code du coupon
+          </td>
+          <td class="tablerowdetail">
+           <input id="CH_CODE" maxlength="40" name="CH_CODE" onblur="this.value=this.value.toUpperCase()" size="40" type="text" value="<field>CH_CODE</field>"/>
+          </td>
+         </tr>
+         <tr class="tablerowheader">
+          <td align="center" colspan="2">
+           <!-- comment: include the next 'param' input field if you want TM to show only events that this coupon opens up
+                  on the event listing page for a one time shot and remove it if you want the web pages to stay on this coupon page -->
+           <input name="param" type="hidden" value="altbtn=btnGetEventList"/>
+           <input class="new" name="btnCouponAccept" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ajouter un coupon"/>
+           &nbsp;
+           <input class="new" name="<field>pick(F_LOGGED_IN=2,'btnHome','btnCart')</field>" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler"/>
+          </td>
+         </tr>
+        </table>
+       </div>
+      </form>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

@@ -7,92 +7,32 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="subscriptions">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <ul class="breadcrumb">
-      <li>
-       <a href="<field>F_HTML_FIREWALL</field>online?btnHome">
-        Account
-       </a>
-       <span class="divider">
-        /
-       </span>
-      </li>
-      <li class="active">
-       Subscriptions
-      </li>
-     </ul>
-     <div class="hero-unit">
-      <h1>
-       Subscription Shopping Cart
-      </h1>
-      <p class="text-center text-warning">
-       <field>F_HTML_PAGE_MESSAGE</field>
-      </p>
-      <h4>
-       Thank you for choosing to purchase a season subscription package.
-      </h4>
-      <p>
-       Subscriptions are the best way to enjoy year round entertainment in the best possible seats, 
-	  at the best possible times and with the best possible deals. Subscriptions are also a great way to support the institutions we know you value so much. Tickets
-	  by <field>D_COMPANY</field> and its partner venues thank you.
-      </p>
-     </div>
-     <!--/.hero-unit-->
-     <h5>
-      Subscription Options:
-     </h5>
-     <ol>
-      <li>
-       Renew your subscription without any changes.
-       <br/>
-       <em>
-        If you would like to make changes to your renewal, please contact the Tickets by <field>D_COMPANY</field> Box Office <field>D_SWITCH_BOARD</field>
-       </em>
-      </li>
-      <li>
-       Purchase a new subscription
-      </li>
-     </ol>
-     For more assistance please contact the Tickets by <field>D_COMPANY</field> Box Office at <field>D_SWITCH_BOARD</field> and one of our Ticket Agents will be happy to assist you.
-     <em>
-      <strong>
-       (all discounts will be taken at checkout)
-      </strong>
-     </em>
-     <!--<p>Use this page to manage your season subscription packages (to renew them or add new ones to your account). 
-  You are limited to the following: </p>
-<ol>
- <li>Renewing a package as is (without changes)</li>
- <li>Renewing your current seats and completing the online change request for a seat or performance move</li>
- <li>Cancelling a subscription to allow us to reallocate the seats later in the season</li>
- <li>Reinstating a package that you cancelled so you can book the seats</li>
- <li>Adding a completely new subscription after finding available seats </li>
-</ol>
-<p>If you wish to make any wholesale changes to your subscription such as dropping or adding a seat -or- moving within the 
-<field>low(D_VENUE)</field> 
-or  
-changing your evening that cannot be accomodated in the online change request, please contact the box office and we will be happy to assist.</p>-->
-     <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-     <a name="renew">
-     </a>
-     <field>F_HTML_CURRENT_SUBSCRIPTION_LIST</field>
-     <a name="new">
-     </a>
-     <field>F_HTML_NEW_SUBSCRIPTION_LIST</field>
-     <!--<p><a href="tmMaps/TMsubscriptionsPriceMapDefault.html" class="btn">Ticket Purchase Window</a></p>-->
-    </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Season Subscriptions
+    </h1>
    </div>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     <!--#include virtual="TMtemplates/rowSubRenewAnonymous.html" -->
+    </div>
+    <div class="col-md-8">
+     <!--#include virtual="TMtemplates/rowSubRenewalList.html" -->
+     <field>F_HTML_NEW_SUBSCRIPTION_LIST</field>
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

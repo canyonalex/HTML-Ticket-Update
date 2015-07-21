@@ -9,41 +9,39 @@
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="backup">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <h1>
-      Box Office Offline
-     </h1>
-     <div class="main_content">
-      <p class="text-center text-warning">
-       <field>F_HTML_PAGE_MESSAGE</field>
-      </p>
-      <form action="<field>F_HTML_FIREWALL</field>online" method="post">
-       <div align="center">
-        <!-- comment:
-		<p>We are temporarily off line so that the box office can be backed up starting at <field>SPR_FORCE_LOGOFF_DAILY_AT</field> for <field>SPR_BACKUP_ELAPSED_TIME</field> minutes.</p>
--->
-        <p>
-         Please contact our box office listed below and our representatives will be more than happy to assist you.
-        </p>
-       </div>
-       <!--#include virtual="TMtemplates/tmContactHours.html" -->
-       <p>
-        You can try to continue and access your shopping cart by clicking on any of the menu items on the screen. If you receive this message again, the system is still in the process of being backed up.
+  <div align="center" id="content">
+   <div align="center" class="message">
+    <b>
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </div>
+   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <h2>
+        <div align="center">
+         <p class="title">
+          <field>D_COMPANY_LONG</field> Online Ticketing
+         </p>
+        </div>
+       </h2>
+       <center>
+        <!--#include virtual="TMtemplates/tmContactHours.html" -->
+       </center>
+       <p class="main">
+        You can try to continue and access your shopping cart 
+            by clicking on any of the tabs above. If you receive this message 
+            again, the system is still in the process of being backed up.
        </p>
       </form>
-     </div>
-     <!--span-->
-     <!--#include virtual="tmScripts/venue_footer.html" -->
-    </div>
-   </div>
+     </td>
+    </tr>
+   </table>
   </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

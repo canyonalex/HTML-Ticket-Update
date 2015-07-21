@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | D&eacute;tail de l'&eacute;v&eacute;nement - <field>P_PLAY_TITLE</field>
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="backgroundPopup">
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+   <tr class="tablerowheader">
+    <td align="center">
+     <a class="link" href="<field>F_HTML_FIREWALL</field>login?event=<field>P_SEQ</field>" onclick="return openInParent(this);">
+      Acheter des billets pour cet &eacute;v&eacute;nement
+     </a>
+    </td>
+   </tr>
+   <tr class="tablerowdetail">
+    <td align="center">
+     <field>pick(P_PERFORMANCES=1,'Du','Le')</field>
+	  <field>cap(dat(P_SHOW_FIRST,'w D n y'))</field>
+	<field>pick(P_PERFORMANCES=1,con('au ',cap(dat(P_SHOW_LAST,'w D n y'))))</field>
+	 dans
+     <br/>
+     <field>VE_NAME</field>
+     <br/>
+     <field>VE_ADDRESS1</field>
+     <br/>
+     <field>pick(len(VE_ADDRESS2)>0,'<!-- comment: two lines of address')</field>
+	<field>VE_ADDRESS2</field>
+     <br/>
+     <field>pick(len(VE_ADDRESS2)>0,'-->')</field>
+   <field>VE_CITY</field> <field>VE_PROVINCE</field> <field>VE_POSTAL_CODE</field>
+     <br/>
+     <br/>
+     Dur&eacute;e approximative&nbsp;: <field>P_PLAY_DURATION</field> minutes
+    </td>
+   </tr>
+   <tr class="tablerowheader">
+    <td align="center">
+     <b>
+      <field>D_EVENT</field> - Observations
+     </b>
+     <br/>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" class="tablerowdetail" width="100%">
+      <tr>
+       <td align="left">
+        <field>pick(PP_SEQ>0,'<!-- comment: no picture')</field>
+        <img align="right" src="<field>F_HTML_FIREWALL</field>picture?id=<field>PP_SEQ</field>" width="50%"/>
+        <field>pick(PP_SEQ>0,' -->')</field>
+		 <field>P_SALES_NOTES</field>
+       </td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

@@ -1,16 +1,20 @@
-  <div class="control-group">
-   <label class="control-label">
+  <tr>
+   <td>
     <input name="PS_SEQ" type="hidden" value="<field>PS_SEQ</field>"/>
     <field>MS_SECTION</field>
-    <br/>
+   </td>
+   <td>
     <field>MS_ROW_NUMBER</field>
-		<field>MS_SEAT_NUMBER</field>
-    <br/>
+   </td>
+   <td>
+    <field>MS_SEAT_NUMBER</field>
+   </td>
+   <td>
     <field>pick(MS_NOTE_USE_FLAG,'',MS_SEAT_NOTE)</field>
-   </label>
-   <div class="controls">
+   </td>
+   <td>
     <select name="SC_DESCRIPTION" size="1">
      <field>F_HTML_PROMOTIONS_LIST</field>
     </select>
-   </div>
-  </div>
+   </td>
+  </tr>

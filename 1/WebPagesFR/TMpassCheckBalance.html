@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | V&eacute;rifiez col balance
+  </title>
+  <!-- comment: Created by: Arts Management Systems Limited - Calgary Alberta Canada (403) 536-1214 http://www.artsman.com
+    This web page integrates with Theatre Manager to support online ticket sales and donations and provide a single
+    intregrated database for online and inhouse sales for arts and entertainment venues.  If you see this and want to
+    use for your own venue, please check us out at http://www.artsman.com
+    Alter this source code as you see fit to suit your needs, but if you do, Arts Management Systems is not responsible
+    for supporting or debugging errors that may occur  -->
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <!-- Pragma content set to no-cache tells the browser not to cache the page This may or may not work in IE -->
+  <meta content="0" http-equiv="expires"/>
+  <!-- Setting the page to expire at 0 means the page is immediately expired Any vales less then one will set the page to expire some time in past and not be cached. This may not work with Navigator -->
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+     <td>
+      <p align="center" class="message">
+       <b>
+        <field>F_HTML_PAGE_MESSAGE</field>
+       </b>
+      </p>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <div align="center">
+        <table border="0" cellpadding="4" cellspacing="1" width="345">
+         <tr>
+          <td align="center" class="tablerowheader" colspan="2">
+           <b>
+            Col/cadeau de v&eacute;rification Certificat du solde
+           </b>
+          </td>
+         </tr>
+         <tr>
+          <td class="tablerowdetail" colspan="2">
+           <ul>
+            <li>
+             V&eacute;rifiez le solde restant sur un col existant ou un ch&egrave;que-cadeau
+            </li>
+            <li>
+             Appliquer un Ch&egrave;que-cadeau pour le paiement du solde de la commande
+            </li>
+            <li>
+             Appliquer un rachat de passe au paiement des billets applicables
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" valign="middle" width="92">
+           Num&eacute;ro de contr&ocirc;le
+          </td>
+          <td align="left" class="tablerowdetail" valign="middle" width="240">
+           <input id="M_CONTROL_NUMBER" maxlength="30" name="M_CONTROL_NUMBER" size="50" value="<field>M_CONTROL_NUMBER</field>"/>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" valign="middle" width="92">
+           Sode de s&eacute;curit&eacute;
+          </td>
+          <td align="left" class="tablerowdetail" valign="middle" width="240">
+           <input autocomplete="off" id="M_PASSWORD" maxlength="30" name="M_PASSWORD" size="50" value="<field>M_PASSWORD</field>"/>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" valign="middle" width="92">
+           Description
+          </td>
+          <td align="left" class="tablerowdetail" valign="middle" width="240">
+           <field>F_HTML_PASS_LOOKUP_DESCRIPTION</field>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" class="tablerowheader" valign="middle" width="92">
+           Valeur r&eacute;siduellee
+          </td>
+          <td align="left" class="tablerowdetail" valign="middle" width="240">
+           <field>F_HTML_PASS_LOOKUP_VALUE</field>
+          </td>
+         </tr>
+         <p>
+         </p>
+         <tr class="tablerowheader">
+          <td align="center" colspan="2">
+           <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+           <input class="new" name="btnPassCheckBalance" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="V&eacute;rifier le Solde"/>
+           &nbsp;
+           <input class="new" name="btnPassForRedemption" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Appliquer au Panier"/>
+           &nbsp;
+           <input class="new" name="<field>pick(F_LOGGED_IN=2,'btnHome','btnGetEventList')</field>" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Cancel Verification"/>
+          </td>
+         </tr>
+        </table>
+       </div>
+      </form>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

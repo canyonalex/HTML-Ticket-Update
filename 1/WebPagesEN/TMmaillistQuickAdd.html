@@ -7,38 +7,28 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="maillist quickadd">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <h1>
-      Mail Lists
-     </h1>
-     <div align="center" id="content">
-      <p class="text-center text-warning">
-       <field>F_HTML_PAGE_MESSAGE</field>
-      </p>
-      <table border="0" cellpadding="0" cellspacing="0" width="95%">
-       <tr>
-        <td>
-         <div align="center">
-          <!--comment: To support error conditions and insertion of mail list adding on any page the HTML form is seperate from this page.   This allows a single page to be the 'Mail List Add' page -->
-          <!--#include virtual="TMtemplates/tmMailListQuickAddInsert.html" -->
-         </div>
-        </td>
-       </tr>
-      </table>
-     </div>
-    </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
-   </div>
+  <div align="center" id="content">
+   <p class="message">
+    <b>
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </p>
+   <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+     <td>
+      <div align="center">
+       <!--comment: To support error conditions and insertion of mail list adding on any page the HTML form is seperate from this page.   This allows a single page to be the 'Mail List Add' page -->
+       <!--#include virtual="TMtemplates/tmMailListQuickAddInsert.html" -->
+      </div>
+     </td>
+    </tr>
+   </table>
   </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | D&eacute;tail de la campagne
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="backgroundPopup">
+  <table align="center" border="0" cellpadding="4" cellspacing="0" width="90%">
+   <tr class="tablerowheader">
+    <td align="center">
+     <a class="link" href="<field>F_HTML_FIREWALL</field>login&donation=<field>DC_SEQ</field>" onclick="return openInParent(this);">
+      Cliquez ici pour faire un don
+     </a>
+    </td>
+   </tr>
+   <tr align="left" class="tablerowdetail">
+    <td>
+     Cette campagne est men&eacute;e au profit de
+     <p>
+      <field>DC_NOTES</field>
+     </p>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

@@ -1,15 +1,20 @@
-  <tr class="rowcart fee orderfee">
+  <tr class="tablerowdetail">
    <td>
     <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
     <input name="SCD_PURCHASE_GROUP" type="hidden" value="0"/>
+    Fee
    </td>
-   <td>
+   <td align="left">
+   </td>
+   <td align="left">
     <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmOrderFee<field>FEE_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>FEE_DESCRIPTION_EXTERNAL</field>
     </a>
-    ($<field>SCD_PRICE_PAID</field> Fee)
+    ($<field>SCD_PRICE_PAID</field>)
    </td>
-   <td>
+   <td align="right">
     <field>SCD_TOTAL_COST</field>
+   </td>
+   <td align="center">
    </td>
   </tr>

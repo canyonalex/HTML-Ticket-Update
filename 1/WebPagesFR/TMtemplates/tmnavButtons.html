@@ -1,0 +1,24 @@
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tr align="center">
+    <td>
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+      <!-- comment: remove the comment from the next line if you want languages on web pages -->
+      <!--#include virtual="TMtemplates/tmnavLanguages.html" -->
+      <field>pick(F_LOGGED_IN=1,'<!-- comment: trick. if not logged on, next 3 buttons dont show','')</field>
+      <input class="button" id="btnHome" name="btnHome" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Home"/>
+      <input class="button" id="btnAccount" name="btnAccount" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Account"/>
+      <field>pick(F_LOGGED_IN=1,'-->','')</field>
+	  <field>pick(F_LOGGED_IN=2,'<!-- comment: and if not logged on, show login button','')</field>
+      <input class="button" id="btnLogin" name="btnLogin" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Login"/>
+      <field>pick(F_LOGGED_IN=2,'-->','')</field>
+      <input class="button" id="btnGetEventList" name="btnGetEventList" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Billets"/>
+      <input class="button" id="btnSubscription" name="btnSubscription" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Abonnements"/>
+      <input class="button" id="btnPass" name="btnPass" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Ch&egrave;ques-cadeaux"/>
+      <input class="button" id="btnDonation" name="btnDonation" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Dons"/>
+      <input class="button" id="btnCart" name="btnCart" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Panier d'achat"/>
+      <input class="button" id="btnCheckout" name="btnCheckout" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Payer"/>
+      <input class="button" id="btnLogout" name="btnLogout" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Fermer la session"/>
+     </form>
+    </td>
+   </tr>
+  </table>

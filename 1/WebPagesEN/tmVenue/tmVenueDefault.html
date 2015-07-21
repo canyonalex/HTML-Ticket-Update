@@ -7,60 +7,57 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="venue popup">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
-     <!--venuedefault-->
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div class="hero-unit">
-      <h1>
-       <field>VE_NAME</field>
-      </h1>
+  <div class="container">
+   <div id="content">
+    <div class="row">
+     <div class="col-md-4">
+      <div class="page-header">
+       <h1>
+        <field>VE_NAME</field>
+       </h1>
+      </div>
       <p>
        <field>VE_ADDRESS1</field>
        <br/>
-       <field>pick(len(VE_ADDRESS2)=0,con(VE_ADDRESS2,'<br>'))</field>
-	<field>VE_CITY</field>, <field>VE_PROVINCE</field> <field>VE_POSTAL_CODE</field>
+       <field>pick(len(VE_ADDRESS2)>0,'<!-- comment: two lines of address')</field>
+         <field>VE_ADDRESS2</field>
+       <br/>
+       <field>pick(len(VE_ADDRESS2)>0,'-->')</field>
+        <field>VE_CITY</field> <field>VE_PROVINCE</field> <field>VE_POSTAL_CODE</field>
       </p>
-      <a class="link" href="http://maps.google.com/maps?q=<field>VE_ADDRESS1</field> <field>VE_ADDRESS2</field> <field>VE_CITY</field> <field>VE_PROVINCE</field>
-	<field>VE_POSTAL_CODE</field> <field>VE_COUNTRY</field>" target="_blank">
-       Directions to our <field>D_VENUE</field>
-      </a>
-      <p>
-       Phone: <field>VE_WORK_PHONE</field> Fax: <field>VE_FAX_PHONE</field>
-      </p>
-      <h4>
+      <h3>
        <field>D_VENUE</field> Notes
-      </h4>
-      <p class="text-center">
+      </h3>
+      <p>
        Capacity: <field>TM_SEATS_REPORT</field>
        <br/>
        <field>VE_NOTES</field>
       </p>
-      <p class="text-center">
-       <!-- comment:
-	selected_only = if true, the image returned is a blown up version around the selected seats (can be yes,y,no,n,1 or 0)
-	selected_border = specifies the extra space around the selected seats in points (72 = 1 inch).
-	selected_color = specifies the fill color of the selected seats as a RGB hex string, i.e. FF0000 means bright red  007700 is green
-	img_quality = the jpeg quality 1 to 100, 100 is best.  -->
-       <img border="0" src="<field>F_HTML_SEATMAP</field>"/>
+      <p>
+       <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>login?venue=<field>VE_SEQ</field>">
+        Buy Tickets For Events in this Venue
+       </a>
+       <a class="btn btn-info" href="http://maps.google.com/maps?q=<field>VE_ADDRESS1</field> <field>VE_ADDRESS2</field> <field>VE_CITY</field> <field>VE_PROVINCE</field>
+          <field>VE_POSTAL_CODE</field> <field>VE_COUNTRY</field>" target="_blank">
+        Directions
+       </a>
       </p>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>login?venue=<field>VE_SEQ</field>" onclick="return openInParent(this);">
-       Buy Tickets for <field>tEditCheck.$setPlural(D_EVENT)</field> in this <field>D_VENUE</field>
-      </a>
+     </div>
+     <!-- comment: display the map of the venue -->
+     <div class="col-md-8">
+      <img alt="seat map" class="img-thumbnail visible-lg visible-md" src="<field>F_HTML_SEATMAP</field>&selected_only=no&img_quality=75&format=pick"/>
+      <img alt="seat map" class="img-thumbnail visible-sm visible-xs" src="<field>F_HTML_SEATMAP</field>&selected_only=no&img_quality=75&format=pick" style="width: 300px;"/>
      </div>
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
    </div>
   </div>
+  <!-- .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

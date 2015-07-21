@@ -7,42 +7,41 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="maillist verify optin">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <div class="hero-unit">
-      <h1>
-       Notification List Opt-In
-      </h1>
-      <p class="text-center text-warning">
-       <field>F_HTML_PAGE_MESSAGE</field>
-      </p>
-      <p>
-       Thank you for confirming the following notification options:
-      </p>
-      <p>
-      </p>
-      <p>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Email Notification Opt-in
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+     </div>
+     <div class="col-md-8">
+      <div class="text">
+       The following email notification options have been confirmed for your account.  If you wish to 
+       change anything, please login using the buttons above.
+      </div>
+      <br/>
+      <div class="text">
        <b>
         <field>F_HTML_DOUBLE_OPT_IN</field>
        </b>
-      </p>
-      <p>
-       If you wish to change anything, please login using the buttons above.
-      </p>
+      </div>
      </div>
-     <!--/.hero-unit-->
+     <!-- comment: .col-md-8 -->
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <!-- comment: .row -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

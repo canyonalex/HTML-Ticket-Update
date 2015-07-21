@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+ </head>
+ <body>
+  <p>
+   title&gt;<field>D_COMPANY_LONG</field> | Billets
+   <meta content="no-cache" http-equiv="Pragma"/>
+   <!-- Pragma content set to no-cache tells the browser not to cache the page
+		This may or may not work in IE -->
+   <meta content="0" http-equiv="expires"/>
+   <!-- Setting the page to expire at 0 means the page is immediately expired
+		Any values less then one will set the page to expire some time in past and
+		not be cached. This may not work with Navigator -->
+   <!--#include virtual="tmScripts/disclaimer.html" -->
+   <!--#include virtual="tmScripts/styles.html" -->
+   <!--#include virtual="tmScripts/buttonRollover.html" -->
+   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+   <!--#include virtual="tmScripts/googleHeader.html" -->
+  </p>
+  <div align="center">
+   <b class="messageprint">
+    <field>D_COMPANY_LONG</field>
+   </b>
+   <p>
+    <b class="messageprint">
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </p>
+   <table border="0" cellpadding="10" cellspacing="0" class="tablerowdetailprint" width="700">
+    <tr>
+     <td>
+      <div align="left">
+       <p align="left" class="message">
+        Les billets doivent &ecirc;tre imprim&eacute;s sur papier blanc
+        <br/>
+       </p>
+       <p align="left" class="mainprint">
+        La liste ci-dessous &eacute;num&egrave;re les billets figurant &agrave; votre nom dans nos dossiers pour des <field>low(D_PERF_DESC)</field> &agrave; venir. Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.  Si vous avez des questions au sujet de vos billets ou si vous souhaitez les &eacute;changer conform&eacute;ment aux
+        <a class="linkprint" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
+         politiques du service de billetterie en ligne
+        </a>
+        , veuillez
+        <a class="linkprint" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmContactPopup.html" onclick="return popup(this, 'notes')">
+         prendre contact
+        </a>
+        avec nous.
+        <br/>
+        <br/>
+        Remarque: seules les ventes finalis&eacute;es de billets figurent dans cette liste. Les ventes qui se trouvent actuellement dans votre panier d'achat n'y appara&icirc;tront qu'une fois achev&eacute;es.
+       </p>
+      </div>
+      <div align="center">
+       <input onclick="window.print()" type="button" value="Imprimez vos billets maintenant!"/>
+       <p>
+        <!--#include virtual="TMtemplates/tmContactHours.html" -->
+       </p>
+      </div>
+     </td>
+    </tr>
+   </table>
+   <field>F_HTML_HISTORICAL_CART_LIST</field>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

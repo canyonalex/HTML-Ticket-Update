@@ -1,0 +1,84 @@
+  <form action="<field>F_HTML_FIREWALL</field>patronnew" method="POST">
+   <table border="0" cellpadding="2" cellspacing="0">
+    <tr class="tablerowheader">
+     <td align="right">
+      Account Information
+     </td>
+     <td>
+      <div class="missingfield">
+       *=Renseignements obligatoires
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td align="right" class="tablerowheader" width="127">
+      Pr&eacute;nom
+     </td>
+     <td class="tablerowdetail">
+      <input maxlength="60" name="C_FIRST_NAME" size="30" type="text" value="<field>C_FIRST_NAME</field>"/>
+      <span class="missingfield">
+       <field>F_HTML_REQUIRE_FIRST_NAME</field>
+      </span>
+     </td>
+    </tr>
+    <tr>
+     <td align="right" class="tablerowheader" width="127">
+      Nom
+     </td>
+     <td class="tablerowdetail">
+      <input maxlength="30" name="C_LAST_NAME" size="30" type="text" value="<field>C_LAST_NAME</field>"/>
+      <span class="missingfield">
+       <field>F_HTML_REQUIRE_LAST_NAME</field>
+      </span>
+     </td>
+    </tr>
+    <field>F_HTML_EMAIL_LIST</field>
+    <!-- comment: uncomment this if you would like company to display on the limited profile window.
+		Normally, a company name would not be the kind of thing a limited profile person would use. -->
+    <!-- comment:
+	<TR> 
+		<TD WIDTH="127" class="tablerowheader" align="right">Nom de la société</TD>
+		<TD class="tablerowdetail">
+			<INPUT TYPE=text NAME="C_COMPANY" value="<field>C_COMPANY</field>" SIZE=50 MAXLENGTH=60>
+			<span class=missingfield><field>F_HTML_REQUIRE_COMPANY</field></span>
+		</TD>
+	</TR>
+	-->
+    <field>F_HTML_ADDRESS_LIST</field>
+    <tr class="tablerowheader">
+     <td>
+     </td>
+     <td align="left" class="tablerowheader">
+      Coordonn&eacute;es
+     </td>
+    </tr>
+    <field>F_HTML_CONTACT_LIST</field>
+    <tr class="tablerowheader">
+     <td>
+     </td>
+     <td align="left" class="tablerowheader">
+      Notifications
+     </td>
+    </tr>
+    <td align="right" class="tablerowheader" width="127">
+     E-Mail Notifications
+    </td>
+    <td align="left" class="tablerowdetail">
+     Si vous souhaitez &ecirc;tre tenu inform&eacute; des divers 
+		&eacute;v&eacute;nements et activit&eacute;s sur le lieu, s'il vous pla&icirc;t s&eacute;lectionner vos pr&eacute;f&eacute;rences de dessous:
+     <!--#include virtual="TMtemplates/tmNotificationHeader.html" -->
+    </td>
+    <tr>
+     <td align="center" class="tablerowheader" colspan="2">
+      <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+      <input class="new" name="btnAccountLimitedProfileAdd" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Accepter et Aller au Paiement"/>
+      &nbsp;
+      <input class="new" name="btnCart" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler et Revue Panier"/>
+      <input id="donotmail" name="MKT_DO_NOT_MAILP" type="hidden" value="OUI"/>
+      <!-- comment: set to yes for USA only - outher countries have spam laws -->
+      <input id="donotemail" name="MKT_DO_NOT_EMAIL" type="hidden" value="<field>pick(D_COUNTRY='USA','OUI','NON')</field>"/>
+      <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+     </td>
+    </tr>
+   </table>
+  </form>

@@ -7,70 +7,53 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="background patron new email">
-  <!--#include virtual="tmScripts/venue_header_email.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
+ <body class="background">
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
      <h1>
       New Account Added to Database
+      <br/>
+      <small class="text-muted">
+       <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
+      </small>
      </h1>
-     <p>
-      Dear
-      <b>
-       <field>con(C_FIRST_NAME,' ',C_LAST_NAME,pick(len(C_COMPANY)=0,' - '),C_COMPANY)</field>
-      </b>
-      ,
-     </p>
-     <p>
-      Your email ID
-      <b>
-       <field>CI_CONTENTS</field>
-      </b>
-      and mailing information has been added to our online ticketing
-   system as a result of your recent visit to our web site.  If you do not recall creating an online account,
-   please contact the box office by phone with any concerns you may have.
-     </p>
-     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
-     <p>
-      You also clicked some checkboxes to tell us how you want us to notify you about our programs and events.
-     <field>D_COMPANY_LONG</field> uses a double-opt-in confirmation approach for the notifications.   It means you
-     must confirm your choices by clicking:
-     </p>
-     <p>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-       Confirm my notification setup
-      </a>
-     </p>
-     <p>
-      If you do not click the link, then our system will respect your wishes and remove you from those notifications
-     approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> hours after you created your account.
-     </p>
-     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
-     <p>
-      For your convenience,
-      <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountnew">
-       click here
-      </a>
-      to connect to the web site or you may type it directly into the URL of the browser.
-     </p>
-     <p>
-      Unless you provide express consent or disclosure is required pursuant to a legal power,
-    all information kept by <field>D_COMPANY_LONG</field> regarding you, is confidential
-    and may not be disclosed by <field>D_COMPANY_LONG</field> to anyone.
-     </p>
-     <p class="text-center">
-      Please contact us via telephone or e-mail for more information.
-     </p>
-     <p class="text-center">
-      <!--#include virtual="TMtemplates/tmContactHours.html" -->
-     </p>
     </div>
-    <!--span-->
+    <div class="alert">
+     You have been added to our online ticketing system as a result of your recent visit to our web site.  Your email address
+    will be your account name. If you do not recall creating an online account, contact the box office by phone
+     with any concerns you may have.
+    </div>
+    <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
+    <p>
+     &nbsp;
+    </p>
+    <div class="alert">
+     You also clicked some checkboxes to tell us how you want to be notified about our programs and events.
+     <field>D_COMPANY_LONG</field> uses double-opt-in confirmation.   It means you must confirm your choices by 
+     clicking the button below.
+     <br/>
+     <br/>
+     If you do not click the link, you will be removed from those notifications approximately 
+      <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> hours after you created your account.
+    </div>
+    <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
+     Confirm my notification setup
+    </a>
+    <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
+    <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>login?e=<field>F_EMAIL_ADDRESS</field>&tmsource=accountnew">
+     Login
+    </a>
+    <p>
+     &nbsp;
+    </p>
+    <!--#include virtual="TMtemplates/tmPrivacyNoteEmail.html" -->
+    <!--#include virtual="TMtemplates/tmContactHours.html" -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

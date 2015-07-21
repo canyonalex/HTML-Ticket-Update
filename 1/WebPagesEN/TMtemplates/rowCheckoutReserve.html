@@ -1,4 +1,4 @@
-  <tr class="rowcheckout reserve">
+  <tr class="tablerowdetail">
    <td>
     Tickets
    </td>
@@ -16,7 +16,7 @@
     </b>
     <br/>
     in the
-    <a class="link muted" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+    <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>VE_NAME</field>
     </a>
     <br/>
@@ -35,20 +35,3 @@
     <field>SCD_TOTAL_COST</field>
    </td>
   </tr>
-  <script>
-   var item = <field>PB_P_SEQ</field>; //numeric ID
-if(tm_checkout_items[item]) {
-  tm_checkout_items[item].qty = parseInt(tm_checkout_items[item].qty) + parseInt(<field>SCD_QUANTITY</field>);
-  //console.log('reserve exists ' + item);
-}
-else {
-	tm_checkout_items[item] = 
-	{
-		title:'<field>P_PLAY_TITLE</field>',
-		variation:"<field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> at <field>PB_PERFORM_TIME</field>",
-		price:'<field>SCD_TOTAL_COST</field>',
-		qty:'<field>SCD_QUANTITY</field>'
-	};
-	//console.log('new reserve ' + item);
-}
-  </script>

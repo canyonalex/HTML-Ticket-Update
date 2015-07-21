@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Billets pour <field>tEditCheck.$setPlural(D_EVENT)</field> &agrave; venir
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <p>
+    <b class="message">
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </p>
+   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <div align="center">
+        <p align="left" class="main">
+         La liste ci-dessous &eacute;num&egrave;re les billets figurant &agrave; votre nom dans nos dossiers pour des <field>low(D_PERF_DESC)</field> &agrave; venir.
+		   Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.  Si vous avez des questions au sujet de vos billets ou si vous souhaitez les &eacute;changer conform&eacute;ment aux
+         <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
+          politiques du service de billetterie en ligne
+         </a>
+         , veuillez
+         <a class="link" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmContactPopup.html" onclick="return popup(this, 'notes')">
+          prendre contact
+         </a>
+         avec nous.
+         <br/>
+         <br/>
+         Remarque&nbsp;: seules les ventes finalis&eacute;es de billets figurent dans cette liste. Les ventes qui se trouvent actuellement dans votre panier d'achat n'y appara&icirc;tront qu'une fois achev&eacute;es.
+        </p>
+        <field>F_HTML_HISTORICAL_CART_LIST</field>
+        <table align="center" border="0" cellpadding="1" width="100%">
+         <tr class="tablerowheader">
+          <td align="center">
+           <input class="new" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Revenir &agrave; la page principale"/>
+           &nbsp;
+                  <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'<!-- comment: hide button if not able to print at home')</field>
+           <input class="new" onclick="window.open('<field>F_HTML_FIREWALL</field>login?futureticketsprint','Imprimer des billets','width=700,height=500')" type="button" value="Imprimer Tous les <field>F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT</field> billets futurs"/>
+           <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'-->')</field>
+          </td>
+         </tr>
+        </table>
+       </div>
+      </form>
+     </td>
+    </tr>
+   </table>
+   <!--#include virtual="TMtemplates/tmContactHours.html" -->
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

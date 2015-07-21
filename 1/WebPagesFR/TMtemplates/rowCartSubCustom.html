@@ -1,0 +1,23 @@
+  <tr class="tablerowdetail">
+   <td>
+    <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
+    <input name="SCD_PURCHASE_GROUP" type="hidden" value="<field>SCD_PURCHASE_GROUP</field>"/>
+    &nbsp;
+   </td>
+   <td align="center">
+    &nbsp;
+   </td>
+   <td align="left">
+    <b>
+     <field>pick(PB_SALES_METHOD=2,D_FESTIVAL_DESC,con(MS_SECTION,'/',MS_ROW_NUMBER,'/',MS_SEAT_NUMBER))</field>
+    </b>
+    <field>pick(D_WEB_SHOW_PROMOTION,'',con(' ',SC_DESCRIPTION))</field>
+<field>pick(D_WEB_SHOW_PRICE_CODE,'',con(' ',PC_DESCRIPTION))</field>
+   </td>
+   <td align="right">
+    &nbsp;
+   </td>
+   <td align="center">
+    <input name="F_HTML_REMOVE_CART_ITEM_YN" type="hidden" value="NO"/>
+   </td>
+  </tr>

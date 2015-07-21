@@ -1,18 +1,15 @@
-  <tr class="rowticket event notonsale <field>pick(F_SOLD_PERCENT>=80&F_SOLD_PERCENT<100,'','warning')</field><field>pick(F_SOLD_PERCENT>=100,'','error')</field>">
-   <!--could put an image here (TMtemplates/rowTicketEventName.html), or line numbers <td width="15" valign="middle" class="hidden-phone"><field>F_LINE_LAST_DISPLAYED</field>.</td>-->
-   <td>
+  <div class="media">
+   <!--#include virtual="TMtemplates/rowTicketEventImage.html" -->
+   <div class="media-body">
     <!--#include virtual="TMtemplates/rowTicketEventName.html" -->
-   </td>
-   <td class="hidden-phone">
-    <!--#include virtual="TMtemplates/rowTicketEventCallBoxOffice.html" -->
-   </td>
-   <td>
-    <field>cap(dat(PB_PERFORM_DATE,'w m D y'))</field>
-   </td>
-   <td>
-    <field>PB_PERFORM_TIME</field>
-   </td>
-   <td align="center" valign="middle" width="50">
-   </td>
-  </tr>
-  <!-- comment: used for events that are not yet on sale -- so these are marketing place holders -->
+    <div class="row">
+     <!--#include virtual="TMtemplates/rowTicketEventVenue.html" -->
+     <!--#include virtual="TMtemplates/rowTicketEventCallBoxOffice.html" -->
+     <!-- /col -->
+     <!--#include virtual="TMtemplates/rowTicketEventCallButton.html" -->
+     <!-- /col -->
+    </div>
+    <!-- /row -->
+   </div>
+  </div>
+  <!-- /.media -->

@@ -1,5 +1,9 @@
   <div align="center" class="page-break" width="700">
    <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/pageHeader.gif"/>
+   <p>
+   </p>
+   <p>
+   </p>
    <table border="1" cellpadding="5" cellspacing="0" class="tablerowticketprint" width="700">
     <tr>
      <td align="center" rowspan="6" valign="top">
@@ -15,9 +19,7 @@
       <div class="ticketlineprint">
        event
       </div>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
-       <field>P_PLAY_TITLE</field>
-      </a>
+      <field>P_PLAY_TITLE</field>
      </td>
     </tr>
     <tr>
@@ -25,9 +27,7 @@
       <div class="ticketlineprint">
        venue
       </div>
-      <a class="link muted" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
-       <field>VE_NAME</field>
-      </a>
+      <field>VE_NAME</field>
       <br/>
       <div style="font-size: 12px">
        <field>con(VE_ADDRESS1,' ',VE_ADDRESS2,' ',VE_CITY)</field>
@@ -70,13 +70,16 @@
     <tr>
      <td class="tablerowdetailprint" colspan="2">
       Please print this ticket and bring it with you to the event
-    
-		<field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'-->')</field>
+    <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'<!-- comment: do not show bar code to avoid server hits')</field>
+      <img align="right" src="<field>F_HTML_TIX_BAR_CODE</field>"/>
+      <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'-->')</field>
      </td>
     </tr>
    </table>
    <p>
     <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/ticketAd.png"/>
+   </p>
+   <p style="page-break-after:always;">
    </p>
   </div>
   <!-- comment: parameters to F_HTML_TIX_BAR_CODE

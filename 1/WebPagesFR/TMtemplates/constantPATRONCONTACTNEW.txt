@@ -1,0 +1,37 @@
+#	Ce fichier doit contenir une liste de types et de lieux à indiquer dans tous
+#	les enregistrements de NOUVEAU CLIENT. Doivent inclure les infos de type de
+#	contact ou d'adresse et le numéro de lieu provenant des tables de codes du
+#	directeur ou le texte équivalent (p. ex., Domicile). Le lieu peut rester vide,
+#	auquel cas lavaleur par défaut de la table de codes pour ce type sera sélectionnée.
+#
+#	This file must contain a list of the type and location to be listed on all NEW
+#	patron records.  Must include the contact/address type and the location # from Theatre
+#	Manager's code tables or the plain text equivalent(e.g Home). The location can be left blank and the
+#	code table default for that type will be selected.
+#
+#	Types are as follows:
+#	----------------------
+#	1 = Address
+#	2 = Phone
+#	3 = Fax
+#	4 = E-mail
+#	5 = Website
+#	
+#	Les types sont les suivants :
+#	-----------------------------
+#	1 = Adresse
+#	2 = Téléphone
+#	3 = Télécopieur
+#	4 = Courriel
+#	5 = Site Web
+#	
+# Type	Lieu
+#
+#	Exemple :
+#
+# 4 Domicile
+# 1	Domicile
+# 2	
+# 2	Bureau
+# 3	Télécopieur
+# 5	Bureau

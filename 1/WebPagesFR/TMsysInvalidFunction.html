@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Service de billetterie en ligne
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div align="center" id="content">
+   <div align="center" class="message">
+    <b>
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </b>
+   </div>
+   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+    <tr>
+     <td>
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+       <p align="center" class="title">
+        Service de billetterie en ligne du <field>D_COMPANY_LONG</field>
+       </p>
+       <p align="center" class="main">
+        Il semble que vous ayez cliqu&eacute; sur un des boutons PR&Eacute;C&Eacute;DENT,
+          SUIVANT ou ACTUALISER de votre navigateur. Vous devez &eacute;viter d'utiliser ces boutons lorsque 
+          vous visitez le site du service de billetterie en ligne, car ils ne permettent pas d'actualiser l'affichage 
+          avec les donn&eacute;es les plus &agrave; jour de notre site Web. Si vous n'avez pas cliqu&eacute; 
+          sur un de ces boutons, peut-&ecirc;tre avez-vous cliqu&eacute; &agrave; plusieurs reprises sur un autre bouton?&nbsp; 
+          Il suffit de cliquer une seule fois sur un lien ou un bouton pour transmettre votre requ&ecirc;te par 
+          l'interm&eacute;diaire du site Web.&nbsp;&nbsp;
+       </p>
+       <p align="center" class="main">
+        Pour consulter de l'information, acheter des billets, mettre &agrave; 
+          jour les renseignements de votre compte ou utiliser les autres fonctionnalit&eacute;s du service de billetterie 
+          en ligne, veuillez utiliser les boutons int&eacute;gr&eacute;s aux pages affich&eacute;es.
+       </p>
+       <p align="center" class="main">
+        Pour toute question sur la fa&ccedil;on d'utiliser la billetterie en ligne par 
+          l'interm&eacute;diaire du site Web, veuillez prendre contact avec notre service de billetterie en ligne ci-dessous. 
+          Nos repr&eacute;sentants se feront un plaisir de vous aider.
+       </p>
+       <center>
+        <!--#include virtual="TMtemplates/tmContactHours.html" -->
+       </center>
+       <p align="center" class="main">
+        Vous pouvez continuer et acc&eacute;der &agrave; votre panier en cliquant 
+			sur un des boutons de navigation ci-dessus.
+       </p>
+      </form>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

@@ -7,56 +7,24 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="pass popup">
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span12 page-content img-rounded">
-     <h1>
-      Pass Detail Window
-     </h1>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div align="center">
-      <table border="0" cellpadding="4" cellspacing="0" width="90%">
-       <tr class="tablerowheader">
-        <td align="center">
-         <field>MT_DESCRIPTION_EXTERNAL</field>
-        </td>
-       </tr>
-       <tr class="tablerowdetail">
-        <td align="center">
-         <p>
-          This is a membership about......
-         </p>
-         <p>
-          <field>MT_NOTES</field>
-         </p>
-         <p>
-          <a class="link" href="<field>F_HTML_FIREWALL</field>TMlogin.html?btnLoginFromDetail&MT_SEQ=<field>MT_SEQ</field>">
-           Click 
-          here to Purchase this Pass
-          </a>
-         </p>
-        </td>
-       </tr>
-       <tr align="center" class="tablerowheader">
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>login&pass=<field>MT_SEQ</field>" onclick="return openInParent(this);">
-          Click here to Purchase this <field>MT_DESCRIPTION_EXTERNAL</field>
-         </a>
-        </td>
-       </tr>
-      </table>
-     </div>
-    </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
-   </div>
-  </div>
+ <body class="backgroundPopup">
+  <table align="center" border="0" cellpadding="4" cellspacing="0" width="90%">
+   <tr class="tablerowheader">
+    <td align="center">
+     <a class="link" href="<field>F_HTML_FIREWALL</field>login&pass=<field>MT_SEQ</field>" onclick="return openInParent(this);">
+      Purchase <field>MT_DESCRIPTION_EXTERNAL</field>
+     </a>
+    </td>
+   </tr>
+   <tr align="left" class="tablerowdetail">
+    <td>
+     <field>MT_NOTES</field>
+    </td>
+   </tr>
+  </table>
  </body>
 </html>

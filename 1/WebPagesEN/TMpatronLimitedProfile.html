@@ -3,135 +3,63 @@
  <head>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | New Account Window
+   <field>D_COMPANY_LONG</field> | Checkout Identification Options
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <!--#include virtual="tmScripts/showhidediv.html" -->
-  <!-- comment: Must be after CSS -->
-  <!--#include virtual="tmScripts/html5shiv.html" -->
  </head>
- <body class="patron limitedprofile">
+ <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div class="container-fluid">
-   <div class="row-fluid">
-    <!--#include virtual="tmScripts/venue_header.html" -->
-    <div class="span9 page-content img-rounded">
-     <!--todo-->
-     <h2 class="title">
-      New Account Window
-     </h2>
-     <p class="text-center text-warning">
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </p>
-     <div align="center" id="content">
-      <p align="center" class="message">
-       <b>
-        <field>F_HTML_PAGE_MESSAGE</field>
-       </b>
-      </p>
-      <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-       <tr>
-        <td align="center" colspan="3">
-         <b>
-          To continue with your purchase, select one of the three options below
-          <b>
-          </b>
-         </b>
-        </td>
-       </tr>
-       <tr>
-        <td align="center" valign="middle" width="8%">
-         <img src="tmGifs/step1.gif"/>
-        </td>
-        <td>
-         <!--#include virtual="TMtemplates/tmLoginForm.html" -->
-        </td>
-       </tr>
-      </table>
-      <hr align="center" width="80%"/>
-      <table align="center" border="0" cellpadding="4" cellspacing="0" class="tablerowdetail" width="90%">
-       <tr>
-        <td align="center" valign="middle" width="8%">
-         <img src="tmGifs/step2.gif"/>
-        </td>
-        <td valign="top">
-         <form action="<field>F_HTML_FIREWALL</field>login" method="POST">
-          <input class="new" name="btnAccountRequest" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Create an Account"/>
-          <input name="param" type="hidden" value="altbtn=btnCheckout"/>
-         </form>
-        </td>
-        <td>
-         Creating an account has future benefits such as:
-         <ul>
-          <li>
-           receiving any 'personal' perks/discounts that may apply based on your past purchase history,
-          </li>
-          <li>
-           viewing past purchases at any time
-          </li>
-          <li>
-           reviewing all future tickets for upcoming events,
-          </li>
-          <li>
-           obtaining replacement tickets in case they are lost or stolen,
-          </li>
-          <li>
-           reprinting confirmations, print-at-home tickets,
-          </li>
-          <li>
-           email reminders about your event if our venue offers that service,
-          </li>
-          <li>
-           expedited checkout for future purchases,
-          </li>
-          <li>
-           and more.
-          </li>
-         </ul>
-        </td>
-       </tr>
-       <td>
-       </td>
-       <td>
-        All information is safeguarded pursuant to our
-        <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
-         privacy policy
-        </a>
-        .
-       </td>
-      </table>
-      <hr align="center" width="80%"/>
-      <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-       <tr>
-        <td align="center" valign="middle" width="8%">
-         <img src="tmGifs/step3.gif"/>
-        </td>
-        <td>
-         You may complete your purchase
-         <b>
-          without creating an account
-         </b>
-         .  This limits some
-customer services such as ticket replacement (lost or stolen), refunds (cancelled events),
-notification (postponement), etc.
-        </td>
-       </tr>
-       <tr>
-        <td>
-        </td>
-        <td>
-         <!--#include virtual="TMtemplates/tmLoginLimitedPatron.html" -->
-        </td>
-       </tr>
-      </table>
-     </div>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Checkout Options
+      <br/>
+      <small class="text-muted">
+       Select one of the three options below
+      </small>
+     </h1>
     </div>
-    <!--span-->
-    <!--#include virtual="tmScripts/venue_footer.html" -->
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+      <div class="alert alert-info">
+       Use an existing account
+      </div>
+      <!--#include virtual="TMtemplates/tmLoginForm.html" -->
+      <p>
+       &nbsp;
+      </p>
+     </div>
+     <div class="col-md-8">
+      <div class="alert alert-info">
+       Create a new account
+      </div>
+      <!-- #include virtual="TMtemplates/tmLoginLimitedPatronNewAccount.html" -->
+      <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+       <input class="btn btn-success" name="btnAccountRequest" type="submit" value="New <field>D_PATRON</field>"/>
+       <input name="param" type="hidden" value="altbtn=btnCheckout"/>
+      </form>
+      <p>
+       &nbsp;
+      </p>
+      <div class="alert alert-info">
+       Complete your purchase without creating an account (may limit some customer services)
+      </div>
+      <!--#include virtual="TMtemplates/tmLoginLimitedPatron.html" -->
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>
