@@ -210,43 +210,43 @@ ErrorNumber	ErrorText
 10209	{title} ({date} à {time}): actuel et chariots dernières contiennent billets {current} actuelles, ce qui dépasse le montant maximum de {allowed} autorisés.
 10210	Le nom inscrit sur la carte de crédit est manquant.
 10211	Voici les meilleurs siéges disponibles.  Si vous préférez différents sièges, sélectionnez les sièges disponibles sur la carte ci-dessous.
-10212	First and Last Name OR Company must be entered
-10213	Last Name OR Company must be entered.
-10214	First name must be entered
-10215	Last name must be entered
-10216	Company must be entered
-10217	Gender appears to be incorrect.
-10218	Birthday appears to be incorrect.
-10219	Another {patron} was found with matching search information.  Please call the box office at {mainphone}.
-10220	{outlet} is required.  Please call the box office at {mainphone}
-10221	{mkt1} is required.
-10222	{mkt2} is required.
-10223	{mkt3} is required.
-10224	{mkt4} is required.
-10225	{mkt5} is required.
-10226	{mkt6} is required.
-10227	{mkt6} appears invalid.
-10228	{mkt7} is required.
-10229	{mkt7} appears invalid.
-10230	{mkt8} is required.
-10231	{mkt8} appears invalid.
-10232	Age code is required.
-10233	Age code appears invalid.
-10234	Address is not associated with a {household}.  Please call the box office {mainphone}.
-10235	At least one of the address lines must be entered
-10236	City must be entered.
-10237	{prov} must be entered.
-10238	{prov} appears to be in a different country
-10239	Country must be entered.
-10240	Postal/Zip code must be entered.
-10241	Postal/Zip code appears invalid.
-10242	Country is unknown.
-10243	Address link is not associated with a {household}.  Please call the box office {mainphone}.
-10244	Address link is not associated with a {patron}.  Please call the box office {mainphone}.
-10245	Address link is not associated with an address.  Please call the box office {mainphone}.
-10246	Address link is not associated with a location.  Please call the box office {mainphone}.
-10247	Address link has an invalid location.  Please call the box office {mainphone}.
-10248	At least one address is required.
+10212	Nom ou Société Prénom et doivent être saisis.
+10213	Nom ou Société doivent être saisis.
+10214	Premier nom doit être inscrit
+10215	Dernier nom doit être inscrit
+10216	Société doit être entré
+10217	Sexe semble être incorrect.
+10218	Anniversaire semble être incorrect.
+10219	Un autre {patron} a été trouvé avec les informations correspondantes de recherche.  S'il vous plaît appeler la billetterie au {mainphone}.
+10220	{outlet} is required.  S'il vous plaît appeler la billetterie au {mainphone}
+10221	{mkt1} est requis.
+10222	{mkt2} est requis.
+10223	{mkt3} est requis.
+10224	{mkt4} est requis.
+10225	{mkt5} est requis.
+10226	{mkt6} est requis.
+10227	{mkt6} est invalide.
+10228	{mkt7} est requis.
+10229	{mkt7} est invalide.
+10230	{mkt8} est requis.
+10231	{mkt8} est invalide.
+10232	Code Age est nécessaire.
+10233	Code Age est invalide.
+10234	Adresse est pas associé à {household}.  S'il vous plaît appeler la billetterie au {mainphone}.
+10235	Au moins l'une des lignes d'adresse doivent être inscrits
+10236	Ville doit être entré.
+10237	{prov} doit être entré.
+10238	{prov} semble être dans un pays différent
+10239	Pays doit être entré.
+10240	Code postal / Zip doit être entré.
+10241	Code postal / Zip est invalide.
+10242	Pays est inconnue.
+10243	Lien d'adresses est pas associé à un {household}.  S'il vous plaît appeler la billetterie au {mainphone}.
+10244	Lien d'adresses est pas associé à un {patron}.  S'il vous plaît appeler la billetterie au {mainphone}.
+10245	Lien d'adresses est pas associé à un address.  S'il vous plaît appeler la billetterie au {mainphone}.
+10246	Lien d'adresses est pas associé à un emplacement.  S'il vous plaît appeler la billetterie au {mainphone}.
+10247	Lien d'adresses a un emplacement non valide.  S'il vous plaît appeler la billetterie au {mainphone}.
+10248	Au moins une adresse est nécessaire.
 10249	"{contents}" is not associated with a {household}
 10250	"{contents}" appears to have an invalid type.
 10251	"{contents}" appears to have invalid content.
@@ -264,7 +264,7 @@ ErrorNumber	ErrorText
 10263	Contact link is not associated with a contact.  Please call the box office {mainphone}.
 10264	Contact link is not associated with a location.  Please call the box office {mainphone}.
 10265	Contact link has an invalid location.  Please call the box office {mainphone}.
-10266	At least one address is required.
+10266	At least one phone number is required.
 10267	Contact link could not be found.  Please call the box office {mainphone}.
 10268	Voici les meilleurs {seat} encore disponibles.  Si vous préférez différents sièges, sélectionnez les sièges disponibles sur la carte ci-dessous.
 10269 	Temporairement incapable de générer des PDF. S'il vous plaît réessayer plus tard ou appelez le box-office {mainphone}
