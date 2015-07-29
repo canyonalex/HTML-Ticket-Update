@@ -26,7 +26,7 @@
     </div>
     <div class="row">
      <div class="col-md-4">
-      <!--#include virtual="tmTemplates/tmErrorMessageInfo.html" -->
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
       <!--#include virtual="TMtemplates/tmCheckoutSecurityAdvisory.html" -->
      </div>
      <div class="col-md-8">
@@ -135,7 +135,7 @@
         </div>
        </div>
        <field>pick(F_POST_DATED_PLAN_ALLOWED&(SCH_TOTAL_COST-F_POST_DATED_AMOUNT_DUE_TODAY)>0,'<!-- comment: installment plan options')</field>
-       <!--#include virtual="tmTemplates/tmCheckoutPostDatedPayments.html" -->
+       <!--#include virtual="TMtemplates/tmCheckoutPostDatedPayments.html" -->
        <field>pick(F_POST_DATED_PLAN_ALLOWED&(SCH_TOTAL_COST-F_POST_DATED_AMOUNT_DUE_TODAY)>0,'-->')</field>
      
               <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)=0,'<!-- comment: for donation only, may need value for reason to buy')</field>
