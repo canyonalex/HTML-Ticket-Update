@@ -45,7 +45,7 @@
        <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'-->')</field>
     
          <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)=0,'<!-- comment: for donation only, may need value for reason to buy')</field>
-       <input name="ORD_REASON_BUY_FC_SEQ" type="hidden" value="0"/>
+       <!--#include virtual="TMtemplates/tmCheckoutDonationReasonToBuy.html" -->
        <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)=0,'-->')</field>     
      
          <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'<!-- comment: if more than donations, show reason to buy')</field>
