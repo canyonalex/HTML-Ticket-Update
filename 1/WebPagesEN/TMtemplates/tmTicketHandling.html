@@ -8,12 +8,12 @@
     <div class="form-group">
      <div class="radio col-sm-3">
       <label class="control-label" for="eticket">
-       <input id="eticket" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeRemove','YES');" type="radio" value="0" <field>pick(SCH_TIX_PRINT_STATUS=0,'','checked')</field>/>
+       <input id="eticket" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeRemove','<field>F_MAIL_FEE_EXISTS</field>');" type="radio" value="0" <field>pick(SCH_TIX_PRINT_STATUS=0,'','checked')</field>/>
        E-Ticket/print at home
       </label>
      </div>
      <div class="col-sm-9">
-      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=0,'alert-danger','alert-success')</field>">
+      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=0,'alert-info','alert-info')</field>">
        <b>
         E-Tickets
        </b>
@@ -30,12 +30,12 @@
     <div class="form-group">
      <div class="radio col-sm-3">
       <label class="control-label" for="mailtopatron">
-       <input id="mailtopatron" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeAdd','YES');" type="radio" value="1" <field>pick(SCH_TIX_PRINT_STATUS=1,'','checked')</field>/>
+       <input id="mailtopatron" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeAdd','<field>F_MAIL_FEE_ALLOWED</field>');" type="radio" value="1" <field>pick(SCH_TIX_PRINT_STATUS=1,'','checked')</field>/>
        Mail me my tickets
       </label>
      </div>
      <div class="col-sm-9">
-      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=1,'alert-danger','alert-success')</field>">
+      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=1,'alert-info','alert-info')</field>">
        <b>
         Mailed tickets
        </b>
@@ -54,12 +54,12 @@
     <div class="form-group">
      <div class="radio col-sm-3">
       <label class="control-label" for="willcall">
-       <input id="willcall" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeRemove','YES');" type="radio" value="2" <field>pick(SCH_TIX_PRINT_STATUS=2,'','checked')</field>/>
+       <input id="willcall" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeRemove','<field>F_MAIL_FEE_EXISTS</field>');" type="radio" value="2" <field>pick(SCH_TIX_PRINT_STATUS=2,'','checked')</field>/>
        Hold tickets at Will Call
       </label>
      </div>
      <div class="col-sm-9">
-      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=2,'alert-danger','alert-success')</field>">
+      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=2,'alert-info','alert-info')</field>">
        <b>
         Will Call tickets
        </b>
