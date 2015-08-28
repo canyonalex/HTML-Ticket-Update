@@ -1,0 +1,22 @@
+  <div class="alert alert-warning">
+   <b>
+    Mailing Address (if items mailed)
+   </b>
+   <br/>
+   <div>
+	<field>pick(len(AD_ADDRESS1)>0,'<!-- comment:')</field>
+     <br/>
+     <field>AD_ADDRESS1</field>
+          <field>pick(len(AD_ADDRESS1)>0,'-->')</field>
+          <field>pick(len(AD_ADDRESS2)>0,'<!-- comment:')</field>
+     <br/>
+     <field>AD_ADDRESS2</field>
+          <field>pick(len(AD_ADDRESS2)>0,'-->')</field>
+     <br/>
+     <field>AD_CITY</field>, <field>AD_PROVINCE</field> <field>AD_POSTAL_CODE</field>
+     <br/>
+     <a class="btn btn-warning btn-xs" href="<field>F_HTML_FIREWALL</field>online?btnAccount=Account">
+        Change
+     </a>
+   </div>
+  </div>
