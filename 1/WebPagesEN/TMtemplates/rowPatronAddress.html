@@ -1,6 +1,11 @@
 <div class="well">
   <h4>
    <field>F_HTML_ADDRESS_LOCATION</field> Address
+   <field>pick(AD_SEQ=MKT_PRIMARY_AD_SEQ,'<!-- comment: indicate it is primary address')</field>
+   <small>
+    (primary mailing address)
+   </small>
+   <field>pick(AD_SEQ=MKT_PRIMARY_AD_SEQ,'-->')</field>
   </h4>
   <div class="form-group">
    <input name="AD_SEQ_<field>F_HTML_ROW</field>" type="hidden" value="<field>AD_SEQ</field>"/>

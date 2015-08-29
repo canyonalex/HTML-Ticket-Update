@@ -1,9 +1,11 @@
+ <field>pick(SCH_TIX_PRINT_STATUS=1,'<!-- comment: dont show change of address unless mailing to patron')</field>
   <div class="alert alert-warning">
    <b>
-    Mailing Address (if items mailed)
+    Primary Mailing Address
    </b>
    <br/>
    <div>
+    <field>C_FIRST_NAME</field> <field>C_MIDDLE_INITIAL</field> <field>C_LAST_NAME</field>
 	<field>pick(len(AD_ADDRESS1)>0,'<!-- comment:')</field>
      <br/>
      <field>AD_ADDRESS1</field>
@@ -16,7 +18,8 @@
      <field>AD_CITY</field>, <field>AD_PROVINCE</field> <field>AD_POSTAL_CODE</field>
      <br/>
      <a class="btn btn-warning btn-xs" href="<field>F_HTML_FIREWALL</field>online?btnAccount=Account">
-        Change
+        Account
      </a>
    </div>
   </div>
+<field>pick(SCH_TIX_PRINT_STATUS=1,'-->')</field>
