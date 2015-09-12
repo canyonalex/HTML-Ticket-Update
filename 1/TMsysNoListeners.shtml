@@ -4,13 +4,10 @@
   <title>
    Online Ticketing | Currently Unavailable
   </title>
-  <meta charset="utf-8"/>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <!--#include virtual="/TheatreManager/1/tmScripts/styles.html" -->
  </head>
  <body class="background">
+  <!--#include virtual="/tmnavButtonsNoServer.shtml" -->
   <div class="container">
    <div id="content">
     <div class="page-header">
@@ -31,10 +28,10 @@
 		our representatives will be more than happy to assist you or try again in a short while.
       </div>
       <!-- comment: there are no listeners active, so we have no hope of trying again.
-              		Best bet is to go back to the main web site (not in https mode.
-              		
-              		Please change to www.yourvenue.org as required -->
-      <a class="btn btn-success" href="http://www.yourvenue.org" target="_blank">
+              		Best bet is to go back to the main web site (not in https mode)
+              		*** variables are set within balancer-manager.conf *** -->
+
+      <a class="btn btn-success" href="<!--#echo var="webURL" -->" target="_blank" />
        Main web site
       </a>
      </div>

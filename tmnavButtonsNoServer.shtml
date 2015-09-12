@@ -1,0 +1,10 @@
+   <div class="navbar navbar-default navbar-static-top" role="navigation">
+   <div class="container">
+    <div class="navbar-header">
+     <a class="navbar-brand" href="<!--#echo var="webURL" -->" target="_blank">
+      <img src="tmGifs/tmCompanyLogo.jpg" style="height: 50px;"/>
+     </a>
+    </div>
+    </div>
+    </div>
+    
