@@ -5,22 +5,22 @@
   <title>
    <field>D_COMPANY_LONG</field> | Mailing Fee
   </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="backgroundPopup">
-  <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-   <tr>
-    <td align="left" class="tablerowheader">
-     Mailing Fees
-    </td>
-   </tr>
-   <tr>
-    <td align="left" class="tablerowdetail">
-     Mailing fees are charged to cover the costs of sending 
-              you your tickets and/or passes in the mail.
-			  Tickets and Passes are mailed via 1st Class Postage. 
+    <div class="container">
+   <div id="content">
+   <!-- comment: used for non-specific mailing fee links -->
+   <h3>
+     Mailing Fee
+    </h3>
+   <div class="alert alert-warning">
+     Mailing fees are charged to cover the costs of sending you your tickets
+     and/or passes in the mail. Tickets and Passes are mailed via 1st Class Postage. 
               Delivery may take 5 to 7 business days to arrive.
      <br/>
      <br/>
@@ -30,11 +30,9 @@
      <br/>
      <field>D_COMPANY_LONG</field> is not responsible for lost or stolen tickets
                in the mail.
-     <br/>
-     <br/>
+    </div>
      <!--#include virtual="TMtemplates/tmContactHours.html" -->
-    </td>
-   </tr>
-  </table>
+    </div>
+    </div>
  </body>
 </html>

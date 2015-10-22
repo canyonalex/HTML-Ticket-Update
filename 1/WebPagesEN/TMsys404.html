@@ -3,58 +3,49 @@
  <head>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Missing HTML Page
+   <field>D_COMPANY_LONG</field> | Page Missing
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <div align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Page Missing
+    </h1>
    </div>
-   <table border="0" width="90%">
-    <tr>
-     <td rowspan="3" valign="top" width="100">
-      <img border="0" height="49" src="tmGifs/tmCompanyLogo.gif" valign="top" width="84"/>
-     </td>
-     <td align="center" class="tablerowheader">
-      <font class="title" size="+2">
-       Your requested page was not found.
-      </font>
-     </td>
-     <td rowspan="3" width="100">
-      &nbsp;
-     </td>
-    </tr>
-    <tr>
-     <td class="tablerowdetail">
-      <p align="center">
-       The page you requested or previously bookmarked was not found.
+   <div class="row">
+    <div class="col-md-4">
+     <div class="lead alert alert-info">
+      <field>D_COMPANY_LONG</field> web services
+            could not locate a requested page.
+     </div>
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert-text">
+      <p>
+       You can try to continue by clicking on any of the menu items above. If you receive this message 
+        again, the system is still unable to access the requested page.
       </p>
-      <p align="center" class="main">
-       If you cannot find the page, please contact our box office listed 
-            below and our representatives will be more than happy to assist you.  Please let us know what you 
-			were searching for and where the broken link resides, so that we may remedy the link as soon as possible.
-       <br/>
+      <p>
+       Or, you can contact the box office and our representatives will be more than happy to assist you.
       </p>
-      <center>
-       <!--#include virtual="TMtemplates/tmContactHours.html" -->
-      </center>
-     </td>
-    </tr>
-    <tr>
-     <td align="center" class="tablerowheader">
-      Click your "Back button" or "Previous Window Button" 
-  in your browser to return to where you came from
-     </td>
-    </tr>
-   </table>
+     </div>
+     <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?btnCart=Cart">
+      Show my Shopping Cart
+     </a>
+     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

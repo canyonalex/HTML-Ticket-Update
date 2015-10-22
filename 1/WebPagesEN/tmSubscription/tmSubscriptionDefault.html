@@ -12,19 +12,20 @@
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="backgroundPopup">
-  <table align="center" border="0" cellpadding="4" cellspacing="0" width="90%">
-   <tr class="tablerowheader">
-    <td align="center">
-     <a class="link" href="<field>F_HTML_FIREWALL</field>login?subscription=<field>SG_SEQ</field>&VE_SEQ=<field>VE_SEQ</field>" onclick="return openInParent(this);">
+    <div class="container">
+   <div id="content">
+    <div align="center">
+     <a class="btn btn-success btn-xs" href="<field>F_HTML_FIREWALL</field>login?subscription=<field>SG_SEQ</field>&VE_SEQ=<field>VE_SEQ</field>" onclick="return openInParent(this);">
       Buy the <field>SG_DESCRIPTION</field>
      </a>
-    </td>
-   </tr>
-   <tr align="left" class="tablerowdetail">
-    <td>
+    </div>
+   <p>
+    &nbsp;
+    </p>
+    <div class="alert alert-warning">
      <field>SG_NOTES</field>
-    </td>
-   </tr>
-  </table>
+ </div>
+ </div>
+ </div>
  </body>
 </html>

@@ -10,21 +10,21 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <div align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Cookies are disabled
+    </h1>
    </div>
-   <form action="<field>F_HTML_FIREWALL</field>login" method="post">
-    <table align="Center" border="0" cellpadding="1" cellspacing="2" width="410">
-     <tr class="tablerowheader">
-      <td align="center">
+   <div class="row">
+    <div class="col-md-4">
+     <div class="lead alert alert-info">
        <field>D_COMPANY_LONG</field> online ticketing requires that cookies are enabled in your web browser in order to purchase online.
-      </td>
-     </tr>
-     <tr class="tablerowdetail">
-      <td align="justify">
+      </div>
+           <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert-text">
        <p>
         You may need to change the security level for this site in your web browser, or to accept any cookies if you have been getting a prompt about cookies.
        </p>
@@ -32,18 +32,15 @@
         We value your privacy. Cookies from this site are encrypted and contain only sufficient information to assist the ticket buying process. The cookie also expires in 24 hours and automatically disappears from your web browser after that.
        </p>
        <p>
-        When you  have enabled cookies in your web browser and are ready to log in, please click the login button.
+        When you have enabled cookies in your web browser and are ready to log in, please click the login button.
        </p>
-      </td>
-     </tr>
-     <tr class="tablerowheader">
-      <td align="center">
-       <input class="button" id="btnLogin" name="btnLogin" type="submit" value="Login"/>
+     </div>
+      <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+       <input class="btn btn-success" id="btnLogin" name="btnLogin" type="submit" value="Login"/>
        <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
-      </td>
-     </tr>
-    </table>
    </form>
+   </div>
+  </div>
   </div>
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>

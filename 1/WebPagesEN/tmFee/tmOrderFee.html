@@ -5,27 +5,26 @@
   <title>
    <field>D_COMPANY_LONG</field> | Order Fee
   </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="backgroundPopup">
-  <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-   <tr>
-    <td align="left" class="tablerowheader">
-     <field>D_ORDER_DESC</field> Fee
-    </td>
-   </tr>
-   <tr>
-    <td align="left" class="tablerowdetail">
+   <div class="container">
+   <div id="content">
+      <!-- comment: used for non-specific order fee links like box office policy -->
+   <h3>
+      <field>D_ORDER_DESC</field> Fee
+    </h3>
+   <div class="alert alert-warning">
      The <field>low(D_ORDER_DESC)</field> fee is charged to cover the cost
-              of our box office and maintaining a web site that offers you the convenience to purchase 
-              tickets 24 hours a day, 7 days a week.
-     <br/>
-     <br/>
+     of our box office and maintaining a web site that offers you the convenience to purchase 
+     tickets 24 hours a day, 7 days a week.
+    </div>
      <!--#include virtual="TMtemplates/tmContactHours.html" -->
-    </td>
-   </tr>
-  </table>
+    </div>
+    </div>
  </body>
 </html>

@@ -4,7 +4,7 @@
    </p>
    <p>
    </p>
-   <table border="1" cellpadding="5" cellspacing="0" class="tablerowticket" width="700">
+   <table border="1" cellpadding="5" cellspacing="0" width="700">
     <tr>
      <td align="center" rowspan="6" valign="top">
       <field>pick(PB_PRINT_AT_HOME,'<!-- comment: not printing at home, do not show bar code to avoid server hits')</field>
@@ -78,7 +78,7 @@
      </td>
     </tr>
     <tr>
-     <td class="tablerowdetail" colspan="2">
+     <td colspan="2">
       Please print this ticket and bring it with you to the event
     <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'<!-- comment: do not show bar code to avoid server hits')</field>
       <img align="right" src="<field>F_HTML_TIX_BAR_CODE</field>"/>

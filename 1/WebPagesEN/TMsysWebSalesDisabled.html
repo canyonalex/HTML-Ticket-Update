@@ -12,42 +12,39 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <div align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Online Ticketing Disabled
+    </h1>
    </div>
-   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-       <h2>
-       </h2>
-       <p align="center" class="title">
-        <field>D_COMPANY_LONG</field> Online Ticketing
-       </p>
-       <p align="center" class="main">
-        <field>D_COMPANY_LONG</field> Online Ticketing 
-            is currently inaccessable.
-       </p>
-       <p align="center" class="main">
+   <div class="row">
+    <div class="col-md-4">
+     <div class="lead alert alert-info">
+      <field>D_COMPANY_LONG</field> web services
+            could not locate a requested page.
+     </div>
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert-text">
+      <p>
         Please contact our box office at the numbers listed 
             below during business hours and our representatives will be more than happy to assist you.
        </p>
-       <p align="center" class="main">
+       <p>
         You can try to continue and access your shopping cart 
             by clicking on any of the tabs above. If you receive this message 
           again, the system is still inaccessable.
        </p>
-       <center>
+     </div>
         <!--#include virtual="TMtemplates/tmContactHours.html" -->
-       </center>
-      </form>
-     </td>
-    </tr>
-   </table>
+ </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>
