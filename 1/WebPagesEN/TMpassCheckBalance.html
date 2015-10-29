@@ -22,24 +22,14 @@
    <div class="row">
     <div class="col-md-4">
      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     <field>pick(len(F_HTML_PASS_LOOKUP_DESCRIPTION)>0,'<!-- comment: pass found from verification')</field>
+      <!--#include virtual="TMtemplates/tmPassRemainingMessage.html" -->
+     <field>pick(len(F_HTML_PASS_LOOKUP_DESCRIPTION)>0,'-->')</field>
+     <field>pick(len(F_HTML_PASS_LOOKUP_DESCRIPTION)=0,'<!-- comment: provide instructions, if nothing verified')</field>
+      <!--#include virtual="TMtemplates/tmPassInstructionsMessage.html" -->
+     <field>pick(len(F_HTML_PASS_LOOKUP_DESCRIPTION)=0,'-->')</field>
     </div>
     <div class="col-md-8">
-     <div class="alert alert-warning">
-      <h4>
-       Pass/Gift Certificate Balance Verification
-      </h4>
-      <ul>
-       <li>
-        Check the balance remaining on an existing Pass or Gift Certificate
-       </li>
-       <li>
-        Apply a Gift Certificate towards payment of the order balance
-       </li>
-       <li>
-        Apply a Pass redemption towards payment of applicable tickets
-       </li>
-      </ul>
-     </div>
      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
       <div class="form-group">
        <label for="M_CONTROL_NUMBER">
@@ -52,22 +42,6 @@
         Security Code
        </label>
        <input autocomplete="off" class="form-control" id="M_PASSWORD" maxlength="30" name="M_PASSWORD" size="50" value="<field>M_PASSWORD</field>"/>
-      </div>
-      <div class="form-group">
-       <label class="control-label">
-        Description
-       </label>
-       <p class="form-control-static">
-        <field>F_HTML_PASS_LOOKUP_DESCRIPTION</field>
-       </p>
-      </div>
-      <div class="form-group">
-       <label class="control-label">
-        Remaining Value
-       </label>
-       <p class="form-control-static">
-        <field>F_HTML_PASS_LOOKUP_VALUE</field>
-       </p>
       </div>
       <div>
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
