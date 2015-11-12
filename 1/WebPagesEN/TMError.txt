@@ -268,3 +268,4 @@ ErrorNumber	ErrorText
 10267	Contact link could not be found.  Please call the box office {mainphone}.
 10268	Here are the next Best Available {seats}.  If you would prefer different {seats}, select any available seats on the map below.
 10269	Temporarily unable to generate PDF.  Please try again later or call the box office {mainphone}
+10270	Missing or invalid outlet parameter "{error}" sent to classic listener. Call the box office {mainphone}

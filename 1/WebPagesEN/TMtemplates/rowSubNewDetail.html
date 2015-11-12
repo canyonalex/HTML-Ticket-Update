@@ -1,18 +1,17 @@
   <tr>
    <td>
-    <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-     <input class="btn btn-success" name="btnSubscriptionNew" type="submit" value="New Subscription"/>
-     <input name="SG_SEQ" type="hidden" value="<field>SG_SEQ</field>"/>
-    </form>
-   </td>
-   <td>
-    <a class="link" href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
+    <a href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>SG_DESCRIPTION</field>
     </a>
    </td>
    <td>
-    <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+    <a href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>VE_NAME</field>
     </a>
+   </td>
+      <td>
+   <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>login&subscription=<field>SG_SEQ</field>">
+   New Subscription
+   </a>
    </td>
   </tr>

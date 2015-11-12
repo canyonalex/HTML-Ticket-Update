@@ -1,35 +1,22 @@
-  <table class="table table-striped">
-   <thead>
-    <tr>
-     <td colspan="3" width="35%">
-      Subscription:
-      <a class="link" href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
+<div class="well">
+ <h4 class="media-heading">
+ <a href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
        <field>SG_DESCRIPTION</field>
       </a>
-      <br/>
-      <field>D_PERF_DESC</field> code: <field>PB_SERIES_CODE</field>
-      <br/>
-      This subscription since: <field>cap(SS_SEATS_SINCE)</field>
-     </td>
-     <td colspan="2">
-      <field>tEditCheck.$setPlural(D_EVENT)</field> are in
-      <br/>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+   <span class="text-muted">
+      <field>PB_SERIES_CODE</field>
+   <span>
+    <span class="pull-right text-danger text-muted">
+      <field>F_HTML_RENEWAL_STATUS</field>
+    </span>
+ </h4>
+  <div class="small">
+      <a href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
        <field>VE_NAME</field>
       </a>
-     </td>
-     <td>
-      Status:
-      <strong class="message">
-       <field>F_HTML_RENEWAL_STATUS</field>
-      </strong>
-      <br/>
-      Printed: <field>SS_DATE_PRINTED</field>
-     </td>
-    </tr>
-   </thead>
-  </table>
-  <table class="table table-striped">
+</div>
+
+  <table class="table table-striped table-condensed table-responsive">
    <thead>
     <tr>
      <th class="text-center">
@@ -87,4 +74,4 @@
     </tr>
    </tfoot>
   </table>
-  <br/>
+</div>
