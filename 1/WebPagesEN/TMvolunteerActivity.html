@@ -11,12 +11,9 @@
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
-  <script src="http://code.jquery.com/jquery-1.9.1.js">
+  <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js">
   </script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
-  </script>
-  <link href="/resources/demos/style.css" rel="stylesheet"/>
   <script>
    $(function() {
         $( "#start_date" ).datepicker({
@@ -49,15 +46,6 @@
         });
     });
   </script>
-  <script type="text/javascript">
-   <!--
-    var currentTime = new Date()
-    var month = currentTime.getMonth() + 1
-    var day = currentTime.getDate()
-    var year = currentTime.getFullYear()
-    document.write(month + "/" + day + "/" + year)
-    //-->
-  </script>
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
@@ -75,13 +63,9 @@
     <div class="row">
      <div class="col-md-4">
       <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
-     </div>
-     <div class="col-md-8">
-      
-      <div class="alert alert-warning">
-      Search for your activity schedule using any (or all) of the parameters
+      <!--#include virtual="TMtemplates/tmVolunteerActivityMessage.html" -->
       </div>
-
+     <div class="col-md-8">
       <div class="row">
       <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
 		<div class="col-md-3">

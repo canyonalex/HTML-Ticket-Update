@@ -184,7 +184,7 @@ ErrorNumber	ErrorText
 10183	Enter in control number and unique code for the {pass}.
 10184	The {pass} values are listed below.
 10185	Please let us know how you heard about {company} and prompted you to make an {order}.
-10186	Your upcoming activity is listed below.
+10186	Schedule of activities listed is based on the search.
 10187	Your available {pass} for redemption are listed below.
 10188	Enter a control number / password combination to lookup a remaining value.
 10189	Invalid control number / password combination. Contact the Box Office for assistance.
