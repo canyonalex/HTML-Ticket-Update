@@ -29,86 +29,77 @@
       </div>
     </div>
     <div class="col-md-8">
- 
-
    <div class="well">
       <h3>
          ENTERING the <field>D_VENUE</field>
       </h3>
       <form action="<field>F_HTML_FIREWALL</field>checkin" method="POST" role="form">
-      
        <div class="form-group">
        <label for="PS_SEQ">
         Ticket Number
        </label>
-       <input class="form-control" id="PS_SEQ" name="PS_SEQ" type="text" value="" placeholder="type a ticket number"/>
+        <input class="form-control" id="PS_SEQ" name="PS_SEQ" placeholder="type a ticket number" type="text" value=""/>
       </div>
         <div class="form-group">
        <label for="PB_SEQ">
         Performance Number
        </label>
-       <input class="form-control" id="PB_SEQ" name="PB_SEQ" type="text" value="<field>PB_SEQ</field>" placeholder="0 for today, or enter specific performance"/>
+        <input class="form-control" id="PB_SEQ" name="PB_SEQ" placeholder="0 for today, or enter specific performance" type="text" value="<field>PB_SEQ</field>"/>
       </div>     
         <div class="form-group">
        <label for="E_INITIALS">
         Employee Initials
        </label>
-       <input class="form-control" id="E_INITIALS" name="E_INITIALS" type="text" value="<field>E_INITIALS</field>" placeholder="initials of employee who can scan tickets"/>
+        <input class="form-control" id="E_INITIALS" name="E_INITIALS" placeholder="initials of employee who can scan tickets" type="text" value="<field>E_INITIALS</field>"/>
       </div>  
         <div class="form-group">
        <label for="p">
         Password
        </label>
-       <input class="form-control" autocomplete="off" id="p" name="p" type="password" value="<field>F_HTML_PASSWORD</field>" placeholder="password"/>
+        <input autocomplete="off" class="form-control" id="p" name="p" placeholder="password" type="password" value="<field>F_HTML_PASSWORD</field>"/>
       </div>
           <input id="source" name="source" type="hidden" value="webpage"/>
           <input class="btn btn-success" name="btnFile" type="submit" value="Check <field>D_PATRON</field> In"/>
-
       </form>
    </div>
-   
    <div class="well">   
-
          <h3>
           LEAVING the <field>D_VENUE</field>
          </h3>
-         
-         
       <form action="<field>F_HTML_FIREWALL</field>checkout" method="POST" role="form">
        <div class="form-group">
        <label for="PS_SEQ">
         Ticket Number
        </label>
-       <input class="form-control" id="PS_SEQ" name="PS_SEQ" type="text" value="" placeholder="type a ticket number"/>
+        <input class="form-control" id="PS_SEQ" name="PS_SEQ" placeholder="type a ticket number" type="text" value=""/>
       </div>
         <div class="form-group">
        <label for="PB_SEQ">
         Performance Number
        </label>
-       <input class="form-control" id="PB_SEQ" name="PB_SEQ" type="text" value="<field>PB_SEQ</field>" placeholder="0 for today, or enter specific performance"/>
+        <input class="form-control" id="PB_SEQ" name="PB_SEQ" placeholder="0 for today, or enter specific performance" type="text" value="<field>PB_SEQ</field>"/>
       </div>     
         <div class="form-group">
        <label for="E_INITIALS">
         Employee Initials
        </label>
-       <input class="form-control" id="E_INITIALS" name="E_INITIALS" type="text" value="<field>E_INITIALS</field>" placeholder="initials of employee who can scan tickets"/>
+        <input class="form-control" id="E_INITIALS" name="E_INITIALS" placeholder="initials of employee who can scan tickets" type="text" value="<field>E_INITIALS</field>"/>
       </div>  
         <div class="form-group">
        <label for="p">
         Password
        </label>
-       <input class="form-control" autocomplete="off" id="p" name="p" type="password" value="<field>F_HTML_PASSWORD</field>" placeholder="password"/>
+        <input autocomplete="off" class="form-control" id="p" name="p" placeholder="password" type="password" value="<field>F_HTML_PASSWORD</field>"/>
       </div>
           <input id="source" name="source" type="hidden" value="webpage"/>
           <input class="btn btn-danger" name="btnFile" type="submit" value="Check <field>D_PATRON</field> Out"/>
-
-
       </form>
  </div>
-
        <p>
         Beep=<field>F_PALM_BEEP</field>, Allow=<field>F_PALM_ALLOW</field>
        </p>
+  </div>
+   </div>
   </div>
  </body>
 </html>

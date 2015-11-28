@@ -64,62 +64,63 @@
      <div class="col-md-4">
       <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
       <!--#include virtual="TMtemplates/tmVolunteerActivityMessage.html" -->
-      </div>
+     </div>
      <div class="col-md-8">
       <div class="row">
-      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-		<div class="col-md-3">
-<div class="form-group">
-		<label for="start_date">
-		Start Date
-		</label>
-		 <input class="form-control" id="start_date" maxlength="10" name="start_date" type="text" value="<field>start_date</field>" placeholder="format mm/dd/yyyy"/>
-		</div>
-		</div>
-		<div class="col-md-3">
-		<div class="form-group">
-		<label for="end_date">
-		End Date
-		</label>
-             <input class="form-control" id="end_date" maxlength="10" name="end_date" type="text" value="<field>end_date</field>" placeholder="format mm/dd/yyyy"/>
-		</div>
-		</div>
-		<div class="col-md-4">
-		<div class="form-group">
-		<label for="activity">
-		Activity Type
-		</label>
-             <select class="form-control" id="activity" name="activity">
-              <field>F_HTML_ACTIVITY_LIST</field>
-             </select>
-		</div>
-		</div>
-		<div class="col-md-2">
-         <div class="form-group" style="margin-top: 25px;">
-             <input name="page_loaded" type="hidden" value="<field>page_loaded</field>"/>
-             <input class="btn btn-success btn-block" id="Search" name="btnVolunteerActivities" type="submit" value="Search"/>
-             </div>
+       <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+        <div class="col-md-3">
+         <div class="form-group">
+          <label for="start_date">
+           Start Date
+          </label>
+          <input class="form-control" id="start_date" maxlength="10" name="start_date" placeholder="format mm/dd/yyyy" type="text" value="<field>start_date</field>"/>
+         </div>
         </div>
-      </form>
+        <div class="col-md-3">
+         <div class="form-group">
+          <label for="end_date">
+           End Date
+          </label>
+          <input class="form-control" id="end_date" maxlength="10" name="end_date" placeholder="format mm/dd/yyyy" type="text" value="<field>end_date</field>"/>
+         </div>
+        </div>
+        <div class="col-md-4">
+         <div class="form-group">
+          <label for="activity">
+           Activity Type
+          </label>
+          <select class="form-control" id="activity" name="activity">
+           <field>F_HTML_ACTIVITY_LIST</field>
+          </select>
+         </div>
+        </div>
+        <div class="col-md-2">
+         <div class="form-group" style="margin-top: 25px;">
+          <input name="page_loaded" type="hidden" value="<field>page_loaded</field>"/>
+          <input class="btn btn-success btn-block" id="Search" name="btnVolunteerActivities" type="submit" value="Search"/>
+         </div>
+        </div>
+       </form>
       </div>
       <p>
-      &nbsp;
+       &nbsp;
       </p>
       <div class="well table-adaptive">
-	<table class="table table-striped table-condensed">
-       <field>F_HTML_VOLUNTEER_ACTIVITY_LIST</field>
-      </table>
-    </div>
+       <table class="table table-striped table-condensed">
+        <field>F_HTML_VOLUNTEER_ACTIVITY_LIST</field>
+       </table>
+      </div>
       <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>online?btnHome=Home">
        Return to Main Page
       </a>
-     <!-- comment: .col-md-8 -->
+      <!-- comment: .col-md-8 -->
+     </div>
+     <!-- comment: .row -->
     </div>
-    <!-- comment: .row -->
+    <!-- comment: .content -->
    </div>
-   <!-- comment: .content -->
+   <!--  comment: .container -->
+   <!--#include virtual="TMtemplates/tmFooter.html" -->
   </div>
-  <!--  comment: .container -->
-  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>
