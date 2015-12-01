@@ -1,10 +1,10 @@
   <tr>
    <td>
     <input name="VH_SEQ" type="hidden" value="<field>VH_SEQ</field>"/>
-    <field>VH_FROM_DATE</field>
+    <field>cap(dat(VH_FROM_DATE,'m D y'))</field> @ <field>dat(VH_FROM_DATE,'H:N A')</field>
    </td>
    <td>
-    <field>VH_TO_DATE</field>
+    <field>cap(dat(VH_TO_DATE,'m D y'))</field> @ <field>dat(VH_TO_DATE,'H:N A')</field>
    </td>
    <td class="text-right">
     <field>VH_HOURS</field>
