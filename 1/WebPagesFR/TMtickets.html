@@ -6,94 +6,42 @@
   <title>
    <field>D_COMPANY_LONG</field> | Prochain <field>tEditCheck.$setPlural(D_EVENT)</field>
   </title>
-  <meta content="no-cache" http-equiv="Pragma"/>
-  <!-- Pragma content set to no-cache tells the browser not to cache the page This may or may not work in IE -->
-  <meta content="0" http-equiv="expires"/>
-  <!-- Setting the page to expire at 0 means the page is immediately expired Any vales less then one will set the page to expire some time in past and not be cached. This may not work with Navigator -->
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
+  <!--#include virtual="tmScripts/adaptiveMenuFunctions.html" -->
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table border="0" cellpadding="0" cellspacing="0" width="95%">
-    <tr>
-     <td>
-      <p align="center" class="message">
-       <b>
-        <field>F_HTML_PAGE_MESSAGE</field>
-       </b>
-      </p>
-      <table border="0" cellpadding="1" cellspacing="0" class="tablerowdetail" width="100%">
-       <tr align="center">
-        <td>
-         Recherchez un &eacute;v&eacute;nement en fonction d'un ou plusieurs des crit&egrave;res ci-dessous.
-         <!--#include virtual="TMtemplates/tmTicketsSearch.html" -->
-         <!--#include virtual="TMtemplates/tmTicketsPresalesCoupon.html" -->
-        </td>
-       </tr>
-      </table>
-      <center>
-       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-      </center>
-      <!--#include virtual="TMtemplates/rowTicketPageHeader.html" -->
-      <table align="center" border="0" cellpadding="1" cellspacing="1" width="100%">
-       <tr class="tablerowheader">
-        <field>pick(D_WEB_SHOW_TT_IMAGES,'<!-- comment: Ticket Trove Image ')</field>
-        <td width="50">
-         &nbsp;
-        </td>
-        <field>pick(D_WEB_SHOW_TT_IMAGES,' -->')</field>
-        <!-- comment: add colspan=2 to Événement column if using line numbers -->
-        <td align="left">
-         &Eacute;v&eacute;nement
-        </td>
-        <td align="center" width="90">
-         Disponibilit&eacute;
-        </td>
-        <td align="left" width="140">
-         Date
-        </td>
-        <td align="right" width="60">
-         Heure
-        </td>
-        <td width="50">
-         &nbsp;
-        </td>
-       </tr>
-       <field>F_HTML_PERFORMANCE_LIST</field>
-      </table>
-      <!--#include virtual="TMtemplates/rowTicketPageHeader.html" -->
-      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-       <tr class="tablerowheader">
-        <td align="center" valign="middle">
-         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-          <field>pick(F_LOGGED_IN=1,'<!-- comment: trick. if not logged on, home doesnt show','')</field>
-          <input class="new" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler l'achat de billets"/>
-          <field>pick(F_LOGGED_IN=1,'-->','')</field>
-	 		  <field>pick(F_LOGGED_IN=2,'<!-- comment: and if not logged on, show logout button','')</field>
-          <input class="button" id="btnLogout" name="btnLogout" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="D&eacute;connexion et vide Panier"/>
-          <field>pick(F_LOGGED_IN=2,'-->','')</field>
-         </form>
-        </td>
-        <td valign="middle" width="30%">
-         <a href="http://itunes.apple.com/us/app/ticket-trove/id417854093?mt=8&uo=4" target="itunes_store">
-          <img align="right" alt="TicketTrove" border="0" height="50" src="tmGifs/tickettrove.jpg" width="50"/>
-         </a>
-         Trouvez-nous et achetez des billets sur votre iPhone ou sur votre iPad gr&acirc;ce &agrave;
-         <a class="link" href="http://itunes.apple.com/us/app/ticket-trove/id417854093?mt=8&uo=4" style="link" target="itunes_store">
-          Ticket Trove
-         </a>
-        </td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>
+  <div class="container">
+   <div id="content">
+    <!--#include virtual="TMtemplates/tmTicketCustomPatronInstructions.html" -->
+    <!--#include virtual="tmSearch/searchTop.html" -->
+    <small class="text-muted">
+     <field>F_HTML_PAGE_MESSAGE</field>
+    </small>
+    <!--#include virtual="TMtemplates/rowTicketLegend.html" -->
+    <!--#include virtual="TMtemplates/rowTicketPageHeader.html" -->
+    <!-- Begin restructured event list -->
+    <div class="clearfix add-border-bottom">
+    </div>
+    <field>F_HTML_PERFORMANCE_LIST</field>
+    <!-- END restructured event list -->
+    <!--#include virtual="TMtemplates/rowTicketPageHeader.html" -->
+    <!-- comment: an extra search as the bottom if you want (or you can comment the top and only have one at the bottom) -->
+    <!-- comment: #include virtual="tmSearch/searchBottom.html" -->
+    <div align="center">
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+      <input class="btn btn-danger" id="btnLogout" name="btnLogout" type="submit" value="D&eacute;connexion et vide Panier"/>
+     </form>
+    </div>
+    <!--#include virtual="TMtemplates/rowTicketTroveLink.html" -->
+   </div>
+   <!-- /#content -->
   </div>
+  <!-- /.container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

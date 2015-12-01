@@ -1,0 +1,8 @@
+  <!-- comment: types can be alert-warning alert-error alert-info -->
+  <!-- comment: if you want larger letters make the class    lead alert  alert-xxxx   -->
+  <!-- comment: or if you prefer no box, make the class    bs-callout bs-callout-info -->
+  <field>pick(len(F_HTML_PAGE_MESSAGE)>0,'<!-- comment: error message')</field>
+  <div class="lead alert alert-info">
+   <field>F_HTML_PAGE_MESSAGE</field>
+  </div>
+  <field>pick(len(F_HTML_PAGE_MESSAGE)>0,' -->')</field>

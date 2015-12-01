@@ -14,99 +14,70 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-    <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
-    <p align="center" class="message">
-     <b>
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </b>
-    </p>
-    <table align="center" border="0" cellpadding="2" cellspacing="0" class="tablerowdetail" width="80%">
-     <tr class="tablerowheader">
-      <td align="center" class="playinfo">
-       <field>P_PLAY_TITLE</field>
+  <div class="container">
+   <div class="page-header">
+    <!--#include virtual="tmMaps/tmTicketsEventTitle.html" -->
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     <!--#include virtual="tmMaps/tmChangePerformanceDate.html" -->
+    </div>
+    <div class="col-md-8">
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST" role="form">
+      <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
+      <div class="form-group">
+       <label for="PS_QUANTITY">
+        <h4>
+         Indiquez le nombre de participants que vous souhaitez inscrire
+        </h4>
+       </label>
        <br/>
-       &Agrave; partir du <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> &agrave; <field>PB_PERFORM_TIME</field>
-       <br/>
-       <field>VE_NAME</field> <field>VE_ADDRESS1</field> <field>VE_ADDRESS2</field>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <table align="center" border="0" cellpadding="2" cellspacing="0" class="tablerowdetail">
-        <tr>
-         <field>pick(D_WEB_SHOW_TT_IMAGES,'<!-- comment: Ticket Trove Image ')</field>
-         <td align="center" rowspan="2" valign="middle" width="120">
-          <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>P_SEQ</field>.html" onclick="return popup(this, 'notes')">
-           <img align="center" src="<field>F_HTML_FIREWALL</field>image?event=<field>P_SEQ</field>" valign="center" width="100"/>
-          </a>
-         </td>
-         <field>pick(D_WEB_SHOW_TT_IMAGES,' -->')</field>
-         <td align="center" width="8%">
-          <img height="30" src="tmGifs/step1.gif" width="30"/>
-         </td>
-         <td align="left" width="72%">
-          Indiquez le nombre de participants que vous souhaitez inscrire&nbsp;:
-         </td>
-         <td width="20%">
-          <select id="PS_QUANTITY" name="PS_QUANTITY" size="1">
-           <field>F_HTML_TICKET_QTY_LIST</field>
-          </select>
-         </td>
-        </tr>
-        <tr>
-         <td align="center" width="8%">
-          <img height="30" src="tmGifs/step2.gif" width="30"/>
-         </td>
-         <td align="left" width="72%">
-          Cliquez sur 'Inscrire'.
-         </td>
-         <td width="20%">
-          <input class="new" name="btnBestAvail" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Inscrire"/>
-         </td>
-        </tr>
-       </table>
-      </td>
-     </tr>
-     <tr>
-      <td align="center" class="tablerowheader">
+       <select class="form-control" id="PS_QUANTITY" name="PS_QUANTITY" size="1">
+        <field>F_HTML_TICKET_QTY_LIST</field>
+       </select>
+      </div>
+      <div class="form-group" style="margin-top: 15px;">
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-       <input class="new" name="btnBestAvailCancel" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler et recommencer"/>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Des renseignements compl&eacute;mentaires, comme le nom des participants autres que vous-m&ecirc;me, sont n&eacute;cessaires pour l'inscription &agrave; ce
+       <input class="btn btn-success" name="btnBestAvail" onclick="process()" type="submit" value="Inscrire"/>
+       <input class="btn btn-danger" name="btnBestAvailCancel" type="submit" value="Annuler et recommencer"/>
+      </div>
+     </form>
+     <div class="alert alert-info">
+      <p>
+       Des renseignements compl&eacute;mentaires, comme le nom des participants autres que
+       vous-m&ecirc;me, sont n&eacute;cessaires pour l'inscription &agrave; ce
        <b>
-        <field>D_COURSE_DESC</field>
+        <field>D_COURSE_DESC</field>,
        </b>
-       , avant de pouvoir finaliser la vente. Il peut &ecirc;tre n&eacute;cessaire d'ajouter un ou plusieurs autres membres de votre foyer dans votre compte.
-       <field>pick(F_LOGGED_IN=1,'','<!-- comment: only show comment if not logged in)')</field>
-       <p>
-        <em>
-         Pour ce faire, ouvrez une session et faites les ajouts n&eacute;cessaires avant d'effectuer votre paiement. Des messages vous guideront au besoin.
-        </em>
-       </p>
-       <field>pick(F_LOGGED_IN=1,'','-->')</field>
-      </td>
-     </tr>
-    </table>
-    <br/>
-    <table align="center" border="0" cellpadding="2" cellspacing="0" class="tablerowdetail" width="80%">
-     <tr align="left" class="tablerowheader">
-      <td>
-       <field>D_COURSE_DESC</field> &ndash; Observations et renseignements pour l'inscription
-      </td>
-     </tr>
-     <tr>
-      <td align="left">
+       avant de pouvoir finaliser la vente. Il peut &ecirc;tre n&eacute;cessaire d'ajouter
+       un ou plusieurs autres membres de votre foyer dans votre compte.
+      </p>
+      <field>pick(F_LOGGED_IN=1,'','<!-- comment: only show comment if not logged in)')</field>
+      <p>
+       <em>
+        Pour ce faire, ouvrez une session et faites les ajouts n&eacute;cessaires avant
+        d'effectuer votre paiement. Des messages vous guideront au besoin.
+       </em>
+      </p>
+      <field>pick(F_LOGGED_IN=1,'','-->')</field>
+     </div>
+     <field>pick(len(P_SALES_NOTES)>0,'<!-- comment: no sales notes')</field>
+     <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title">
+        <field>D_COURSE_DESC</field> Observations et renseignements pour l'inscription
+       </h3>
+      </div>
+      <div class="panel-body">
        <field>P_SALES_NOTES</field>
-      </td>
-     </tr>
-    </table>
-   </form>
+      </div>
+     </div>
+     <field>pick(len(P_SALES_NOTES)>0,'-->')</field>
+    </div>
+   </div>
   </div>
+  <!-- .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

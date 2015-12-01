@@ -9,100 +9,79 @@
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table border="0" cellpadding="0" cellspacing="0" width="95%">
-    <tr>
-     <td>
-      <p align="center">
-       <b class="message">
-        <field>F_HTML_PAGE_MESSAGE</field>
-       </b>
-      </p>
-      <div align="center">
-       <table border="0" cellpadding="5" cellspacing="0" width="85%">
-        <tr class="tablerowheader">
-         <td width="49%">
-          <div align="center">
-           <b>
-            Notifications vous pouvez ajouter
-           </b>
-          </div>
-         </td>
-         <td width="51%">
-          <div align="center">
-           <b>
-            Notifications vous recevez d&eacute;j&agrave;
-           </b>
-          </div>
-         </td>
-        </tr>
-        <tr class="tablerowdetail">
-         <td height="199" valign="top">
-          <form action="<field>F_HTML_FIREWALL</field>online" id="TMadd" method="POST">
-           <p align="center">
-            <input class="new" name="btnMailListAdd" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ajouter les Notifications s&eacute;lectionn&eacute;s"/>
-            <input name="hiddenSubmit" type="hidden" value=""/>
-           </p>
-           <p align="center">
-            <select id="PM_SEQ" multiple="" name="PM_SEQ" ondblclick="submitForm('TMadd','btnMailListAdd','YES');" size="10" style="width: 75%">
-             <field>F_HTML_SUBSCRIBE_LIST</field>
-            </select>
-           </p>
-          </form>
-         </td>
-         <td valign="top">
-          <form action="<field>F_HTML_FIREWALL</field>online" id="TMremove" method="POST">
-           <p align="center">
-            <input class="new" name="btnMailListRemove" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Retirez les Notifications s&eacute;lectionn&eacute;s"/>
-            <input name="hiddenSubmit" type="hidden" value=""/>
-           </p>
-           <p align="center">
-            <select id="ML_PM_SEQ" multiple="" name="ML_PM_SEQ" ondblclick="submitForm('TMremove','btnMailListRemove','YES');" size="10" style="width: 75%">
-             <field>F_HTML_UNSUBSCRIBE_LIST</field>
-            </select>
-           </p>
-          </form>
-         </td>
-        </tr>
-        <tr class="tablerowheader">
-         <td align="left" valign="top">
-          S&eacute;lectionnez les &eacute;l&eacute;ments que vous souhaitez recevoir des courriels,
-                puis cliquez sur le bouton 'Ajouter les Notifications s&eacute;lectionn&eacute;s'.
-         </td>
-         <td align="left" valign="top">
-          S&eacute;lectionnez les &eacute;l&eacute;ments que vous ne souhaitez plus &ecirc;tre envoy&eacute; sur,
-                puis cliquez sur le bouton 'Ajouter les Notifications s&eacute;lectionn&eacute;s'.
-         </td>
-        </tr>
-        <tr>
-         <td class="tablerowdetail" colspan="2" valign="top">
-          <field>D_COMPANY_LONG</field> est commis &agrave; la vie priv&eacute;e et Internet email ettiquete.
-          <p>
-           S'il vous pla&icirc;t nous dire comment vous souhaitez &ecirc;tre contact&eacute; par d&eacute;placement d'une ou plusieurs
-                  options de notification dans la colonne de gauche vers la droite colunm. Cela nous permet de vous
-                  tenir inform&eacute;s sur les programmes et les activit&eacute;s varous nous offrons qui vous int&eacute;ressent.
-          </p>
-          <p>
-           Vous pouvez modifier vos options de notification &agrave; tout moment et ils sont en vigueur imm&eacute;diatement.
-                  Il suffit de les d&eacute;placer de 'gauche &agrave; droite' ou 'droite &agrave; gauche'.
-          </p>
-          <p>
-           Politique de confidentialit&eacute;&nbsp;: le <field>D_COMPANY_LONG</field> ne vend ni n'&eacute;change aucun renseignement
-                 personnel fourni sur ce site Web et conserve tous vos renseignements personnels de mani&egrave;re confidentielle.
-          </p>
-         </td>
-        </tr>
-       </table>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Notifications par courriel
+    </h1>
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="row">
+      <div class="col-md-6">
+       <form action="<field>F_HTML_FIREWALL</field>online" id="TMadd" method="POST" role="form">
+        <input class="btn btn-primary" name="btnMailListAdd" type="submit" value="Ajouter les Notifications s&eacute;lectionn&eacute;s"/>
+        <input name="hiddenSubmit" type="hidden" value=""/>
+        <div class="form-group">
+         <label for="F_HTML_SUBSCRIBE_LIST">
+          Notifications vous pouvez ajouter
+         </label>
+         <select class="form-control" id="PM_SEQ" multiple="" name="PM_SEQ" ondblclick="submitForm('TMadd','btnMailListAdd','YES');" size="10">
+          <field>F_HTML_SUBSCRIBE_LIST</field>
+         </select>
+        </div>
+       </form>
+       <div class="alert alert-warning">
+        S&eacute;lectionnez les &eacute;l&eacute;ments que vous souhaitez recevoir
+        des courriels, puis cliquez sur le bouton 'Ajouter les Notifications
+        s&eacute;lectionn&eacute;s'.
+       </div>
       </div>
-     </td>
-    </tr>
-   </table>
+      <!-- comment: .col-md-6 -->
+      <div class="col-md-6">
+       <form action="<field>F_HTML_FIREWALL</field>online" id="TMremove" method="POST" role="form">
+        <input class="btn btn-primary" name="btnMailListRemove" type="submit" value="Retirez les Notifications s&eacute;lectionn&eacute;s"/>
+        <input name="hiddenSubmit" type="hidden" value=""/>
+        <div class="form-group">
+         <label for="F_HTML_UNSUBSCRIBE_LIST">
+          Notifications vous recevez d&eacute;j&agrave;
+         </label>
+         <select class="form-control" id="ML_PM_SEQ" multiple="" name="ML_PM_SEQ" ondblclick="submitForm('TMremove','btnMailListRemove','YES');" size="10">
+          <field>F_HTML_UNSUBSCRIBE_LIST</field>
+         </select>
+        </div>
+       </form>
+       <div class="alert alert-warning">
+        S&eacute;lectionnez les &eacute;l&eacute;ments que vous ne souhaitez plus
+        &ecirc;tre envoy&eacute; sur, puis cliquez sur le bouton 'Ajouter les
+        Notifications s&eacute;lectionn&eacute;s'.
+       </div>
+      </div>
+      <!-- comment: .col-md-6 -->
+     </div>
+     <!-- comment: .row -->
+     <div class="alert">
+      S'il vous plaît lire notre politique de confidentialité qui explique comment
+      l'information peut être utilisée.
+     </div>
+     <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
+      Politique de Confidentialité
+     </a>
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

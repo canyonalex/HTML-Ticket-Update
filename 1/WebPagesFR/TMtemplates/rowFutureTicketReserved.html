@@ -1,18 +1,20 @@
-  <tr class="tablerowdetail">
+  <tr>
    <td>
     <field>MS_SECTION</field>/<field>MS_ROW_NUMBER</field>/<field>MS_SEAT_NUMBER</field>
-    <em>
-     <field>pick(MS_NOTE_USE_FLAG,'',MS_SEAT_NOTE)</field>
-    </em>
+    <field>pick(MS_NOTE_USE_FLAG,'<!-- comment:')</field>
+    <div class="text text-info">
+     <field>MS_SEAT_NOTE</field>
+    </div>
+    <field>pick(MS_NOTE_USE_FLAG,'-->')</field>
    </td>
    <td>
     <field>pick(D_WEB_SHOW_PROMOTION,'',con(SC_DESCRIPTION,' '))</field>
 <field>pick(D_WEB_SHOW_PRICE_CODE,'',PC_DESCRIPTION)</field>
    </td>
-   <td align="right">
+   <td class="text-right">
     <field>PS_TOTAL_COST</field>$
    </td>
-   <td align="right">
+   <td class="text-right">
     <field>ORD_SEQ</field>
    </td>
    <td>

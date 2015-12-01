@@ -10,61 +10,59 @@
   <!--#include virtual="tmScripts/styles.html" -->
  </head>
  <body class="background">
-  <div align="center" id="content">
-   <h2 align="center" class="message">
-    Demande d'abonnement &agrave; une liste de diffusion du <field>D_COMPANY_LONG</field>
-   </h2>
-   <div align="left" class="tablerowdetail">
-    <p>
-     <b>
-      <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
-     </b>
-     ,
-    </p>
-    <p>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Demande d'abonnement &agrave; une liste de diffusion du <field>D_COMPANY_LONG</field>
+      <br/>
+      <small class="text-muted">
+       <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
+      </small>
+     </h1>
+    </div>
+    <div class="alert">
      Merci de votre int&eacute;r&ecirc;t pour le <field>D_COMPANY_LONG</field>. Vous avez demand&eacute; &agrave; vous abonner &agrave; une ou plusieurs listes de diffusion, afin de recevoir en temps utile de l'information relative au th&egrave;me de chacune de ces listes de diffusion.
-    </p>
-    <p>
+     <br/>
+     <br/>
      Pour achever le processus, veuillez choisir l'une des options suivantes:
+    </div>
+    <div class="alert">
+     Confirmer votre adresse courriel dans les
+      <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> prochaines heures
+      pour terminer le processus d'abonnement.
+    </div>
+    <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>login&verifyEmail=yes&C_SEQ=<field>C_SEQ</field>&e=<field>CI_CONTENTS</field>&vpw=<field>CCL_VALIDATE_PASS</field>" target="_top">
+     Confirmer votre adresse courriel
+    </a>
+    <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>login&event=0" target="_top">
+     Billets D'achat
+    </a>
+    <p>
+     &nbsp;
     </p>
-    <ol>
-     <li>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>login&verifyEmail=yes&C_SEQ=<field>C_SEQ</field>&e=<field>CI_CONTENTS</field>&vpw=<field>CCL_VALIDATE_PASS</field>" target="_top">
-       Confirmer votre adresse courriel
-      </a>
-      dans les <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> prochaines heures pour terminer le processus d'abonnement.
-     </li>
-     <li>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>login&removeEmail=yes&C_SEQ=<field>C_SEQ</field>&e=<field>CI_CONTENTS</field>" target="_top">
-       Retirer votre adresse courriel
-      </a>
-      imm&eacute;diatement de la liste de diffusion si vous n'&ecirc;tes pas &agrave; l'origine de cette demande d'abonnement.
-     </li>
-     <li>
+    <div class="alert">
+     Retirer votre adresse courriel imm&eacute;diatement de la liste de diffusion si
+    vous n'&ecirc;tes pas &agrave; l'origine de cette demande d'abonnement.
       Ne rien faire: pour votre protection, votre adresse courriel
-      <em>
-       sera retir&eacute;e automatiquement de la liste de diffusion au bout de <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures si vous ne r&eacute;pondez pas ou ne faites rien.
-      </em>
-     </li>
-    </ol>
+     <em>
+      sera retir&eacute;e automatiquement de la liste de diffusion au bout de
+      <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures si vous ne
+      r&eacute;pondez pas ou ne faites rien.
+     </em>
+    </div>
+    <a class="btn btn-danger" href="<field>F_HTML_FIREWALL</field>login&removeEmail=yes&C_SEQ=<field>C_SEQ</field>&e=<field>CI_CONTENTS</field>" target="_top">
+     Retirer votre adresse courriel
+    </a>
     <p>
-     Vous pouvez vous connecter directement &agrave; notre site Web pour acheter des billets en
-     <a class="link" href="<field>F_HTML_FIREWALL</field>login&event=0" target="_top">
-      cliquant ici
-     </a>
-     .
+     &nbsp;
     </p>
-    <p>
-     Politique de confidentialit&eacute;&nbsp;:  tous les renseignements personnels que vous fournissez au <field>D_COMPANY_LONG</field> sont consid&eacute;r&eacute;s comme confidentiels et ne peuvent &ecirc;tre communiqu&eacute;s &agrave; quiconque, sauf si vous y avez express&eacute;ment consenti ou si nous y sommes tenus par une autorit&eacute; l&eacute;gale.
-    </p>
-    <p align="center">
-     Pour en savoir plus, veuillez prendre contact avec nous par t&eacute;l&eacute;phone ou par courriel.
-    </p>
-    <center>
-     <!--#include virtual="TMtemplates/tmContactHours.html" -->
-    </center>
+    <!--#include virtual="TMtemplates/tmPrivacyNoteEmail.html" -->
+    <!--#include virtual="TMtemplates/tmContactHours.html" -->
    </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

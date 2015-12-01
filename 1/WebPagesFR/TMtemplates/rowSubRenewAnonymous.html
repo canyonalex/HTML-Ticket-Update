@@ -1,7 +1,6 @@
-  <p align="center" class="message">
-   Vous n'&ecirc;tes pas actuellement connect&eacute;. Pour renouveler un abonnement, veuillez d'abord ouvrir une session.
-  </p>
+  <field>pick(F_LOGGED_IN=2,'<!-- comment: show when logged OUT')</field>
   <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-   <input class="button" id="btnLoginAccount" name="btnLoginAccount" onmouseout="pviiClassNew(this,'button')" onmouseover="pviiClassNew(this,'buttonover')" type="submit" value="Ouvrir une session pour consulter les abonnements existants"/>
+   <input class="btn btn-primary" id="btnLoginAccount" name="btnLoginAccount" type="submit" value="Login to renew existing subscriptions"/>
    <input name="param" type="hidden" value="SG_SEQ=0"/>
   </form>
+  <field>pick(F_LOGGED_IN=2,'-->')</field>

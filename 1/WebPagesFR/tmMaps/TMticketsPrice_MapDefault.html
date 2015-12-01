@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Achat de billets
+   <field>D_COMPANY_LONG</field> | Le choix du siège de billets
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -13,82 +13,82 @@
   <!--#include virtual="tmScripts/googleHeader.html" -->
   <style>
    body.js-off .desktop_navigation {
-       display: none;
-   }
-   body.js-off #btnBestAvailSwap {
-       display: none;
-   }
+    		display: none;
+    	}
+    	body.js-off #btnBestAvailSwap {
+    		display: none;
+    	}
   </style>
  </head>
  <body class="background js-off">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-    <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
-    <input id="F_HTML_NEXT_BEST_SEAT" name="F_HTML_NEXT_BEST_SEAT" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT</field>"/>
-    <input id="F_HTML_NEXT_BEST_SEAT_SWAP" name="F_HTML_NEXT_BEST_SEAT_SWAP" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_SWAP</field>"/>
-    <input id="F_HTML_NEXT_BEST_AREA" name="F_HTML_NEXT_BEST_AREA" type="hidden" value="<field>F_HTML_NEXT_BEST_AREA</field>"/>
-    <input id="F_HTML_BEST_PRICE_CODE" name="F_HTML_BEST_PRICE_CODE" type="hidden" value="<field>F_HTML_BEST_PRICE_CODE</field>"/>
-    <input id="F_TOGETHER" name="F_TOGETHER" type="hidden" value="<field>F_TOGETHER</field>"/>
-    <input id="F_HTML_NEXT_BEST_PASS_NUMBER" name="F_HTML_NEXT_BEST_PASS_NUMBER" type="hidden" value="<field>F_HTML_NEXT_BEST_PASS_NUMBER</field>"/>
-    <input id="F_HTML_NEXT_BEST_TWO_PASS_OK" name="F_HTML_NEXT_BEST_TWO_PASS_OK" type="hidden" value="<field>F_HTML_NEXT_BEST_TWO_PASS_OK</field>"/>
-    <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY" name="F_HTML_NEXT_BEST_SEAT_PRIORITY" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY</field>"/>
-    <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" name="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE</field>"/>
-    <p align="center" class="message">
-     <b>
-      <field>F_HTML_PAGE_MESSAGE</field>
-     </b>
-    </p>
-    <table align="center" border="0" cellpadding="2" cellspacing="0" id="bestavailable" width="80%">
-     <tr class="tablerowheader">
-      <td align="center" class="playinfo">
-       <field>P_PLAY_TITLE</field>
-       <br/>
-       Le <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> &agrave; <field>PB_PERFORM_TIME</field>
-       <br/>
-       <field>VE_NAME</field>
-				<field>VE_ADDRESS1</field> <field>VE_ADDRESS2</field>
-      </td>
-     </tr>
-    </table>
-    <table align="center" border="0" cellpadding="2" cellspacing="0" id="bestavailable" width="80%">
-     <tr class="tablerowheader">
-      <td align="left" class="tablerowheader" rowspan="100" valign="middle" width="20%">
-       <br/>
-       Votre s&eacute;lection de si&egrave;ge actuel
-      </td>
-      <td align="left" valign="top" width="15%">
-       <field>D_SECTION_DESC</field>
-      </td>
-      <td align="left" valign="top" width="10%">
-       <field>D_ROW_DESC</field>
-      </td>
-      <td align="left" valign="top" width="10%">
-       <field>D_SEAT_DESC</field>
-      </td>
-      <td align="left" valign="top">
-       Remarques sur les si&egrave;ges
-      </td>
-      <td align="left" valign="top">
-       Prix
-      </td>
-     </tr>
-     <field>F_HTML_BEST_SEATS_LIST</field>
-     <tr class="tablerowheader">
-      <td align="center" colspan="5">
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <!--#include virtual="tmMaps/tmTicketsEventTitle.html" -->
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+      <!--#include virtual="tmMaps/tmChangePerformanceDate.html" -->
+     </div>
+     <div class="col-md-8">
+      <form action="<field>F_HTML_FIREWALL</field>online" method="POST" role="form">
+       <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
+       <input id="F_HTML_NEXT_BEST_SEAT" name="F_HTML_NEXT_BEST_SEAT" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT</field>"/>
+       <input id="F_HTML_NEXT_BEST_SEAT_SWAP" name="F_HTML_NEXT_BEST_SEAT_SWAP" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_SWAP</field>"/>
+       <input id="F_HTML_NEXT_BEST_AREA" name="F_HTML_NEXT_BEST_AREA" type="hidden" value="<field>F_HTML_NEXT_BEST_AREA</field>"/>
+       <input id="F_HTML_BEST_PRICE_CODE" name="F_HTML_BEST_PRICE_CODE" type="hidden" value="<field>F_HTML_BEST_PRICE_CODE</field>"/>
+       <input id="F_TOGETHER" name="F_TOGETHER" type="hidden" value="<field>F_TOGETHER</field>"/>
+       <input id="F_HTML_NEXT_BEST_PASS_NUMBER" name="F_HTML_NEXT_BEST_PASS_NUMBER" type="hidden" value="<field>F_HTML_NEXT_BEST_PASS_NUMBER</field>"/>
+       <input id="F_HTML_NEXT_BEST_TWO_PASS_OK" name="F_HTML_NEXT_BEST_TWO_PASS_OK" type="hidden" value="<field>F_HTML_NEXT_BEST_TWO_PASS_OK</field>"/>
+       <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY" name="F_HTML_NEXT_BEST_SEAT_PRIORITY" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY</field>"/>
+       <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" name="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE</field>"/>
+       <div class="table-responsive">
+        <table class="table table-striped table-condensed table-responsive">
+         <thead>
+          <th>
+           <field>D_SECTION_DESC</field>
+          </th>
+          <field>pick(PB_SALES_METHOD=2,'<!-- comment: only if reserved seating')</field>
+          <th>
+           <field>D_ROW_DESC</field>
+          </th>
+          <th>
+           <field>D_SEAT_DESC</field>
+          </th>
+          <th>
+           Sièges Remarques
+          </th>
+          <field>pick(MS_SALES_METHOD=2,'-->')</field>
+          <th>
+           Prix
+          </th>
+         </thead>
+         <tbody>
+          <field>F_HTML_BEST_SEATS_LIST</field>
+         </tbody>
+        </table>
+       </div>
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-       <input class="new" name="btnReserveTicket" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ajouter les billets &agrave; mon panier d'achat"/>
+       <input class="btn btn-success" name="btnReserveTicket" onclick="process()" type="submit" value="Acheter des Billets"/>
        <field>pick(PB_SALES_METHOD=2&not(F_HTML_ALLOW_PICK_YOUR_OWN),'<!-- comment:')</field>
-       <input class="new" name="btnBestAvail" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Chercher les meilleurs si&egrave;ges encore disponibles"/>
+       <input class="btn btn-info" name="btnBestAvail" onclick="process()" type="submit" value="Suggérer d'autres sièges"/>
        <field>pick(PB_SALES_METHOD=2&not(F_HTML_ALLOW_PICK_YOUR_OWN),'-->')</field>
-       <input class="new" name="btnReserveCancel" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler les billets et recommencer"/>
-      </td>
-     </tr>
-    </table>
-    <!--#include virtual="tmMaps/tmPickYourSeatButtons.html" -->
-   </form>
-   <!--#include virtual="tmMaps/tmPickYourSeatMapDisplay.html" -->
+       <input class="btn btn-danger" name="btnReserveCancel" type="submit" value="Annuler et Recommencer"/>
+       <!--#include virtual="tmMaps/tmPickYourSeatButtons.html" -->
+      </form>
+      <div>
+       <!--#include virtual="tmMaps/tmPickYourSeatMapDisplay.html" -->
+      </div>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="tmMaps/tmPickYourSeatScripts.html" -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
    <field>D_COMPANY_LONG</field> | Suivi de la fr&eacute;quentation du site Web
@@ -12,147 +11,95 @@
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background">
-  <div align="center" id="content">
-   <table align="center" border="0" class="tablerowdetail" width="60%">
-    <tr>
-     <td>
-      Cet &eacute;cran permet d'enregistrer l'arriv&eacute;e d'un <field>low(D_PATRON)</field> &agrave; votre <field>low(D_VENUE)</field> pour assister &agrave; un spectacle ou &agrave; toute autre manifestation, ainsi que son d&eacute;part.
-      <br/>
-      Vous pouvez num&eacute;riser le num&eacute;ro du billet au moyen d'un lecteur optique ou le saisir manuellement dans le champ pr&eacute;vu &agrave; cet effet, puis, selon ce que vous souhaitez accomplir, cliquer sur l'un des deux boutons suivants&nbsp;:
-      <ul>
-       <li>
-        'Enregistrer l'arriv&eacute;e du <field>D_PATRON</field>'
-       </li>
-       <li>
-        'Enregistrer le d&eacute;part du <field>D_PATRON</field>'
-       </li>
-      </ul>
-      <p>
-       <br/>
-       <br/>
-       Vous n'avez pas &agrave; utiliser cette page si vous ne suivez pas la fr&eacute;quentation au moyen d'un appareil sans fil Symbol MC50/MC55.
-      </p>
-     </td>
-    </tr>
-   </table>
-   <p align="center">
-    <b class="message">
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
-   </p>
-   <table align="center" border="2" cellpadding="10" cellspacing="0" width="60%">
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>checkin" method="POST">
-       <table align="center" border="0" cellpadding="1" width="100%">
-        <tr>
-         <td align="right" class="message" rowspan="5">
-          ARRIV&eacute;E
-          <br/>
-          <br/>
-          sur le lieu de la manifestation
-         </td>
-         <td align="right" class="tablerowheader">
-          Num&eacute;ro de billet
-         </td>
-         <td class="tablerowdetail">
-          <input id="PS_SEQ" name="PS_SEQ" type="text" value=""/>
-         </td>
-        </tr>
-        <tr>
-         <td align="right" class="tablerowheader">
-          Num&eacute;ro de spectacle
-         </td>
-         <td class="tablerowdetail">
-          <input id="PB_SEQ" name="PB_SEQ" type="text" value="<field>PB_SEQ</field>"/>
-         </td>
-        </tr>
-        <tr>
-         <td align="right" class="tablerowheader">
-          Initiales de l'employ&eacute;(e)
-         </td>
-         <td class="tablerowdetail">
-          <input id="E_INITIALS" name="E_INITIALS" type="text" value="<field>E_INITIALS</field>"/>
-         </td>
-        </tr>
-        <tr>
-         <td align="right" class="tablerowheader">
-          Mot de passe
-         </td>
-         <td class="tablerowdetail">
-          <input autocomplete="off" id="p" maxlength="20" name="p" type="password" value="<field>F_HTML_PASSWORD</field>"/>
-         </td>
-        </tr>
-        <tr class="tablerowheader">
-         <td>
-          <input id="source" name="source" type="hidden" value="webpage"/>
-         </td>
-         <td align="center">
-          <input class="new" name="btnFile" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Enregistrer l'arriv&eacute;e du <field>D_PATRON</field>"/>
-         </td>
-        </tr>
-       </table>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Scan Patrons in/out of venue
+    </h1>
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     <div class="alert alert-warning">
+      Use this screen to check a <field>low(D_PATRON)</field> into and/or out of your <field>low(D_VENUE)</field> for a
+      <field>low(D_PERF_DESC)</field>. You can scan the ticket number from the ticket (or type it in).
+     </div>
+     <div class="alert alert-warning">
+      You do not need to use this page you are using a wireless scanner device to track attendance.
+     </div>
+    </div>
+    <div class="col-md-8">
+     <div class="well">
+      <h3>
+       ENTERING the <field>D_VENUE</field>
+      </h3>
+      <form action="<field>F_HTML_FIREWALL</field>checkin" method="POST" role="form">
+       <div class="form-group">
+        <label for="PS_SEQ">
+         Ticket Number
+        </label>
+        <input class="form-control" id="PS_SEQ" name="PS_SEQ" placeholder="type a ticket number" type="text" value=""/>
+       </div>
+       <div class="form-group">
+        <label for="PB_SEQ">
+         Performance Number
+        </label>
+        <input class="form-control" id="PB_SEQ" name="PB_SEQ" placeholder="0 for today, or enter specific performance" type="text" value="<field>PB_SEQ</field>"/>
+       </div>
+       <div class="form-group">
+        <label for="E_INITIALS">
+         Employee Initials
+        </label>
+        <input class="form-control" id="E_INITIALS" name="E_INITIALS" placeholder="initials of employee who can scan tickets" type="text" value="<field>E_INITIALS</field>"/>
+       </div>
+       <div class="form-group">
+        <label for="p">
+         Password
+        </label>
+        <input autocomplete="off" class="form-control" id="p" name="p" placeholder="password" type="password" value="<field>F_HTML_PASSWORD</field>"/>
+       </div>
+       <input id="source" name="source" type="hidden" value="webpage"/>
+       <input class="btn btn-success" name="btnFile" type="submit" value="Check <field>D_PATRON</field> In"/>
       </form>
-     </td>
-    </tr>
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>checkout" method="POST">
-       <table align="center" border="0" cellpadding="1" width="100%">
-        <tr>
-         <td align="right" class="message" rowspan="5">
-          D&Eacute;PART
-          <br/>
-          <br/>
-          du lieu de la manifestation
-         </td>
-         <td align="right" class="tablerowheader">
-          Num&eacute;ro de billet
-         </td>
-         <td class="tablerowdetail">
-          <input id="PS_SEQ" name="PS_SEQ" type="text" value=""/>
-         </td>
-        </tr>
-        <tr>
-         <td align="right" class="tablerowheader">
-          Num&eacute;ro de spectacle
-         </td>
-         <td class="tablerowdetail">
-          <input id="PB_SEQ" name="PB_SEQ" type="text" value="<field>PB_SEQ</field>"/>
-         </td>
-        </tr>
-        <tr>
-         <td align="right" class="tablerowheader">
-          Initiales de l'employ&eacute;(e)
-         </td>
-         <td class="tablerowdetail">
-          <input id="E_INITIALS" name="E_INITIALS" type="text" value="<field>E_INITIALS</field>"/>
-         </td>
-        </tr>
-        <tr>
-         <td align="right" class="tablerowheader">
-          Mot de passe
-         </td>
-         <td class="tablerowdetail">
-          <input autocomplete="off" id="p" maxlength="20" name="p" type="password" value="<field>F_HTML_PASSWORD</field>"/>
-         </td>
-        </tr>
-        <tr class="tablerowheader">
-         <td>
-          <input id="source" name="source" type="hidden" value="webpage"/>
-         </td>
-         <td align="center">
-          <input class="new" name="btnFile" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Enregistrer le d&eacute;part du <field>D_PATRON</field>"/>
-         </td>
-        </tr>
-       </table>
-       <p align="center" class="style1">
-        Beep=<field>F_PALM_BEEP</field>, Allow=<field>F_PALM_ALLOW</field>
-       </p>
+     </div>
+     <div class="well">
+      <h3>
+       LEAVING the <field>D_VENUE</field>
+      </h3>
+      <form action="<field>F_HTML_FIREWALL</field>checkout" method="POST" role="form">
+       <div class="form-group">
+        <label for="PS_SEQ">
+         Ticket Number
+        </label>
+        <input class="form-control" id="PS_SEQ" name="PS_SEQ" placeholder="type a ticket number" type="text" value=""/>
+       </div>
+       <div class="form-group">
+        <label for="PB_SEQ">
+         Performance Number
+        </label>
+        <input class="form-control" id="PB_SEQ" name="PB_SEQ" placeholder="0 for today, or enter specific performance" type="text" value="<field>PB_SEQ</field>"/>
+       </div>
+       <div class="form-group">
+        <label for="E_INITIALS">
+         Employee Initials
+        </label>
+        <input class="form-control" id="E_INITIALS" name="E_INITIALS" placeholder="initials of employee who can scan tickets" type="text" value="<field>E_INITIALS</field>"/>
+       </div>
+       <div class="form-group">
+        <label for="p">
+         Password
+        </label>
+        <input autocomplete="off" class="form-control" id="p" name="p" placeholder="password" type="password" value="<field>F_HTML_PASSWORD</field>"/>
+       </div>
+       <input id="source" name="source" type="hidden" value="webpage"/>
+       <input class="btn btn-danger" name="btnFile" type="submit" value="Check <field>D_PATRON</field> Out"/>
       </form>
-     </td>
-    </tr>
-   </table>
+     </div>
+     <p>
+      Beep=<field>F_PALM_BEEP</field>, Allow=<field>F_PALM_ALLOW</field>
+     </p>
+    </div>
+   </div>
   </div>
  </body>
 </html>

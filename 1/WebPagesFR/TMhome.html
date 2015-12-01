@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Service de billetterie en ligne
+   <field>D_COMPANY_LONG</field> | Page d'Accueil
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -14,89 +14,63 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <p class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
-   </p>
-   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td>
-      <div align="center" class="title">
-       Bienvenue au service de billetterie en ligne du <field>D_COMPANY_LONG</field>
-      </div>
-      <p>
-       <span class="main">
-        Bonjour,
-        <b>
-         <field>C_FIRST_NAME</field> <field>C_INITIAL</field> <field>C_LAST_NAME</field>
-        </b>
-        . Vous venez d'ouvrir une session au moyen de l'adresse courriel
-        <b>
-         <field>CI_CONTENTS</field>
-        </b>
-        .&nbsp;&nbsp;
-          Votre adresse est-elle exacte?&nbsp; Si tel n'est pas le cas, veuillez la modifier en cliquant sur le bouton 'Mon compte' ci-dessus.&nbsp; Il est essentiel que votre adresse courriel soit juste, afin que vous puissiez recevoir vos confirmations d'achat.
-       </span>
-      </p>
-      <p>
-       <span class="main">
-        Quelques renseignements utiles sur ce site Web&nbsp;:
-       </span>
-      </p>
-      <span class="main">
-       <ol>
-        <li>
-         Tous les avis et confirmations vous sont envoy&eacute;s &agrave; votre adresse courriel. Si celle-ci a chang&eacute; ou est inexacte, cliquez sur le bouton 'Mon compte' ci-dessus pour mettre &agrave; jour vos renseignements personnels.
-        </li>
-        <li>
-         Les abonn&eacute;s et les d&eacute;tenteurs de si&egrave;ges Premium peuvent avoir acc&egrave;s &agrave; certains &eacute;v&eacute;nements par l'interm&eacute;diaire du service de billetterie en ligne avant la mise en vente publique des places par Internet.
-        </li>
-        <li>
-         Pour commencer, veuillez cliquer sur les boutons situ&eacute;s en haut de cette page.
-        </li>
-        <li>
-         Votre session expirera et vos billets seront remis en vente au bout de <field>D_WEB_TIMEOUT</field> minutes d'inactivit&eacute;.
-        </li>
-       </ol>
-      </span>
-      <table align="center" border="0" cellpadding="2" cellspacing="0">
-       <tr>
-        <td align="center">
-         <img height="50" src="tmGifs/handicapped.gif" width="50"/>
-        </td>
-        <td class="main" valign="middle" width="90%">
-         Pour acheter des billets pour des personnes en fauteuil roulant ou pour des si&egrave;ges &agrave; acc&egrave;s limit&eacute;, veuillez appeler notre service de billetterie en ligne, au <field>D_SWITCH_BOARD</field>.
-             Nous sommes mieux &agrave; m&ecirc;me de r&eacute;pondre aux besoins particuliers par t&eacute;l&eacute;phone ou en personne.
-             <field>pick(D_COUNTRY='USA','<!-- comment: only include ADA note for USA venues')</field>
-            Toutefois, en raison de changements r&eacute;cents de l'ADA, vous pourrez peut-&ecirc;tre acheter en ligne.  
-            Nous pouvons exiger que vous attestez votre besoin pour des si&egrave;ges r&eacute;serv&eacute;s &agrave; l'ADA en acceptant les termes et conditions.
-            <field>pick(D_COUNTRY='USA','-->')</field>
-        </td>
-       </tr>
-       <tr>
-        <td align="center">
-         <img alt="" height="50" src="tmGifs/stop.gif" width="50"/>
-        </td>
-        <td class="main" valign="middle">
-         Pour votre s&eacute;curit&eacute;, N'UTILISEZ PAS les boutons PR&Eacute;C&Eacute;DENT, SUIVANT OU ACTUALISER de votre navigateur Web. L'utilisation du bouton 'Pr&eacute;c&eacute;dent' peut entra&icirc;ner la perte de votre s&eacute;lection de billets en cours (ce qui se trouve d&eacute;j&agrave; dans votre panier ne sera toutefois pas touch&eacute;). Servez-vous les boutons situ&eacute;s en haut de chaque page de notre site.
-        </td>
-       </tr>
-      </table>
-      <p class="main">
-       Pour toute demande d'assistance, veuillez nous faire parvenir votre question par
-       <a class="link" href="mailto:<field>D_EMAIL_ADDR</field>?subject=Online%20Sales%20Support">
-        courriel
-       </a>
-       .
-      </p>
-      <!--#include virtual="TMtemplates/tmnavButtonsFooter.html" -->
-     </td>
-    </tr>
-   </table>
-   <!--#include virtual="TMtemplates/tmPoweredBy.html" -->
+  <div class="container">
+   <div id="content">
+    <div class="pull-right">
+     <a class="btn btn-success" href="mailto:<field>D_EMAIL_ADDR</field>?subject=Online%20Sales%20Support%20Question">
+      <i class="fa fa-support">
+      </i>
+      Avoir besoin d'aide?
+     </a>
+    </div>
+    <div class="page-header">
+     <h1>
+      Page d'Accueil
+      <br/>
+      <small class="text-mute">
+       <field>C_FIRST_NAME</field> <field>C_INITIAL</field> <field>C_LAST_NAME</field>
+      </small>
+     </h1>
+    </div>
+    <div class="text">
+     Vous venez d'ouvrir une session au moyen de l'adresse courriel
+     <b>
+      <field>CI_CONTENTS</field>.
+     </b>
+     <p>
+      &nbsp;
+     </p>
+     Si vous préférez une autre adresse e-mail,
+     <a href="<field>F_HTML_FIREWALL</field>online?btnAccount=Account">
+      s'il vous plaît mettre à jour le maintenant.
+     </a>
+     L'adresse e-mail doit être précis pour envoyer des confirmations de commande et les instructions pour l'impression à la maison des billets .
+    </div>
+    <!--#include virtual="TMtemplates/tmnavButtonsFooter.html" -->
+    <p>
+     &nbsp;
+    </p>
+    <div class="text">
+     Votre session expirera et vos billets seront remis en vente au bout de <field>D_WEB_TIMEOUT</field> minutes d'inactivit&eacute;.
+    </div>
+    <br/>
+    <div class="text">
+     <img align="left" height="35" src="tmGifs/handicapped.gif" width="35"/>
+     Pour acheter des billets pour des personnes en fauteuil roulant ou pour des si&egrave;ges &agrave; acc&egrave;s limit&eacute;, veuillez appeler notre service de billetterie en ligne, au
+     <a href="tel:<field>D_SWITCH_BOARD</field>">
+      <field>D_SWITCH_BOARD</field>.
+     </a>
+     Nous sommes mieux &agrave; m&ecirc;me de r&eacute;pondre aux besoins particuliers par t&eacute;l&eacute;phone ou en personne.
+    <field>pick(D_COUNTRY='USA','<!-- comment: only include ADA note for USA venues')</field>
+    Toutefois, en raison de changements r&eacute;cents de l'ADA, vous pourrez peut-&ecirc;tre acheter
+     en ligne. Nous pouvons exiger que vous attestez votre besoin pour des si&egrave;ges r&eacute;serv&eacute;s &agrave; l'ADA en acceptant les termes et conditions.
+    <field>pick(D_COUNTRY='USA','-->')</field>
+    </div>
+    <!--#include virtual="TMtemplates/tmPoweredBy.html" -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

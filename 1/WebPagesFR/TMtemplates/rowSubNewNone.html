@@ -1,20 +1,20 @@
-  <table class="tablerowheader" width="100%">
-   <tr>
-    <td align="center">
-     Aucun
-     <strong>
-      nouvel
-     </strong>
-     abonnement n&iacute;est offert en ligne pour l&iacute;instant.
-     <br/>
-     Veuillez appeler la billetterie, au <field>D_SWITCH_BOARD</field>.
-     <br/>
-     Vous pouvez
-     <strong>
-      renouveler
-     </strong>
-     tout abonnement figurant dans la liste ci-dessous.
-    </td>
-   </tr>
-  </table>
+  <div class="alert alert-warning">
+   <b>
+    New
+   </b>
+   subscriptions are not available for purchase online at this time.
+ <field>pick(F_LOGGED_IN=1,'<!-- comment: show when logged IN')</field>
+ You may
+   <b>
+    renew
+   </b>
+   any subscriptions that follow in the list below.
+ <field>pick(F_LOGGED_IN=1,'-->')</field>
+ Please contact the box office for more information.
+  </div>
   <br/>
+  <div>
+   <a class="btn btn-warning" href="tel:<field>D_SWITCH_BOARD</field>">
+    <field>D_SWITCH_BOARD</field>
+   </a>
+  </div>

@@ -1,18 +1,17 @@
-  <tr class="tablerowdetail">
-   <td align="center">
-    <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-     <input class="new" name="btnSubscriptionNew" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Nouvel abonnement"/>
-     <input name="SG_SEQ" type="hidden" value="<field>SG_SEQ</field>"/>
-    </form>
-   </td>
-   <td align="left">
-    <a class="link" href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
+  <tr>
+   <td>
+    <a href="<field>F_HTML_FIREWALL</field>tmSubscription/tmSubscription<field>SG_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>SG_DESCRIPTION</field>
     </a>
    </td>
-   <td align="left">
-    <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+   <td>
+    <a href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>VE_NAME</field>
+    </a>
+   </td>
+   <td>
+    <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>login&subscription=<field>SG_SEQ</field>">
+     New Subscription
     </a>
    </td>
   </tr>

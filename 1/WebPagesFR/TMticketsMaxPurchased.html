@@ -9,38 +9,47 @@
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <p align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
-   </p>
-   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Allocation billet Maximal Atteint
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+      <div class="alert alert-info">
+       Nous sommes d&eacute;sol&eacute;s, mais vous avez atteint le nombre
+       maximum de billets que vous pouvez acheter pour cette
+       repr&eacute;sentation.
+      </div>
       <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-       <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
-       <p align="center" class="main">
-        Nous sommes d&eacute;sol&eacute;s, mais vous avez atteint le nombre maximum de billets que vous pouvez acheter pour cette repr&eacute;sentation.
-       </p>
-       <p align="center" class="main">
-        Si vous souhaitez vous procurer des billets suppl&eacute;mentaires, veuillez prendre contact avec notre service de billetterie en ligne ci-dessous. Nos repr&eacute;sentants se feront un plaisir de vous aider.
-       </p>
-       <p align="center">
-        <input class="new" name="btnGetEventList" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="S&eacute;lectionner un autre &eacute;v&eacute;nement"/>
-       </p>
+       <input id="P_SEQ" name="P_SEQ" type="hidden" value="<field>P_SEQ</field>"/>
+       <input class="btn btn-success" name="btnGetEventList" type="submit" value="Select another Performance"/>
       </form>
-      <center>
-       <!--#include virtual="TMtemplates/tmContactHours.html" -->
-      </center>
-     </td>
-    </tr>
-   </table>
+     </div>
+     <div class="col-md-8">
+      <div class="text">
+       Si vous souhaitez vous procurer des billets suppl&eacute;mentaires,
+       veuillez prendre contact avec notre service de billetterie en ligne
+       ci-dessous. Nos repr&eacute;sentants se feront un plaisir de vous aider.
+      </div>
+      <!--#include virtual="TMtemplates/tmContactHours.html" -->
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

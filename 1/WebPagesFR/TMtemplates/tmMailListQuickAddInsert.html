@@ -3,7 +3,7 @@
 	function verify() {
 		var themessage = "";
 		if (document.form.C_FIRST_NAME.value=="") {
-			themessage = themessage + " - PrÃ©nom";
+			themessage = themessage + " - PrŽnom";
 			}
 		if (document.form.C_LAST_NAME.value=="") {
 			themessage = themessage + " - Nom";
@@ -17,7 +17,7 @@
 			return true;
 			}
 		else {
-			themessage = "Vous Ãªtes tenu de remplir les champs suivants: " + themessage;
+			themessage = "Vous tes tenu de remplir les champs suivants: " + themessage;
 			alert(themessage);
 			return false;
 		   }
@@ -25,7 +25,7 @@
 	//  End -->
   </script>
   <form action="<field>F_HTML_FIREWALL</field>login" method="POST" name="form">
-   <table border="0" cellpadding="1" cellspacing="2" class="tablerowheader">
+   <table border="0" cellpadding="1" cellspacing="2">
     <field>pick(F_LOGGED_IN=2,'<!-- comment: trick. if not logged on, 3 entry fields show','')</field>
     <tr>
      <td width="127">
@@ -106,8 +106,8 @@
   		<input type=hidden name="PM_SEQ" value=10>
   		
   	Checkbox support (The below would display checkboxes for mail list #5 and #10):
-  		<input type=checkbox name="PM_SEQ" value="5"> Ajoutez-moi Ã  la liste de courrier #5<br>
-  		<input type=checkbox name="PM_SEQ" value="10"> Ajoutez-moi Ã  la liste de courrier #10<br>
+  		<input type=checkbox name="PM_SEQ" value="5"> Ajoutez-moi ˆ la liste de courrier #5<br>
+  		<input type=checkbox name="PM_SEQ" value="10"> Ajoutez-moi ˆ la liste de courrier #10<br>
   		
   	List support (The below would display a list of options for mail list #5 and #10):
   		<select name="PM_SEQ" size="10" multiple id="PM_SEQ">

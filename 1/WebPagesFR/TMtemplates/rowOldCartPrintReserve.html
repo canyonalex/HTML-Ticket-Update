@@ -1,7 +1,7 @@
   <tr class="tablerowdetailprint">
    <td valign="top">
     <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
-    Billets
+    Tickets
    </td>
    <td align="center" valign="top">
     <field>SCD_QUANTITY</field>
@@ -11,11 +11,12 @@
      <field>P_PLAY_TITLE</field>
     </a>
     <br/>
-    Le
+    on
     <b>
-     <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> &agrave; <field>PB_PERFORM_TIME</field>
+     <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> at <field>PB_PERFORM_TIME</field>
     </b>
     <br/>
+    at
     <a class="linkprint" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>VE_NAME</field>
     </a>

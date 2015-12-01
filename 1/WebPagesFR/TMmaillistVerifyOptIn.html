@@ -13,35 +13,37 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table border="0" cellpadding="0" cellspacing="0" width="95%">
-    <tr>
-     <td>
-      <p align="center" class="message">
-       <b>
-        <field>F_HTML_PAGE_MESSAGE</field>
-       </b>
-      </p>
-     </td>
-    </tr>
-    <tr class="tablerowdetail">
-     <td>
-      <p>
-       Merci de confirmer les options de notification suivantes:
-      </p>
-      <p>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Liste d'email opt-in
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     </div>
+     <div class="col-md-8">
+      <div class="text">
+       Merci de confirmer les options de notification suivantes. Si vous souhaitez
+       changer quelque chose, s'il vous pla&icirc;t vous connecter
+       en utilisant les boutons ci-dessus.
+      </div>
+      <br/>
+      <div class="text">
        <b>
         <field>F_HTML_DOUBLE_OPT_IN</field>
        </b>
-      </p>
-      <p>
-       Si vous souhaitez changer quelque chose, s'il vous pla&icirc;t vous connecter
-en utilisant les boutons ci-dessus.
-      </p>
-     </td>
-    </tr>
-   </table>
+      </div>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

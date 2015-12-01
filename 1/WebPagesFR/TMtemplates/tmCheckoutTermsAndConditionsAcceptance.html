@@ -1,0 +1,15 @@
+  <div class="form-group">
+   <div class="col-sm-offset-2 col-sm-10">
+    <div class="checkbox">
+     <field>pick(D_REQD_ACKNOWLEDGE_CRITERIA,'<!-- comment:')</field>
+     <label for="conditions">
+      <input id="conditions" name="ORD_ACKNOWLEDGED_CONDITIONS" type="checkbox" value="1" <field>pick(SCH_ACKNOWLEDGED_CONDITIONS,'','checked')</field>/>
+      J'accepte
+      <a class="link" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmtermsandconditions.html" onclick="return popup(this, 'notes')">
+       les Conditions de Vente
+      </a>
+     </label>
+     <field>pick(D_REQD_ACKNOWLEDGE_CRITERIA,'-->')</field>
+    </div>
+   </div>
+  </div>

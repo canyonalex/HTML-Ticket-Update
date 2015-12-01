@@ -1,76 +1,73 @@
-  <tr>
-   <td align="right" class="tablerowheader" height="46" valign="top" width="15%">
-    Gestion des billets
-    <br/>
-    Retrait des billets
-   </td>
-   <td class="tablerowdetail" valign="top" width="85%">
-    <table border="0" cellpadding="0" class="main" width="100%">
-     <field>pick(F_BTN_PRINT_AT_HOME,'<!-- comment: print at home as per company prefs')</field>
-     <tr>
-      <td valign="top" width="200">
+  <div class="form-group">
+   <label class="col-sm-2 control-label" for="">
+    <field>pick(SCH_TIX_QUANTITY=0,'Gestion des billets et ')</field>Mode de Livraison
+   </label>
+   <div class="col-sm-10">
+    <field>pick(F_BTN_PRINT_AT_HOME,'<!-- comment: print at home as per company prefs')</field>
+    <div class="form-group">
+     <div class="radio col-sm-3">
+      <label class="control-label" for="eticket">
        <input id="eticket" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeRemove','<field>F_MAIL_FEE_EXISTS</field>');" type="radio" value="0" <field>pick(SCH_TIX_PRINT_STATUS=0,'','checked')</field>/>
-       <label for="eticket">
-        E-Ticket (doit imprimer &agrave; la maison)
-       </label>
-       <br/>
-      </td>
-      <td valign="top">
+       E-Ticket (doit imprimer &agrave; la maison)
+      </label>
+     </div>
+     <div class="col-sm-9">
+      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=0,'alert-info','alert-info')</field>">
        <b>
         E-ticket
        </b>
        livraison signifie que vous devez imprimer
        <em>
-        les billets sur votre propre imprimante et
-			les apporter avec vous &agrave; l'&eacute;v&eacute;nement
+        les billets sur votre propre imprimante et les apporter avec 
+        vous &agrave; l'&eacute;v&eacute;nement.
        </em>
-       . Billets ne seront pas envoy&eacute;s par la poste.
-      </td>
-     </tr>
-     <field>pick(F_BTN_PRINT_AT_HOME,'-->')</field>
- 
-	<field>pick(F_BTN_MAIL_TO_PATRON,'<!-- comment: mail to as patron per company prefs')</field>
-     <tr>
-      <td valign="top" width="200">
+        Billets ne seront pas envoy&eacute;s par la poste.
+      </div>
+     </div>
+    </div>
+    <field>pick(F_BTN_PRINT_AT_HOME,'-->')</field>
+    <field>pick(F_BTN_MAIL_TO_PATRON,'<!-- comment: mail to as patron per company prefs')</field>
+    <div class="form-group">
+     <div class="radio col-sm-3">
+      <label class="control-label" for="mailtopatron">
        <input id="mailtopatron" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeAdd','<field>F_MAIL_FEE_ALLOWED</field>');" type="radio" value="1" <field>pick(SCH_TIX_PRINT_STATUS=1,'','checked')</field>/>
-       <label for="mailtopatron">
-        Mail moi mes billets
-       </label>
-       <br/>
-      </td>
-      <td valign="top">
+       Mail moi mes <field>pick(SCH_TIX_QUANTITY=0,'billets','articles')</field>
+      </label>
+     </div>
+     <div class="col-sm-9">
+      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=1,'alert-info','alert-info')</field>">
        <b>
-        Billets post&eacute;s
+        Articles post&eacute;s
        </b>
-       peut prendre 5 &agrave; 7 jours ouvrables &agrave; arriver &agrave; votre adresse postale.
+       peut prendre 5 &agrave; 7 jours ouvrables &agrave; arriver &agrave; votre
+       adresse postale.
        <em>
-        Les billets pour les &eacute;v&eacute;nements dans les 7 prochains jours ne seront pas envoy&eacute;s par la poste.
-			Les billets non re&ccedil;us peuvent &ecirc;tre ramass&eacute;s au guichet.
+        <field>pick(SCH_TIX_QUANTITY=0,'Les billets pour les &eacute;v&eacute;nements dans les 7 prochains jours ne seront pas envoy&eacute;s par la poste. Les billets non re&ccedil;us peuvent &ecirc;tre ramass&eacute;s au guichet.')</field>
        </em>
-       <field>D_COMPANY_LONG</field> n'est pas responsable des billets perdus dans le courrier.
-      </td>
-     </tr>
-     <field>pick(F_BTN_MAIL_TO_PATRON,'-->')</field>
-
-	<field>pick(F_BTN_WILLCALL,'<!-- comment: Will Call as per company prefs')</field>
-     <tr>
-      <td valign="top" width="200">
+       <field>D_COMPANY_LONG</field> n'est pas responsable des <field>pick(SCH_TIX_QUANTITY=0,'billets','articles')</field> perdus dans le courrier.
+      </div>
+     </div>
+    </div>
+    <field>pick(F_BTN_MAIL_TO_PATRON,'-->')</field>
+    <field>pick(F_BTN_WILLCALL,'<!-- comment: Will Call as per company prefs')</field>
+    <div class="form-group">
+     <div class="radio col-sm-3">
+      <label class="control-label" for="willcall">
        <input id="willcall" name="SCH_TIX_PRINT_STATUS" onclick="submitForm('TMForm','btnMailFeeRemove','<field>F_MAIL_FEE_EXISTS</field>');" type="radio" value="2" <field>pick(SCH_TIX_PRINT_STATUS=2,'','checked')</field>/>
-       <label for="willcall">
-        Tenez billets au guichet
-       </label>
-      </td>
-      <td valign="top">
+       Tenez <field>pick(SCH_TIX_QUANTITY=0,'billets','articles')</field> au guichet
+      </label>
+     </div>
+     <div class="col-sm-9">
+      <div class="alert <field>pick(SCH_TIX_PRINT_STATUS=2,'alert-info','alert-info')</field>">
        <b>
-        Appellerons billets
+        Appellerons <field>pick(SCH_TIX_QUANTITY=0,'billets','articles')</field>
        </b>
-       sont disponibles pour le ramassage au th&eacute;&acirc;tre durant les heures de
-			 heures. Les billets ne sont pas ramass&eacute;s avant l'&eacute;v&eacute;nement seront disponibles pour le ramassage &agrave; 
-			 l'fen&ecirc;tre appelez un (1) heure avant l'&eacute;v&eacute;nement le jour de l'&eacute;v&eacute;nement 
-			 sur le lieu o&ugrave; l'&eacute;v&eacute;nement se produit.
-      </td>
-     </tr>
-     <field>pick(F_BTN_WILLCALL,'-->')</field>
-    </table>
-   </td>
-  </tr>
+       sont disponibles pour le ramassage au th&eacute;&acirc;tre durant les heures
+       de heures.
+       <field>pick(SCH_TIX_QUANTITY=0,"Les billets ne sont pas ramass&eacute;s avant l'&eacute;v&eacute;nement seront disponibles pour le ramassage &agrave; l'fen&ecirc;tre appelez un (1) heure avant l'&eacute;v&eacute;nement le jour de l'&eacute;v&eacute;nement sur le lieu o&ugrave; l'&eacute;v&eacute;nement se produit.")</field>
+      </div>
+     </div>
+    </div>
+    <field>pick(F_BTN_WILLCALL,'-->')</field>
+   </div>
+  </div>

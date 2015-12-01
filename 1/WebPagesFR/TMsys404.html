@@ -8,51 +8,49 @@
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <div align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Page HTML non trouv&eacute;e
+    </h1>
    </div>
-   <table border="0" width="90%">
-    <tr>
-     <td rowspan="3" valign="top" width="100">
-      <img border="0" height="49" src="tmGifs/tmCompanyLogo.gif" valign="top" width="84"/>
-     </td>
-     <td align="center" class="tablerowheader">
-      <font class="title" size="+2">
-       La page que vous avez demand&eacute;e n'a pas &eacute;t&eacute; trouv&eacute;e
-      </font>
-     </td>
-     <td rowspan="3" width="100">
-      &nbsp;
-     </td>
-    </tr>
-    <tr>
-     <td class="tablerowdetail">
-      <p align="center">
-       La page que vous avez demand&eacute;e ou pour laquelle vous aviez d&eacute;fini un signet n'a pas &eacute;t&eacute; trouv&eacute;e.
+   <div class="row">
+    <div class="col-md-4">
+     <div class="lead alert alert-info">
+      La page que vous avez demand&eacute;e n'a pas &eacute;t&eacute; trouv&eacute;e
+     </div>
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert-text">
+      <p>
+       Vous pouvez essayer de continuer en cliquant sur ​​l'un des
+       éléments de menu ci-dessus. Si vous recevez ce message
+        à nouveau , le système est toujours incapable d' accéder à
+        la page demandée.
       </p>
-      <p align="center" class="main">
-       Si vous ne pouvez pas trouver cette page, veuillez prendre contact avec notre service de billetterie en ligne ci-dessous. Nos repr&eacute;sentants se feront un plaisir de vous aider.  Faites-nous savoir ce que vous cherchiez et o&ugrave; se trouve le lien bris&eacute;, de sorte que nous puissions rem&eacute;dier au probl&egrave;me dans les meilleurs d&eacute;lais.
-       <br/>
+      <p>
+       Si vous ne pouvez pas trouver cette page, veuillez prendre
+       contact avec notre service de billetterie en ligne
+       ci-dessous. Nos repr&eacute;sentants se feront un plaisir
+       de vous aider.
       </p>
-      <center>
-       <!--#include virtual="TMtemplates/tmContactHours.html" -->
-      </center>
-     </td>
-    </tr>
-    <tr>
-     <td align="center" class="tablerowheader">
-      Cliquez sur le bouton 'Retour' ou 'Pr&eacute;c&eacute;dent' de votre navigateur pour revenir &agrave; la page pr&eacute;c&eacute;dente.
-     </td>
-    </tr>
-   </table>
+     </div>
+     <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?btnCart=Cart">
+      Panier d'achat
+     </a>
+     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

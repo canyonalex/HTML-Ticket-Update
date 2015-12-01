@@ -1,19 +1,18 @@
   <!-- comment: this is included when pressales access coupons have been enabled  -->
   <field>pick(F_PRESALES_ALLOWED,'<!-- comment: setting in company prefs')</field>
-  <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-   <table align="center" border="0" cellpadding="1" cellspacing="0" class="tablerowdetail" width="95%">
-    <tr>
-     <td align="right" width="30%">
-      Code d'acc&egrave;s pr&eacute;vente
-     </td>
-     <td width="56%">
-      <input id="CH_CODE" maxlength="40" name="CH_CODE" onblur="this.value=this.value.toUpperCase()" size="40" type="text" value="<field>CH_CODE</field>"/>
-     </td>
-     <td align="left">
-      <input class="new" name="btnCouponAccept" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ajouter du code"/>
+  <form action="<field>F_HTML_FIREWALL</field>online" class="" method="POST">
+   <div class="row">
+    <div class="col-md-6">
+     <div class="input-group">
       <input name="param" type="hidden" value="altbtn=btnGetEventList"/>
-     </td>
-    </tr>
-   </table>
+      <input id="CH_CODE" maxlength="40" name="CH_CODE" onblur="this.value=this.value.toUpperCase()" placeholder="Code d'acc&egrave;s pr&eacute;vente" size="40" type="text" value="<field>CH_CODE</field>"/>
+      &nbsp;
+      <span class="input-group-btn">
+       <input class="btn btn-primary" name="btnCouponAccept" onclick="process()" type="submit" value="Ajouter du code"/>
+      </span>
+     </div>
+    </div>
+    <!-- /col -->
+   </div>
   </form>
   <field>pick(F_PRESALES_ALLOWED,' -->')</field>

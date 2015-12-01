@@ -13,32 +13,37 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <div align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Invalid Demande directe en ligne
+    </h1>
    </div>
-   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td>
-      <p align="center" class="title">
-       Service de billetterie en ligne du <field>D_COMPANY_LONG</field>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert-text">
+       <p>
+       Vous avez essay&eacute; d'acc&eacute;der directement depuis
+       le service de billetterie en ligne du
+       <field>D_COMPANY_LONG</field> &agrave; une page Web dont le
+       nom commence par un pr&eacute;fixe indiquant que
+       l'acc&egrave;s &agrave; cette page est limit&eacute;. Le
+       nom de cette page commence tr&egrave;s probablement par le
+       pr&eacute;fixe 'TM' et est un des noms de page
+       r&eacute;serv&eacute;s servant &agrave; contr&ocirc;ler le
+       flux des ventes de billets.
       </p>
-      <p align="center" class="main">
-       Vous avez essay&eacute; d'acc&eacute;der directement depuis le service de billetterie
-           en ligne du <field>D_COMPANY_LONG</field> &agrave; une page Web dont le nom commence par un pr&eacute;fixe 
-           indiquant que l'acc&egrave;s &agrave; cette page est limit&eacute;. Le nom de cette page commence tr&egrave;s
-           probablement par le pr&eacute;fixe 'TM' et est un des noms de page r&eacute;serv&eacute;s
-           servant &agrave; contr&ocirc;ler le flux des ventes de billets.
-      </p>
-      <center>
-       <!--#include virtual="TMtemplates/tmContactHours.html" -->
-      </center>
-     </td>
-    </tr>
-   </table>
+     </div>
+     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

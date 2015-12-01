@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Paiement
+   <field>D_COMPANY_LONG</field> | Aucun Paiement Requis
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -15,11 +15,23 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table border="0" cellpadding="0" cellspacing="0" width="95%">
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>online" id="TMForm" method="POST">
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      &Eacute;tape 1 sur 2:
+      <span class="text-muted">
+       Aucun paiement requis
+      </span>
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+      <!--#include virtual="TMtemplates/tmCheckoutSecurityAdvisory.html" -->
+     </div>
+     <div class="col-md-8">
+      <form action="<field>F_HTML_FIREWALL</field>online" class="form-horizontal" id="TMForm" method="POST">
        <!-- comment: following fields used for hidden submit
         			  remove the input field for 'param' if you want to go to the default page TMcart.html as we usually go there
 					  after making chances to the shopping cart.  If you prefer to stay on this page and process the credit, the
@@ -29,84 +41,38 @@
        <input name="fee" type="hidden" value="<field>D_WEB_MAIL_FEE_SEQ</field>"/>
        <input name="param" type="hidden" value="altbtn=btnCheckoutProcessing"/>
        <input name="hiddenSubmit" type="hidden" value=""/>
-       <div align="center">
-        <p class="message">
-         <b>
-          <field>F_HTML_PAGE_MESSAGE</field>
-         </b>
-        </p>
-        <table border="0" cellpadding="5" width="100%">
-         <tr>
-          <td align="center" class="tablerowdetail" style="font-size:25px">
-           <img align="left" src="tmGifs/step2.gif"/>
-           <b>
-            &Eacute;tape 2 sur 3: La commande que vous nous avez envoy&eacute;e indique qu'aucun paiement n'est d&ucirc;.
-            <br/>
-            Pour confirmer votre commande, veuillez cliquer sur le bouton 'Confirmer la commande pour traitement'.'
-           </b>
-          </td>
-         </tr>
-        </table>
-        <br/>
-        <table border="0" cellpadding="5" class="main" colspan="2" width="100%">
-         <!--#include virtual="TMtemplates/tmTicketHandling.html" -->
-         <tr>
-          <td align="right" class="tablerowheader" valign="top">
-           Comment avez-vous entendu parler de nous?
-          </td>
-          <td class="tablerowdetail" valign="top">
-           <select name="ORD_REASON_BUY_FC_SEQ" size="5">
-            <field>F_HTML_REASON_TO_BUY_LIST</field>
-           </select>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader" valign="top">
-           Commentaires additionnels sur votre commande
-          </td>
-          <td class="tablerowdetail" valign="top">
-           <textarea cols="40" name="ORD_NOTES" rows="5"><field>ORD_NOTES</field></textarea>
-          </td>
-         </tr>
-         <!--#include virtual="TMtemplates/tmCheckoutSecurityAdvisory.html" -->
-         <tr>
-          <td class="tablerowheader" height="25" valign="top">
-           &nbsp;
-          </td>
-          <td align="left" class="tablerowdetail" valign="top">
-           <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-           <field>pick(D_REQD_ACKNOWLEDGE_CRITERIA,'<!-- comment:')</field>
-           <input id="conditions" name="ORD_ACKNOWLEDGED_CONDITIONS" type="checkbox" value="1" <field>pick(SCH_ACKNOWLEDGED_CONDITIONS,'','checked')</field>/>
-           <label for="conditions">
-            J'accepte
-           </label>
-           <a class="link" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmtermsandconditions.html" onclick="return popup(this, 'notes')">
-            les Conditions de Vente
-           </a>
-           <field>pick(D_REQD_ACKNOWLEDGE_CRITERIA,'-->')</field>
-           <input class="new" name="btnCheckoutAccept" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Confirmer la commande pour traitement"/>
-           &nbsp;&nbsp;&nbsp;&nbsp;
-           <input class="new" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler"/>
-          </td>
-         </tr>
-        </table>
-        <br/>
-        <span class="message">
-         <b>
-          AToutes les ventes de billet sont d&eacute;finitives. Aucun &eacute;change ni remboursement.
-         </b>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
-          Politiques du service de billetterie en ligne
-         </a>
-         <br/>
-         <br/>
-        </span>
+       <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'<!-- comment: enable/disable special handling')</field>
+       <!--#include virtual="TMtemplates/tmTicketHandling.html" -->
+       <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'-->')</field>
+    
+         <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)=0,'<!-- comment: for donation only, may need value for reason to buy')</field>
+       <!--#include virtual="TMtemplates/tmCheckoutDonationReasonToBuy.html" -->
+       <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)=0,'-->')</field>     
+     
+         <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'<!-- comment: if more than donations, show reason to buy')</field>
+       <!--#include virtual="TMtemplates/tmCheckoutReasonToBuy.html" -->
+       <!--#include virtual="TMtemplates/tmCheckoutOrderNotes.html" -->
+       <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'-->')</field>
+       <!--#include virtual="TMtemplates/tmCheckoutTermsAndConditionsAcceptance.html" -->
+       <div class="form-group">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-10">
+         <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+         <input class="btn btn-success" name="btnCheckoutAccept" onclick="process()" type="submit" value="Confirmer la commande pour traitement"/>
+         <input class="btn btn-warning" name="btnCart" type="submit" value="Panier"/>
+        </div>
        </div>
       </form>
-     </td>
-    </tr>
-   </table>
+      <!--#include virtual="TMtemplates/tmCheckoutRefundExchangePolicy.html" -->
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

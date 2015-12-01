@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Achat de billets
+   <field>D_COMPANY_LONG</field> | Sélectionnez sièges de souscription
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -14,13 +14,28 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table align="center" border="0" cellpadding="0" cellspacing="0" width="80%">
-    <tr>
-     <td>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Sélectionnez sièges de souscription
+      <br/>
+      <span class="text-muted">
+       <field>SG_DESCRIPTION</field> <field>PB_SERIES_CODE</field>
+      </span>
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+      <!--#include virtual="tmMaps/tmChangeSubscriptionSeatingNote.html" -->
+     </div>
+     <div class="col-md-8">
       <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
        <input id="SG_SEQ" name="SG_SEQ" type="hidden" value="<field>SG_SEQ</field>"/>
+       <!-- comment: Subscription Package -->
        <input id="PB_SERIES_CODE" name="PB_SERIES_CODE" type="hidden" value="<field>PB_SERIES_CODE</field>"/>
+       <!-- comment: Performance Series Code -->
        <input id="F_HTML_NEXT_BEST_SEAT" name="F_HTML_NEXT_BEST_SEAT" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT</field>"/>
        <input id="F_HTML_NEXT_BEST_AREA" name="F_HTML_NEXT_BEST_AREA" type="hidden" value="<field>F_HTML_NEXT_BEST_AREA</field>"/>
        <input id="F_HTML_BEST_PRICE_CODE" name="F_HTML_BEST_PRICE_CODE" type="hidden" value="<field>F_HTML_BEST_PRICE_CODE</field>"/>
@@ -28,57 +43,38 @@
        <input id="F_HTML_NEXT_BEST_TWO_PASS_OK" name="F_HTML_NEXT_BEST_TWO_PASS_OK" type="hidden" value="<field>F_HTML_NEXT_BEST_TWO_PASS_OK</field>"/>
        <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY" name="F_HTML_NEXT_BEST_SEAT_PRIORITY" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY</field>"/>
        <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" name="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE</field>"/>
-       <p align="center" class="message">
-        <b>
-         <field>F_HTML_PAGE_MESSAGE</field>
-        </b>
-       </p>
-       <table align="center" border="0" cellpadding="2" cellspacing="0" id="bestavailable" width="80%">
-        <tr class="tablerowheader">
-         <td align="center" class="playinfo" colspan="5">
-          <b>
-           <field>SG_DESCRIPTION</field>
-          </b>
-          <br/>
-          <span class="main">
-           <field>SG_NOTES</field>
-          </span>
-         </td>
-        </tr>
-        <tr class="tablerowheader">
-         <td align="left" width="15%">
-          <field>D_SECTION_DESC</field>
-         </td>
-         <td align="left" width="10%">
-          <field>D_ROW_DESC</field>
-         </td>
-         <td align="left" width="10%">
-          <field>D_SEAT_DESC</field>
-         </td>
-         <td align="left">
-          Remarques sur les si&egrave;ges
-         </td>
-         <td align="left">
-          Prix
-         </td>
-        </tr>
-        <field>F_HTML_BEST_SEATS_LIST</field>
-        <tr class="tablerowheader">
-         <td align="center" colspan="5">
-          <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-          <input class="new" name="btnSubscriptionNewReserve" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ajouter l'abonnement &agrave; mon panier d'achat"/>
-          <field>pick(PB_SALES_METHOD=2,'<!-- comment:')</field>
-          <input class="new" name="btnSubscriptionBestAvail" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Chercher les meilleurs si&egrave;ges encore disponibles"/>
-          <field>pick(PB_SALES_METHOD=2,'-->')</field>
-          <input class="new" name="btnSubscription" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler et recommencer"/>
-         </td>
-        </tr>
+       <table class="table table-striped table-condensed table-responsive">
+        <thead>
+         <tr>
+          <th>
+           <field>D_SECTION_DESC</field>
+          </th>
+          <th>
+           <field>D_ROW_DESC</field>
+          </th>
+          <th>
+           <field>D_SEAT_DESC</field>
+          </th>
+          <th>
+           Si&egrave;ges Remarques
+          </th>
+          <th>
+           Prix
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <field>F_HTML_BEST_SEATS_LIST</field>
+        </tbody>
        </table>
+       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+       <input class="btn btn-success" name="btnSubscriptionNewReserve" onclick="process()" type="submit" value="Ajouter l'abonnement au panier"/>
+       <field>pick(PB_SALES_METHOD=2,'<!-- comment:')</field>
+       <input class="btn btn-info" name="btnSubscriptionBestAvail" onclick="process()" type="submit" value="Suggérer d'autres sièges"/>
+       <field>pick(PB_SALES_METHOD=2,'-->')</field>
+       <input class="btn btn-danger" name="btnSubscription" type="submit" value="Annuler et recommencer"/>
       </form>
-     </td>
-    </tr>
-   </table>
-   <!-- comment:
+      <!-- comment:
 	selected_only = if true, the image returned is a blown up version around the selected seats (can be yes,y,no,n,1 or 0)
 	selected_border = specifies the extra space around the selected seats in points (72 = 1 inch).
 	selected_color = specifies the fill color of the selected seats as a RGB hex string, i.e. FF0000 means bright red
@@ -86,10 +82,15 @@
 				between 50 and 75 are good values. 
 	format=svg (pick your own seats and interactive) png or jpg
 -->
-   <!-- img src="<field>F_HTML_SEATMAP</field>&selected_color=007700&format=svg"
-	border="0"  width="80%" align="center" alt="selected seats" -->
-   <img align="center" alt="selected seats" border="0" src="<field>F_HTML_SEATMAP</field>&selected_color=007700&format=svg&selected_boundary=True&selected_boundary_color=FF000&selected_boundary_width=5&selected_seat_border=5" width="80%"/>
+      <img align="center" alt="selected seats" border="0" src="<field>F_HTML_SEATMAP</field>&selected_only=yes&selected_border=999&selected_color=007700&img_quality=75&format=svg" width="80%"/>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

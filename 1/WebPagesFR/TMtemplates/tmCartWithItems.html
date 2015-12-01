@@ -1,0 +1,53 @@
+  <form action="<field>F_HTML_FIREWALL</field>online" id="TMForm" method="POST">
+   <!--comment: hidden input used to submit drop-down selections-->
+   <input name="hiddenSubmit" type="hidden" value=""/>
+   <div align="center">
+    <table class="table table-striped">
+     <thead>
+      <tr>
+       <th>
+        Article
+       </th>
+       <th class="text-center">
+        Qt&eacute;
+       </th>
+       <th class="text-left">
+        Description
+       </th>
+       <th class="text-right">
+        Total
+       </th>
+       <th class="text-center">
+        Supprimer
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <field>F_HTML_CURRENT_CART_LIST</field>
+     </tbody>
+     <!-- comment: footer on the table -->
+     <tfoot>
+      <tr>
+       <td>
+        <!-- comment: F_HTML_CART_REQUIRES_REPRICE indicates classic listener was unavailable for discount/plugin calculation.-->
+        <!-- comment: on purpose, we've made success just text and no classic a full alert -->
+        <span class="<field>pick(F_HTML_CART_REQUIRES_REPRICE,'alert-success','alert alert-danger')</field>">
+         Panier <field>SCH_SEQ</field>
+        </span>
+       </td>
+       <td class="text-right" colspan="2">
+        TOTAL <field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','(Les prix indiqués comprennent toutes les taxes applicables.)')</field>
+       </td>
+       <td class="text-right">
+        <field>SCH_TOTAL_COST</field>$
+       </td>
+       <td class="text-center">
+        <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'<!-- comment: show if items can be removed','')</field>
+        <input class="btn btn-danger btn-xs" name="btnCartRemoveItem" onclick="process()" type="submit" value="Supprimer"/>
+        <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'-->','')</field>
+       </td>
+      </tr>
+     </tfoot>
+    </table>
+   </div>
+  </form>

@@ -1,27 +1,23 @@
-  <tr>
-   <td align="right" class="tablerowheader" valign="top">
+  <div class="form-group">
+   <label class="col-sm-2 control-label" for="">
     Paiements &eacute;chelonn&eacute;s
-   </td>
-   <td class="tablerowdetail" valign="top">
+   </label>
+   <div class="col-sm-10">
     <!--#include virtual="TMtemplates/tmCheckoutPostDatedPaymentRules.html" -->
-    <table border="0" cellpadding="0" class="main" width="100%">
-     <tr>
-      <td align="top" class="tablerowdetail" width="20%">
-       &nbsp;
-      </td>
-      <td class="tablerowdetail" valign="top">
-       <input id="PostDatedPlanAccept" name="F_POST_DATED_PLAN_ACCEPTED" type="checkbox" value="1" <field>pick(F_POST_DATED_PLAN_ACCEPTED=1,'','checked')</field>/>
-       <label for="PostDatedPlanAccept">
-        Je souhaite participer au r&eacute;gime de paiement diff&eacute;r&eacute; pour cet achat
+    <div class="form-group">
+     <label class="col-sm-2 control-label" for="PostDatedPlanAccept">
+      Participer?
+     </label>
+     <div class="col-sm-8">
+      <div class="checkbox">
+       <label class="control-label" for="PostDatedPlanAccept">
+        <input id="PostDatedPlanAccept" name="F_POST_DATED_PLAN_ACCEPTED" type="checkbox" value="1" <field>pick(F_POST_DATED_PLAN_ACCEPTED=1,'','checked')</field>/>
+        Je souhaite participer au r&eacute;gime de paiement diff&eacute;r&eacute;
        </label>
-      </td>
-     </tr>
-     <tr>
-      <td align="right" class="tablerowdetail">
-       Fr&eacute;quence des paiements
-      </td>
-      <td class="tablerowdetail" valign="top">
-       <!-- comment: To be updated to allow patron to select payment frequency
+      </div>
+     </div>
+    </div>
+    <!-- comment: To be updated to allow patron to select payment frequency at some time in the future
       <select name="PostDatedFrequency" id="PostDatedFrequency" onchange="submitForm('TMForm','btnCheckoutCalcPayPlan','3');">
       <option value="0">One Time</option>
       <option value="1" selected>Monthly</option>
@@ -30,55 +26,77 @@
       <option value="4">Annually</option>
       </select>
     -->
-       <select id="PostDatedFrequency" name="PostDatedFrequency">
+    <div class="form-group">
+     <label class="col-sm-2 control-label" for="PostDatedFrequency">
+      Fr&eacute;quence
+     </label>
+     <div class="col-sm-8">
+      <div>
+       <select class="form-control" id="PostDatedFrequency" name="PostDatedFrequency">
         <option selected="" value="1">
          Au Mois
         </option>
        </select>
-      </td>
-     </tr>
-     <tr>
-      <td align="top" class="tablerowdetail">
-       &nbsp;
-      </td>
-      <td align="top" class="tablerowdetail">
-       <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-        <tr class="tablerowheader">
-         <td align="left" width="140">
+      </div>
+     </div>
+    </div>
+    <div class="form-group">
+     <label class="col-sm-2 control-label">
+      Calendrier
+     </label>
+     <div class="col-sm-8">
+      <table class="table table-striped">
+       <thead>
+        <tr>
+         <th class="text-left">
           Date de pr&eacute;autoris&eacute;
-         </td>
-         <td align="right">
+         </th>
+         <th class="text-right">
           Amount
-         </td>
+         </th>
         </tr>
+       </thead>
+       <tbody>
         <field>F_HTML_PAYMENT_PLAN_LIST</field>
         <tr>
-         <td align="left" class="tablerowheader">
-          Montant total diff&eacute;r&eacute;
+         <td class="text-right text-warning">
+          <b>
+           Montant total diff&eacute;r&eacute;
+          </b>
          </td>
-         <td align="right" class="tablerowheader">
-          <field>SCH_TOTAL_COST-F_POST_DATED_AMOUNT_DUE_TODAY</field> $
-         </td>
-        </tr>
-        <tr>
-         <td align="left" class="tablerowdetail">
-          Montant d&ucirc; aujourd'hui
-         </td>
-         <td align="right" class="tablerowdetail">
-          <field>F_POST_DATED_AMOUNT_DUE_TODAY</field> $
+         <td class="text-right text-warning">
+          <b>
+           <field>SCH_TOTAL_COST-F_POST_DATED_AMOUNT_DUE_TODAY</field>$
+          </b>
          </td>
         </tr>
         <tr>
-         <td align="left" class="tablerowheader">
-          Total
+         <td class="text-right">
+          <b>
+           Montant d&ucirc; aujourd'hui
+          </b>
          </td>
-         <td align="right" class="tablerowheader">
-          <field>SCH_TOTAL_COST</field> $
+         <td class="text-right">
+          <b>
+           <field>F_POST_DATED_AMOUNT_DUE_TODAY</field>$
+          </b>
          </td>
         </tr>
-       </table>
-      </td>
-     </tr>
-    </table>
-   </td>
-  </tr>
+        <tr>
+         <td class="text-right text-warning">
+          <b>
+           Total
+          </b>
+         </td>
+         <td class="text-right text-warning">
+          <b>
+           <field>SCH_TOTAL_COST</field>$
+          </b>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+  </div>

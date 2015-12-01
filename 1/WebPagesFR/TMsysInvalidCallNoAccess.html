@@ -13,44 +13,45 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <div align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Page non trouvée
+    </h1>
    </div>
-   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-       <h2>
-        <div align="center">
-         <p class="title">
-          Service de billetterie en ligne du <field>D_COMPANY_LONG</field>
-         </p>
-        </div>
-       </h2>
-       <p align="center" class="main">
-        Le service de billetterie en ligne du <field>D_COMPANY_LONG</field> n'a pas
-          pu localiser la page demand&eacute;e.
-       </p>
-       <p align="center" class="main">
-        Veuillez prendre contact avec notre service de billetterie en ligne ci-dessous.
-           Nos repr&eacute;sentants se feront un plaisir de vous aider.
-       </p>
-       <center>
-        <!--#include virtual="TMtemplates/tmContactHours.html" -->
-       </center>
-       <p class="main">
-        Vous pouvez essayer de continuer et d'acc&eacute;der &agrave; votre panier en cliquant sur un des
-            onglets ci-dessus. Si ce message s'affiche de nouveau, le syst&egrave;me est toujours dans l'impossibilit&eacute;
-            d'acc&eacute;der &agrave; la page demand&eacute;e.
-       </p>
-      </form>
-     </td>
-    </tr>
-   </table>
+   <div class="row">
+    <div class="col-md-4">
+     <div class="lead alert alert-info">
+      Le service de billetterie en ligne du
+      <field>D_COMPANY_LONG</field> n'a pas
+      pu localiser la page demand&eacute;e.
+     </div>
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert-text">
+      <p>
+       Veuillez prendre contact avec notre service de billetterie
+       en ligne ci-dessous. Nos repr&eacute;sentants se feront un plaisir de vous aider.
+      </p>
+      <p>
+       Vous pouvez essayer de continuer et d'acc&eacute;der
+       &agrave; votre panier en cliquant sur un des onglets
+       ci-dessus. Si ce message s'affiche de nouveau, le
+       syst&egrave;me est toujours dans l'impossibilit&eacute;
+       d'acc&eacute;der &agrave; la page demand&eacute;e.
+      </p>
+     </div>
+     <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?btnCart=Cart">
+      Panier d'achat
+     </a>
+     <!--#include virtual="TMtemplates/tmContactHours.html" -->
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

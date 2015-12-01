@@ -1,38 +1,34 @@
-  <tr class="tablerowdetail">
-   <td width="15">
-    <input name="PKGD_SEQ_<field>F_HTML_ROW</field>" type="hidden" value="<field>PKGD_SEQ</field>"/>
-    <input name="PB_SEQ_<field>F_HTML_ROW</field>" type="hidden" value="<field>PB_SEQ</field>"/>
-    <field>F_HTML_ROW</field>.
-   </td>
-   <td>
-    <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
-     <field>P_PLAY_TITLE</field>
-    </a>
-    <field>pick(len(PB_PERF_NOTES)=0,PB_PERF_NOTES)</field>
-    <div align="right">
-     Lieu:
-     <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
-      <field>VE_NAME</field>
-     </a>
+  <div class="media">
+   <!--#include virtual="TMtemplates/rowTicketEventImage.html" -->
+   <div class="media-body">
+    <!--#include virtual="TMtemplates/rowTicketEventName.html" -->
+    <div class="row">
+     <!--#include virtual="TMtemplates/rowTicketEventVenue.html" -->
     </div>
-   </td>
-   <td>
-    <select name="PS_QUANTITY_<field>F_HTML_ROW</field>" size="1">
-     <field>F_HTML_TICKET_QTY_LIST</field>
-    </select>
-   </td>
-   <td>
-    <select name="SC_DESCRIPTION_<field>F_HTML_ROW</field>" size="1">
-     <field>F_HTML_PROMOTIONS_LIST</field>
-    </select>
-   </td>
-   <td>
-    <!--#include virtual="TMtemplates/rowTicketEventAvailability.html" -->
-   </td>
-   <td width="140">
-    <field>cap(dat(PB_PERFORM_DATE,'w D m y'))</field>
-   </td>
-   <td align="right">
-    <field>PB_PERFORM_TIME</field>
-   </td>
-  </tr>
+    <div class="row">
+     <!-- /col -->
+     <div class="col-md-8 form-inline">
+      <div class="form-group">
+       <label for="PS_QUANTITY_<field>F_HTML_ROW</field>">
+        Quantity
+       </label>
+       <select class="form-control" name="PS_QUANTITY_<field>F_HTML_ROW</field>" size="1">
+        <field>F_HTML_TICKET_QTY_LIST</field>
+       </select>
+      </div>
+      &nbsp;
+      <div class="form-group">
+       <label for="SC_DESCRIPTION_<field>F_HTML_ROW</field>">
+        Price
+       </label>
+       <select class="form-control" name="SC_DESCRIPTION_<field>F_HTML_ROW</field>" size="1">
+        <field>F_HTML_PROMOTIONS_LIST</field>
+       </select>
+      </div>
+     </div>
+     <!-- comment: ./col -->
+    </div>
+    <!-- comment: ./row -->
+   </div>
+  </div>
+  <!-- comment:. .media -->

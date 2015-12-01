@@ -1,139 +1,80 @@
-  <div align="center">
-   <table border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="90%">
-    <tr>
-     <td align="left" class="link">
-      <hr align="left" width="85%"/>
-      Mes Services Patrons
-      <hr align="left" width="85%"/>
-     </td>
-     <td align="left width=" class="link">
-      <hr align="left" width="85%"/>
-      Gestion des comptes
-      <hr align="left" width="85%"/>
-     </td>
-     <td align="left width=" class="link">
-      <hr align="left" width="85%"/>
-      Contactez-nous
-      <hr align="left" width="85%"/>
-     </td>
-    </tr>
-    <tr>
-     <td valign="top">
-      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-       <tr>
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>online?btnFutureTickets">
-          Billets pour les &eacute;v&eacute;nements &agrave; venir
-         </a>
-        </td>
-       </tr>
-       <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if enabled to redeem passes','')</field>
-       <td align="left">
-        <a class="link" href="<field>F_HTML_FIREWALL</field>online?btnPassRemainingValues">
-         Mes Passes / ch&egrave;que-cadeau
-        </a>
-       </td>
-       <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
-       <tr>
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>online?btnMailList">
-          Mes Notifications par Courriel
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>online?btnVolunteerActivities">
-          Calendrier des activit&eacute;s
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>online?btnHistoricalCart">
-          Paniers derni&egrave;res
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <hr align="left" width="85%"/>
-        </td>
-       </tr>
-      </table>
-     </td>
-     <td valign="top">
-      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-       <tr>
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>online?btnAccount">
-          Mon compte
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
-          Box office Politique
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
-          Politique de confidentialit&eacute;
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <hr align="left" width="85%"/>
-        </td>
-       </tr>
-      </table>
-     </td>
-     <td valign="top">
-      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-       <tr>
-        <td>
-         <a class="link" href="mailto:<field>D_EMAIL_ADDR</field>?subject=Question%20g&eacute;n&eacute;rale%20de%20l'information">
-          Envoyez-nous un E-mail
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <a class="link" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmtermsandconditions.html" onclick="return popup(this, 'notes')">
-          Vente Termes et Conditions
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <a class="link" href="http://maps.google.com/maps?q=<field>D_ADDRESS1</field> <field>D_ADDRESS2</field> <field>D_CITY</field> <field>D_PROVINCE</field> <field>D_POSTAL_CODE</field>" target="_blank">
-          Acc&egrave;s &agrave; notre Box Office
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <a class="link" href="http://<field>D_WEB_SITE</field>" target="_blank">
-          Notre site principal
-         </a>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <hr align="left" width="85%"/>
-        </td>
-       </tr>
-       <tr>
-        <td>
-         <!--#include virtual="TMtemplates/tmSocialMedia.html" -->
-        </td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>
+  <div class="row">
+   <div class="col-md-4">
+    <h4>
+     Mes Services Patrons
+    </h4>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>online?btnFutureTickets">
+     <i class="fa fa-print">
+     </i>
+     Billets pour les &eacute;v&eacute;nements &agrave; venir
+    </a>
+    <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if enabled to redeem passes','')</field>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>online?btnPassRemainingValues">
+     <i class="fa fa-gift">
+     </i>
+     Mes Passes/Ch&egrave;que-Cadeau
+    </a>
+    <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>online?btnMailList">
+     <i class="fa fa-envelope">
+     </i>
+     Mes Notifications par Courriel
+    </a>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>online?btnVolunteerActivities">
+     <i class="fa fa-calendar">
+     </i>
+     Calendrier des activit&eacute;s
+    </a>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>online?btnHistoricalCart">
+     <i class="fa fa-shopping-cart">
+     </i>
+     Paniers derni&egrave;res
+    </a>
+   </div>
+   <div class="col-md-4">
+    <h4>
+     Gestion des comptes
+    </h4>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>online?btnAccount">
+     <i class="fa fa-user">
+     </i>
+     Mon compte
+    </a>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
+     <i class="fa fa-info">
+     </i>
+     Box office Politique
+    </a>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
+     <i class="fa fa-eye">
+     </i>
+     Politique de confidentialit&eacute;
+    </a>
+   </div>
+   <div class="col-md-4">
+    <h4>
+     Contactez-nous
+    </h4>
+    <a class="btn btn-block btn-primary" href="mailto:<field>D_EMAIL_ADDR</field>?subject=General%20Information%20Question">
+     <i class="fa fa-envelope">
+     </i>
+     Envoyez-nous un E-mail
+    </a>
+    <a class="btn btn-block btn-primary" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmtermsandconditions.html" onclick="return popup(this, 'notes')">
+     <i class="fa fa-info">
+     </i>
+     Vente Termes et Conditions
+    </a>
+    <a class="btn btn-block btn-primary" href="http://maps.google.com/maps?q=<field>D_ADDRESS1</field> <field>D_ADDRESS2</field> <field>D_CITY</field> <field>D_PROVINCE</field> <field>D_POSTAL_CODE</field>" target="_blank">
+     <i class="fa fa-map-marker">
+     </i>
+     Acc&egrave;s &agrave; notre Box Office
+    </a>
+    <a class="btn btn-block btn-primary" href="http://<field>D_WEB_SITE</field>" target="_blank">
+     <i class="fa fa-globe">
+     </i>
+     Notre site principal
+    </a>
+    <!--#include virtual="TMtemplates/tmSocialMedia.html" -->
+   </div>
   </div>

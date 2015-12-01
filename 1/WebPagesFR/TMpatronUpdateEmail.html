@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Renseignements du compte mis &agrave; jour
+   <field>D_COMPANY_LONG</field> | Account Information Updated
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background">
-  <h2 align="center" class="message">
-   Les renseignements de votre compte ont &eacute;t&eacute; mis &agrave; jour
-  </h2>
-  <div align="left" class="tablerowdetail">
-   <p>
-    <b>
-     <field>con(C_FIRST_NAME,' ',C_LAST_NAME,pick(len(C_COMPANY)=0,' - '),C_COMPANY)</field>
-    </b>
-    ,
-   </p>
-   <p>
-    Votre adresse courriel
-    <b>
-     <field>CI_CONTENTS</field>
-    </b>
-    et les renseignements de votre compte ont &eacute;t&eacute; mis &agrave; jour conform&eacute;ment &agrave; votre demande sur le service de billetterie en ligne du <field>D_COMPANY_LONG</field>.
-   </p>
-   <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
-   <p>
-    Vous avez &eacute;galement cliqu&eacute; quelques cases &agrave; cocher pour nous dire comment vous voulez que nous vous
-     informerons sur nos programmes et &eacute;v&eacute;nements.
-     <field>D_COMPANY_LONG</field> utilise une approche double opt-in confirmation pour les notifications.
-     Cela signifie que vous devez confirmer votre choix en cliquant sur:
-   </p>
-   <p>
-    <a class="link" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-     Confirmer mes notification des changements
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Account Information Updated
+      <br/>
+      <small class="text-muted">
+       <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
+      </small>
+     </h1>
+    </div>
+    <div class="alert">
+     Recently, your account information was updated when you visited our online web site
+  or talked to the staff at <field>D_COMPANY_LONG</field>.  If you are not aware of this recent activity,
+  please contact the box office or log in, verify your account and change your password.
+     <br/>
+     <br/>
+     You may wish to directly type the URL of our site in your web browser if you prefer additional browsing safety.
+    </div>
+    <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
+     Review My Account
     </a>
-   </p>
-   <p>
-    Si vous ne cliquez pas sur le lien, puis notre syst&egrave;me respectera vos souhaits et vous retirer de ces notifications environ <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures apr&egrave;s que vous recevez cet e-mail
-   </p>
-   <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
-   <p>
-    Pour vous connecter directement &agrave; notre site Web, veuillez
-    <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
-     cliquer ici
+    <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
+    <div class="alert alert-info">
+     You made some selections asking to be kept informed about our programs and events.
+     <field>D_COMPANY_LONG</field> uses a double opt-in confirmation so you must confirm 
+     your choices by clicking the button.  If you do not, our system respects your wishes and removes you from those notifications
+     approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> hours after you receive this email.
+    </div>
+    <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
+     Confirm my email notification choices
     </a>
-    .
-   </p>
-   <p>
-    Tous les renseignements personnels que conserve le <field>D_COMPANY_LONG</field> &agrave; votre sujet sont confidentiels et ne peuvent &ecirc;tre communiqu&eacute;s &agrave; quiconque, sauf si vous y avez express&eacute;ment consenti ou si nous y sommes oblig&eacute;s par une autorit&eacute; l&eacute;gale.
-   </p>
-   <p align="center">
-    Pour en savoir plus, veuillez prendre contact avec nous par t&eacute;l&eacute;phone ou par courriel.
-   </p>
-   <center>
+    <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
+    <p>
+     &nbsp;
+    </p>
+    <!--#include virtual="TMtemplates/tmPrivacyNoteEmail.html" -->
     <!--#include virtual="TMtemplates/tmContactHours.html" -->
-   </center>
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

@@ -1,7 +1,7 @@
-#	Ce fichier doit comprendre deux noms, qui repr√©sentent respectivement
-#	ce qui est plac√© dans les champs C_FIRST_NAME et C_LAST_NAME.
-#	Ces noms sont aussi combin√©s pour √çtre utilis√©s avec C_FORMAL_NAME
-#	dans le mod√®le. Ils doivent √çtre s√©par√©s par une tabulation.
+#	Ce fichier doit comprendre deux noms, qui représentent respectivement
+#	ce qui est placé dans les champs C_FIRST_NAME et C_LAST_NAME.
+#	Ces noms sont aussi combinés pour Ítre utilisés avec C_FORMAL_NAME
+#	dans le modèle. Ils doivent Ítre séparés par une tabulation.
 #
 #	This file must contain two names.  This represents what is placed 
 #	in the C_FIRST_NAME and C_LAST_NAME respectively.  The names are 

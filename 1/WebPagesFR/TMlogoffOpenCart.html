@@ -13,34 +13,44 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <p class="message">
-    <field>F_HTML_PAGE_MESSAGE</field>
-   </p>
-   <table border="0" cellpadding="0" cellspacing="0" width="95%">
-    <tr>
-     <td align="center" class="tablerowdetail">
-      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Fermer la Session
+    </h1>
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert-text">
+      <h4>
+       Vous avez demand&eacute; &agrave; fermer votre session.
+      </h4>
+      <p>
+       Votre panier contient des articles que vous avez s&eacute;lectionn&eacute;s pour les acheter.
+      </p>
+     </div>
+     <div>
+      <!-- comment: the logout is a post to make it work. -->
+      <form action="<field>F_HTML_FIREWALL</field>logoff" method="POST">
+       <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>login?btnCheckout=Checkout">
+        Payer ma commande
+       </a>
+       <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?btnCart=Cart">
+        Examiner ma commande
+       </a>
        <input name="e" type="hidden" value="<field>F_EMAIL_ADDRESS</field>"/>
-       <p>
-        Vous avez demand&eacute; &agrave; fermer votre session sur le site Web de la billetterie en ligne du <field>D_COMPANY_LONG</field>.
-       </p>
-       <p>
-        Votre panier contient des articles que vous avez s&eacute;lectionn&eacute;s pour les acheter.
-       </p>
-       <p>
-        Que souhaitez-vous faire?
-        <input class="new" name="btnCheckout" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Payer ma commande"/>
-        ,
-        <input class="new" name="btnCart" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Examiner ma commande"/>
-        ou
-        <input class="new" name="btnLogoutCancelOrder" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler ma commande et fermer la session"/>
-       </p>
+       <input class="btn btn-danger" name="btnLogoutCancelOrder" type="submit" value="Annuler ma commande et fermer la session"/>
       </form>
-     </td>
-    </tr>
-   </table>
+     </div>
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

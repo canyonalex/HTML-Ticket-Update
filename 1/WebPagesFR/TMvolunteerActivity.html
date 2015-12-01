@@ -4,18 +4,17 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | <field>D_VOLUNTEER</field> Activity List
+   <field>D_COMPANY_LONG</field> | Calendrier des Activités
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
-  <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
-  <script src="http://code.jquery.com/jquery-1.9.1.js">
+  <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js">
   </script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
-  </script>
-  <link href="/resources/demos/style.css" rel="stylesheet"/>
   <script>
    $(function() {
         $( "#start_date" ).datepicker({
@@ -48,80 +47,80 @@
         });
     });
   </script>
-  <script type="text/javascript">
-   <!--
-    var currentTime = new Date()
-    var month = currentTime.getMonth() + 1
-    var day = currentTime.getDate()
-    var year = currentTime.getFullYear()
-    document.write(month + "/" + day + "/" + year)
-    //-->
-  </script>
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table border="0" cellpadding="0" cellspacing="0" width="95%">
-    <tr>
-     <td>
-      <p align="center" class="message">
-       <b>
-        <field>F_HTML_PAGE_MESSAGE</field>
-       </b>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Calendrier des Activités
+      <span class="text-muted">
+       <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
+      </span>
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+      <!--#include virtual="TMtemplates/tmVolunteerActivityMessage.html" -->
+     </div>
+     <div class="col-md-8">
+      <div class="row">
+       <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+        <div class="col-md-3">
+         <div class="form-group">
+          <label for="start_date">
+           Date de Début
+          </label>
+          <input class="form-control" id="start_date" maxlength="10" name="start_date" placeholder="format mm/dd/yyyy" type="text" value="<field>start_date</field>"/>
+         </div>
+        </div>
+        <div class="col-md-3">
+         <div class="form-group">
+          <label for="end_date">
+           Date de Fin
+          </label>
+          <input class="form-control" id="end_date" maxlength="10" name="end_date" placeholder="format mm/dd/yyyy" type="text" value="<field>end_date</field>"/>
+         </div>
+        </div>
+        <div class="col-md-4">
+         <div class="form-group">
+          <label for="activity">
+           Activité
+          </label>
+          <select class="form-control" id="activity" name="activity">
+           <field>F_HTML_ACTIVITY_LIST</field>
+          </select>
+         </div>
+        </div>
+        <div class="col-md-2">
+         <div class="form-group" style="margin-top: 25px;">
+          <input name="page_loaded" type="hidden" value="<field>page_loaded</field>"/>
+          <input class="btn btn-success btn-block" id="Search" name="btnVolunteerActivities" type="submit" value="Recherche"/>
+         </div>
+        </div>
+       </form>
+      </div>
+      <p>
+       &nbsp;
       </p>
-      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-       <table border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="100%">
-        <tr align="center">
-         <td>
-          Recherchez votre calendrier d'activit&eacute;s en utilisant l'un des param&egrave;tres ci-dessous:
-          <table align="center" border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="95%">
-           <tr>
-            <td align="right" width="40%">
-             Date de d&eacute;but
-            </td>
-            <td align="left" width="60%">
-             <input id="start_date" maxlength="10" name="start_date" size="15" type="text" value="<field>start_date</field>"/>
-            </td>
-           </tr>
-           <tr>
-            <td align="right" width="40%">
-             Date de fin
-            </td>
-            <td align="left" width="60%">
-             <input id="end_date" maxlength="10" name="end_date" size="15" type="text" value="<field>end_date</field>"/>
-            </td>
-           </tr>
-           <tr>
-            <td align="right" width="40%">
-             Type d'activit&eacute;
-            </td>
-            <td align="left" width="60%">
-             <select id="activity" name="activity">
-              <field>F_HTML_ACTIVITY_LIST</field>
-             </select>
-             <input name="page_loaded" type="hidden" value="<field>page_loaded</field>"/>
-             <input class="new" id="Search" name="btnVolunteerActivities" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Search"/>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
+      <div class="well table-adaptive">
+       <table class="table table-striped table-condensed">
+        <field>F_HTML_VOLUNTEER_ACTIVITY_LIST</field>
        </table>
-      </form>
-      <table align="center" border="0" cellpadding="1" cellspacing="2" width="100%">
-       <field>F_HTML_VOLUNTEER_ACTIVITY_LIST</field>
-       <tr class="tablerowheader">
-        <td align="center" colspan="7">
-         <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-          <input class="new" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Return to Main Page"/>
-         </form>
-        </td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>
+      </div>
+      <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>online?btnHome=Home">
+       Accueil
+      </a>
+      <!-- comment: .col-md-8 -->
+     </div>
+     <!-- comment: .row -->
+    </div>
+    <!-- comment: .content -->
+   </div>
+   <!--  comment: .container -->
+   <!--#include virtual="TMtemplates/tmFooter.html" -->
   </div>
-  <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

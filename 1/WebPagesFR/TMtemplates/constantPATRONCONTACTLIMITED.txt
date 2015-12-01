@@ -1,8 +1,8 @@
-#	Ce fichier doit contenir une liste de types et de lieux √† indiquer dans tous
-#	les enregistrements de CLIENTS AVEC PROFIL LIMIT√©. Doivent inclure les infos de type de
-#	contact ou d'adresse et le num√©ro de lieu provenant des tables de codes du
-#	directeur ou le texte √©quivalent (p. ex., Domicile). Le lieu peut rester vide,
-#	auquel cas lavaleur par d√©faut de la table de codes pour ce type sera s√©lectionn√©e.
+#	Ce fichier doit contenir une liste de types et de lieux à indiquer dans tous
+#	les enregistrements de CLIENTS AVEC PROFIL LIMITé. Doivent inclure les infos de type de
+#	contact ou d'adresse et le numéro de lieu provenant des tables de codes du
+#	directeur ou le texte équivalent (p. ex., Domicile). Le lieu peut rester vide,
+#	auquel cas lavaleur par défaut de la table de codes pour ce type sera sélectionnée.
 #
 #	This file must contain a list of the type and location to be listed on all LIMITED PATRON
 #	patron records.  Must include the contact/address type and the location # from Theatre
@@ -20,8 +20,8 @@
 #	Les types sont les suivants :
 #	-----------------------------
 #	1 = Adresse
-#	2 = T√©l√©phone
-#	3 = T√©l√©copieur
+#	2 = Téléphone
+#	3 = Télécopieur
 #	4 = Courriel
 #	5 = Site Web
 #	
@@ -33,10 +33,10 @@
 # 1	Domicile
 # 2	
 # 2	Bureau
-# 3	T√©l√©copieur
+# 3	Télécopieur
 # 5	Bureau
 #
-#	NOTE : pour les clients avec profil limit√©, sugg√©rer uniquement une adresse et un num√©ro de t√©l√©phone
+#	NOTE : pour les clients avec profil limité, suggérer uniquement une adresse et un numéro de téléphone
 #	NOTE for limited profile patrons, only suggest an address and a phone number
 1
 2

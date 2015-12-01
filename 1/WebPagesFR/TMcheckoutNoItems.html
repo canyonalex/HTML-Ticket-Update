@@ -3,7 +3,6 @@
  <head>
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
-  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
    <field>D_COMPANY_LONG</field> | Paiement
   </title>
@@ -20,20 +19,20 @@
      <field>F_HTML_PAGE_MESSAGE</field>
     </b>
    </p>
-   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
+   <table border="0" cellpadding="0" cellspacing="0" width="90%">
     <tr>
      <td align="center">
       <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
        <input name="pg" type="hidden" value="checkout"/>
        Votre panier d'achat est vide.
        <p>
-        Si vous souhaitez acheter des billets ou des ch&egrave;ques-cadeaux 
+        Si vous souhaitez acheter des billets ou des ch&egrave;ques-cadeaux,  
             <field>pick(F_DONATION_ALLOWED,'<!-- comment: based on setting in company preferences','')</field>
         <a class="link" href="<field>F_HTML_FIREWALL</field>login&donation=0">
-         , or make a donation
+         ou faire un don,
         </a>
         <field>pick(F_DONATION_ALLOWED,'-->','')</field>
- 				veuillez s&eacute;lectionner un article dans le menu ci-dessus.
+        veuillez s&eacute;lectionner un article dans le menu ci-dessus.
        </p>
       </form>
      </td>

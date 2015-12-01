@@ -1,25 +1,14 @@
   <field>pick(F_DONATION_ALLOWED,'<!-- comment: based on setting in company preferences to show suggested donation','')</field>
-  <tr class="tablerowdetail">
-   <td>
-    Donation Request
-   </td>
-   <td>
-    &nbsp;
-   </td>
-   <td align="left">
-    S'il vous pla&icirc;t envisager de faire un
-    <a class="link" href="<field>F_HTML_FIREWALL</field>login&donation=0">
-     don
+  <div class="alert alert-warning">
+   <div>
+    <a class="btn btn-info btn-xs" href="<field>F_HTML_FIREWALL</field>login&donation=0">
+     S'il vous pla&icirc;t envisager de faire un don
     </a>
-    .&nbsp;&nbsp;<field>D_COMPANY_LONG</field>
-	  est un organisme de bienfaisance enregistr&eacute; et votre don est d&eacute;ductible compl&egrave;tement
-	  &agrave; la pleine mesure de la loi.
-   </td>
-   <td>
-    &nbsp;
-   </td>
-   <td>
-    &nbsp;
-   </td>
-  </tr>
+   </div>
+   <p>
+    <field>D_COMPANY_LONG</field> est un organisme de bienfaisance enregistr&eacute;
+    et votre don est d&eacute;ductible compl&egrave;tement &agrave; la pleine
+    mesure de la loi.
+   </p>
+  </div>
   <field>pick(F_DONATION_ALLOWED,'-->','')</field>

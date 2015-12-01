@@ -1,19 +1,15 @@
-  <tr class="tablerowdetail">
+  <div class="media">
    <!--#include virtual="TMtemplates/rowTicketEventImage.html" -->
-   <!--#include virtual="TMtemplates/rowTicketEventLineNumbers.html" -->
-   <td valign="middle">
+   <div class="media-body">
     <!--#include virtual="TMtemplates/rowTicketEventName.html" -->
-   </td>
-   <td align="center" valign="middle" width="90">
-    <!--#include virtual="TMtemplates/rowTicketEventCallBoxOffice.html" -->
-   </td>
-   <td valign="middle" width="140">
-    <field>cap(dat(PB_PERFORM_DATE,'w D m y'))</field>
-   </td>
-   <td align="right" valign="middle" width="60">
-    <field>PB_PERFORM_TIME</field>
-   </td>
-   <td align="center" valign="middle" width="50">
-   </td>
-  </tr>
-  <!-- comment: used for events that are not yet on sale -- so these are marketing place holders -->
+    <div class="row">
+     <!--#include virtual="TMtemplates/rowTicketEventVenue.html" -->
+     <!--#include virtual="TMtemplates/rowTicketEventCallBoxOffice.html" -->
+     <!-- /col -->
+     <!--#include virtual="TMtemplates/rowTicketEventCallButton.html" -->
+     <!-- /col -->
+    </div>
+    <!-- /row -->
+   </div>
+  </div>
+  <!-- /.media -->

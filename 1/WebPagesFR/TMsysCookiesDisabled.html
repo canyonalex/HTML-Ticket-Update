@@ -11,44 +11,41 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <div align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     T&eacute;moins d&eacute;sactiv&eacute;s
+    </h1>
    </div>
-   <form action="<field>F_HTML_FIREWALL</field>login" method="post">
-    <table align="Center" border="0" cellpadding="1" cellspacing="2" width="410">
-     <tr class="tablerowheader">
-      <td align="center">
-       Pour vous permettre d'acheter en ligne, le service de billetterie en ligne du <field>D_COMPANY_LONG</field> n&eacute;cessite que les t&eacute;moins (ou
-       <i>
-        cookies
+   <div class="row">
+    <div class="col-md-4">
+     <div class="lead alert alert-info">
+      Pour vous permettre d'acheter en ligne, le service de billetterie en ligne du <field>D_COMPANY_LONG</field> n&eacute;cessite que les t&eacute;moins
+      <i>
+      (ou cookies)
        </i>
-       ) soient activ&eacute;s dans votre navigateur.
-      </td>
-     </tr>
-     <tr class="tablerowdetail">
-      <td align="justify">
-       <p>
-        Vous pouvez modifier le niveau de s&eacute;curit&eacute; de votre navigateur, ou encore choisir d'accepter les t&eacute;moins si un message s'affiche pour vous demander si vous d&eacute;sirez les autoriser.
-       </p>
-       <p>
-        Nous attachons une importance primordiale &agrave; la confidentialit&eacute; de vos renseignements personnels. Les t&eacute;moins de ce site sont crypt&eacute;s et ne contiennent que l'information suffisante pour faciliter le processus d'achat de billets. Ces t&eacute;moins expirent en outre au bout de 24&nbsp;heures et disparaissent automatiquement de votre navigateur apr&egrave;s ce d&eacute;lai.
-       </p>
-       <p>
-        Si les t&eacute;moins sont activ&eacute;s dans votre navigateur et si vous souhaitez ouvrir une session, veuillez cliquer sur le bouton 'Ouvrir une session'.
-       </p>
-      </td>
-     </tr>
-     <tr class="tablerowheader">
-      <td align="center">
-       <input class="button" id="btnLogin" name="btnLogin" type="submit" value="Ouvrir une session"/>
-       <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
-      </td>
-     </tr>
-    </table>
-   </form>
+       soient activ&eacute;s dans votre navigateur.
+     </div>
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <div class="alert-text">
+      <p>
+       Vous pouvez modifier le niveau de s&eacute;curit&eacute; de votre navigateur, ou encore choisir d'accepter les t&eacute;moins si un message s'affiche pour vous demander si vous d&eacute;sirez les autoriser.
+      </p>
+      <p>
+       Nous attachons une importance primordiale &agrave; la confidentialit&eacute; de vos renseignements personnels. Les t&eacute;moins de ce site sont crypt&eacute;s et ne contiennent que l'information suffisante pour faciliter le processus d'achat de billets. Ces t&eacute;moins expirent en outre au bout de 24&nbsp;heures et disparaissent automatiquement de votre navigateur apr&egrave;s ce d&eacute;lai.
+      </p>
+      <p>
+       Si les t&eacute;moins sont activ&eacute;s dans votre navigateur et si vous souhaitez ouvrir une session, veuillez cliquer sur le bouton 'Ouvrir une session'.
+      </p>
+     </div>
+     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+      <input class="btn btn-success" id="btnLogin" name="btnLogin" type="submit" value="Ouvrir une session"/>
+      <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+     </form>
+    </div>
+   </div>
   </div>
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>

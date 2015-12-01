@@ -4,93 +4,65 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Ouverture de session
+   <field>D_COMPANY_LONG</field> | Sélectionnez membre du ménage
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table border="0" cellpadding="0" cellspacing="0" width="95%">
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>login" method="POST">
-       <div align="center">
-        <p class="message">
-         <field>F_HTML_PAGE_MESSAGE</field>
-        </p>
-        <table border="0" cellpadding="1" cellspacing="4" class="tablerowdetail" width="410">
-         <tr>
-          <td colspan="2">
-           <!-- comment: input type=hidden name=e value="<field>F_EMAIL_ADDRESS</field>"-->
-           <p>
-            L'adresse courriel
-            <b>
-             <field>F_EMAIL_ADDRESS</field>
-            </b>
-            est commune aux
-                   <field>low(tEditCheck.$setPlural(D_PATRON))</field> ci-dessous. Veuillez nous indiquer &agrave;
-                   qui nous devons associer le panier d'achats courant.
-           </p>
-           <p>
-            Pour ce faire, s&eacute;lectionnez le nom appropri&eacute; dans la liste ci-dessous.
-           </p>
-           <p>
-            Pour votre propre s&eacute;curit&eacute;, veuillez &eacute;galement entrer de nouveau votre mot de passe.
-            <br/>
-           </p>
-          </td>
-         </tr>
-        </table>
-        <table border="0" cellpadding="1" cellspacing="4" class="tablerowheader" width="410">
-         <tr>
-          <td align="left" valign="top" width="82">
-           <field>D_PATRON</field>
-          </td>
-          <td align="Left" width="314">
-           <select name="C_SEQ" size="5">
-            <field>F_HTML_LOGIN_PATRON_LIST</field>
-           </select>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" valign="top">
-           <div align="left">
-            Mot de passe
-           </div>
-          </td>
-          <td align="left">
-           <input autocomplete="off" maxlength="20" name="p" size="20" type="Password" value="<field>F_EMAIL_PASSWORD</field>"/>
-           <input class="new" name="btnLoginAccount" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ouvrir une session"/>
-          </td>
-         </tr>
-        </table>
-        <table align="Center" border="0" cellpadding="1" cellspacing="2" class="tablerowdetail" width="410">
-         <tr>
-          <td align="justify">
-           Cliquer sur
-           <input class="new" name="btnLoginAccount" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ouvrir une session"/>
-           apr&egrave;s avoir s&eacute;lectionn&eacute; votre identit&eacute; dans la liste et entr&eacute; votre mot de passe.
-          </td>
-         </tr>
-         <tr class="tablerowdetail">
-          <td align="justify">
-           Cliquer sur
-           <input class="new" name="btnLogoutCancelOrder" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Fermer la session"/>
-           si vous souhaitez abandonner votre achat de billets en ligne. Tous les articles se trouvant dans votre panier seront alors perdus.
-          </td>
-         </tr>
-        </table>
-        <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Sélectionnez membre du ménage
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     </div>
+     <div class="col-md-8">
+      <div class="text">
+       <!-- comment: input type=hidden name=e value="<field>F_EMAIL_ADDRESS</field>"-->
+       <p>
+        <b>
+         <field>F_EMAIL_ADDRESS</field>
+        </b>
+        email est partagée entre les <field>low(tEditCheck.$setPlural(D_PATRON))</field> de la liste.
+        S&eacute;lectionn&eacute; votre identit&eacute; dans la liste
+       </p>
+        <br/>
+      </div>
+      <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+       <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
+       <div class="form-group">
+        <label for="C_SEQ">
+         <field>D_PATRON</field>
+        </label>
+        <select class="form-control" name="C_SEQ" size="5">
+         <field>F_HTML_LOGIN_PATRON_LIST</field>
+        </select>
        </div>
+       <div class="form-group">
+        <label for="p">
+         Mot de passe
+        </label>
+        <input autocomplete="off" class="form-control" id="p" maxlength="<field>SPR_PASSWORD_MAX_LENGTH</field>" name="p" type="Password" value="<field>F_EMAIL_PASSWORD</field>"/>
+       </div>
+       <input class="btn btn-success" name="btnLoginAccount" type="submit" value="Ouvrir une session"/>
       </form>
-     </td>
-    </tr>
-   </table>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

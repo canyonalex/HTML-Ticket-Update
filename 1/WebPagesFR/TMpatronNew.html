@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Nouveau compte
+   <field>D_COMPANY_LONG</field> | New Account Window
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -15,178 +14,70 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table border="0" cellpadding="0" cellspacing="0" width="90%">
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>patronnew" method="POST">
-       <!-- comment: set the altbtn=btnHome& (to go to home page), btnCart& (to go to cart)
-                  btnMailList& (to go to mail list window if not using tmNotificationHeader or 
-                  **leave blank to follow default path which may be determined by user action -->
+  <div class="container">
+   <div id="content">
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     </div>
+     <div class="col-md-8">
+      <!-- comment: if use enters email that exists, then show the password request button -->
+      <field>pick(F_HTML_EMAIL_EXISTS=1,'<!-- comment: entered email exists')</field>
+      <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?btnPasswordRequest=forgot">
+       Forgot My Password
+      </a>
+      <field>pick(F_HTML_EMAIL_EXISTS=1,'-->')</field>
+      <h4>
+       Account Information
+      </h4>
+      <form action="<field>F_HTML_FIREWALL</field>patronnew" method="POST" role="form">
        <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
-       <div align="center">
-        <p align="center" class="message">
-         <b>
-          <field>F_HTML_PAGE_MESSAGE</field>
-         </b>
-        </p>
-        <table border="0" cellpadding="5" cellspacing="0">
-         <tr>
-          <td align="right" class="tablerowheader" valign="top">
-           Renseignements de connexion
-          </td>
-          <td align="left" class="tablerowheader" valign="top">
-           <div class="missingfield">
-            * Champs obligatoires
-           </div>
-          </td>
-         </tr>
-         <field>F_HTML_EMAIL_LIST</field>
-         <tr>
-          <td align="right" class="tablerowheader" width="127">
-           Salutation
-          </td>
-          <td class="tablerowdetail">
-           <select id="C_SALUTATION" name="C_SALUTATION" size="1">
-            <field>F_HTML_SALUTATION_LIST</field>
-           </select>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader" width="127">
-           Pr&eacute;nom
-          </td>
-          <td class="tablerowdetail">
-           <input maxlength="60" name="C_FIRST_NAME" size="30" type="text" value="<field>C_FIRST_NAME</field>"/>
-           <span class="missingfield">
-            <field>F_HTML_REQUIRE_FIRST_NAME</field>
-           </span>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader" width="127">
-           Initiale
-          </td>
-          <td class="tablerowdetail">
-           <input id="C_INITIAL" maxlength="60" name="C_INITIAL" size="30" type="text" value="<field>C_INITIAL</field>"/>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader" width="127">
-           Nom
-          </td>
-          <td class="tablerowdetail">
-           <input maxlength="30" name="C_LAST_NAME" size="30" type="text" value="<field>C_LAST_NAME</field>"/>
-           <span class="missingfield">
-            <field>F_HTML_REQUIRE_LAST_NAME</field>
-           </span>
-          </td>
-         </tr>
-         <!-- comment: Suffix is also available
-              <TR>
-                <TD WIDTH=127 class="tablerowheader" align="right">Suffixe</TD>
-                <TD WIDTH=590 class="tablerowdetail"> 
-                    <select name="C_SUFFIX" size="1" id="C_SUFFIX"><field>F_HTML_SUFFIX_LIST</field></select>
-                </TD>
-              </TR>
-              -->
-         <tr>
-          <td align="right" class="tablerowheader" width="127">
-           Soci&eacute;t&eacute;
-          </td>
-          <td class="tablerowdetail">
-           <input id="C_COMPANY" maxlength="60" name="C_COMPANY" size="50" type="text" value="<field>C_COMPANY</field>"/>
-           <span class="missingfield">
-            <field>F_HTML_REQUIRE_COMPANY</field>
-           </span>
-          </td>
-         </tr>
-         <!--#include virtual="TMtemplates/tmMarketingFields.html" -->
-         <field>F_HTML_ADDRESS_LIST</field>
-         <tr>
-          <td class="tablerowheader" width="127">
-          </td>
-          <td align="left" class="tablerowheader" width="590">
-           Coordonn&eacute;es
-          </td>
-         </tr>
-         <field>F_HTML_CONTACT_LIST</field>
-         <tr>
-          <td class="tablerowheader" width="127">
-          </td>
-          <td align="left" class="tablerowheader">
-           Avis
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader" width="127">
-           Avis par courrier
-          </td>
-          <td align="left" class="tablerowdetail">
-           <input id="mailyes" name="MKT_DO_NOT_MAILP" type="radio" value="NO" <field>pick(MKT_DO_NOT_MAILP='YES','checked','')</field>/>
-           <label for="mailyes">
-            Veuillez m'envoyer p&eacute;riodiquement des nouvelles et de l'information sur les &eacute;v&eacute;nements &agrave; venir.
-           </label>
-           <br/>
-           <input id="mailno" name="MKT_DO_NOT_MAILP" type="radio" value="YES" <field>pick(MKT_DO_NOT_MAILP='YES','','checked')</field>/>
-           <label for="mailno">
-            Veuillez ne pas m'envoyer d'information sur les &eacute;v&eacute;nements &agrave; venir./label&gt;
-           </label>
-          </td>
-         </tr>
-         <field>pick(D_COUNTRY='USA','<!-- comment: do not email is now notifications for all but USA')</field>
-         <tr>
-          <td align="right" class="tablerowheader" width="127">
-           Avis par courriel
-          </td>
-          <td align="left" class="tablerowdetail">
-           <input id="emailyes" name="MKT_DO_NOT_EMAIL" type="radio" value="NO" <field>pick(MKT_DO_NOT_EMAIL='YES','checked','')</field>/>
-           <label for="emailyes">
-            Veuillez m'envoyer p&eacute;riodiquement des nouvelles et de l'information sur les &eacute;v&eacute;nements &agrave; venir.
-           </label>
-           <br/>
-           <input id="emailno" name="MKT_DO_NOT_EMAIL" type="radio" value="YES" <field>pick(MKT_DO_NOT_EMAIL='YES','','checked')</field>/>
-           <label for="emailno">
-            Veuillez ne pas m'envoyer d'information sur les &eacute;v&eacute;nements &agrave; venir.
-           </label>
-          </td>
-         </tr>
-         <field>pick(D_COUNTRY='USA','-->')</field>
-         <tr>
-          <td align="right" class="tablerowheader" width="127">
-           <field>pick(D_COUNTRY='USA','Avis par courriel','')</field>
-          </td>
-          <td align="left" class="tablerowdetail">
-           Apr&egrave;s avoir cr&eacute;&eacute; un compte, vous pouvez visiter
-           <b>
-            Mes notifications par courrier &eacute;lectronique
-           </b>
-           &agrave; tout moment pour affiner la fa&ccedil;on dont vous souhaitez &ecirc;tre inform&eacute; de 
-               &eacute;v&eacute;nements et activit&eacute;s &agrave; <field>D_COMPANY_LONG</field> qui vous int&eacute;ressent. S'il vous pla&icirc;t faire 
-               une premi&egrave;re s&eacute;lection ci-dessous:
-           <!--#include virtual="TMtemplates/tmNotificationHeader.html" -->
-           Tous vos renseignements personnels et coordonn&eacute;es sont conserv&eacute;s de fa&ccedil;on confidentielle, conform&eacute;ment &agrave; notre
-           <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
-            Politique de confidentialit&eacute;
-           </a>
-           .
-          </td>
-         </tr>
-         <tr class="tablerowheader">
-          <td align="center" colspan="2">
-           <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-           <input class="new" name="btnAccountAdd" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Cr&eacute;er un compte"/>
-           &nbsp;
-           <input class="new" name="btnLogin" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler"/>
-          </td>
-         </tr>
-        </table>
+       <div class="well">
+        <field>F_HTML_EMAIL_LIST</field>
        </div>
+       <div class="well">
+        <!--#include virtual="TMtemplates/tmPatronNameFields.html" -->
+       </div>
+       <field>F_HTML_ADDRESS_LIST</field>
+       <div class="well">
+        <field>F_HTML_CONTACT_LIST</field>
+       </div>
+       <!--#include virtual="TMtemplates/tmMarketingFields.html" -->
+       <h4>
+        How may We Contact You?
+       </h4>
+       <div class="well">
+        <!--#include virtual="TMtemplates/tmMailNotificationFields.html" -->
+       </div>
+       <div class="well">
+        <h4>
+         Email Notifications
+        </h4>
+        Visit
+        <a class="link" href="<field>F_HTML_FIREWALL</field>login?maillist=0">
+         My Email Notifications
+        </a>
+        at any time to fine tune how you wish to be informed of events and activities at
+         <field>D_COMPANY_LONG</field> that interest you. Any contact information provided will be held confidential per our
+        <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
+         privacy policy.
+         <br/>
+         <br/>
+        </a>
+        <!--#include virtual="TMtemplates/tmNotificationHeader.html" -->
+       </div>
+       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+       <input class="btn btn-success" name="btnAccountAdd" onclick="process()" type="submit" value="Create Account"/>
+       <input class="btn btn-danger" name="btnLogin" type="submit" value="Cancel Adding Account"/>
       </form>
-     </td>
-    </tr>
-   </table>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

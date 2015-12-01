@@ -9,30 +9,44 @@
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <p class="message">
-    <field>F_HTML_PAGE_MESSAGE</field>
-   </p>
-   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td align="center">
-      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-       <p>
-        Nous sommes d&eacute;sol&eacute;s, mais seul le titulaire principal du compte est habilit&eacute; &agrave; s'abonner aux listes de diffusion ou &agrave; s'en d&eacute;sabonner.
-       </p>
-       <p>
-        Pour modifier vos abonnements, veuillez ouvrir une session en tant que <field>CI_CONTENTS</field>.
-       </p>
-       <input class="new" id="Reset" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Revenir &agrave; la page principale"/>
-      </form>
-     </td>
-    </tr>
-   </table>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Listes de diffusion
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     </div>
+     <div class="col-md-8">
+      <div class="alert alert-warning">
+       Nous sommes d&eacute;sol&eacute;s, mais seul le titulaire 
+       principal du compte est habilit&eacute; &agrave; s'abonner aux 
+       listes de diffusion ou &agrave; s'en d&eacute;sabonner.
+       <br/>
+       <br/>
+       Pour modifier vos abonnements, veuillez ouvrir une session en tant 
+       que <field>CI_CONTENTS</field>.
+      </div>
+      <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>online?btnHome=Home">
+       Revenir &agrave; la page principale
+      </a>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

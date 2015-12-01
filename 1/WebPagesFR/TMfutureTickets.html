@@ -14,51 +14,45 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <p>
-    <b class="message">
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
-   </p>
-   <table border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-       <div align="center">
-        <p align="left" class="main">
-         La liste ci-dessous &eacute;num&egrave;re les billets figurant &agrave; votre nom dans nos dossiers pour des <field>low(D_PERF_DESC)</field> &agrave; venir.
-		   Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.  Si vous avez des questions au sujet de vos billets ou si vous souhaitez les &eacute;changer conform&eacute;ment aux
-         <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
-          politiques du service de billetterie en ligne
-         </a>
-         , veuillez
-         <a class="link" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmContactPopup.html" onclick="return popup(this, 'notes')">
-          prendre contact
-         </a>
-         avec nous.
-         <br/>
-         <br/>
-         Remarque&nbsp;: seules les ventes finalis&eacute;es de billets figurent dans cette liste. Les ventes qui se trouvent actuellement dans votre panier d'achat n'y appara&icirc;tront qu'une fois achev&eacute;es.
-        </p>
-        <field>F_HTML_HISTORICAL_CART_LIST</field>
-        <table align="center" border="0" cellpadding="1" width="100%">
-         <tr class="tablerowheader">
-          <td align="center">
-           <input class="new" name="btnHome" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Revenir &agrave; la page principale"/>
-           &nbsp;
-                  <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'<!-- comment: hide button if not able to print at home')</field>
-           <input class="new" onclick="window.open('<field>F_HTML_FIREWALL</field>login?futureticketsprint','Imprimer des billets','width=700,height=500')" type="button" value="Imprimer Tous les <field>F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT</field> billets futurs"/>
-           <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'-->')</field>
-          </td>
-         </tr>
-        </table>
-       </div>
-      </form>
-     </td>
-    </tr>
-   </table>
-   <!--#include virtual="TMtemplates/tmContactHours.html" -->
+  <div class="container">
+   <div id="content">
+    <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    <div class="alert alert-info">
+     La liste ci-dessous &eacute;num&egrave;re les billets figurant &agrave; votre nom dans nos dossiers pour des <field>low(D_PERF_DESC)</field> &agrave; venir.
+     Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.  Si vous avez des questions au sujet de vos billets ou si vous souhaitez les &eacute;changer conform&eacute;ment aux
+     <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
+      politiques du service de billetterie en ligne,
+     </a>
+     veuillez
+     <a class="link" href="<field>F_HTML_FIREWALL</field>TMtemplates/tmContactPopup.html" onclick="return popup(this, 'notes')">
+      prendre contact avec nous.
+     </a>
+     <br/>
+     <br/>
+     Remarque&nbsp;: seules les ventes finalis&eacute;es de billets figurent
+     dans cette liste. Les ventes qui se trouvent actuellement dans votre
+    panier d'achat n'y appara&icirc;tront qu'une fois achev&eacute;es.
+    </div>
+    <field>F_HTML_HISTORICAL_CART_LIST</field>
+    <p>
+     &nbsp;
+    </p>
+    <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>online?btnHome=Home">
+     Revenir &agrave; la page principale
+    </a>
+    <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'<!-- comment: hide button if not able to print at home')</field>
+    <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?futureticketsprint" target="_blank">
+     Imprimer tous les <field>F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT</field> billets futurs
+    </a>
+    <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?futureticketspdf">
+     Télécharger tous les <field>F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT</field> billets au format PDF
+    </a>
+    <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'-->')</field>
+    <!--#include virtual="TMtemplates/tmContactHours.html" -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

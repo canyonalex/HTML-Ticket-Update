@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
    <field>D_COMPANY_LONG</field> | Saisie d'un don
@@ -14,100 +14,80 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <table border="0" cellpadding="0" cellspacing="0" width="95%">
-    <tr>
-     <td>
-      <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
-       <div align="center">
-        <p>
-         <b class="message">
-          <field>F_HTML_PAGE_MESSAGE</field>
-         </b>
-        </p>
-        <table border="0" cellpadding="1" width="589">
-         <tr>
-          <td align="right" class="tablerowheader" width="167">
-           Campagne de dons
-          </td>
-          <td class="tablerowdetail" width="408">
-           <select id="DD_DC_SEQ" name="DD_DC_SEQ">
-            <field>F_HTML_CAMPAIGN_LIST</field>
-           </select>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader" width="167">
-           Montant du don
-          </td>
-          <td class="tablerowdetail">
-           <input id="DD_AMOUNT_PLEDGE" maxlength="15" name="DD_AMOUNT_PLEDGE" size="30" type="text" value="<field>DD_AMOUNT_PLEDGE</field>"/>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader" width="167">
-           Comment souhaitez-vous que votre nom apparaisse dans le programme?
-          </td>
-          <td class="tablerowdetail">
-           <input id="DD_NAME_OF" maxlength="100" name="DD_NAME_OF" size="50" type="text" value="<field>DD_NAME_OF</field>"/>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader" width="167">
-           Pr&eacute;f&eacute;rez-vous que votre don reste anonyme?
-          </td>
-          <td class="tablerowdetail">
-           <select id="Anonymous" name="Anonymous">
-            <option value="1">
-             Oui
-            </option>
-            <option selected="" value="0">
-             Non
-            </option>
-           </select>
-          </td>
-         </tr>
-         <tr>
-          <td align="right" class="tablerowheader">
-           S'agit-il d'un don d'entreprise?
-          </td>
-          <td class="tablerowdetail">
-           <select name="DD_CORPORATE">
-            <option value="1">
-             Oui
-            </option>
-            <option selected="" value="0">
-             Non
-            </option>
-           </select>
-           (comptes d'entreprise uniquement)
-          </td>
-         </tr>
-         <p>
-         </p>
-         <tr class="tablerowheader">
-          <td align="center" colspan="2">
-           <!-- comment: the following 3 fields are the donor popup fields on the 'notes' tab.
-			If these fields have been made mandatory, then you will need to have a code table value
-			for those fields for internet accepted donations.  Change the value of xxx, yyy, or zzz to
-			be the internal number of the appropriate popup.  Also, uncomment the desired code below
-			 <INPUT NAME="DD_FLD1_FC_SEQ" TYPE=hidden id="DD_FLD1_FC_SEQ" value="xxx">
-             <INPUT NAME="DD_FLD2_FC_SEQ" TYPE=hidden id="DD_FLD2_FC_SEQ" value="yyy">
-             <INPUT NAME="DD_FLD3_FC_SEQ" TYPE=hidden id="DD_FLD3_FC_SEQ" value="zzz">
-			 -->
-           <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-           <input class="new" name="btnDonationAccept" onclick="process()" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Ajouter le don &agrave; mon panier"/>
-           &nbsp;
-           <input class="new" name="<field>pick(F_LOGGED_IN=2,'btnHome','btnGetEventList')</field>" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Annuler"/>
-          </td>
-         </tr>
-        </table>
-       </div>
-      </form>
-     </td>
-    </tr>
-   </table>
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Saisie d'un don
+    </h1>
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+    </div>
+    <div class="col-md-8">
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST" role="form">
+      <div class="form-group">
+       <label for="DD_DC_SEQ">
+        Campagne de dons
+       </label>
+       <select class="form-control" id="DD_DC_SEQ" name="DD_DC_SEQ">
+        <field>F_HTML_CAMPAIGN_LIST</field>
+       </select>
+      </div>
+      <div class="form-group">
+       <label for="DD_AMOUNT_PLEDGE">
+        Montant du don
+       </label>
+       <input class="form-control" id="DD_AMOUNT_PLEDGE" maxlength="15" name="DD_AMOUNT_PLEDGE" size="30" type="text" value="<field>DD_AMOUNT_PLEDGE</field>"/>
+      </div>
+      <div class="form-group">
+       <label for="DD_NAME_OF">
+        Comment souhaitez-vous que votre nom apparaisse dans le programme?
+       </label>
+       <input class="form-control" id="DD_NAME_OF" maxlength="100" name="DD_NAME_OF" size="50" type="text" value="<field>DD_NAME_OF</field>"/>
+      </div>
+      <div class="form-group">
+       <label for="Anonymous">
+        Pr&eacute;f&eacute;rez-vous que votre don reste anonyme?
+       </label>
+       <select class="form-control" id="Anonymous" name="Anonymous">
+        <option value="1">
+         Oui
+        </option>
+        <option selected="" value="0">
+         Non
+        </option>
+       </select>
+      </div>
+      <div class="form-group">
+       <label for="DD_CORPORATE">
+        S'agit-il d'un don d'entreprise?
+       </label>
+       <select class="form-control" id="DD_CORPORATE" name="DD_CORPORATE">
+        <option value="1">
+         Oui
+        </option>
+        <option selected="" value="0">
+         Non
+        </option>
+       </select>
+       <p class="help-block">
+        (comptes d'entreprise uniquement)
+       </p>
+      </div>
+      <!-- comment: if you enable any of the mandatory fields in donations, edit the values for the hidden
+           fields in tmDonationHiddenFields.html so that it is a separate file -->
+      <!--#include virtual="TMtemplates/tmDonationHiddenFields.html" -->
+      <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
+      <input class="btn btn-success" name="btnDonationAccept" onclick="process()" type="submit" value="Ajouter le don &agrave; mon panier"/>
+      <input class="btn btn-danger" name="<field>pick(F_LOGGED_IN=2,'btnHome','btnGetEventList')</field>" type="submit" value="Annuler"/>
+     </form>
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
   </div>
+  <!-- comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

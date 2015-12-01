@@ -1,49 +1,42 @@
-  <table width="100%">
-   <tr class="tablerowheader">
-    <td>
-     <field>cap(dat(PB_PERFORM_DATE,'w D m y'))</field> &agrave; <field>PB_PERFORM_TIME</field>
-    </td>
-    <td colspan="3">
-     <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
-      <field>P_PLAY_TITLE</field>
-     </a>
-     <field>pick(isclear(PB_PERF_NOTES),'','<!-- comment:')</field>
-     <br/>
-     <field>pick(isclear(PB_PERF_NOTES),'',' -->')</field>
-			<field>PB_PERF_NOTES</field>
-    </td>
-    <td>
-     <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
-      <field>VE_NAME</field>
-     </a>
-     <field>pick(PB_PRINT_AT_HOME,'<!-- comment:')</field>
-     <div align="right">
-      <form>
-       <input class="new" onclick="window.open(
-				'<field>F_HTML_FIREWALL</field>login?futureticketsprint=<field>PB_SEQ</field>'
-				,'Print','width=700,height=500')" type="button" value="Imprimer des billets"/>
-      </form>
-     </div>
-     <field>pick(PB_PRINT_AT_HOME,'-->')</field>
-    </td>
-   </tr>
-   <tr class="tablerowheader">
-    <td align="left">
-     <field>D_SECTION_DESC</field>/<field>D_ROW_DESC</field>/<field>D_SEAT_DESC</field>
-    </td>
-    <td width="15%">
-     Promotion
-    </td>
-    <td align="right" width="8%">
-     Prix
-    </td>
-    <td align="right" width="8%">
-     Commande
-    </td>
-    <td align="left" width="15%">
-     Date d'achat des billets
-    </td>
-   </tr>
-   <field>F_HTML_HISTORICAL_CART_DETAIL_LIST</field>
-  </table>
-  <br/>
+  <div class="row">
+   <h4 class="alert alert-warning">
+    <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
+     <field>P_PLAY_TITLE</field>
+    </a>
+    <field>cap(dat(PB_PERFORM_DATE,'w D m y'))</field> &agrave; <field>PB_PERFORM_TIME</field>
+   </h4>
+   <div class="col-md-4">
+    <!--#include virtual="TMtemplates/rowFutureTicketEventHeader.html" -->
+   </div>
+   <div class="col-md-8">
+    <table class="table table-striped table-responsive">
+     <thead>
+      <tr>
+       <field>pick(PB_SALES_METHOD=2,'<!-- comment: only print for reserved seating')</field>
+       <th>
+        <field>D_SECTION_DESC</field>/<field>D_ROW_DESC</field>/<field>D_SEAT_DESC</field>
+       </th>
+       <field>pick(PB_SALES_METHOD=2,'-->')</field>
+       <th>
+        Promotion
+       </th>
+       <th sclass="text-right">
+        Prix
+       </th>
+       <th class="text-right">
+        Commande
+       </th>
+       <th>
+        Date d'achat des billets
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <field>F_HTML_HISTORICAL_CART_DETAIL_LIST</field>
+     </tbody>
+    </table>
+    <br/>
+   </div>
+   <!-- comment .col-md-8-->
+  </div>
+  <!-- comment .row -->

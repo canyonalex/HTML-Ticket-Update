@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Nouveau compte
+   <field>D_COMPANY_LONG</field> | Checkout Identification Options
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -15,69 +14,52 @@
  </head>
  <body class="background">
   <!--#include virtual="TMtemplates/tmnavButtons.html" -->
-  <div align="center" id="content">
-   <p align="center" class="message">
-    <b>
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
-   </p>
-   <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td align="center" colspan="3">
-      <b>
-       Pour poursuivre votre op&eacute;ration, veuillez s&eacute;lectionner une des options ci-dessous et fournir les renseignements demand&eacute;s.
-      </b>
-     </td>
-    </tr>
-    <tr>
-     <td align="center" valign="middle" width="8%">
-      <img src="tmGifs/step1.gif"/>
-     </td>
-     <td>
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Checkout Options
+      <br/>
+      <small class="text-muted">
+       Select one of the three options below
+      </small>
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+      <div class="alert alert-info">
+       Use an existing account
+      </div>
       <!--#include virtual="TMtemplates/tmLoginForm.html" -->
-     </td>
-    </tr>
-   </table>
-   <hr align="center" width="80%"/>
-   <table align="center" border="0" cellpadding="4" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td align="center" valign="top" width="8%">
-      <img src="tmGifs/step2.gif"/>
-     </td>
-     <td valign="top">
-      <form action="<field>F_HTML_FIREWALL</field>login" method="POST">
-       <input class="new" name="btnAccountRequest" onmouseout="pviiClassNew(this,'new')" onmouseover="pviiClassNew(this,'newover')" type="submit" value="Cr&eacute;er un compte"/>
+      <p>
+       &nbsp;
+      </p>
+     </div>
+     <div class="col-md-8">
+      <div class="alert alert-info">
+       Create a new account
+      </div>
+      <!-- #include virtual="TMtemplates/tmLoginLimitedPatronNewAccount.html" -->
+      <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
+       <input class="btn btn-success" name="btnAccountRequest" type="submit" value="New <field>D_PATRON</field>"/>
        <input name="param" type="hidden" value="altbtn=btnCheckout"/>
       </form>
-     </td>
-     <!--#include virtual="TMtemplates/tmLoginLimitedPatronNewAccount.html" -->
-    </tr>
-   </table>
-   <hr align="center" width="80%"/>
-   <table align="center" border="0" cellpadding="0" cellspacing="0" class="tablerowdetail" width="90%">
-    <tr>
-     <td align="center" valign="top" width="8%">
-      <img src="tmGifs/step3.gif"/>
-     </td>
-     <td>
-      Vous pouvez compl&eacute;ter votre achat
-      <b>
-       sans cr&eacute;er de compte
-      </b>
-      .  Cela limite un peu
-services &agrave; la client&egrave;le comme le remplacement du billet (s'il est perdu ou vol&eacute;),
-les remboursements (si l'&eacute;v&eacute;nement d'annulation), notification (si l'&eacute;v&eacute;nement report&eacute;), etc.
-     </td>
-    </tr>
-    <tr>
-     <td>
-     </td>
-     <td>
+      <p>
+       &nbsp;
+      </p>
+      <div class="alert alert-info">
+       Complete your purchase without creating an account (may limit some customer services)
+      </div>
       <!--#include virtual="TMtemplates/tmLoginLimitedPatron.html" -->
-     </td>
-    </tr>
-   </table>
+     </div>
+     <!-- comment: .col-md-8 -->
+    </div>
+    <!-- comment: .row -->
+   </div>
+   <!-- comment: .content -->
   </div>
+  <!--  comment: .container -->
   <!--#include virtual="TMtemplates/tmFooter.html" -->
  </body>
 </html>

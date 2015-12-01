@@ -1,22 +1,22 @@
-<field>pick(F_POST_DATED_PLAN_ACCEPTED,'<!-- comment: installment plan options')</field>
-<tr>
- <td class="tablerowdetail" align="center">
+  <field>pick(F_POST_DATED_PLAN_ACCEPTED,'<!-- comment: installment plan options')</field>
   <p>
-   <b>
-   Vous avez �galement choisi l'option de verser des acomptes provisionnels comme suit:
-  </b>
   </p>
-  <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
-   <tr class="tablerowheader">
-	<td align="left" width="140">
-	 Pre-Authorized Date
-	</td>
-	<td align="right">
-	 Amount
-	</td>
-   </tr>
-   <field>F_HTML_PAYMENT_PLAN_LIST</field>
-  </table>
- </td>
-</tr>
-<field>pick(F_POST_DATED_PLAN_ACCEPTED,'-->')</field>
+  <div class="alert alert-warning">
+   Vous avez également choisi l'option de verser des acomptes provisionnels comme suit:
+   <table class="table table-striped table-condensed table-responsive">
+    <thead>
+     <tr>
+      <th class="text-left">
+       Date de préautorisé
+      </th>
+      <th class="text-right">
+       Amount
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <field>F_HTML_PAYMENT_PLAN_LIST</field>
+    </tbody>
+   </table>
+  </div>
+  <field>pick(F_POST_DATED_PLAN_ACCEPTED,'-->')</field>

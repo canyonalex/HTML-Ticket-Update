@@ -1,4 +1,4 @@
-  <tr class="tablerowdetail">
+  <tr>
    <td align="center">
     <field>PS_QUANTITY</field>
    </td>
@@ -15,6 +15,8 @@
     <field>PS_TOTAL_COST</field>$
    </td>
    <td>
-    <field>pick(F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'<font color="#FF0000">')</field><field>F_MESSAGE_DESCRIPTION</field><field>pick(F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'</font>')</field>
+    <div class="<field>pick(F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'text-danger')</field>">
+     <field>F_MESSAGE_DESCRIPTION</field>
+    </div>
    </td>
   </tr>
