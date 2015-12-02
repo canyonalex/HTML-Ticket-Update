@@ -27,6 +27,9 @@
      <field>pick(not(F_REMOVE_CART_ITEM_ALLOWED),'<!-- comment: there is no cart')</field>
       <!--#include virtual="TMtemplates/tmCartEmpty.html" -->
      <field>pick(not(F_REMOVE_CART_ITEM_ALLOWED),'-->')</field>
+      <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'<!-- comment: there is a cart')</field>
+      <!--#include virtual="TMtemplates/tmCartMessageInfo.html" -->
+      <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'-->')</field>
      </div>
      <div class="col-md-8">
       <!--#include virtual="TMtemplates/rowCartDonationSuggestion.html" -->

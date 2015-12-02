@@ -79,7 +79,7 @@
    <label for="C_BIRTHDAY">
     Birthday
    </label>
-   <input class="form-control" id="C_BIRTHDAY" name="C_BIRTHDAY" placeholder="mm/dd/yyyy (enter date as numbers separated with a /)" type="text" value="<field>dat(C_BIRTHDAY, 'M/d/y')</field>"/>
+   <input class="form-control" id="C_BIRTHDAY" name="C_BIRTHDAY" placeholder="mm/dd/yyyy (numbers separated with a /)" type="text" value="<field>dat(C_BIRTHDAY, 'M/d/y')</field>"/>
   </div>
   -->
   <!-- comment: Marketing #1 (numbers)
@@ -103,7 +103,7 @@
    <label for="MKT_FIELD_3">
     <field>D_MKT3</field>
    </label>
-   <input class="form-control" id="MKT_FIELD_3" name="MKT_FIELD_3" placeholder="<field>D_MKT3</field> <field>F_HTML_REQUIRE_MARKETING_3</field> (text)" type="text" value="<field>MKT_FIELD_3</field>"/>
+   <input class="form-control" id="MKT_FIELD_3" name="MKT_FIELD_3" placeholder="<field>D_MKT3</field> <field>F_HTML_REQUIRE_MARKETING_3</field> (text)" MAXLENGTH=10 type="text" value="<field>MKT_FIELD_3</field>" onblur="this.value=this.value.toUpperCase()"/>
   </div>
   -->
   <!-- comment: Marketing #4 (upper case text)
@@ -111,7 +111,7 @@
    <label for="MKT_FIELD_4">
     <field>D_MKT4</field>
    </label>
-   <input class="form-control" id="MKT_FIELD_4" name="MKT_FIELD_4" placeholder="<field>D_MKT4</field> <field>F_HTML_REQUIRE_MARKETING_4</field> (text)" type="text" value="<field>MKT_FIELD_4</field>"/>
+   <input class="form-control" id="MKT_FIELD_4" name="MKT_FIELD_4" placeholder="<field>D_MKT4</field> <field>F_HTML_REQUIRE_MARKETING_4</field> (text)" MAXLENGTH=10 type="text" value="<field>MKT_FIELD_4</field>" onblur="this.value=this.value.toUpperCase()"/>
   </div>
   -->
   <!-- comment: Marketing #5 (text)
