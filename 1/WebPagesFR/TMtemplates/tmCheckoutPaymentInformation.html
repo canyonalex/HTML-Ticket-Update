@@ -3,7 +3,7 @@
    <tr>
     <th>
      <a class="btn btn-warning btn-xs" href="<field>F_HTML_FIREWALL</field>login?btnAccount">
-      Purchaser Info
+      Ouvrir un session
      </a>
     </th>
     <td>
@@ -22,7 +22,7 @@
    </tr>
    <tr>
     <th>
-     Order Reference
+     Référence de l'achat
     </th>
     <td>
      <field>SCH_ORD_SEQ</field>
@@ -30,7 +30,7 @@
    </tr>
    <tr>
     <th>
-     Order Date
+     Date de commande
     </th>
     <td>
      <field>SCH_DATE_CHECKOUT</field>
@@ -39,17 +39,17 @@
    <tr>
     <field>pick(PAY_TOTAL_PAID>0,'<!-- comment: remove card number and authorization if no payment')</field>
     <th>
-     Payment Amount
+     Montant du paiement
     </th>
     <td>
      <strong>
-      $<field>PAY_TOTAL_PAID</field> <field>F_HTML_CURRENCY</field>
+      <field>PAY_TOTAL_PAID</field>$ <field>F_HTML_CURRENCY</field>
      </strong>
     </td>
    </tr>
    <tr>
     <th>
-     Card Number
+     Numéro de carte
     </th>
     <td>
      <field>PAY_CARD_NO</field>
@@ -57,7 +57,7 @@
    </tr>
    <tr>
     <th>
-     Authorization Code
+     Code d'autorisation
     </th>
     <td>
      <field>PAY_AUTH_NO</field>
@@ -67,7 +67,7 @@
         <field>pick(len(SCH_ORD_NOTES)>0,'<!-- comment: order notes blank')</field>
    <tr>
     <th>
-     Notes
+     Observations
     </th>
     <td>
      <field>SCH_ORD_NOTES</field>

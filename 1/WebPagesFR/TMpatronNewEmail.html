@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | New Account Added to Database
+   <field>D_COMPANY_LONG</field> | Nouveau compte ajout&eacute; &agrave; la base de donn&eacute;es
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -13,7 +14,7 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      New Account Added to Database
+      Nouveau compte ajout&eacute; &agrave; la base de donn&eacute;es
       <br/>
       <small class="text-muted">
        <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
@@ -21,29 +22,28 @@
      </h1>
     </div>
     <div class="alert">
-     You have been added to our online ticketing system as a result of your recent visit to our web site.  Your email address
-    will be your account name. If you do not recall creating an online account, contact the box office by phone
-     with any concerns you may have.
+     Vous avez été ajouté à notre système de billetterie en ligne à la suite de votre récente visite à notre site Web.
+    Votre adresse email est utilisée pour accéder à votre compte.
+     Si vous ne vous souvenez pas de créer un compte en ligne, contacter la billetterie par téléphone avec les préoccupations que vous pourriez avoir.
     </div>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
     <p>
      &nbsp;
     </p>
     <div class="alert">
-     You also clicked some checkboxes to tell us how you want to be notified about our programs and events.
-     <field>D_COMPANY_LONG</field> uses double-opt-in confirmation.   It means you must confirm your choices by 
-     clicking the button below.
+     Vous avez &eacute;galement cliqu&eacute; quelques cases &agrave; cocher pour nous dire comment vous voulez que nous vous informerons sur nos programmes et &eacute;v&eacute;nements.
+     <field>D_COMPANY_LONG</field> utilise une approche double opt-in confirmation pour les notifications.
+        Cela signifie que vous devez confirmer votre choix en cliquant sur le bouton ci-dessous.
      <br/>
      <br/>
-     If you do not click the link, you will be removed from those notifications approximately 
-      <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> hours after you created your account.
+     Si vous ne cliquez pas sur le lien, puis notre syst&egrave;me respectera vos souhaits et vous retirer de ces notifications environ <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures apr&egrave;s que vous avez cr&eacute;&eacute; votre compte.
     </div>
     <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-     Confirm my notification setup
+     Confirmer ma configuration de notification
     </a>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
     <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>login?e=<field>F_EMAIL_ADDRESS</field>&tmsource=accountnew">
-     Login
+     Ouvrir un Session
     </a>
     <p>
      &nbsp;

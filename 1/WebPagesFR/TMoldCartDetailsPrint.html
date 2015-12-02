@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Historical Shopping Cart Detail
+   <field>D_COMPANY_LONG</field> | Contenu du panier d'achat
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -16,10 +17,10 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      Cart #<field>SCH_SEQ</field>
+      Panier #<field>SCH_SEQ</field>
       <br/>
       <small class="text-muted">
-       Order <field>SCH_ORD_SEQ</field> purchased <field>cap(dat(SCH_DATE_CHECKOUT,'w n D, y'))</field>
+       Afin <field>SCH_ORD_SEQ</field> Acheté en <field>cap(dat(SCH_DATE_CHECKOUT,'w n D, y'))</field>
       </small>
      </h1>
     </div>
@@ -27,7 +28,7 @@
      <field>pick(len(SCH_ORD_NOTES)>0,'<!-- comment: cart order notes')</field>
      <div class="alert alert-warning">
       <b>
-       Notes:
+       Observations:
       </b>
       <br/>
       <field>SCH_ORD_NOTES</field>
@@ -38,10 +39,10 @@
        <thead>
         <tr>
          <th>
-          Item
+          Article
          </th>
          <th class="text-center">
-          Qty
+          Qté
          </th>
          <th>
           Description
@@ -58,13 +59,13 @@
         <tr>
          <td class="text-right" colspan="3">
           <b>
-           GRAND TOTAL 
-                  <field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','(includes all applicable taxes)')</field>
+           TOTAL 
+                  <field>pick(SCH_TAX1+SCH_TAX2+SCH_TAX3>0,'','(Les prix indiqués comprennent toutes les taxes applicables)')</field>
           </b>
          </td>
          <td class="text-right">
           <b>
-           $<field>SCH_TOTAL_COST</field>
+           <field>SCH_TOTAL_COST</field>$
           </b>
          </td>
         </tr>

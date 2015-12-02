@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Notification Confirmation Request
+   <field>D_COMPANY_LONG</field> | Notification demande de confirmation
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -14,7 +15,7 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      Notification Confirmation Request
+      Notification demande de confirmation
       <br/>
       <small class="text-muted">
        <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
@@ -22,33 +23,34 @@
      </h1>
     </div>
     <div class="alert">
-     Our staff recently added you to a specific email notification list which we will use to email to you for the purposes outlined.
-  Most likely, you were added as a result of a conversation that we had with you or past history with our organization.
+     Notre personnel vous a r&eacute;cemment ajout&eacute; &agrave; une liste sp&eacute;cifique de notification que nous allons utiliser pour envoyer pour
+  les fins mentionn&eacute;es. Tr&egrave;s probablement, vous avez &eacute;t&eacute; ajout&eacute; &agrave; la suite d'une conversation que nous avons eue avec 
+  vous ou pass&eacute; avec notre organisation.
      <br/>
      <br/>
-     <field>D_COMPANY_LONG</field> uses a
+     <field>D_COMPANY_LONG</field> utilise un
      <b>
-      double-opt-in mechanism
+     m&eacute;canisme de double opt-in
      </b>
-     and you must confirm your participation.
+     et vous devez confirmer votre participation.
      <br/>
      <br/>
-     If you do not, you will automatically be removed from the notification approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field>
-  hours after you receive this email.  If you ignore the email, you can opt in at some future time you wish.
+     Si vous n'avez pas, vous serez automatiquement retir&eacute; de la notification d'environ <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> 
+  heures apr&egrave;s que vous recevez cet e-mail.  Si vous ignorez l'e-mail, vous pouvez opter, &agrave; l'avenir que vous souhaitez.
     </div>
     <p>
      &nbsp;
     </p>
     <div class="alert alert-info">
-     Purpose:
+     But:
      <br/>
      <field>PM_DESCRIPTION</field>
     </div>
     <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-     Confirm participation in <field>PM_DESCRIPTION_EXTERNAL</field>
+     Confirmer la participation <field>PM_DESCRIPTION_EXTERNAL</field>
     </a>
     <a class="link" href="<field>F_HTML_FIREWALL</field>login?e=<field>F_EMAIL_ADDRESS</field>&tmsource=accountupdate">
-     Review My Account
+     Revoir Mon compte
     </a>
     <p>
      &nbsp;

@@ -17,7 +17,7 @@
      </td>
      <td align="center" valign="top">
       <div class="ticketline">
-       event
+       événement
       </div>
       <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
        <field>P_PLAY_TITLE</field>
@@ -27,7 +27,7 @@
     <tr>
      <td align="center" valign="top">
       <div class="ticketline">
-       venue
+       lieu
       </div>
       <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
        <field>VE_NAME</field>
@@ -49,7 +49,7 @@
     <tr>
      <td align="center" valign="top">
       <div class="ticketline">
-       seat
+       siège
       </div>
       <field>D_COURSE_DESC</field>
      </td>
@@ -57,7 +57,7 @@
     <tr>
      <td align="center" valign="top">
       <div class="ticketline">
-       price
+       prix
       </div>
       <field>pick(D_WEB_SHOW_PROMOTION,'',con(SC_DESCRIPTION,' '))</field>
 <field>pick(D_WEB_SHOW_PRICE_CODE,'',PC_DESCRIPTION)</field>
@@ -73,7 +73,7 @@
     </tr>
     <tr>
      <td colspan="2">
-      Please print this ticket and bring it with you to the event
+      S'il vous plaît imprimer ce billet et l'apporter avec vous à l'événement
     <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'<!-- comment: do not show bar code to avoid server hits')</field>
       <img align="right" src="<field>F_HTML_TIX_BAR_CODE</field>"/>
       <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'-->')</field>

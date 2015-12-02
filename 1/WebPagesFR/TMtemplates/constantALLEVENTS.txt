@@ -1,4 +1,4 @@
 #	enter the value to represent searching for 'All Events'
 #	it goes at the top of the search window for events
 
-Tous les événements
+Tous les √©v√©nements

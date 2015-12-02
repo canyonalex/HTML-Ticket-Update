@@ -19,10 +19,10 @@
     <thead>
      <tr>
       <th class="text-center">
-       Qty
+       Qt&eacute;
       </th>
       <th>
-       Seat Code
+       Code de si&egrave;ge
       </th>
       <th>
        <field>D_SECTION_DESC</field>/<field>D_ROW_DESC</field>/<field>D_SEAT_DESC</field>
@@ -31,10 +31,10 @@
        Promotion
       </th>
       <th class="text-right">
-       Price
+       Prix
       </th>
       <th>
-       Notes
+       Observations
       </th>
      </tr>
     </thead>
@@ -49,12 +49,12 @@
         <input name="F_HTML_SUBSCRIPTION_TOTAL_COST" type="hidden" value="<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>"/>
         <input name="F_HTML_SUBSCRIPTION_SEATS_ARE_OK" type="hidden" value="<field>F_HTML_SUBSCRIPTION_SEATS_ARE_OK</field>"/>
         <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'<!-- comment: if not started, or notice printed, can be renewed or cancelled')</field>
-        <input class="btn btn-success" name="btnSubscriptionRenew" type="submit" value="Renew"/>
+        <input class="btn btn-success" name="btnSubscriptionRenew" type="submit" value="Renouveler"/>
         &nbsp;
-        <input class="btn btn-danger" name="btnSubscriptionCancel" type="submit" value="Cancel Subscription"/>
+        <input class="btn btn-danger" name="btnSubscriptionCancel" type="submit" value="Annuler l'abonnement"/>
         <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,' -->')</field>
 <field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,'<!-- comment: if state is cancelled-season, or cancelled-internet, it can be reinstated so it can be booked.')</field>
-        <input class="btn btn-success" name="btnSubscriptionReinstate" type="submit" value="Re-Instate Subscription"/>
+        <input class="btn btn-success" name="btnSubscriptionReinstate" type="submit" value="R&eacute;tablir abonnement"/>
         <field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,' -->')</field>
        </form>
       </td>
@@ -65,7 +65,7 @@
       </td>
       <td align="right">
        <b>
-        $<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>
+        <field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>$
        </b>
       </td>
       <td align="center">

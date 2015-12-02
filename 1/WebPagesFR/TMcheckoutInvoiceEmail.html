@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Purchase Confirmation for order <field>SCH_ORD_SEQ</field>
+   <field>D_COMPANY_LONG</field> | Confirmation d'achat de l'ordre <field>SCH_ORD_SEQ</field>
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -16,7 +17,7 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      Web Order <field>ORD_SEQ</field> Confirmation
+      Confirmation d'achat de l'ordre <field>SCH_ORD_SEQ</field>
       <br/>
       <small class="text-muted">
        <field>D_COMPANY_LONG</field>
@@ -24,8 +25,7 @@
      </h1>
     </div>
     <div class="alert alert-info">
-     This email confirms your purchase and receipt
-          of your payment. Save it for your records.  It is not a ticket.
+     Ce courriel confirme votre achat et r&eacute;ception de votre paiement. Conservez-le pour vos dossiers.  Il est pas un billet.
     </div>
     <!--#include virtual="TMtemplates/tmCheckoutConfirmationDeliveryEmail.html" -->
     <!--#include virtual="TMtemplates/tmCheckoutCartList.html" -->

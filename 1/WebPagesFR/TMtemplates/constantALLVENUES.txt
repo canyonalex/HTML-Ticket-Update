@@ -1,5 +1,5 @@
-#	Entrez le texte correspondant à la recherche de 'tous les lieux'.
-#	Ce texte se place en haut de la fenÍtre de recherche d'événements.
+#	Entrez le texte correspondant √† la recherche de 'tous les lieux'.
+#	Ce texte se place en haut de la fen√çtre de recherche d'√©v√©nements.
 #
 #	Enter the text to represent searching for 'All Venues'
 #	it goes at the top of the search window for events

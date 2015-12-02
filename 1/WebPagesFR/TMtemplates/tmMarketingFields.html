@@ -29,7 +29,7 @@
     you will also need to UNCOMMENT the ENDING div tag at the end of the file
 
     <h4>
-      Additional Information
+      Information Supplémentaire
     </h4>
     <div class="well">
 
@@ -54,12 +54,12 @@
   <div class="radio">
    <label>
     <input id="Female" name="C_SEX" type="radio" value="F" <field>pick(C_SEX='F','','checked')</field>/>
-    Female
+    Femme
    </label>
    &nbsp;&nbsp;
    <label>
     <input id="Male" name="C_SEX" type="radio" value="M" <field>pick(C_SEX='F','checked','')</field>/>
-    Male
+    Homme
    </label>
   </div>
   </div>
@@ -67,7 +67,7 @@
   <!-- comment: Age Code
   <div class="form-group">
    <label for="MKT_AGE_CODE_FC_SEQ">
-    Age Code <field>F_HTML_REQUIRE_AGE_CODE</field>
+    Tranche d'âge <field>F_HTML_REQUIRE_AGE_CODE</field>
    </label>
    <select class="form-control" id="MKT_AGE_CODE_FC_SEQ" name="MKT_AGE_CODE_FC_SEQ" size="1">
     <field>F_HTML_AGE_CODE_LIST</field>
@@ -77,9 +77,9 @@
   <!-- comment: birthday
   <div class="form-group">
    <label for="C_BIRTHDAY">
-    Birthday
+    Anniversaire
    </label>
-   <input class="form-control" id="C_BIRTHDAY" name="C_BIRTHDAY" placeholder="mm/dd/yyyy (enter date as numbers separated with a /)" type="text" value="<field>dat(C_BIRTHDAY, 'M/d/y')</field>"/>
+   <input class="form-control" id="C_BIRTHDAY" name="C_BIRTHDAY" placeholder="mm/dd/yyyy (nombres séparés par un /)" type="text" value="<field>dat(C_BIRTHDAY, 'M/d/y')</field>"/>
   </div>
   -->
   <!-- comment: Marketing #1 (numbers)
@@ -87,7 +87,7 @@
    <label for="MKT_FIELD_1">
     <field>D_MKT1</field>
    </label>
-   <input class="form-control" id="MKT_FIELD_1" name="MKT_FIELD_1" placeholder="<field>D_MKT1</field> <field>F_HTML_REQUIRE_MARKETING_1</field> (numbers only)" type="text" value="<field>MKT_FIELD_1</field>"/>
+   <input class="form-control" id="MKT_FIELD_1" name="MKT_FIELD_1" placeholder="<field>D_MKT1</field> <field>F_HTML_REQUIRE_MARKETING_1</field> (numéros seulement)" type="text" value="<field>MKT_FIELD_1</field>"/>
   </div>
   -->
   <!-- comment: Marketing #2 (numbers)
@@ -95,7 +95,7 @@
    <label for="MKT_FIELD_2">
     <field>D_MKT2</field>
    </label>
-   <input class="form-control" id="MKT_FIELD_2" name="MKT_FIELD_2" placeholder="<field>D_MKT2</field> <field>F_HTML_REQUIRE_MARKETING_2</field> (numbers only)" type="text" value="<field>MKT_FIELD_2</field>"/>
+   <input class="form-control" id="MKT_FIELD_2" name="MKT_FIELD_2" placeholder="<field>D_MKT2</field> <field>F_HTML_REQUIRE_MARKETING_2</field> (numéros seulement)" type="text" value="<field>MKT_FIELD_2</field>"/>
   </div>
   -->
   <!-- comment: Marketing #3 (upper case text)
@@ -103,7 +103,7 @@
    <label for="MKT_FIELD_3">
     <field>D_MKT3</field>
    </label>
-   <input class="form-control" id="MKT_FIELD_3" name="MKT_FIELD_3" placeholder="<field>D_MKT3</field> <field>F_HTML_REQUIRE_MARKETING_3</field> (text)" type="text" value="<field>MKT_FIELD_3</field>"/>
+   <input class="form-control" id="MKT_FIELD_3" name="MKT_FIELD_3" placeholder="<field>D_MKT3</field> <field>F_HTML_REQUIRE_MARKETING_3</field> (text)" MAXLENGTH=10 type="text" value="<field>MKT_FIELD_3</field>" onblur="this.value=this.value.toUpperCase()"/>
   </div>
   -->
   <!-- comment: Marketing #4 (upper case text)
@@ -111,7 +111,7 @@
    <label for="MKT_FIELD_4">
     <field>D_MKT4</field>
    </label>
-   <input class="form-control" id="MKT_FIELD_4" name="MKT_FIELD_4" placeholder="<field>D_MKT4</field> <field>F_HTML_REQUIRE_MARKETING_4</field> (text)" type="text" value="<field>MKT_FIELD_4</field>"/>
+   <input class="form-control" id="MKT_FIELD_4" name="MKT_FIELD_4" placeholder="<field>D_MKT4</field> <field>F_HTML_REQUIRE_MARKETING_4</field> (text)" MAXLENGTH=10 type="text" value="<field>MKT_FIELD_4</field>" onblur="this.value=this.value.toUpperCase()"/>
   </div>
   -->
   <!-- comment: Marketing #5 (text)

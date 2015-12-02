@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Print at Home Tickets
+   <field>D_COMPANY_LONG</field> | Imprimer vos billets
   </title>
   <meta content="no-cache" http-equiv="Pragma"/>
   <!-- Pragma content set to no-cache tells the browser not to cache the page
@@ -33,53 +34,51 @@
      <td>
       <div align="left">
        <p align="left" class="message">
-        TICKETS MUST BE PRINTED ON WHITE PAPER
+        Les billets doivent &ecirc;tre imprim&eacute;s sur papier blanc
         <br/>
        </p>
        <p align="left" class="mainprint">
-        These 'print-at-home' tickets are on file under your name for upcoming <field>low(tEditCheck.$setPlural(D_EVENT))</field> and are organized by <field>low(D_PERF_DESC)</field> and date.  If you have tickets for multiple <field>low(tEditCheck.$setPlural(D_PERF_DESC))</field>, please make sure to bring the correct tickets to the correct <field>low(D_PERF_DESC)</field>.
+        La liste ci-dessous &eacute;num&egrave;re les billets figurant &agrave; votre nom dans nos dossiers pour des <field>low(D_PERF_DESC)</field> &agrave; venir. Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.
        </p>
        <p>
-        If you have any questions of concerns about the tickets or would like to exchange any of them
-		   pursuant to our
+        Si vous avez des questions au sujet de vos billets ou si vous souhaitez les &eacute;changer conform&eacute;ment aux
         <a class="linkprint" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
-         box office policies
+         politiques du service de billetterie en ligne
         </a>
-        ,
-		   please contact us using the information below.
+        , s'il vous plaît nous contacter en utilisant les informations ci-dessous.
        </p>
        <p>
         <b>
-         Notes:
+         Observations:
         </b>
        </p>
        <ul>
         <li>
-         Only completed ticket sales are printed -AND- only if the ticket may be printed at home.
+         Les ventes de billets sont imprimés complétés seulement -ET- seulement si le billet peut être imprimé à la maison
         </li>
         <li>
-         Tickets in this list may have been purchased online and/or at the box office.
+         Billets dans cette liste peuvent avoir été achetés en ligne et/ou au box-office
         </li>
         <li>
-         Anything currently in an incomplete shopping cart will not appear in this list until the purchase is completed.
+         Tout actuellement dans un panier incomplète ne sera pas apparaître dans cette liste jusqu'à ce que l' achat est terminé.
         </li>
         <li>
-         The box office will no longer print hard paper tickets for any tickets shown on this page.
+         Le box-office ne sera plus imprimer des billets de papier difficile pour tout billets indiqués sur cette page.
         </li>
         <li>
-         Tickets are scanned/verified at the box office for validity, please make sure to print them legibly and show the entire bar code on the page.
+         Les billets sont numérisés / vérifié au box-office pour la validité, s'il vous plaît assurez-vous de les imprimer de façon lisible et montrent l'ensemble du code à barres sur la page.
         </li>
        </ul>
-       The tickets
+       Les Billets
        <b>
-        print on separate pages
+        imprimer sur des pages séparées
        </b>
-       and, depending on your browser, may not appear on this window.  If the printer dialog does not appear (or if you close it), use the button below to open the printer dialog to print your tickets.
+       et , en fonction de votre navigateur , ne peuvent figurer sur cette page.   Si la boîte de dialogue d'impression ne semble pas ( ou si vous le fermez ), utilisez le bouton ci-dessous pour ouvrir la boîte de dialogue de l'imprimante pour imprimer vos billets.
        <p>
        </p>
       </div>
       <div align="center">
-       <input onclick="window.print()" type="button" value="Print your tickets now!"/>
+       <input onclick="window.print()" type="button" value="Imprimez vos billets maintenant!"/>
        <p>
         <!--#include virtual="TMtemplates/tmContactHours.html" -->
        </p>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Monthly Donation Entry
+   <field>D_COMPANY_LONG</field> | Saisie d'un don
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -27,7 +28,7 @@
         <table border="0" cellpadding="1" width="589">
          <tr>
           <td align="right" width="167">
-           Donation Campaign
+           Campagne de dons
           </td>
           <td valign="top" width="408">
            <select id="DD_DC_SEQ" name="DD_DC_SEQ">
@@ -37,7 +38,7 @@
          </tr>
          <tr>
           <td align="right" width="167">
-           Total Donation Amount
+           Montant total du don
           </td>
           <td valign="top">
            <input id="DD_AMOUNT_PLEDGE" maxlength="30" name="DD_AMOUNT_PLEDGE" size="30" type="text" value="<field>DD_AMOUNT_PLEDGE</field>"/>
@@ -45,31 +46,31 @@
          </tr>
          <tr>
           <td align="right" width="167">
-           Donation Frequency
+           Fr&eacute;quence des versements
           </td>
           <td valign="top">
            <select id="DD_REPEAT_FREQ" name="DD_REPEAT_FREQ">
             <option selected="" value="0">
-             One Time
+             Versement unique
             </option>
             <option value="1">
-             Monthly
+             Tous les mois
             </option>
             <option value="2">
-             Twice a Month
+             Deux fois par mois
             </option>
             <option value="3">
-             Quarterly
+             Tous les trimestres
             </option>
             <option value="4">
-             Annually
+             Chaque ann&eacute;e
             </option>
            </select>
           </td>
          </tr>
          <tr>
           <td align="right" width="167">
-           Start Date
+           Date de d&eacute;but
           </td>
           <td valign="top">
            <input id="DD_REPEAT_START_DATE" maxlength="30" name="DD_REPEAT_START_DATE" size="30" type="text" value="<field>DD_REPEAT_START_DATE</field>"/>
@@ -77,7 +78,7 @@
          </tr>
          <tr>
           <td align="right" width="167">
-           Stop Date
+           Date de fin
           </td>
           <td valign="top">
            <input id="DD_REPEAT_STOP_DATE" maxlength="30" name="DD_REPEAT_STOP_DATE" size="30" type="text" value="<field>DD_REPEAT_STOP_DATE</field>"/>
@@ -85,8 +86,7 @@
          </tr>
          <tr>
           <td align="right" width="167">
-           How would you like your name recognized in
-                    the program?
+           Comment souhaitez-vous que votre nom apparaisse dans le programme?
           </td>
           <td valign="top">
            <input id="DD_NAME_OF" maxlength="30" name="DD_NAME_OF" size="30" type="text" value="<field>DD_NAME_OF</field>"/>
@@ -94,33 +94,33 @@
          </tr>
          <tr>
           <td align="right" width="167">
-           Would you prefer this donation to be Anonymous?
+           Pr&eacute;f&eacute;rez-vous que votre don reste anonyme?
           </td>
           <td valign="top">
            <select id="Anonymous" name="Anonymous">
             <option value="1">
-             Yes
+             Oui
             </option>
             <option selected="" value="0">
-             No
+             Non
             </option>
            </select>
           </td>
          </tr>
          <tr>
           <td align="right">
-           Is this a Corporate Donation?
+           S'agit-il d'un don d'entreprise?
           </td>
           <td valign="top">
            <select name="DD_CORPORATE">
             <option value="1">
-             Yes
+             Oui
             </option>
             <option selected="" value="0">
-             No
+             Non
             </option>
            </select>
-           (for corporate accounts only)
+           (comptes d'entreprise uniquement)
           </td>
          </tr>
          <p>
@@ -132,9 +132,9 @@
            fields in tmDonationHiddenFields.html so that it is a separate file -->
            <!--#include virtual="TMtemplates/tmDonationHiddenFields.html" -->
            <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-           <input class="btn btn-success" name="btnDonationAccept" onclick="process()" type="submit" value="Add Donation to Shopping Cart"/>
+           <input class="btn btn-success" name="btnDonationAccept" onclick="process()" type="submit" value="Ajouter le don &agrave; mon panier"/>
            &nbsp;
-           <input class="btn btn-danger" name="<field>pick(F_LOGGED_IN=2,'btnHome','btnGetEventList')</field>" type="submit" value="Cancel"/>
+           <input class="btn btn-danger" name="<field>pick(F_LOGGED_IN=2,'btnHome','btnGetEventList')</field>" type="submit" value="Annuler"/>
           </td>
          </tr>
         </table>

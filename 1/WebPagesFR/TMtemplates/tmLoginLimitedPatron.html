@@ -3,24 +3,24 @@
    <div class="well">
     <div class="form-group">
      <label for="C_FIRST_NAME">
-      First Name
+      Pr&eacute;nom
      </label>
-     <input class="form-control" id="C_FIRST_NAME" maxlength="60" name="C_FIRST_NAME" placeholder="first name <field>F_HTML_REQUIRE_FIRST_NAME</field>" type="text" value="<field>C_FIRST_NAME</field>"/>
+     <input class="form-control" id="C_FIRST_NAME" maxlength="60" name="C_FIRST_NAME" placeholder="Pr&eacute;nom <field>F_HTML_REQUIRE_FIRST_NAME</field>" type="text" value="<field>C_FIRST_NAME</field>"/>
     </div>
     <div class="form-group">
      <label for="C_LAST_NAME">
-      Last Name
+      Nom
      </label>
-     <input class="form-control" id="C_LAST_NAME" maxlength="60" name="C_LAST_NAME" placeholder="last name <field>F_HTML_REQUIRE_LAST_NAME</field>" type="text" value="<field>C_LAST_NAME</field>"/>
+     <input class="form-control" id="C_LAST_NAME" maxlength="60" name="C_LAST_NAME" placeholder="nom de famille  <field>F_HTML_REQUIRE_LAST_NAME</field>" type="text" value="<field>C_LAST_NAME</field>"/>
     </div>
     <!-- comment: uncomment this if you would like company to display on the limited profile window.
 			Normally, a company name would not be the kind of thing a limited profile person would use. -->
     <!-- comment:
 			   <div class="form-group">
 			<label for="C_COMPANY">
-			 Company Name
+			 Compagnie
 			</label>
-			<input class="form-control" id="C_COMPANY" maxlength="60" name="C_COMPANY" type="text" value="<field>C_COMPANY</field>" placeholder="company <field>F_HTML_REQUIRE_COMPANY</field>"/>
+			<input class="form-control" id="C_COMPANY" maxlength="60" name="C_COMPANY" type="text" value="<field>C_COMPANY</field>" placeholder="nom de l'entreprise <field>F_HTML_REQUIRE_COMPANY</field>"/>
 		   </div>
 		-->
    </div>
@@ -31,24 +31,26 @@
    <field>F_HTML_ADDRESS_LIST</field>
    <div class="well">
     <h4>
-     Contact Information
+     Coordonn&eacute;es
     </h4>
     <field>F_HTML_CONTACT_LIST</field>
    </div>
    <div class="well">
     <h4>
-     E-Mail Notifications
+     Notifications par email
     </h4>
-    If you wish to be kept informed about various
-        events and activities at the venue, please select your preferences from below:
+    Si vous souhaitez &ecirc;tre tenu inform&eacute; des divers
+    &eacute;v&eacute;nements et activit&eacute;s sur le lieu, s'il
+    vous pla&icirc;t s&eacute;lectionner vos
+    pr&eacute;f&eacute;rences de dessous:
     <br/>
     <br/>
     <!--#include virtual="TMtemplates/tmNotificationHeader.html" -->
    </div>
    <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-   <input class="btn btn-success" name="btnAccountLimitedProfileAdd" onclick="process()" type="submit" value="Accept and go to Payment"/>
+   <input class="btn btn-success" name="btnAccountLimitedProfileAdd" onclick="process()" type="submit" value="Accepter et Aller au Paiement"/>
    &nbsp;
-   <input class="btn btn-danger" name="btnCart" type="submit" value="Cancel and Review Cart"/>
+   <input class="btn btn-danger" name="btnCart" type="submit" value="Annuler et Revue Panier"/>
    <input id="donotmail" name="MKT_DO_NOT_MAILP" type="hidden" value="YES"/>
    <!-- comment: set to no for USA only - outher countries have spam laws and must be yes -->
    <input id="donotemail" name="MKT_DO_NOT_EMAIL" type="hidden" value="<field>pick(D_COUNTRY='USA','YES','NO')</field>"/>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | New Account Window
+   <field>D_COMPANY_LONG</field> | Nouveau compte
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -24,11 +25,11 @@
       <!-- comment: if use enters email that exists, then show the password request button -->
       <field>pick(F_HTML_EMAIL_EXISTS=1,'<!-- comment: entered email exists')</field>
       <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?btnPasswordRequest=forgot">
-       Forgot My Password
+       J'ai oublié mon mot de passe
       </a>
       <field>pick(F_HTML_EMAIL_EXISTS=1,'-->')</field>
       <h4>
-       Account Information
+       Information sur le compte
       </h4>
       <form action="<field>F_HTML_FIREWALL</field>patronnew" method="POST" role="form">
        <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
@@ -44,31 +45,38 @@
        </div>
        <!--#include virtual="TMtemplates/tmMarketingFields.html" -->
        <h4>
-        How may We Contact You?
+        Comment pouvons-nous communiquer avec vous?
        </h4>
        <div class="well">
         <!--#include virtual="TMtemplates/tmMailNotificationFields.html" -->
        </div>
        <div class="well">
         <h4>
-         Email Notifications
+         Avis par courriel
         </h4>
-        Visit
+        Veuillez visiter la section
         <a class="link" href="<field>F_HTML_FIREWALL</field>login?maillist=0">
-         My Email Notifications
+         Mes notifications par courriel
         </a>
-        at any time to fine tune how you wish to be informed of events and activities at
-         <field>D_COMPANY_LONG</field> that interest you. Any contact information provided will be held confidential per our
+        du site Web et nous faire savoir (de fa&ccedil;on
+        pr&eacute;cise) comment vous aimeriez &ecirc;tre
+        inform&eacute;(e) des &eacute;v&eacute;nements et
+        activit&eacute;s organis&eacute;s par le
+        <field>D_COMPANY_LONG</field> qui sont susceptibles
+        de vous int&eacute;resser.
+        Tous vos renseignements personnels et coordonn&eacute;es
+        sont conserv&eacute;s de fa&ccedil;on confidentielle,
+        conform&eacute;ment &agrave; notre
         <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
-         privacy policy.
+         Politique de confidentialit&eacute;.
+         </a>
          <br/>
          <br/>
-        </a>
         <!--#include virtual="TMtemplates/tmNotificationHeader.html" -->
        </div>
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-       <input class="btn btn-success" name="btnAccountAdd" onclick="process()" type="submit" value="Create Account"/>
-       <input class="btn btn-danger" name="btnLogin" type="submit" value="Cancel Adding Account"/>
+       <input class="btn btn-success" name="btnAccountAdd" onclick="process()" type="submit" value="Cr&eacute;er un compte"/>
+       <input class="btn btn-danger" name="btnLogin" type="submit" value="Annuler"/>
       </form>
      </div>
      <!-- comment: .col-md-8 -->

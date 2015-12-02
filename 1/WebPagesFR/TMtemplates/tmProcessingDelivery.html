@@ -2,29 +2,26 @@
   <p>
   </p>
   <div class="alert alert-warning">
-   You selected
      <field>pick(SCH_TIX_PRINT_STATUS=0,'<!-- comment: eticket')</field>
+    Vous avez choisi d'imprimer vous-même vos
    <b>
-    E-Ticket delivery
+    billets électroniques.
    </b>
-   <br/>
-   and will print your own tickets
      <field>pick(SCH_TIX_PRINT_STATUS=0,'-->')</field>
-     
      <field>pick(SCH_TIX_PRINT_STATUS=1,'<!-- comment: mailed')</field>
+    Vos billets vous seront acheminés
    <b>
-    to have your tickets mailed
+    par la poste
    </b>
-   <br/>
-   subject to post office deadlines
+    (sous réserve des délais postaux).
      <field>pick(SCH_TIX_PRINT_STATUS=1,'-->')</field>
-     
     <field>pick(SCH_TIX_PRINT_STATUS=2,'<!-- comment: pick up')</field>
+    Vous pouvez
    <b>
-    to pick up your tickets
-    <br/>
+    retirer vos billets
    </b>
-   at the Box Office or at Will Call on the night of performance
+    au guichet dans la nuit de la performance.
      <field>pick(SCH_TIX_PRINT_STATUS=2,'-->')</field>
   </div>
+     <br/>
   <field>pick(SCH_TIX_QUANTITY+SCH_PASS_QUANTITY,'-->')</field>

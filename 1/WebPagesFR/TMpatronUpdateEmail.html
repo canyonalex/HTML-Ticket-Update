@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Account Information Updated
+   <field>D_COMPANY_LONG</field> | Renseignements du compte mis &agrave; jour
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -14,7 +15,7 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      Account Information Updated
+      Renseignements du compte mis &agrave; jour
       <br/>
       <small class="text-muted">
        <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
@@ -22,25 +23,25 @@
      </h1>
     </div>
     <div class="alert">
-     Recently, your account information was updated when you visited our online web site
-  or talked to the staff at <field>D_COMPANY_LONG</field>.  If you are not aware of this recent activity,
-  please contact the box office or log in, verify your account and change your password.
+     Récemment, des informations de votre compte a été mis à jour lorsque vous avez visité notre site web en ligne ou parlé au personnel au <field>D_COMPANY_LONG</field>.  Si vous n'êtes pas au courant de cette activité récente , s'il vous plaît contacter la billetterie ou vous connecter, vérifiez votre compte et changer votre mot de passe
      <br/>
      <br/>
-     You may wish to directly type the URL of our site in your web browser if you prefer additional browsing safety.
+     Vous pouvez taper directement l'adresse URL du site dans votre navigateur si vous préférez une sécurité supplémentaire de navigation.
     </div>
     <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
-     Review My Account
+     Revoir Mon compte
     </a>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
     <div class="alert alert-info">
-     You made some selections asking to be kept informed about our programs and events.
-     <field>D_COMPANY_LONG</field> uses a double opt-in confirmation so you must confirm 
-     your choices by clicking the button.  If you do not, our system respects your wishes and removes you from those notifications
-     approximately <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> hours after you receive this email.
+     Vous avez &eacute;galement cliqu&eacute; quelques cases &agrave; cocher pour nous dire comment vous voulez que nous vous informerons sur nos programmes et &eacute;v&eacute;nements.
+     <field>D_COMPANY_LONG</field> utilise une approche double opt-in confirmation pour les notifications.
+        Cela signifie que vous devez confirmer votre choix en cliquant sur le bouton ci-dessous.
+        <br/>
+     <br/>
+     Si vous ne cliquez pas sur le lien, puis notre syst&egrave;me respectera vos souhaits et vous retirer de ces notifications environ <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures apr&egrave;s que vous avez cr&eacute;&eacute; votre compte.
     </div>
     <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-     Confirm my email notification choices
+     Confirmer ma configuration de notification
     </a>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
     <p>
