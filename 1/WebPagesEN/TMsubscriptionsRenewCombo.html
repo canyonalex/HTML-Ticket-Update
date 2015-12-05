@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<meta charset="utf-8" />
+  <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
+  <title>
+   <field>D_COMPANY_LONG</field> | Renew Subscription Options
+  </title>
+  <!--#include virtual="tmScripts/disclaimer.html" -->
+  <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/buttonRollover.html" -->
+  <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/googleHeader.html" -->
+ </head>
+ <body class="background">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container">
+   <div class="page-header">
+    <h1>
+     Season Subscription Renewal
+     <br/>
+     <span class="text-muted">
+      <field>SG_DESCRIPTION</field>
+     </span>
+    </h1>
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+     <div class="alert">
+      Subscription:
+       <field>SG_DESCRIPTION</field>
+     </div>
+     <!--#include virtual="TMtemplates/rowSubRenewInstructions.html" -->
+    </div>
+    <div class="col-md-8">
+     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
+      <div class="form-group">
+       <label for="SS_SEATING_REQUEST">
+        Seat Change Request
+       </label>
+       <textarea class="form-control" cols="40" name="SS_SEATING_REQUEST" rows="5"><field>SS_SEATING_REQUEST</field></textarea>
+      </div>
+      <div class="form-group">
+       <label>
+        If we are unable to accommodate the requested change
+       </label>
+       <div class="radio">
+        <label>
+         <input checked="" id="retain" name="SS_ACCOMMODATE_CHANGE" type="radio" value="0"/>
+         Please retain my original seats
+        </label>
+       </div>
+       <div class="radio">
+        <label>
+         <input id="closest" name="SS_ACCOMMODATE_CHANGE" type="radio" value="1"/>
+         I am willing to take the next best seats or closest seats to accomodate my request
+        </label>
+       </div>
+       <div class="radio">
+        <label>
+         <input id="callfirst" name="SS_ACCOMMODATE_CHANGE" type="radio" value="2"/>
+         Please call me before making any changes
+        </label>
+       </div>
+      </div>
+      <input name="SS_SEQ" type="hidden" value="<field>SS_SEQ</field>"/>
+      <table class="table table-striped table-condensed table-responsive">
+       <tbody>
+        <field>F_HTML_FAVOURITE_SEAT_LIST</field>
+       </tbody>
+       <input name="F_HTML_SUBSCRIPTION_TOTAL_COST" type="hidden" value="<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>"/>
+       <input name="F_HTML_SUBSCRIPTION_SEATS_ARE_OK" type="hidden" value="<field>F_HTML_SUBSCRIPTION_SEATS_ARE_OK</field>"/>
+       <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'<!-- comment: if not started, or notice printed, can be renewed or cancelled')</field>
+       <input class="btn btn-success" name="btnSubscriptionReserve" type="submit" value="Renew Subscription"/>
+       &nbsp;
+       <input class="btn btn-danger" name="btnSubscriptionCancel" type="submit" value="Cancel Subscription"/>
+       <input name="param" type="hidden" value="altbtn=btnPackage"/>
+       <input name="PKG_SEQ" type="hidden" value="1"/>
+       <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,' -->')</field>
+       <br/>
+       <br/>
+       <tfoot>
+        <tr>
+         <td colspan="3">
+         </td>
+         <td class="text-right">
+          <b>
+           Total
+          </b>
+         </td>
+         <td class="text-right">
+          <b>
+           $<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>
+          </b>
+         </td>
+         <td>
+         </td>
+        </tr>
+       </tfoot>
+      </table>
+     </form>
+    </div>
+    <!-- comment: .col-md-8 -->
+   </div>
+   <!-- comment: .row -->
+  </div>
+  <!-- comment: .container -->
+  <!--#include virtual="TMtemplates/tmFooter.html" -->
+ </body>
+</html>

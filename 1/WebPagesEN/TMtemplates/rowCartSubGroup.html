@@ -2,7 +2,7 @@
    <td>
     <input name="SCD_SEQ" type="hidden" value="<field>SCD_SEQ</field>"/>
     <input name="SCD_PURCHASE_GROUP" type="hidden" value="<field>SCD_PURCHASE_GROUP</field>"/>
-    Forfait
+    Subscription
    </td>
    <td align="center">
     <field>SCD_QUANTITY</field>
@@ -18,7 +18,7 @@
      <field>P_PLAY_TITLE</field>
     </a>
     <b>
-     (<field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> &agrave; <field>PB_PERFORM_TIME</field>)
+     (<field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> @ <field>PB_PERFORM_TIME</field>)
     </b>
     <br/>
     <b>
@@ -34,6 +34,6 @@
     <field>SCD_TOTAL_COST</field>
    </td>
    <td align="center">
-    <input id="F_HTML_REMOVE_CART_ITEM_YN" name="F_HTML_REMOVE_CART_ITEM_YN" type="checkbox" value="1"/>
+    <input name="F_HTML_REMOVE_CART_ITEM_YN" type="hidden" value="NO"/>
    </td>
   </tr>
