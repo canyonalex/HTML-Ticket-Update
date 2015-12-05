@@ -9,11 +9,14 @@
 		_setDomainName with your URL (without the tickets. - most likely)
 		and remove the comments around the script to enable it
 
+-->
+
+<field>pick(len(D_GOOGLE_ACCOUNT)>0,'<!-- comment: no google account provided')</field>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-xxxxxxx-1']);
-  _gaq.push(['_setDomainName', '.yourvenue.org']);
+  _gaq.push(['_setAccount', '<field>D_GOOGLE_ACCOUNT</field>']);
+  _gaq.push(['_setDomainName', '.<field>F_HTML_CURRENT_DOMAIN</field>']);
   _gaq.push(['_trackPageview', '/TM/<field>con(F_HTML_CURRENT_OUTLET,"/",F_HTML_CURRENT_LANGUAGE,"/",F_HTML_MAIN_TEMPLATE)</field>']);
 
   (function() {
@@ -24,4 +27,4 @@
 
 </script>
 
--->
+<field>pick(len(D_GOOGLE_ACCOUNT)>0,'-->')</field>
