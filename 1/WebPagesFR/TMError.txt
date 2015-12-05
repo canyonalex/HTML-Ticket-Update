@@ -1,224 +1,224 @@
 ErrorNumber	ErrorText
 10001	Veuillez vous reconnecter.
-10002	Interruption du système - Veuillez vous reconnecter.
-10003	Nous sommes désolés.  Notre clôture de la journée est en cours, et les ventes par Internet sont temporairement suspendues. {br}Veuillez réessayer dans quelques instants
-10004	Votre session a expiré; votre panier d'achat et votre sélection de billets ont été réinitialisés. {br}Veuillez vous reconnecter et sélectionner à nouveau les articles que vous souhaitez.
-10005	Vous avez quitté la zone de navigation sécurisée.  Veuillez vous reconnecter pour poursuivre.
-10006	Impossible de trouver les meilleurs {seat} après l'utilisation du bouton Précédent. {br}Tous les {seat} qui étaient en suspens ont été libérés. {br}Veuillez réserver à nouveau les billets que vous souhaitez.
-10007	Impossible d'annuler des billets après l'utilisation du bouton Précédent du navigateur. {br}S'ils se trouvent toujours dans votre panier, veuillez les annuler à partir de là.
-10008	Impossible de réserver des billets après l'utilisation du bouton Précédent du navigateur. {br}Veuillez vérifier votre panier d'achat.  Il se peut qu'ils s'y trouvent déjà.
-10009	Service de billetterie en ligne temporairement indisponible, pendant l'exécution des sauvegardes
+10002	Interruption du syst√®me - Veuillez vous reconnecter.
+10003	Nous sommes d√©sol√©s.  Notre cl√¥ture de la journ√©e est en cours, et les ventes par Internet sont temporairement suspendues. {br}Veuillez r√©essayer dans quelques instants
+10004	Votre session a expir√©; votre panier d'achat et votre s√©lection de billets ont √©t√© r√©initialis√©s. {br}Veuillez vous reconnecter et s√©lectionner √† nouveau les articles que vous souhaitez.
+10005	Vous avez quitt√© la zone de navigation s√©curis√©e.  Veuillez vous reconnecter pour poursuivre.
+10006	Impossible de trouver les meilleurs {seat} apr√®s l'utilisation du bouton Pr√©c√©dent. {br}Tous les {seat} qui √©taient en suspens ont √©t√© lib√©r√©s. {br}Veuillez r√©server √† nouveau les billets que vous souhaitez.
+10007	Impossible d'annuler des billets apr√®s l'utilisation du bouton Pr√©c√©dent du navigateur. {br}S'ils se trouvent toujours dans votre panier, veuillez les annuler √† partir de l√†.
+10008	Impossible de r√©server des billets apr√®s l'utilisation du bouton Pr√©c√©dent du navigateur. {br}Veuillez v√©rifier votre panier d'achat.  Il se peut qu'ils s'y trouvent d√©j√†.
+10009	Service de billetterie en ligne temporairement indisponible, pendant l'ex√©cution des sauvegardes
 10010	Nombre maximal d'articles pour une commande atteint
 10011	Bienvenue sur le site Web de vente en ligne de {company}. {br} {br}Veuillez entrer votre adresse courriel et votre mot de passe OU {br}choisir l'une des options ci-dessous.
 10012	Erreur - Veuillez entrer une adresse courriel et un mot de passe valides.
-10013	Erreur - adresse courriel ou mot de passe non valide {br}(remarque le mot de passe est sensible à la casse.)
-10014	Le mot de passe doit être changé pour pouvoir poursuivre l'ouverture de la session.
+10013	Erreur - adresse courriel ou mot de passe non valide {br}(remarque le mot de passe est sensible √† la casse.)
+10014	Le mot de passe doit √™tre chang√© pour pouvoir poursuivre l'ouverture de la session.
 10015	Remplissez les champs voulus.
-10016	Veuillez sélectionner la représentation pour lequel vous achetez des billets.
-10017	Aucun résultat ne correspond à vos critères. {br}Veuillez sélectionner un autre mois ou une autre année, ou encore choisir tous les mois et toutes les années.
-10018	Impossible de trouver une représentation de {playtitle} correspondant à vos critères. {br}Veuillez modifier votre recherche.
-10019	Veuillez mettre à jour tous les renseignements voulus pour {patronname}.
+10016	Veuillez s√©lectionner la repr√©sentation pour lequel vous achetez des billets.
+10017	Aucun r√©sultat ne correspond √† vos crit√®res. {br}Veuillez s√©lectionner un autre mois ou une autre ann√©e, ou encore choisir tous les mois et toutes les ann√©es.
+10018	Impossible de trouver une repr√©sentation de {playtitle} correspondant √† vos crit√®res. {br}Veuillez modifier votre recherche.
+10019	Veuillez mettre √† jour tous les renseignements voulus pour {patronname}.
 10020	Veuillez remplir tous les champs voulus {br}{error}
 10021	Bienvenue {patronname}
-10022	Compte mis à jour
+10022	Compte mis √† jour
 10023	Veuillez entrer votre mot de passe actuel et le nouveau mot de passe de votre choix.
-10024	Le mot de passe doit être changé pour pouvoir poursuivre l'ouverture de la session.
-10025	Changement de mot de passe annulé
-10026	Erreur - Vous devez entrer votre mot de passe actuel de faÁon exacte.
+10024	Le mot de passe doit √™tre chang√© pour pouvoir poursuivre l'ouverture de la session.
+10025	Changement de mot de passe annul√©
+10026	Erreur - Vous devez entrer votre mot de passe actuel de fa√Åon exacte.
 10027	Erreur - Vous devez entrer votre nouveau mot de passe dans les deux champs.
-10028	Erreur - Les nouveaux mots de passe entrés ne sont pas identiques.
-10029	Erreur - Votre mot de passe doit comporter au moins {passwordminlength} caractères
-10030	Nouveau mot de passe identique à l'ancien. {br}Le mot de passe n'a pas été changé.
-10031	Mot de passe mis à jour avec succès.
-10032	Votre mot de passe a été envoyé à votre adresse courriel.
-10033	Une erreur SMTP s'est produite lors de l'envoi de votre mot de de passe à votre adresse courriel.
-10034	Nous sommes désolés, aucun compte n'est associé à cette adresse courriel.  Veuillez vérifier cette dernière.
-10035	Veuillez sélectionner les listes de diffusion auxquelles vous souhaitez vous abonner.
-10036	Veuillez sélectionner une liste de diffusion à laquelle vous souhaitez vous abonner.
-10037	Votre nom a été ajouté aux listes de diffusions choisies.
-10038	Veuillez sélectionner une liste de diffusion dont vous souhaitez vous désabonner.
-10039	Votre nom a été supprimé des listes de diffusions indiquées.
-10040	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles dans la section demandée
+10028	Erreur - Les nouveaux mots de passe entr√©s ne sont pas identiques.
+10029	Erreur - Votre mot de passe doit comporter au moins {passwordminlength} caract√®res
+10030	Nouveau mot de passe identique √† l'ancien. {br}Le mot de passe n'a pas √©t√© chang√©.
+10031	Mot de passe mis √† jour avec succ√®s.
+10032	Votre mot de passe a √©t√© envoy√© √† votre adresse courriel.
+10033	Une erreur SMTP s'est produite lors de l'envoi de votre mot de de passe √† votre adresse courriel.
+10034	Nous sommes d√©sol√©s, aucun compte n'est associ√© √† cette adresse courriel.  Veuillez v√©rifier cette derni√®re.
+10035	Veuillez s√©lectionner les listes de diffusion auxquelles vous souhaitez vous abonner.
+10036	Veuillez s√©lectionner une liste de diffusion √† laquelle vous souhaitez vous abonner.
+10037	Votre nom a √©t√© ajout√© aux listes de diffusions choisies.
+10038	Veuillez s√©lectionner une liste de diffusion dont vous souhaitez vous d√©sabonner.
+10039	Votre nom a √©t√© supprim√© des listes de diffusions indiqu√©es.
+10040	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles dans la section demand√©e
 10041	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles
-10042	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles dans la section demandée. {br}Veuillez essayer dans une autre section.
+10042	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles dans la section demand√©e. {br}Veuillez essayer dans une autre section.
 10043	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles. {br}Veuillez essayer dans une autre section.
 10044	Voici les meilleurs {seat} encore disponibles.
 10045	Voici les meilleurs {seat} disponibles.
-10046	Il n'a pas été possible de retenir les billets, car votre processus de sélection a duré trop longtemps ou parce que vous avez cliqué sur le bouton Précédent. Veuillez vérifier les billets achetés dans votre panier, puis recommencer votre sélection.
-10047	Les billets ont été placés en attente.
+10046	Il n'a pas √©t√© possible de retenir les billets, car votre processus de s√©lection a dur√© trop longtemps ou parce que vous avez cliqu√© sur le bouton Pr√©c√©dent. Veuillez v√©rifier les billets achet√©s dans votre panier, puis recommencer votre s√©lection.
+10047	Les billets ont √©t√© plac√©s en attente.
 10048	Veuillez entrer le montant que vous souhaitez acheter pour {pass}
-10049	{pass} a été ajouté à votre panier d'achat.
-10050	Entrée de {pass} annulée
+10049	{pass} a √©t√© ajout√© √† votre panier d'achat.
+10050	Entr√©e de {pass} annul√©e
 10051	Merci de votre {donation}
 10052	Veuillez confirmer les articles que vous achetez.
-10053	Panier déjà fermé
-10054	Impossible d'envoyer des paiements de moins de zéro dollar
-10055	Veuillez essayer à nouveau d'envoyer votre paiement dans 5 minutes.  Nous effectuons un rapprochement des ventes antérieures et avons temporairement suspendu l'acceptation des paiements par carte de crédit.
-10056	Veuillez essayer à nouveau d'envoyer votre paiement dans une minute.  Acceptation des paiements par carte de crédit temporairement suspendue en raison de l'exécution d'un processus de rapprochement
-10057	Numéro de carte de crédit cardtype} non valide
-10058	Date d'expiration de la carte de crédit non valide
-10059	Autorisation de carte de crédit - Erreur {error}
-10060	Paiement confirmé
-10061	Paiement confirmé - toutefois, une erreur SMTP s'est produite lors de l'envoi de la confirmation à votre adresse de courriel.
-10062	Vous avez déjà demandé que votre commande vous soit envoyée par courrier.
-10063	Vous avez demandé que vos billets et vos {passes} vous soient envoyés par courrier.
-10064	Vous avez demandé que vos billets vous soient envoyés par courrier.
-10065	Vous avez demandé que vos {passes} vous soient envoyés par courrier.
-10066	Aucuns frais d'affranchissement ne sont facturés pour les dons.
+10053	Panier d√©j√† ferm√©
+10054	Impossible d'envoyer des paiements de moins de z√©ro dollar
+10055	Veuillez essayer √† nouveau d'envoyer votre paiement dans 5 minutes.  Nous effectuons un rapprochement des ventes ant√©rieures et avons temporairement suspendu l'acceptation des paiements par carte de cr√©dit.
+10056	Veuillez essayer √† nouveau d'envoyer votre paiement dans une minute.  Acceptation des paiements par carte de cr√©dit temporairement suspendue en raison de l'ex√©cution d'un processus de rapprochement
+10057	Num√©ro de carte de cr√©dit cardtype} non valide
+10058	Date d'expiration de la carte de cr√©dit non valide
+10059	Autorisation de carte de cr√©dit - Erreur {error}
+10060	Paiement confirm√©
+10061	Paiement confirm√© - toutefois, une erreur SMTP s'est produite lors de l'envoi de la confirmation √† votre adresse de courriel.
+10062	Vous avez d√©j√† demand√© que votre commande vous soit envoy√©e par courrier.
+10063	Vous avez demand√© que vos billets et vos {passes} vous soient envoy√©s par courrier.
+10064	Vous avez demand√© que vos billets vous soient envoy√©s par courrier.
+10065	Vous avez demand√© que vos {passes} vous soient envoy√©s par courrier.
+10066	Aucuns frais d'affranchissement ne sont factur√©s pour les dons.
 10067	Veuillez acheter des articles avant d'ajouter des frais de port.
 10068	Que souhaitez-vous faire?
-10069	Vous avez fermé votre session.
-10070	Vous avez fermé votre session. {br}Votre panier d'achat a été vidé et tous les articles ont été remis en vente.
-10071	échec de la tentative d'accès direct à la page '{pagename}' au moyen de la méthode GET.
+10069	Vous avez ferm√© votre session.
+10070	Vous avez ferm√© votre session. {br}Votre panier d'achat a √©t√© vid√© et tous les articles ont √©t√© remis en vente.
+10071	√©chec de la tentative d'acc√®s direct √† la page '{pagename}' au moyen de la m√©thode GET.
 10072	Impossible de mettre {count} {seat} en attente
 10073	Nous avons mis en attente {count} {seat} pour votre compte.
-10074	Impossible de mettre {count} {seat} en attente {br}Aucun tarif ne peut être obtenu pour les représentations sélectionnées.
-10075	Impossible d'obtenir l'autorisation pour votre carte de crédit.  Veuillez appeler la billetterie, au {mainphone}.
-10076	Utilisation non prévue du bouton Précédent ou Suivant
-10077	Impossible d'accéder à la page {error}
-10078	Les billets pour la représentation ne sont plus en vente.
-10079	Numéro CID, CVC2 ou CVV2 de la carte de crédit non valide ou manquant
-10080	Vous devez sélectionner un {pass}.
-10081	Impossible de trouver une représentation correspondant à vos critères dans le lieu suivant {venuetitle}. {br}Veuillez modifier votre recherche.
-10082	Impossible de trouver une représentation correspondant à vos critères. {br}Veuillez modifier votre recherche.
-10083	L'achat de billets nécessite que les témoins (cookies) soient activés pour ce site. {br}Veuillez modifier les options de votre navigateur de sorte qu'il les accepte.
-10084	Deuxième tentative d'obtenir une autorisation au moyen de cette carte de crédit aujourd'hui. {br}Veuillez appeler la billetterie, au {mainphone}, afin de vérifier votre achat ou d'utiliser une autre carte de crédit.
-10085	"Votre session a expiré; votre panier d'achat et votre sélection de billets ont été réinitialisés. {br}Vous devez chercher de nouveaux billets à ajouter à votre panier."
-10086	{count} événement(s) affiché(s).  Utilisez la sélection de pages pour en voir plus.
-10087	Il n'y a aucun billet à afficher pour des spectacles futurs.
+10074	Impossible de mettre {count} {seat} en attente {br}Aucun tarif ne peut √™tre obtenu pour les repr√©sentations s√©lectionn√©es.
+10075	Impossible d'obtenir l'autorisation pour votre carte de cr√©dit.  Veuillez appeler la billetterie, au {mainphone}.
+10076	Utilisation non pr√©vue du bouton Pr√©c√©dent ou Suivant
+10077	Impossible d'acc√©der √† la page {error}
+10078	Les billets pour la repr√©sentation ne sont plus en vente.
+10079	Num√©ro CID, CVC2 ou CVV2 de la carte de cr√©dit non valide ou manquant
+10080	Vous devez s√©lectionner un {pass}.
+10081	Impossible de trouver une repr√©sentation correspondant √† vos crit√®res dans le lieu suivant {venuetitle}. {br}Veuillez modifier votre recherche.
+10082	Impossible de trouver une repr√©sentation correspondant √† vos crit√®res. {br}Veuillez modifier votre recherche.
+10083	L'achat de billets n√©cessite que les t√©moins (cookies) soient activ√©s pour ce site. {br}Veuillez modifier les options de votre navigateur de sorte qu'il les accepte.
+10084	Deuxi√®me tentative d'obtenir une autorisation au moyen de cette carte de cr√©dit aujourd'hui. {br}Veuillez appeler la billetterie, au {mainphone}, afin de v√©rifier votre achat ou d'utiliser une autre carte de cr√©dit.
+10085	"Votre session a expir√©; votre panier d'achat et votre s√©lection de billets ont √©t√© r√©initialis√©s. {br}Vous devez chercher de nouveaux billets √† ajouter √† votre panier."
+10086	{count} √©v√©nement(s) affich√©(s).  Utilisez la s√©lection de pages pour en voir plus.
+10087	Il n'y a aucun billet √† afficher pour des spectacles futurs.
 10088	ID Utilisateur introuvable
-10089	Ticket # {ticketnumber} non trouvé - veuillez le numériser à nouveau ou l'entrer manuellement.
-10090	Le billet # {ticketnumber} ne correspond pas à la représentation indiquée.
-10091	Le client a déjà utilisé le billet # {ticketnumber}.
-10092	L'événement correspondant au billet # {ticketnumber} doit avoir lieu à une date ultérieure.
+10089	Ticket # {ticketnumber} non trouv√© - veuillez le num√©riser √† nouveau ou l'entrer manuellement.
+10090	Le billet # {ticketnumber} ne correspond pas √† la repr√©sentation indiqu√©e.
+10091	Le client a d√©j√† utilis√© le billet # {ticketnumber}.
+10092	L'√©v√©nement correspondant au billet # {ticketnumber} doit avoir lieu √† une date ult√©rieure.
 10093	Cliquez sur OK pour entrer.
-10094	Le client n'est pas présent sur le lieu de l'événement.
+10094	Le client n'est pas pr√©sent sur le lieu de l'√©v√©nement.
 10095	Cliquez sur OK pour sortir.
-10096	Le billet # {ticketnumber} n'a pas été vendu.
-10097	Aucun abonnement actif à afficher
+10096	Le billet # {ticketnumber} n'a pas √©t√© vendu.
+10097	Aucun abonnement actif √† afficher
 10098	{subscriptionseries} a fait l'objet d'une annulation. {br}Merci de nous en informer
-10099	Impossible d'annuler l'abonnement sélectionné. {br}Merci de prendre contact directement avec la billetterie
-10100	{subscriptionseries} est à nouveau au programme. {br}Veuillez utiliser l'option Renouveler l'abonnement pour acheter vos places.
-10101	Impossible de rétablir l'abonnement sélectionné. {br}Merci de prendre contact directement avec la billetterie
+10099	Impossible d'annuler l'abonnement s√©lectionn√©. {br}Merci de prendre contact directement avec la billetterie
+10100	{subscriptionseries} est √† nouveau au programme. {br}Veuillez utiliser l'option Renouveler l'abonnement pour acheter vos places.
+10101	Impossible de r√©tablir l'abonnement s√©lectionn√©. {br}Merci de prendre contact directement avec la billetterie
 10102	Impossible de renouveler l'abonnement {subscriptionseries} - erreur de codage de la page Web
-10103	Abonnement {subscriptionseries} déjà en cours de renouvellement. {br}Veuillez vérifier votre panier d'achat ou appeler la billetterie.
+10103	Abonnement {subscriptionseries} d√©j√† en cours de renouvellement. {br}Veuillez v√©rifier votre panier d'achat ou appeler la billetterie.
 10104	Impossible de trouver l'abonnement {subscriptionseries} pour le renouveler - {error}. {br}Veuillez prendre contact avec la billetterie.
 10105	L'abonnement {subscriptionseries} n'est plus en vente. {br}Veuillez prendre contact avec la billetterie.
-10106	Impossible de vendre l'abonnement {subscriptionseries}. {br}Il ne contient aucun événement. {br}Veuillez prendre contact avec la billetterie.
-10107	Les méthodes de vente de l'abonnement {subscriptionseries} diffèrent. {br}Veuillez prendre contact avec la billetterie.
-10108	Les lieux de spectacle correspondant à l'abonnement {subscriptionseries} diffèrent. {br}Veuillez prendre contact avec la billetterie.
-10109	Vous avez peut-être déjà un abonnement pour tous les soirs. {br}Veuillez prendre contact avec la billetterie pour modifier une soirée.
+10106	Impossible de vendre l'abonnement {subscriptionseries}. {br}Il ne contient aucun √©v√©nement. {br}Veuillez prendre contact avec la billetterie.
+10107	Les m√©thodes de vente de l'abonnement {subscriptionseries} diff√®rent. {br}Veuillez prendre contact avec la billetterie.
+10108	Les lieux de spectacle correspondant √† l'abonnement {subscriptionseries} diff√®rent. {br}Veuillez prendre contact avec la billetterie.
+10109	Vous avez peut-√™tre d√©j√† un abonnement pour tous les soirs. {br}Veuillez prendre contact avec la billetterie pour modifier une soir√©e.
 10110	Panier d'achats plein.  Veuillez payer vos achats actuels.
-10111	Impossible de trouver des {seat} identiques pour tous les événements à un tarif adapté à une vente par abonnement. {br}Veuillez prendre contact avec la billetterie.
-10112	Essayé de retenir un {seat} d'abonné, mais impossible de {br}prendre contact avec la billetterie.
-10113	Veuillez sélectionner un forfait d'abonnement dans la liste pour en créer un nouveau.
-10114	La quantité à réserver doit être supérieure à zéro. {br}Erreur de codage de la page - veuillez prendre contact avec la billetterie.
+10111	Impossible de trouver des {seat} identiques pour tous les √©v√©nements √† un tarif adapt√© √† une vente par abonnement. {br}Veuillez prendre contact avec la billetterie.
+10112	Essay√© de retenir un {seat} d'abonn√©, mais impossible de {br}prendre contact avec la billetterie.
+10113	Veuillez s√©lectionner un forfait d'abonnement dans la liste pour en cr√©er un nouveau.
+10114	La quantit√© √† r√©server doit √™tre sup√©rieure √† z√©ro. {br}Erreur de codage de la page - veuillez prendre contact avec la billetterie.
 10115	Impossible de trouver le {seat} {seatnumber} lors de la recherche du meilleur abonnement possible. {br}Veuillez prendre contact avec la billetterie au {mainphone}.
-10116	Erreur de configuration Contrôle de l'abonnement. L'événement # {error} ne fait pas partie du forfait d'abonnement. {br}Veuillez prendre contact avec la billetterie au {mainphone}.
-10117	Erreur de configuration L'abonnement ne permet pas de choisir le code de prix ou la section que vous essayez de sélectionner. {br}Veuillez prendre contact avec la billetterie au {mainphone}.
+10116	Erreur de configuration Contr√¥le de l'abonnement. L'√©v√©nement # {error} ne fait pas partie du forfait d'abonnement. {br}Veuillez prendre contact avec la billetterie au {mainphone}.
+10117	Erreur de configuration L'abonnement ne permet pas de choisir le code de prix ou la section que vous essayez de s√©lectionner. {br}Veuillez prendre contact avec la billetterie au {mainphone}.
 10118	Erreur de configuration Aucun code de prix existant pour les places mises en vente. {br}Veuillez prendre contact avec la billetterie au {mainphone}.
-10119	Merci d'avoir l'amabilité d'indiquer comment vous avez entendu parler des {event} que vous achetez.
-10120	Impossible d'utiliser le bouton Précédent pour consulter la confirmation de paiement. {br}Celle-ci vous a été envoyée par courriel. {br}Vous pouvez aussi utiliser l'option Afficher mes {performances} à venir.
+10119	Merci d'avoir l'amabilit√© d'indiquer comment vous avez entendu parler des {event} que vous achetez.
+10120	Impossible d'utiliser le bouton Pr√©c√©dent pour consulter la confirmation de paiement. {br}Celle-ci vous a √©t√© envoy√©e par courriel. {br}Vous pouvez aussi utiliser l'option Afficher mes {performances} √† venir.
 10121	Mot de passe non valide
-10122	Privilèges d'enregistrement ou de paiement erronés.
-10123	Des erreurs se sont produites pendant le paiement. {br}Certains articles du panier d'achat peuvent ne pas avoir été réservés. {br}Veuillez appeler la billetterie pour vérifier votre commande.
-10124	Le billet {ticketnumber} est destiné à un autre point de vente.
-10125	Les billets sont nécessairement pour aujourd'hui si la lecture optique n'indique pas de représentation précise.
-10126	Erreur - Le mot de passe contient les caractères spéciaux {error}, qui ne peuvent pas être utilisés.
-10127	Veuillez sélectionner un mode de paiement.
-10128	Erreur dans le panier. {br}Le co˚t total du panier ne correspond pas aux co˚ts individuels des articles. {br}Veuillez essayer de supprimer certains articles et de les réserver à nouveau, ou appelez la billetterie, au {mainphone}, pour obtenir de l'aide.
-10129	Nous sommes désolés, mais une erreur concernant les billets s'est produite {br}dans votre panier d'achat. Si vous recevez ce message, veuillez prendre contact {br}avec la billetterie pour obtenir de l'aide. Vous pouvez aussi vous déconnecter {br}de votre panier d'achat et essayer de réserver à nouveau les billets. {br}Dans tous les cas, veuillez appeler la billetterie, au {mainphone}, afin de signaler {br}cette erreur, de sorte que nous puissions améliorer votre expérience sur notre site Web.
-10130	échec de l'envoi des données de la carte de crédit. {br}Veuillez prendre contact avec la billetterie, au {mainphone}.
-10131	Erreur inattendue lors de la récupération des données de la carte {last4digits} dans le fichier de témoins. {br}Veuillez prendre contact avec la billetterie pour terminer votre commande {br}ou essayer d'utiliser une autre carte de crédit.
-10132	échec de l'enregistrement physique du paiement. {br}Veuillez prendre contact avec la billetterie, au {mainphone}.
-10133	Billetterie en ligne désactivée pour tous les points de vente dans les préférences du système.
-10134	Billetterie en ligne désactivée pour ce lieu dans les préférences de la société.
-10135	Le détecteur Web a reÁu une requête interrompue. {br}Veuillez prendre contact avec la billetterie.
-10136	"Le détecteur Web n'a pas pu trouver le témoin qu'il cherchait {br}pendant le processus de paiement; cela peut découler de l'utilisation du bouton Précédent. {br}Veuillez prendre contact avec la billetterie."
-10137	"Le détecteur Web n'a pas pu trouver le témoin qu'il cherchait {br}pendant le processus de paiement; cela peut découler de l'utilisation du bouton Précédent. {br}La somme ayant toutefois pu être imputée à votre compte de carte, veuillez prendre contact sans tarder avec la billetterie."
+10122	Privil√®ges d'enregistrement ou de paiement erron√©s.
+10123	Des erreurs se sont produites pendant le paiement. {br}Certains articles du panier d'achat peuvent ne pas avoir √©t√© r√©serv√©s. {br}Veuillez appeler la billetterie pour v√©rifier votre commande.
+10124	Le billet {ticketnumber} est destin√© √† un autre point de vente.
+10125	Les billets sont n√©cessairement pour aujourd'hui si la lecture optique n'indique pas de repr√©sentation pr√©cise.
+10126	Erreur - Le mot de passe contient les caract√®res sp√©ciaux {error}, qui ne peuvent pas √™tre utilis√©s.
+10127	Veuillez s√©lectionner un mode de paiement.
+10128	Erreur dans le panier. {br}Le coÀöt total du panier ne correspond pas aux coÀöts individuels des articles. {br}Veuillez essayer de supprimer certains articles et de les r√©server √† nouveau, ou appelez la billetterie, au {mainphone}, pour obtenir de l'aide.
+10129	Nous sommes d√©sol√©s, mais une erreur concernant les billets s'est produite {br}dans votre panier d'achat. Si vous recevez ce message, veuillez prendre contact {br}avec la billetterie pour obtenir de l'aide. Vous pouvez aussi vous d√©connecter {br}de votre panier d'achat et essayer de r√©server √† nouveau les billets. {br}Dans tous les cas, veuillez appeler la billetterie, au {mainphone}, afin de signaler {br}cette erreur, de sorte que nous puissions am√©liorer votre exp√©rience sur notre site Web.
+10130	√©chec de l'envoi des donn√©es de la carte de cr√©dit. {br}Veuillez prendre contact avec la billetterie, au {mainphone}.
+10131	Erreur inattendue lors de la r√©cup√©ration des donn√©es de la carte {last4digits} dans le fichier de t√©moins. {br}Veuillez prendre contact avec la billetterie pour terminer votre commande {br}ou essayer d'utiliser une autre carte de cr√©dit.
+10132	√©chec de l'enregistrement physique du paiement. {br}Veuillez prendre contact avec la billetterie, au {mainphone}.
+10133	Billetterie en ligne d√©sactiv√©e pour tous les points de vente dans les pr√©f√©rences du syst√®me.
+10134	Billetterie en ligne d√©sactiv√©e pour ce lieu dans les pr√©f√©rences de la soci√©t√©.
+10135	Le d√©tecteur Web a re√Åu une requ√™te interrompue. {br}Veuillez prendre contact avec la billetterie.
+10136	"Le d√©tecteur Web n'a pas pu trouver le t√©moin qu'il cherchait {br}pendant le processus de paiement; cela peut d√©couler de l'utilisation du bouton Pr√©c√©dent. {br}Veuillez prendre contact avec la billetterie."
+10137	"Le d√©tecteur Web n'a pas pu trouver le t√©moin qu'il cherchait {br}pendant le processus de paiement; cela peut d√©couler de l'utilisation du bouton Pr√©c√©dent. {br}La somme ayant toutefois pu √™tre imput√©e √† votre compte de carte, veuillez prendre contact sans tarder avec la billetterie."
 10138	Veuillez indiquer le nom de l'acheteur.
-10139	Pour finaliser cet achat, vous devez impérativement prendre contact avec la billetterie, au {mainphone}.
-10140	Erreur - Le mot de passe ne doit pas dépasser {passwordmaxlength}  caractères.
-10141	Veuillez indiquer une adresse de courriel, afin de pouvoir créer un compte.
-10142	Veuillez utiliser les boutons Précédent ou Suivant du calendrier pour voir d'autres mois.
-10143	Erreur - Code de coupon {couponcode} déjà ajouté au panier d'achat ou non reconnu
-10144	Code de coupon {couponcode} accepté
-10145	Veuillez indiquer si vous souhaitez vous connecter à votre compte {br}ou simplement entrer vos coordonnées pour continuer.
+10139	Pour finaliser cet achat, vous devez imp√©rativement prendre contact avec la billetterie, au {mainphone}.
+10140	Erreur - Le mot de passe ne doit pas d√©passer {passwordmaxlength}  caract√®res.
+10141	Veuillez indiquer une adresse de courriel, afin de pouvoir cr√©er un compte.
+10142	Veuillez utiliser les boutons Pr√©c√©dent ou Suivant du calendrier pour voir d'autres mois.
+10143	Erreur - Code de coupon {couponcode} d√©j√† ajout√© au panier d'achat ou non reconnu
+10144	Code de coupon {couponcode} accept√©
+10145	Veuillez indiquer si vous souhaitez vous connecter √† votre compte {br}ou simplement entrer vos coordonn√©es pour continuer.
 10146	Vous devez indiquer une adresse de courriel pour payer.
-10147	Adresse postale requise à la caisse.  Veuillez en entrer une maintenant.
-10148	Erreur - Impossible d'ajouter vos coordonnées à la liste de diffusion.
-10149	Votre adresse de courriel, {email}, a été vérifiée, et {br}vous avez confirmé votre abonnement à la liste de diffusion.
-10150	Votre adresse de courriel, {email}, n'a pas pu être vérifiée, car les paramètres de validation étaient inexacts.
-10151	Votre adresse de courriel, {email}, a été supprimée de toutes les listes de diffusion {br}auxquelles vous vous étiez précédemment abonné(e) en ligne.
-10152	Vous avez précédemment confirmé votre abonnement aux listes de diffusion, au moyen de {br}l'adresse de courriel {email}. {br}Veuillez vous connecter pour modifier vos abonnements.
-10153	Veuillez vérifier la liste des personnes devant assister à tous les {household} figurant dans votre panier {br}et cliquer au besoin sur le bouton Mon compte pour ajouter des membres de votre foyer.
+10147	Adresse postale requise √† la caisse.  Veuillez en entrer une maintenant.
+10148	Erreur - Impossible d'ajouter vos coordonn√©es √† la liste de diffusion.
+10149	Votre adresse de courriel, {email}, a √©t√© v√©rifi√©e, et {br}vous avez confirm√© votre abonnement √† la liste de diffusion.
+10150	Votre adresse de courriel, {email}, n'a pas pu √™tre v√©rifi√©e, car les param√®tres de validation √©taient inexacts.
+10151	Votre adresse de courriel, {email}, a √©t√© supprim√©e de toutes les listes de diffusion {br}auxquelles vous vous √©tiez pr√©c√©demment abonn√©(e) en ligne.
+10152	Vous avez pr√©c√©demment confirm√© votre abonnement aux listes de diffusion, au moyen de {br}l'adresse de courriel {email}. {br}Veuillez vous connecter pour modifier vos abonnements.
+10153	Veuillez v√©rifier la liste des personnes devant assister √† tous les {household} figurant dans votre panier {br}et cliquer au besoin sur le bouton Mon compte pour ajouter des membres de votre foyer.
 10154	Veuillez entrer les renseignements concernant la personne de votre foyer que vous ajoutez.
-10155	Vous devez confirmer que avez lu les conditions générales de vente avant de finaliser la {order}.
+10155	Vous devez confirmer que avez lu les conditions g√©n√©rales de vente avant de finaliser la {order}.
 10156	Votre panier est vide ou contient des articles dont la valeur ne permet de finaliser la transaction.
-10157	Vous ne pouvez pas utiliser le bouton Précédent pour visionner les pages {br}si, pour une raison ou pour une autre, votre panier n'est plus ouvert. {br}Merci de consulter vos anciens paniers à la place.
-10158	Vous devez ajouter au moins un article à votre panier {br}pour pouvoir finaliser votre achat (à part des frais ou un coupon).
-10159	Impossible de trouver une représentation qui soit associée avec le genre et qui corresponde à un autre critère {br}Merci de corriger votre recherche
-10160	Impossible de trouver {count} {seat}, même séparés, parmi les meilleurs {seat} disponibles dans la section demandée {br}Merci de chercher dans une section différente
-10161	Impossible de trouver {count} {seat}, même séparés, parmi les meilleurs {seat} disponibles
+10157	Vous ne pouvez pas utiliser le bouton Pr√©c√©dent pour visionner les pages {br}si, pour une raison ou pour une autre, votre panier n'est plus ouvert. {br}Merci de consulter vos anciens paniers √† la place.
+10158	Vous devez ajouter au moins un article √† votre panier {br}pour pouvoir finaliser votre achat (√† part des frais ou un coupon).
+10159	Impossible de trouver une repr√©sentation qui soit associ√©e avec le genre et qui corresponde √† un autre crit√®re {br}Merci de corriger votre recherche
+10160	Impossible de trouver {count} {seat}, m√™me s√©par√©s, parmi les meilleurs {seat} disponibles dans la section demand√©e {br}Merci de chercher dans une section diff√©rente
+10161	Impossible de trouver {count} {seat}, m√™me s√©par√©s, parmi les meilleurs {seat} disponibles
 10162	Veuillez joindre le service de la billetterie au sujet de cette adresse de courriel, {br}car il est actuellement impossible de l'utiliser pour se connecter.
-10163	En choisissant Billet(s) électronique(s), vous devez imprimer vous-même {br}vos billets après avoir effectué votre paiement. Vous devrez les présenter au {performance}.
+10163	En choisissant Billet(s) √©lectronique(s), vous devez imprimer vous-m√™me {br}vos billets apr√®s avoir effectu√© votre paiement. Vous devrez les pr√©senter au {performance}.
 10164	Vous avez choisi de retirer vos billets au guichet.
-10165	Veuillez choisir les articles du forfait que vous souhaitez ajouter à votre panier d'achats.
-10166	Vous devez choisir et ajouter au moins un article dans votre panier d'achats en sélectionnant une quantité supérieure à zéro.
-10167	Lors de votre dernier achat, vous avez choisi de fournir uniquement une adresse de courriel. {br}Vous devez à présent changer votre mot de passe pour poursuivre l'ouverture de la session et voir vos achats antérieurs.
+10165	Veuillez choisir les articles du forfait que vous souhaitez ajouter √† votre panier d'achats.
+10166	Vous devez choisir et ajouter au moins un article dans votre panier d'achats en s√©lectionnant une quantit√© sup√©rieure √† z√©ro.
+10167	Lors de votre dernier achat, vous avez choisi de fournir uniquement une adresse de courriel. {br}Vous devez √† pr√©sent changer votre mot de passe pour poursuivre l'ouverture de la session et voir vos achats ant√©rieurs.
 10168	Veuillez choisir le mode de gestion et de retrait de vos billets.
-10169	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles dans la section demandée
-10170	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles dans la section et au prix demandés.
-10171	Impossible de trouver {count} {seat}, même séparés, parmi les meilleurs {seat} disponibles dans la section demandée {br}Merci de chercher dans une section différente.
-10172	Impossible de trouver {count} {seat}, même séparés, parmi les meilleurs {seat} disponibles au prix demandé
-10173	Veuillez renouveler votre abonnement au moyen de la liste ci-dessous (même si vous souhaitez des changements) {br}. Vous pouvez aussi établir un tout nouvel abonnement.
-10174	Impossible de verrouiller le panier d'achats pour procéder au paiement - statut {error}. {br}Tous les billets se trouvant dans le panier devraient toujours y être. {br}Veuillez réessayer ou joindre le service de la billetterie pour obtenir de l'aide.
-10175	Votre panier a peut-être été payé. {br}Veuillez vérifier votre historique ou votre panier actuel. {br}Veuillez demander de l'aide au service de la billetterie si vous pensez qu'une erreur s'est produite.
-10176	Impossible de créer un {order} pendant le contrôle. {Br} S'il vous plaît contactez la billetterie au {mainphone}.
-10177	Sélectionnez une plage de dates et / ou le type d'activité pour voir vos activités.
-10178	{count}  activités affichée. Utilisez la sélection de page pour voir plus.
-10179	Vous ne trouvez pas toutes les activités correspondant aux critères{br}S'il vous plaît réviser votre recherche.
-10180	Il n'y a rien disponible correspondant à vos critères {dateerror}br}Choisir une autre plage de dates ou partie claire de la plage de dates.
-10181	Vous ne trouvez pas toutes les {volunteer} dossiers correspondant aux critères.
-10182	Sélectionnez une plage de dates et / ou le type d'activité pour voir vos activités {volunteer}.
-10183	Entrer dans le numéro de commande et un code unique pour {pass}.
-10184	Les valeurs de certificat passe / cadeaux sont énumérés ci-dessous.
-10185	S'il vous plaît laissez-nous savoir comment vous avez entendu parler {company} et vous invite à passer une commande.
-10186	Votre prochaine activité est listé ci-dessous.
-10187	Vos certificats disponibles passes / cadeaux de rachat sont énumérés ci-dessous.
-10188	Entrez une combinaison de chiffres / mot de passe de contrôle de rechercher une valeur résiduelle.
-10189	uméro de contrôle valide / combinaison de mot de passe. Contactez la billetterie de l'aide.
-10190	Ce lien de changement de mot de passe n'est plus valide pour une variété de raisons possibles.{br}{br}Vous pourriez avoir pris trop de temps -ou- réinitialiser le mot de passe déjà -or-{br}utilisé un lien web vieux -ou- contacté le Box Office qui a modifié les données manuellement.{br}{br}S'il vous plaît jeter l'e-mail et demander votre mot de passe réinitialisé email pour être envoyé à nouveau.
-10191	La tentative de changer le mot de passe pour {email}{br}n'a pas pu trouver l'enregistrement de contact.{br}{br}S'il vous plaît contacter la billetterie au {mainphone} de l'aide.
-10192	Il a été et erreur inattendue trouver certaines données.{br}S'il vous plaît contacter la billetterie au {mainphone} avec une copie de la page avec l'erreur.
-10193	La {pass} que vous essayez d'utiliser est actuellement remboursé dans un autre panier. Essayez d'ajouter la {pass} plus tard, ou par téléphone au box-office à {mainphone} pour assistance.
+10169	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles dans la section demand√©e
+10170	Impossible de trouver {count} {seat} voisins parmi les meilleurs {seat} disponibles dans la section et au prix demand√©s.
+10171	Impossible de trouver {count} {seat}, m√™me s√©par√©s, parmi les meilleurs {seat} disponibles dans la section demand√©e {br}Merci de chercher dans une section diff√©rente.
+10172	Impossible de trouver {count} {seat}, m√™me s√©par√©s, parmi les meilleurs {seat} disponibles au prix demand√©
+10173	Veuillez renouveler votre abonnement au moyen de la liste ci-dessous (m√™me si vous souhaitez des changements) {br}. Vous pouvez aussi √©tablir un tout nouvel abonnement.
+10174	Impossible de verrouiller le panier d'achats pour proc√©der au paiement - statut {error}. {br}Tous les billets se trouvant dans le panier devraient toujours y √™tre. {br}Veuillez r√©essayer ou joindre le service de la billetterie pour obtenir de l'aide.
+10175	Votre panier a peut-√™tre √©t√© pay√©. {br}Veuillez v√©rifier votre historique ou votre panier actuel. {br}Veuillez demander de l'aide au service de la billetterie si vous pensez qu'une erreur s'est produite.
+10176	Impossible de cr√©er un {order} pendant le contr√¥le. {Br} S'il vous pla√Æt contactez la billetterie au {mainphone}.
+10177	S√©lectionnez une plage de dates et / ou le type d'activit√© pour voir vos activit√©s.
+10178	{count}  activit√©s affich√©e. Utilisez la s√©lection de page pour voir plus.
+10179	Vous ne trouvez pas toutes les activit√©s correspondant aux crit√®res{br}S'il vous pla√Æt r√©viser votre recherche.
+10180	Il n'y a rien disponible correspondant √† vos crit√®res {dateerror}br}Choisir une autre plage de dates ou partie claire de la plage de dates.
+10181	Vous ne trouvez pas toutes les {volunteer} dossiers correspondant aux crit√®res.
+10182	S√©lectionnez une plage de dates et / ou le type d'activit√© pour voir vos activit√©s {volunteer}.
+10183	Entrer dans le num√©ro de commande et un code unique pour {pass}.
+10184	Les valeurs de certificat passe / cadeaux sont √©num√©r√©s ci-dessous.
+10185	S'il vous pla√Æt laissez-nous savoir comment vous avez entendu parler {company} et vous invite √† passer une commande.
+10186	Votre prochaine activit√© est list√© ci-dessous.
+10187	Vos certificats disponibles passes / cadeaux de rachat sont √©num√©r√©s ci-dessous.
+10188	Entrez une combinaison de chiffres / mot de passe de contr√¥le de rechercher une valeur r√©siduelle.
+10189	um√©ro de contr√¥le valide / combinaison de mot de passe. Contactez la billetterie de l'aide.
+10190	Ce lien de changement de mot de passe n'est plus valide pour une vari√©t√© de raisons possibles.{br}{br}Vous pourriez avoir pris trop de temps -ou- r√©initialiser le mot de passe d√©j√† -or-{br}utilis√© un lien web vieux -ou- contact√© le Box Office qui a modifi√© les donn√©es manuellement.{br}{br}S'il vous pla√Æt jeter l'e-mail et demander votre mot de passe r√©initialis√© email pour √™tre envoy√© √† nouveau.
+10191	La tentative de changer le mot de passe pour {email}{br}n'a pas pu trouver l'enregistrement de contact.{br}{br}S'il vous pla√Æt contacter la billetterie au {mainphone} de l'aide.
+10192	Il a √©t√© et erreur inattendue trouver certaines donn√©es.{br}S'il vous pla√Æt contacter la billetterie au {mainphone} avec une copie de la page avec l'erreur.
+10193	La {pass} que vous essayez d'utiliser est actuellement rembours√© dans un autre panier. Essayez d'ajouter la {pass} plus tard, ou par t√©l√©phone au box-office √† {mainphone} pour assistance.
 10194	*
 10195	(si aucune entreprise)
-10196	(si aucune nom et prénom)
+10196	(si aucune nom et pr√©nom)
 10197	(si aucune nom)
-10198	Erreur - Votre compte a été bloqué en raison de trop nombreuses tentatives de connexion infructueuses.  S'il vous plaît utilisez le bouton Oublié mon Mot de Passe pour définir un nouveau mot de passe et accéder de nouveau.
-10199	Impossible de réserver les sièges sélectionnés en raison de la disponibilité ou de sièges règles.  Se il vous plaît choisir des sièges suppléants.
-10200	{seats} succès échangés.
-10201	Le billet #{ticketnumber} appartient à un client autre qut celui associé à ce billet.
-10202	Le code à barres est associée à client #{patronnumber}, mais ce client n'a pas pu étre trouvé dans la database.
-10203	Une erreur est survenue lors de la vérification du prix du panier. Se il vous plaît réessayer plus tard.
-10204	La base de données est actuellement occupé et incapable de traiter l'action demandée. Se il vous plaît réessayer plus tard.
-10205	Impossible de communiquer avec le serveur nécessaire.{br}Se il vous plaît réessayer plus tard, ou par téléphone au box-office à {mainphone} pour assistance.
-10206	Pas de sièges sélectionnés; sièges inchangés.
-10207	Numéro de téléphone requise à la caisse.  Veuillez en entrer une maintenant.
-10208	Le contenu du panier empêche la caisse.{br}{error}
-10209	{title} ({date} à {time}): actuel et chariots dernières contiennent billets {current} actuelles, ce qui dépasse le montant maximum de {allowed} autorisés.
-10210	Le nom inscrit sur la carte de crédit est manquant.
-10211	Voici les meilleurs siéges disponibles.  Si vous préférez différents sièges, sélectionnez les sièges disponibles sur la carte ci-dessous.
-10212	Nom ou Société Prénom et doivent être saisis.
-10213	Nom ou Société doivent être saisis.
-10214	Premier nom doit être inscrit
-10215	Dernier nom doit être inscrit
-10216	Société doit être entré
-10217	Sexe semble être incorrect.
-10218	Anniversaire semble être incorrect.
-10219	Un autre {patron} a été trouvé avec les informations correspondantes de recherche.  S'il vous plaît appeler la billetterie au {mainphone}.
-10220	{outlet} is required.  S'il vous plaît appeler la billetterie au {mainphone}
+10198	Erreur - Votre compte a √©t√© bloqu√© en raison de trop nombreuses tentatives de connexion infructueuses.  S'il vous pla√Æt utilisez le bouton Oubli√© mon Mot de Passe pour d√©finir un nouveau mot de passe et acc√©der de nouveau.
+10199	Impossible de r√©server les si√®ges s√©lectionn√©s en raison de la disponibilit√© ou de si√®ges r√®gles.  Se il vous pla√Æt choisir des si√®ges suppl√©ants.
+10200	{seats} succ√®s √©chang√©s.
+10201	Le billet #{ticketnumber} appartient √† un client autre qut celui associ√© √† ce billet.
+10202	Le code √† barres est associ√©e √† client #{patronnumber}, mais ce client n'a pas pu √©tre trouv√© dans la database.
+10203	Une erreur est survenue lors de la v√©rification du prix du panier. Se il vous pla√Æt r√©essayer plus tard.
+10204	La base de donn√©es est actuellement occup√© et incapable de traiter l'action demand√©e. Se il vous pla√Æt r√©essayer plus tard.
+10205	Impossible de communiquer avec le serveur n√©cessaire.{br}Se il vous pla√Æt r√©essayer plus tard, ou par t√©l√©phone au box-office √† {mainphone} pour assistance.
+10206	Pas de si√®ges s√©lectionn√©s; si√®ges inchang√©s.
+10207	Num√©ro de t√©l√©phone requise √† la caisse.  Veuillez en entrer une maintenant.
+10208	Le contenu du panier emp√™che la caisse.{br}{error}
+10209	{title} ({date} √† {time}): actuel et chariots derni√®res contiennent billets {current} actuelles, ce qui d√©passe le montant maximum de {allowed} autoris√©s.
+10210	Le nom inscrit sur la carte de cr√©dit est manquant.
+10211	Voici les meilleurs si√©ges disponibles.  Si vous pr√©f√©rez diff√©rents si√®ges, s√©lectionnez les si√®ges disponibles sur la carte ci-dessous.
+10212	Nom ou Soci√©t√© Pr√©nom et doivent √™tre saisis.
+10213	Nom ou Soci√©t√© doivent √™tre saisis.
+10214	Premier nom doit √™tre inscrit
+10215	Dernier nom doit √™tre inscrit
+10216	Soci√©t√© doit √™tre entr√©
+10217	Sexe semble √™tre incorrect.
+10218	Anniversaire semble √™tre incorrect.
+10219	Un autre {patron} a √©t√© trouv√© avec les informations correspondantes de recherche.  S'il vous pla√Æt appeler la billetterie au {mainphone}.
+10220	{outlet} is required.  S'il vous pla√Æt appeler la billetterie au {mainphone}
 10221	{mkt1} est requis.
 10222	{mkt2} est requis.
 10223	{mkt3} est requis.
@@ -230,23 +230,23 @@ ErrorNumber	ErrorText
 10229	{mkt7} est invalide.
 10230	{mkt8} est requis.
 10231	{mkt8} est invalide.
-10232	Code Age est nécessaire.
+10232	Code Age est n√©cessaire.
 10233	Code Age est invalide.
-10234	Adresse est pas associé à {household}.  S'il vous plaît appeler la billetterie au {mainphone}.
-10235	Au moins l'une des lignes d'adresse doivent être inscrits
-10236	Ville doit être entré.
-10237	{prov} doit être entré.
-10238	{prov} semble être dans un pays différent
-10239	Pays doit être entré.
-10240	Code postal / Zip doit être entré.
+10234	Adresse est pas associ√© √† {household}.  S'il vous pla√Æt appeler la billetterie au {mainphone}.
+10235	Au moins l'une des lignes d'adresse doivent √™tre inscrits
+10236	Ville doit √™tre entr√©.
+10237	{prov} doit √™tre entr√©.
+10238	{prov} semble √™tre dans un pays diff√©rent
+10239	Pays doit √™tre entr√©.
+10240	Code postal / Zip doit √™tre entr√©.
 10241	Code postal / Zip est invalide.
 10242	Pays est inconnue.
-10243	Lien d'adresses est pas associé à un {household}.  S'il vous plaît appeler la billetterie au {mainphone}.
-10244	Lien d'adresses est pas associé à un {patron}.  S'il vous plaît appeler la billetterie au {mainphone}.
-10245	Lien d'adresses est pas associé à un address.  S'il vous plaît appeler la billetterie au {mainphone}.
-10246	Lien d'adresses est pas associé à un emplacement.  S'il vous plaît appeler la billetterie au {mainphone}.
-10247	Lien d'adresses a un emplacement non valide.  S'il vous plaît appeler la billetterie au {mainphone}.
-10248	Au moins une adresse est nécessaire.
+10243	Lien d'adresses est pas associ√© √† un {household}.  S'il vous pla√Æt appeler la billetterie au {mainphone}.
+10244	Lien d'adresses est pas associ√© √† un {patron}.  S'il vous pla√Æt appeler la billetterie au {mainphone}.
+10245	Lien d'adresses est pas associ√© √† un address.  S'il vous pla√Æt appeler la billetterie au {mainphone}.
+10246	Lien d'adresses est pas associ√© √† un emplacement.  S'il vous pla√Æt appeler la billetterie au {mainphone}.
+10247	Lien d'adresses a un emplacement non valide.  S'il vous pla√Æt appeler la billetterie au {mainphone}.
+10248	Au moins une adresse est n√©cessaire.
 10249	"{contents}" is not associated with a {household}
 10250	"{contents}" appears to have an invalid type.
 10251	"{contents}" appears to have invalid content.
@@ -266,6 +266,6 @@ ErrorNumber	ErrorText
 10265	Contact link has an invalid location.  Please call the box office {mainphone}.
 10266	At least one phone number is required.
 10267	Contact link could not be found.  Please call the box office {mainphone}.
-10268	Voici les meilleurs {seat} encore disponibles.  Si vous préférez différents sièges, sélectionnez les sièges disponibles sur la carte ci-dessous.
-10269 	Temporairement incapable de générer des PDF. S'il vous plaît réessayer plus tard ou appelez le box-office {mainphone}
-10270	Paramètre de sortie manquant ou invalide "{error}". S'il vous plaît appeler la billetterie au {mainphone}
+10268	Voici les meilleurs {seat} encore disponibles.  Si vous pr√©f√©rez diff√©rents si√®ges, s√©lectionnez les si√®ges disponibles sur la carte ci-dessous.
+10269 	Temporairement incapable de g√©n√©rer des PDF. S'il vous pla√Æt r√©essayer plus tard ou appelez le box-office {mainphone}
+10270	Param√®tre de sortie manquant ou invalide "{error}". S'il vous pla√Æt appeler la billetterie au {mainphone}
