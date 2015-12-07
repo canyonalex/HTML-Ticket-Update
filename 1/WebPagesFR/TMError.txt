@@ -257,15 +257,18 @@
 10256	"{contents}" appears invalid.  Unable to lookup the DNS server for that email address.
 10257	"{contents}" is currently in use and cannot be used for the creation of a new account.{br}If this is your email address, please request your password instead.
 10258	"{contents}" is already associated with your account.
-10259	Please retype the verify password.
+10259	S'il vous pla&icirc;t retaper le mot de passe de v&eacute;rifier.
 10260	"{contents}" has a missing area code.
-10261	Contact link is not associated with a {household}.  Please call the box office {mainphone}.
-10262	Contact link is not associated with a {patron}.  Please call the box office {mainphone}.
-10263	Contact link is not associated with a contact.  Please call the box office {mainphone}.
-10264	Contact link is not associated with a location.  Please call the box office {mainphone}.
-10265	Contact link has an invalid location.  Please call the box office {mainphone}.
-10266	At least one phone number is required.
-10267	Contact link could not be found.  Please call the box office {mainphone}.
+10261	Contact link is not associated with a {household}.  Veuillez prendre contact avec la billetterie {mainphone}.
+10262	Contact link is not associated with a {patron}.  Veuillez prendre contact avec la billetterie {mainphone}.
+10263	Contact link is not associated with a contact.  Veuillez prendre contact avec la billetterie {mainphone}.
+10264	Contact link is not associated with a location.  Veuillez prendre contact avec la billetterie {mainphone}.
+10265	Contact link has an invalid location.  Veuillez prendre contact avec la billetterie {mainphone}.
+10266	Au moins un num&eacute;ro de t&eacute;l&eacute;phone est obligatoire.
+10267	Contactez lien n'a pu &ecirc;tre trouv&eacute;e.  Veuillez prendre contact avec la billetterie {mainphone}.
 10268	Voici les meilleurs {seat} encore disponibles.  Si vous pr&eacute;f&eacute;rez diff&eacute;rents si&egrave;ges, s&eacute;lectionnez les si&egrave;ges disponibles sur la carte ci-dessous.
 10269 	Temporairement incapable de g&eacute;n&eacute;rer des PDF. S'il vous pla&icirc;t r&eacute;essayer plus tard ou appelez le box-office {mainphone}
 10270	Param&egrave;tre de sortie manquant ou invalide "{error}". S'il vous pla&icirc;t appeler la billetterie au {mainphone}
+10271	Il n'a pas &eacute;t&eacute; possible de retenir les billets - Saison paquet n&eacute;cessite un certain nombre de &eacute;v&eacute;nements &agrave; &ecirc;tre s&eacute;lectionn&eacute;.
+10272	Il n'a pas &eacute;t&eacute; possible de retenir les billets - &Eacute;v&eacute;nements inattendus dans le paquet de saison tout en ajoutant abonnement au panier.
+10273	Il n'a pas &eacute;t&eacute; possible de retenir les billets - Erreur dans la v&eacute;rification de l'abonnement de saison. {br}Veuillez prendre contact avec la billetterie {mainphone}.

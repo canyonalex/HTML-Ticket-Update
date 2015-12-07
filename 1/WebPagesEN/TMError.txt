@@ -269,3 +269,6 @@ ErrorNumber	ErrorText
 10268	Here are the next Best Available {seats}.  If you would prefer different {seats}, select any available seats on the map below.
 10269	Temporarily unable to generate PDF.  Please try again later or call the box office {mainphone}
 10270	Missing or invalid outlet parameter "{error}" sent to classic listener. Call the box office {mainphone}
+10271	Tickets could not be held - Season package requires a specific number of {events} to be selected.
+10272	Tickets could not be held - Unexpected {events} in season package while adding subscription to shopping cart.
+10273	Tickets could not be held - Error in verifying season subscription.  Contact the box office at {mainphone}.
