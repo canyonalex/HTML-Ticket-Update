@@ -20,7 +20,7 @@
      <h1>
       Sélectionnez sièges de souscription
       <br/>
-      <span class="text-muted">
+      <span class="small text-muted">
        <field>SG_DESCRIPTION</field> <field>PB_SERIES_CODE</field>
       </span>
      </h1>
@@ -78,11 +78,9 @@
 	selected_only = if true, the image returned is a blown up version around the selected seats (can be yes,y,no,n,1 or 0)
 	selected_border = specifies the extra space around the selected seats in points (72 = 1 inch).
 	selected_color = specifies the fill color of the selected seats as a RGB hex string, i.e. FF0000 means bright red
-	img_quality = the jpeg quality 1 to 100, 100 is best but creates larger/slower downloading jpegs.
-				between 50 and 75 are good values. 
 	format=svg (pick your own seats and interactive) png or jpg
 -->
-      <img align="center" alt="selected seats" border="0" src="<field>F_HTML_SEATMAP</field>&selected_only=yes&selected_border=999&selected_color=007700&img_quality=75&format=svg" width="80%"/>
+      <img class="img-responsive" src="<field>F_HTML_SEATMAP</field>&reserved_colour=007700&reserved_boundary=true&reserved_seat_border=5&format=svg"/>
      </div>
      <!-- comment: .col-md-8 -->
     </div>
