@@ -43,7 +43,6 @@
        <input id="F_HTML_NEXT_BEST_TWO_PASS_OK" name="F_HTML_NEXT_BEST_TWO_PASS_OK" type="hidden" value="<field>F_HTML_NEXT_BEST_TWO_PASS_OK</field>"/>
        <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY" name="F_HTML_NEXT_BEST_SEAT_PRIORITY" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY</field>"/>
        <input id="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" name="F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE" type="hidden" value="<field>F_HTML_NEXT_BEST_SEAT_PRIORITY_SEARCH_TYPE</field>"/>
-       <div class="table-responsive">
         <table class="table table-striped table-condensed table-responsive">
          <thead>
           <th>
@@ -68,7 +67,7 @@
           <field>F_HTML_BEST_SEATS_LIST</field>
          </tbody>
         </table>
-       </div>
+       <!--#include virtual="tmMaps/tmViewFromSeat.html" -->
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
        <input class="btn btn-success" name="btnReserveTicket" onclick="process()" type="submit" value="Add Tickets to Shopping Cart"/>
        <field>pick(PB_SALES_METHOD=2&not(F_HTML_ALLOW_PICK_YOUR_OWN),'<!-- comment:')</field>
