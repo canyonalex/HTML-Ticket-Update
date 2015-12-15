@@ -1,44 +1,43 @@
-<div class="well">
-<div class="form-group">
- <label for="SS_SEATING_REQUEST">
-  Seat Change Request
- </label>
- <textarea class="form-control" cols="40" name="SS_SEATING_REQUEST" rows="5"><field>SS_SEATING_REQUEST</field></textarea>
-</div>
-<div class="form-group">
- <label>
-  If we are unable to accommodate the requested change
- </label>
- <div class="radio">
-  <label>
-   <input checked="" id="retain" name="SS_ACCOMMODATE_CHANGE" type="radio" value="0"/>
-   Please retain my original seats
-  </label>
- </div>
- <div class="radio">
- <label>
-  <input id="closest" name="SS_ACCOMMODATE_CHANGE" type="radio" value="1"/>
-   I am willing to take the next best seats or closest seats to accomodate my request
-  </label>
- </div>
- <div class="radio">
-  <label>
-   <input id="callfirst" name="SS_ACCOMMODATE_CHANGE" type="radio" value="2"/>
-   Please call me before making any changes
-  </label>
- </div>
-</div>
-</div>
-
-<input name="SS_SEQ" type="hidden" value="<field>SS_SEQ</field>"/>
-<input name="F_HTML_SUBSCRIPTION_TOTAL_COST" type="hidden" value="<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>"/>
-<input name="F_HTML_SUBSCRIPTION_SEATS_ARE_OK" type="hidden" value="<field>F_HTML_SUBSCRIPTION_SEATS_ARE_OK</field>"/>
-<field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'<!-- comment: if not started, or notice printed, can be renewed or cancelled')</field>
- <input class="btn btn-success" name="btnSubscriptionReserve" type="submit" value="Renew Subscription"/>
- &nbsp;
- <input class="btn btn-danger" name="btnSubscriptionCancel" type="submit" value="Cancel Subscription"/>
- &nbsp;
-<field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,' -->')</field>
-<a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?subscription=0">
-Other Subscriptions
-</a>
+  <div class="well">
+   <div class="form-group">
+    <label for="SS_SEATING_REQUEST">
+     Seat Change Request
+    </label>
+    <textarea class="form-control" cols="40" name="SS_SEATING_REQUEST" rows="5"><field>SS_SEATING_REQUEST</field></textarea>
+   </div>
+   <div class="form-group">
+    <label>
+     If we are unable to accommodate the requested change
+    </label>
+    <div class="radio">
+     <label>
+      <input checked="" id="retain" name="SS_ACCOMMODATE_CHANGE" type="radio" value="0"/>
+      Please retain my original seats
+     </label>
+    </div>
+    <div class="radio">
+     <label>
+      <input id="closest" name="SS_ACCOMMODATE_CHANGE" type="radio" value="1"/>
+      I am willing to take the next best seats or closest seats to accomodate my request
+     </label>
+    </div>
+    <div class="radio">
+     <label>
+      <input id="callfirst" name="SS_ACCOMMODATE_CHANGE" type="radio" value="2"/>
+      Please call me before making any changes
+     </label>
+    </div>
+   </div>
+  </div>
+  <input name="SS_SEQ" type="hidden" value="<field>SS_SEQ</field>"/>
+  <input name="F_HTML_SUBSCRIPTION_TOTAL_COST" type="hidden" value="<field>F_HTML_SUBSCRIPTION_TOTAL_COST</field>"/>
+  <input name="F_HTML_SUBSCRIPTION_SEATS_ARE_OK" type="hidden" value="<field>F_HTML_SUBSCRIPTION_SEATS_ARE_OK</field>"/>
+  <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,'<!-- comment: if not started, or notice printed, can be renewed or cancelled')</field>
+  <input class="btn btn-success" name="btnSubscriptionReserve" type="submit" value="Renew Subscription"/>
+  &nbsp;
+  <input class="btn btn-danger" name="btnSubscriptionCancel" type="submit" value="Cancel Subscription"/>
+  &nbsp;
+  <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,' -->')</field>
+  <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?subscription=0">
+   Other Subscriptions
+  </a>

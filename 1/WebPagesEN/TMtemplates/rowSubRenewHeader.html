@@ -16,28 +16,6 @@
     </a>
    </div>
    <table class="table table-striped table-condensed table-responsive">
-    <thead>
-     <tr>
-      <th class="text-center">
-       Qty
-      </th>
-      <th>
-       Seat Code
-      </th>
-      <th>
-       <field>D_SECTION_DESC</field>/<field>D_ROW_DESC</field>/<field>D_SEAT_DESC</field>
-      </th>
-      <th>
-       Promotion
-      </th>
-      <th class="text-right">
-       Price
-      </th>
-      <th>
-       Notes
-      </th>
-     </tr>
-    </thead>
     <tbody>
      <field>F_HTML_FAVOURITE_SEAT_LIST</field>
     </tbody>
@@ -53,7 +31,7 @@
         &nbsp;
         <input class="btn btn-danger" name="btnSubscriptionCancel" type="submit" value="Cancel Subscription"/>
         <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,' -->')</field>
-<field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,'<!-- comment: if state is cancelled-season, or cancelled-internet, it can be reinstated so it can be booked.')</field>
+        <field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,'<!-- comment: if state is cancelled-season, or cancelled-internet, it can be reinstated so it can be booked.')</field>
         <input class="btn btn-success" name="btnSubscriptionReinstate" type="submit" value="Re-Instate Subscription"/>
         <field>pick(SS_RENEWAL_STATUS_FC_SEQ=98|SS_RENEWAL_STATUS_FC_SEQ=97|SS_RENEWAL_STATUS_FC_SEQ=96,' -->')</field>
        </form>
