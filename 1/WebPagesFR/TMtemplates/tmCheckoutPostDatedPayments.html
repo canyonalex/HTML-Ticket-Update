@@ -17,25 +17,26 @@
       </div>
      </div>
     </div>
-    <!-- comment: To be updated to allow patron to select payment frequency at some time in the future
-      <select name="PostDatedFrequency" id="PostDatedFrequency" onchange="submitForm('TMForm','btnCheckoutCalcPayPlan','3');">
-      <option value="0">One Time</option>
-      <option value="1" selected>Monthly</option>
-      <option value="2">Twice a Month</option>
-      <option value="3">Quarterly</option>
-      <option value="4">Annually</option>
-      </select>
-    -->
     <div class="form-group">
      <label class="col-sm-2 control-label" for="PostDatedFrequency">
       Fr&eacute;quence
      </label>
      <div class="col-sm-8">
       <div>
-       <select class="form-control" id="PostDatedFrequency" name="PostDatedFrequency">
-        <option selected="" value="1">
+       <select class="form-control" id="PostDatedFrequency" name="PostDatedFrequency" onchange="submitForm('TMForm','btnCheckoutCalcPayPlan','YES');"/>
+        <option value="1" <field>pick(F_HTML_CHECKED='1','','selected')</field>>
          Au Mois
         </option>
+        <!-- comment: Options allowed for patrons to select payment frequency 
+        <option value="1" <field>pick(F_HTML_CHECKED='1','','selected')</field>>Au Mois</option>
+        <option value="2" <field>pick(F_HTML_CHECKED='2','','selected')</field>>Bihebdomadaire</option>
+        <option value="3" <field>pick(F_HTML_CHECKED='3','','selected')</field>>Trimestriel</option>
+        <option value="4" <field>pick(F_HTML_CHECKED='4','','selected')</field>>Annuellement</option>
+        <option value="5" <field>pick(F_HTML_CHECKED='5','','selected')</field>>Tous les jours</option>
+        <option value="6" <field>pick(F_HTML_CHECKED='6','','selected')</field>>Hebdomadaire</option>
+        <option value="7" <field>pick(F_HTML_CHECKED='7','','selected')</field>>Bimensuel</option>
+        <option value="8" <field>pick(F_HTML_CHECKED='8','','selected')</field>>Payer tout &agrave; la fin</option>
+        -->
        </select>
       </div>
      </div>
