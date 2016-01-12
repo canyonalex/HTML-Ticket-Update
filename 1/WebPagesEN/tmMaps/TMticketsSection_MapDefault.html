@@ -30,12 +30,13 @@
        <div class="form-group">
         <label for="section">
          <h4>
-          <img src="tmGifs/step1.gif"/>
+          <img src="tmGifs/step1.gif" width="24"/>
           Where would you like to sit?
          </h4>
         </label>
         <br/>
         <!-- comment: should have class="form-control" in select -->
+        <div class="form-inline">
         <field>F_HTML_BEST_AREA_SEARCH_LIST</field>
        <field>F_HTML_BEST_PRICE_CODE_SEARCH_LIST</field>
         <p class="help-block">
@@ -45,7 +46,7 @@
        <div class="form-group">
         <label for="PS_QUANTITY">
          <h4>
-          <img src="tmGifs/step2.gif"/>
+          <img src="tmGifs/step2.gif" width="24"/>
           How many tickets do you want?
          </h4>
         </label>
@@ -57,11 +58,12 @@
        <div class="form-group">
         <strong>
          <h4>
-          <img src="tmGifs/step3.gif"/>
+          <img src="tmGifs/step3.gif" width="24"/>
           Keep seats together or can they be separated?
          </h4>
         </strong>
        </div>
+       <div class="form-inline">
        <div class="radio">
         <label>
          <input id="together" name="F_TOGETHER" type="radio" value="0" <field>pick(F_TOGETHER,"checked","")</field>/>
@@ -73,6 +75,7 @@
          <input id="separate" name="F_TOGETHER" type="radio" value="1" <field>pick(F_TOGETHER,"","checked")</field>/>
          My Seats Can be Separated
         </label>
+       </div>
        </div>
        <div class="form-group" style="margin-top: 15px;">
         <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
