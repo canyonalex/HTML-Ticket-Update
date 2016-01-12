@@ -43,11 +43,13 @@
        </label>
        <br/>
        <!-- comment: should have class="form-control" in select -->
+       <div class="form-inline">
        <field>F_HTML_BEST_AREA_SEARCH_LIST</field>
        <field>F_HTML_BEST_PRICE_CODE_SEARCH_LIST</field>
        <p class="help-block">
         Où voulez-vous de siéger?
        </p>
+      </div>
       </div>
       <div class="form-group">
        <label for="PS_QUANTITY">
@@ -57,9 +59,11 @@
         </h4>
        </label>
        <br/>
+       <div class="form-inline">
        <select class="form-control" id="PS_QUANTITY" name="PS_QUANTITY" size="1">
         <field>F_HTML_TICKET_QTY_LIST</field>
        </select>
+      </div>
       </div>
       <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
       <input class="btn btn-success" name="btnSubscriptionBestAvail" onclick="process()" type="submit" value="Suggérer des sièges"/>
