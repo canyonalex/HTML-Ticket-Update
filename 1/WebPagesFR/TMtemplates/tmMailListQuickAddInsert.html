@@ -3,7 +3,7 @@
 	function verify() {
 		var themessage = "";
 		if (document.form.C_FIRST_NAME.value=="") {
-			themessage = themessage + " - Prénom";
+			themessage = themessage + " - Pr√©nom";
 			}
 		if (document.form.C_LAST_NAME.value=="") {
 			themessage = themessage + " - Nom";
@@ -17,7 +17,7 @@
 			return true;
 			}
 		else {
-			themessage = "Vous êtes tenu de remplir les champs suivants: " + themessage;
+			themessage = "Vous √™tes tenu de remplir les champs suivants: " + themessage;
 			alert(themessage);
 			return false;
 		   }
@@ -106,8 +106,8 @@
   		<input type=hidden name="PM_SEQ" value=10>
   		
   	Checkbox support (The below would display checkboxes for mail list #5 and #10):
-  		<input type=checkbox name="PM_SEQ" value="5"> Ajoutez-moi à la liste de courrier #5<br>
-  		<input type=checkbox name="PM_SEQ" value="10"> Ajoutez-moi à la liste de courrier #10<br>
+  		<input type=checkbox name="PM_SEQ" value="5"> Ajoutez-moi √† la liste de courrier #5<br>
+  		<input type=checkbox name="PM_SEQ" value="10"> Ajoutez-moi √† la liste de courrier #10<br>
   		
   	List support (The below would display a list of options for mail list #5 and #10):
   		<select name="PM_SEQ" size="10" multiple id="PM_SEQ">
