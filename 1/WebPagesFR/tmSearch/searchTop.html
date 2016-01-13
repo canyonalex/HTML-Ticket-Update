@@ -88,26 +88,27 @@
         <!-- /col -->
         <!-- comment: remove genre in upper search. people can add if they want.
          	  Remember to make column count add to 12 if you add this in.
-         <div class="col-md-1">
+        <div class="col-md-1">
          <!--#include virtual="tmSearch/searchGenre.html" -->
+        </div>
+        -->
+        <!-- /col -->
+        <div class="col-md-2">
+         <div class="form-group" style="margin-top: 25px;">
+          <input class="new btn btn-success btn-block" id="Search" name="btnGetEventList" onclick="process()" type="submit" value="Rechercher"/>
+         </div>
+         <!-- comment: /form-group -->
+        </div>
        </form>
+       <!-- comment: /col -->
       </div>
-      --&gt;
-      <!-- /col -->
-      <div class="col-md-2">
-       <div class="form-group" style="margin-top: 25px;">
-        <input class="new btn btn-success btn-block" id="Search" name="btnGetEventList" onclick="process()" type="submit" value="Rechercher"/>
-       </div>
-       <!-- comment: /form-group -->
-      </div>
-      <!-- comment: /col -->
+      <!--#include virtual="TMtemplates/tmTicketsPresalesCoupon.html" -->
+      <!-- comment: .row -->
      </div>
-     <!--#include virtual="TMtemplates/tmTicketsPresalesCoupon.html" -->
-     <!-- comment: .row -->
+     <!-- /panel-body -->
     </div>
-    <!-- /panel-body -->
+    <!-- /panel-collapse -->
    </div>
-   <!-- /panel-collapse -->
+   <!-- /panel -->
   </div>
-  <!-- /panel -->
   <!-- /panel-group -->
