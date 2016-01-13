@@ -23,12 +23,11 @@
      </label>
      <div class="col-sm-8">
       <div>
-       <select class="form-control" id="PostDatedFrequency" name="F_POST_DATED_PLAN_FREQUENCY" onchange="submitForm('TMForm','btnCheckoutCalcPayPlan','YES');">
-       </select>
-       <option value="1" <field>pick(F_POST_DATED_PLAN_FREQUENCY=1,'','selected')</field>>
-        Au Mois
-       </option>
-       <!-- comment: Options allowed for patrons to select payment frequency 
+       <select class="form-control" id="PostDatedFrequency" name="F_POST_DATED_PLAN_FREQUENCY" onchange="submitForm('TMForm','btnCheckoutCalcPayPlan','YES');"/>
+        <option value="1" <field>pick(F_POST_DATED_PLAN_FREQUENCY=1,'','selected')</field>>
+         Au Mois
+        </option>
+        <!-- comment: Options allowed for patrons to select payment frequency 
         <option value="1" <field>pick(F_POST_DATED_PLAN_FREQUENCY=1,'','selected')</field>>Au Mois</option>
         <option value="2" <field>pick(F_POST_DATED_PLAN_FREQUENCY=2,'','selected')</field>>Bihebdomadaire</option>
         <option value="3" <field>pick(F_POST_DATED_PLAN_FREQUENCY=3,'','selected')</field>>Trimestriel</option>
@@ -38,6 +37,7 @@
         <option value="7" <field>pick(F_POST_DATED_PLAN_FREQUENCY=7,'','selected')</field>>Bimensuel</option>
         <option value="8" <field>pick(F_POST_DATED_PLAN_FREQUENCY=8,'','selected')</field>>Rien Rembourser en Bas de</option>
         -->
+       </select>
       </div>
      </div>
     </div>
