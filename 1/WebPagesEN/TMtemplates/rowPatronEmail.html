@@ -3,7 +3,7 @@
    <input name="CCL_LOCATION_FC_SEQ_<field>F_HTML_ROW</field>" type="hidden" value="<field>CCL_LOCATION_FC_SEQ</field>"/>
    <input name="CI_TYPE_<field>F_HTML_ROW</field>" type="hidden" value="<field>CI_TYPE</field>"/>
    <label for="CI_CONTENTS_<field>F_HTML_ROW</field>">
-      <field>pick(MKT_PRIMARY_EMAIL_CI_SEQ=0,con(F_HTML_CONTACT_LOCATION,' ',F_HTML_CONTACT_TYPE),'Email Address')</field>
+    <field>pick(MKT_PRIMARY_EMAIL_CI_SEQ=0,con(F_HTML_CONTACT_LOCATION,' ',F_HTML_CONTACT_TYPE),'Email Address')</field>
    </label>
    <input class="form-control" id="CI_CONTENTS_<field>F_HTML_ROW</field>" maxlength="100" name="CI_CONTENTS_<field>F_HTML_ROW</field>" placeholder="email address <field>F_HTML_REQUIRE_EMAIL</field>" type="text" value="<field>CI_CONTENTS</field>" <field>pick(F_HTML_ALLOW_PASSWORD_CHANGE,'readonly')</field>/>
    <field>pick(CI_SEQ>0&F_HTML_ALLOW_PASSWORD_CHANGE,'<!-- comment: when editing, change password button','')</field>

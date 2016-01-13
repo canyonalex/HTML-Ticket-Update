@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
    <field>D_COMPANY_LONG</field> | Entr&eacute;e des laissez-passer
@@ -21,7 +21,7 @@
      <h1>
       Entr&eacute;e des laissez-passer
       <span class="text-muted">
-       Choisissez Quantité & Montant
+       Choisissez Quantit&eacute; & Montant
       </span>
      </h1>
     </div>
@@ -44,7 +44,7 @@
         <label for="PS_QUANTITY">
          Quantit&eacute;
         </label>
-        <input class="form-control" id="PS_QUANTITY" maxlength="2" name="PS_QUANTITY" placeholder="nombre d'articles à acheter" type="text" value="<field>PS_QUANTITY</field>"/>
+        <input class="form-control" id="PS_QUANTITY" maxlength="2" name="PS_QUANTITY" placeholder="nombre d'articles &agrave; acheter" type="text" value="<field>PS_QUANTITY</field>"/>
        </div>
        <div class="form-group">
         <label for="M_PURCHASE_AMOUNT">
@@ -56,7 +56,9 @@
         <label for="M_NOTES">
          Message personnalis&eacute;
         </label>
-        <textarea class="form-control" cols="50" id="M_NOTES" name="M_NOTES" placeholder="saisir des instructions ou des notes spécifiques" rows="5"><field>M_NOTES</field></textarea>
+        <textarea class="form-control" cols="50" id="M_NOTES" name="M_NOTES" placeholder="saisir des instructions ou des notes sp&eacute;cifiques" rows="5">
+         <field>M_NOTES</field>
+        </textarea>
        </div>
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
        <input id="MT_SEQ" maxlength="30" name="MT_SEQ" readonly="true" size="30" type="hidden" value="<field>MT_SEQ</field>"/>

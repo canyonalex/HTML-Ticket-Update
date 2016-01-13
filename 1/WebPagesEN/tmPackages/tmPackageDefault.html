@@ -24,24 +24,24 @@
     <div class="row">
      <div class="col-md-4">
       <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
-       <div class="alert">
-         <field>PKG_NOTES</field>
+      <div class="alert">
+       <field>PKG_NOTES</field>
       </div>
      </div>
      <div class="col-md-8">
       <form action="<field>F_HTML_FIREWALL</field>online" method="post">
        <input name="PKG_SEQ" type="hidden" value="<field>PKG_SEQ</field>"/>
-        <field>F_HTML_PACKAGE_ITEM_LIST</field>
-		<p>
-		&nbsp;
-		</p>
-          <input class="btn btn-success" id="btnSelectPackage" name="btnSelectPackage" onclick="process()" type="submit" value="Add to Cart"/>
-          <field>pick(F_LOGGED_IN=1,'<!-- comment: trick. if not logged on, home doesnt show','')</field>
-          <input class="btn btn-warning" name="btnHome" type="submit" value="Cancel Buying Tickets"/>
-          <field>pick(F_LOGGED_IN=1,'-->','')</field>
+       <field>F_HTML_PACKAGE_ITEM_LIST</field>
+       <p>
+        &nbsp;
+       </p>
+       <input class="btn btn-success" id="btnSelectPackage" name="btnSelectPackage" onclick="process()" type="submit" value="Add to Cart"/>
+       <field>pick(F_LOGGED_IN=1,'<!-- comment: trick. if not logged on, home doesnt show','')</field>
+       <input class="btn btn-warning" name="btnHome" type="submit" value="Cancel Buying Tickets"/>
+       <field>pick(F_LOGGED_IN=1,'-->','')</field>
 	 		      <field>pick(F_LOGGED_IN=2,'<!-- comment: and if not logged on, show logout button','')</field>
-          <input class="btn btn-danger" id="btnLogout" name="btnLogout" type="submit" value="Logout and Empty Shopping Cart"/>
-          <field>pick(F_LOGGED_IN=2,'-->','')</field>
+       <input class="btn btn-danger" id="btnLogout" name="btnLogout" type="submit" value="Logout and Empty Shopping Cart"/>
+       <field>pick(F_LOGGED_IN=2,'-->','')</field>
       </form>
      </div>
      <!-- comment: .col-md-8 -->

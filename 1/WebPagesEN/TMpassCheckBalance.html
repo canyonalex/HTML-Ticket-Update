@@ -23,10 +23,10 @@
     <div class="col-md-4">
      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
      <field>pick(len(F_HTML_PASS_LOOKUP_DESCRIPTION)>0,'<!-- comment: pass found from verification')</field>
-      <!--#include virtual="TMtemplates/tmPassRemainingMessage.html" -->
+     <!--#include virtual="TMtemplates/tmPassRemainingMessage.html" -->
      <field>pick(len(F_HTML_PASS_LOOKUP_DESCRIPTION)>0,'-->')</field>
      <field>pick(len(F_HTML_PASS_LOOKUP_DESCRIPTION)=0,'<!-- comment: provide instructions, if nothing verified')</field>
-      <!--#include virtual="TMtemplates/tmPassInstructionsMessage.html" -->
+     <!--#include virtual="TMtemplates/tmPassInstructionsMessage.html" -->
      <field>pick(len(F_HTML_PASS_LOOKUP_DESCRIPTION)=0,'-->')</field>
     </div>
     <div class="col-md-8">

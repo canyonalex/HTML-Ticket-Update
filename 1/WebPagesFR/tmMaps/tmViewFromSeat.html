@@ -1,10 +1,9 @@
- <!-- comment: sample from proctors.  the key is that there is a field called MS_SEAT_VIEW.   
+  <!-- comment: sample from proctors.  the key is that there is a field called MS_SEAT_VIEW.   
       use that to define what the image file is for the name of the seats -->
- 
   <field>pick(len(MS_SEAT_VIEW)>1,'<!-- comment: view from your seat')</field>
   <div class="controls view-from-seat" style="background-image: url('https://s3.amazonaws.com/tourwrist/tours/<field>MS_SEAT_VIEW</field>/images/1280x640/equirect.jpg');">
    <a class="link" href="https://www.thesphere.com/direct_embed/<field>MS_SEAT_VIEW</field>?autoplay=true" onclick="return popup(this, 'notes')" target="_blank">
-	<img src="https://www.proctors.org/sites/all/themes/tickets/view-sphere.png"/>
+    <img src="https://www.proctors.org/sites/all/themes/tickets/view-sphere.png"/>
    </a>
   </div>
   <field>pick(len(MS_SEAT_VIEW)>1,'-->')</field>

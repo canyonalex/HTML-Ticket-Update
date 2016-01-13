@@ -25,7 +25,7 @@
       <!-- comment: if use enters email that exists, then show the password request button -->
       <field>pick(F_HTML_EMAIL_EXISTS=1,'<!-- comment: entered email exists')</field>
       <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?btnPasswordRequest=forgot">
-       J'ai oublié mon mot de passe
+       J'ai oubli&eacute; mon mot de passe
       </a>
       <field>pick(F_HTML_EMAIL_EXISTS=1,'-->')</field>
       <h4>
@@ -69,9 +69,9 @@
         conform&eacute;ment &agrave; notre
         <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
          Politique de confidentialit&eacute;.
-         </a>
-         <br/>
-         <br/>
+        </a>
+        <br/>
+        <br/>
         <!--#include virtual="TMtemplates/tmNotificationHeader.html" -->
        </div>
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->

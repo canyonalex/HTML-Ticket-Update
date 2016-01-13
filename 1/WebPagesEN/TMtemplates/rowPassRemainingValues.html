@@ -1,9 +1,9 @@
   <tr>
    <td>
     <b>
-    Pass # <field>M_CONTROL_NUMBER</field>
+     Pass # <field>M_CONTROL_NUMBER</field>
     </b>
-   <br/>
+    <br/>
     <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>MT_DESCRIPTION_EXTERNAL</field>
     </a>
@@ -44,7 +44,7 @@
    <td class="text-right">
     <field>M_REMAIN_PASS_QTY-M_IN_CART_REDEEM_QTY</field>
    </td>
-      <td class="text-center">
+   <td class="text-center">
     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
      <field>pick(M_IN_CART_REDEEM_SCH_SEQ=0,'<!-- comment: nothing left to redeem so hide button after message')</field>
      <input class="btn btn-success" name="btnPassForRedemption" onclick="process()" type="submit" value="Apply to Cart"/>

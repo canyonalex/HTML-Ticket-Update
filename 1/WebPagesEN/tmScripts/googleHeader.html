@@ -10,11 +10,9 @@
 		and remove the comments around the script to enable it
 
 -->
-
-<field>pick(len(D_GOOGLE_ACCOUNT)>0,'<!-- comment: no google account provided')</field>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
+  <field>pick(len(D_GOOGLE_ACCOUNT)>0,'<!-- comment: no google account provided')</field>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '<field>D_GOOGLE_ACCOUNT</field>']);
   _gaq.push(['_setDomainName', '.<field>F_HTML_CURRENT_DOMAIN</field>']);
   _gaq.push(['_trackPageview', '/TM/<field>con(F_HTML_CURRENT_OUTLET,"/",F_HTML_CURRENT_LANGUAGE,"/",F_HTML_MAIN_TEMPLATE)</field>']);
@@ -24,7 +22,5 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
-</script>
-
-<field>pick(len(D_GOOGLE_ACCOUNT)>0,'-->')</field>
+  </script>
+  <field>pick(len(D_GOOGLE_ACCOUNT)>0,'-->')</field>
