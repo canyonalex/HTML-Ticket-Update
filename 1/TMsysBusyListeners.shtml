@@ -29,10 +29,10 @@
           if you to connect to the web site again within a reasonable time frame (10 minutes or so).
       </div>
       <!-- comment: *** variables are set within balancer-manager.conf *** -->
-      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/1/login?btnCart" />
+      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/1/login?btnCart">
        View my current shopping cart
       </a>
-      <a class="btn btn-info" href="<!--#echo var="webURL" -->" target="_blank" />
+      <a class="btn btn-info" href="<!--#echo var="webURL" -->" target="_blank">
        Main web site
       </a>
      </div>

@@ -31,7 +31,7 @@
               		Best bet is to go back to the main web site (not in https mode)
               		*** variables are set within balancer-manager.conf *** -->
 
-      <a class="btn btn-success" href="<!--#echo var="webURL" -->" target="_blank" />
+      <a class="btn btn-success" href="<!--#echo var="webURL" -->" target="_blank">
        Main web site
       </a>
      </div>

@@ -28,10 +28,10 @@
 		our representatives will be more than happy to assist you -or- try again in a moment or two.
       </div>
       <!-- comment: *** variables are set within balancer-manager.conf *** -->
-      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/1/login?event=0" />
+      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/1/login?event=0">
        Event list
       </a>
-      <a class="btn btn-info" href="<!--#echo var="webURL" -->" target="_blank" />
+      <a class="btn btn-info" href="<!--#echo var="webURL" -->" target="_blank">
        Main web site
       </a>
      </div>
