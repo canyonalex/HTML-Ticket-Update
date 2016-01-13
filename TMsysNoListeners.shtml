@@ -24,8 +24,9 @@
      </div>
      <div class="col-md-8">
       <div class="alert alert-warning">
-       Please contact our box office listed below and 
-		our representatives will be more than happy to assist you or try again in a short while.
+       Please contact our box office listed below and
+       our representatives will be more than happy to assist you 
+       or try again in a short while.
       </div>
       <!-- comment: there are no listeners active, so we have no hope of trying again.
               		Best bet is to go back to the main web site (not in https mode).

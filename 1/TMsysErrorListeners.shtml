@@ -24,8 +24,9 @@
      </div>
      <div class="col-md-8">
       <div class="alert alert-warning">
-       The online ticketing service has encountered an unknown problem. Please contact our box office and 
-		our representatives will be more than happy to assist you -or- try again in a moment or two.
+       The online ticketing service has encountered an unknown problem. Please
+       contact our box office and our representatives will be more than happy
+       to assist you -or- try again in a moment or two.
       </div>
       <!-- comment: *** variables are set within balancer-manager.conf *** -->
       <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/1/login?event=0">
