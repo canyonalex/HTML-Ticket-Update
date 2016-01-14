@@ -22,7 +22,7 @@
       <field>P_PLAY_TITLE</field> Vendu Compl&egrave;tement
       <br/>
       <small class="text-muted">
-       <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> at <field>PB_PERFORM_TIME</field>
+       <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> at <field>dat(PB_PERFORM_TIME, 'h:N A')</field>
       </small>
      </h1>
     </div>
@@ -36,7 +36,7 @@
        Nous sommes d&eacute;sol&eacute;s, mais les billets que vous souhaitiez
        pour la <field>low(D_PERF_DESC)</field> de <field>P_PLAY_TITLE</field> le
        <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> &agrave;
-       <field>PB_PERFORM_TIME</field> ont tous &eacute;t&eacute; vendus OU ne sont plus en vente sur Internet en raison de la proximit&eacute; du d&eacute;but de la repr&eacute;sentation.
+       <field>dat(PB_PERFORM_TIME, 'h:N A')</field> ont tous &eacute;t&eacute; vendus OU ne sont plus en vente sur Internet en raison de la proximit&eacute; du d&eacute;but de la repr&eacute;sentation.
        <br/>
        <br/>
        Si il ya une autre <field>low(D_PERF_DESC)</field> que vous souhaitez

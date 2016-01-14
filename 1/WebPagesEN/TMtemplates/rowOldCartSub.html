@@ -10,7 +10,7 @@
      <field>P_PLAY_TITLE</field>
     </a>
     <b>
-     (<field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> @ <field>PB_PERFORM_TIME</field>)
+     (<field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> @ <field>dat(PB_PERFORM_TIME, 'h:N A')</field>)
     </b>
     <br/>
     <field>pick(PB_SALES_METHOD=2,D_FESTIVAL_DESC,con(MS_SECTION,'/',MS_ROW_NUMBER,'/',MS_SEAT_NUMBER))</field>

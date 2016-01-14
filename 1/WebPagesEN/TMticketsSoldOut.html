@@ -21,7 +21,7 @@
       <field>P_PLAY_TITLE</field> Sold Out
       <br/>
       <small class="text-muted">
-       <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> at <field>PB_PERFORM_TIME</field>
+       <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> at <field>dat(PB_PERFORM_TIME, 'h:N A')</field>
       </small>
      </h1>
     </div>
@@ -33,7 +33,7 @@
      <div class="col-md-8">
       <div class="text">
        We're sorry, the ticket(s) you wanted to <field>P_PLAY_TITLE</field> for the <field>low(D_PERF_DESC)</field> on
- 	   <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> at <field>PB_PERFORM_TIME</field> have just sold out or the 
+ 	   <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field> at <field>dat(PB_PERFORM_TIME, 'h:N A')</field> have just sold out or the 
  	   event is no longer available for sale via the internet if the curtain time is nearing.
        <br/>
        <br/>
