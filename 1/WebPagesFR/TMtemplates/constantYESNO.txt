@@ -1,7 +1,7 @@
 #	Ce fichier doit contenir DEUX paires de mots pour indiquer OUI et NON.
-#	La première colonne doit contenir YES et NO, en anglais, respectivement
-#	sur les 1re et 2e lignes, et la deuxième la mÍme chose, mais dans la
-#	langue de votre choix ó par exemple, OUI et NON, en franÁais.
+#	La premi√®re colonne doit contenir YES et NO, en anglais, respectivement
+#	sur les 1re et 2e lignes, et la deuxi√®me la m√çme chose, mais dans la
+#	langue de votre choix √≥ par exemple, OUI et NON, en fran√Åais.
 #
 #	This file must contain TWO pairs of text to represent yes and no
 #	The first column must be YES and NO in the first and second lines

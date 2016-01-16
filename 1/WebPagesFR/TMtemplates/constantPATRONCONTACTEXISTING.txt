@@ -1,8 +1,8 @@
-#	Ce fichier doit contenir une liste de types et de lieux à indiquer dans tous
+#	Ce fichier doit contenir une liste de types et de lieux √† indiquer dans tous
 #	les enregistrements de CLIENTS EXISTANTS. Doivent inclure les infos de type de
-#	contact ou d'adresse et le numéro de lieu provenant des tables de codes du
-#	directeur ou le texte équivalent (p. ex., Domicile). Le lieu peut rester vide,
-#	auquel cas lavaleur par défaut de la table de codes pour ce type sera sélectionnée.
+#	contact ou d'adresse et le num√©ro de lieu provenant des tables de codes du
+#	directeur ou le texte √©quivalent (p. ex., Domicile). Le lieu peut rester vide,
+#	auquel cas lavaleur par d√©faut de la table de codes pour ce type sera s√©lectionn√©e.
 #
 #	This file must contain a list of the type and location to be listed on all EXISTING
 #	patron records.  Must include the contact/address type and the location # from Theatre
@@ -21,8 +21,8 @@
 #	Les types sont les suivants :
 #	-----------------------------
 #	1 = Adresse
-#	2 = Téléphone
-#	3 = Télécopieur
+#	2 = T√©l√©phone
+#	3 = T√©l√©copieur
 #	4 = Courriel
 #	5 = Site Web
 #	
@@ -34,5 +34,5 @@
 # 1	Domicile
 # 2	
 # 2	Bureau
-# 3	Télécopieur
+# 3	T√©l√©copieur
 # 5	Bureau
