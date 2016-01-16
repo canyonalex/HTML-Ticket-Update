@@ -26,7 +26,7 @@
     <div class="col-md-8">
      <form action="<field>F_HTML_FIREWALL</field>online" method="POST" role="form">
       <input id="PB_SEQ" name="PB_SEQ" type="hidden" value="<field>PB_SEQ</field>"/>
-      <div class="form-group">
+      <div class="form-group form-inline">
        <label for="PS_QUANTITY">
         <h4>
          Indiquez le nombre de participants que vous souhaitez inscrire
@@ -62,18 +62,7 @@
       </p>
       <field>pick(F_LOGGED_IN=1,'','-->')</field>
      </div>
-     <field>pick(len(P_SALES_NOTES)>0,'<!-- comment: no sales notes')</field>
-     <div class="panel panel-default">
-      <div class="panel-heading">
-       <h3 class="panel-title">
-        <field>D_COURSE_DESC</field> Observations et renseignements pour l'inscription
-       </h3>
-      </div>
-      <div class="panel-body">
-       <field>P_SALES_NOTES</field>
-      </div>
-     </div>
-     <field>pick(len(P_SALES_NOTES)>0,'-->')</field>
+     <!--#include virtual="TMtemplates/tmPerformanceSalesNotes.html" -->
     </div>
    </div>
   </div>

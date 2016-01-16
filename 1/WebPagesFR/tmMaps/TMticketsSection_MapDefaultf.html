@@ -34,9 +34,11 @@
          </h4>
         </label>
         <br/>
-        <select class="form-control" id="PS_QUANTITY" name="PS_QUANTITY" size="1">
-         <field>F_HTML_TICKET_QTY_LIST</field>
-        </select>
+        <div class="form-inline">
+         <select class="form-control" id="PS_QUANTITY" name="PS_QUANTITY" size="1">
+          <field>F_HTML_TICKET_QTY_LIST</field>
+         </select>
+        </div>
        </div>
        <div class="form-group" style="margin-top: 15px;">
         <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
@@ -44,6 +46,7 @@
         <input class="btn btn-danger" name="btnBestAvailCancel" type="submit" value="Annuler et Recommencer"/>
        </div>
       </form>
+      <!--#include virtual="TMtemplates/tmPerformanceSalesNotes.html" -->
       <!--#include virtual="TMtemplates/generalAdmissionArrivalNote.html" -->
      </div>
      <!-- comment: .col-md-8 -->
