@@ -44,24 +44,22 @@
         <label for="PS_QUANTITY">
          Quantit&eacute;
         </label>
-        <input class="form-control" id="PS_QUANTITY" max="20" maxlength="2" min="1" name="PS_QUANTITY" placeholder="number of items to purchase" type="number" value="<field>PS_QUANTITY</field>"/>
+        <input class="form-control" id="PS_QUANTITY" max="20" min="1" name="PS_QUANTITY" placeholder="number of items to purchase" type="number" value="<field>PS_QUANTITY</field>"/>
        </div>
        <div class="form-group">
         <label for="M_PURCHASE_AMOUNT">
          Montant unitaire
         </label>
-        <input class="form-control" id="M_PURCHASE_AMOUNT" maxlength="25" name="M_PURCHASE_AMOUNT" size="25" type="text" value="<field>M_PURCHASE_AMOUNT</field>"/>
+        <input class="form-control" id="M_PURCHASE_AMOUNT" max="9999999.99" min="0" step="any" name="M_PURCHASE_AMOUNT" type="number" value="<field>M_PURCHASE_AMOUNT</field>"/>
        </div>
        <div class="form-group">
         <label for="M_NOTES">
          Message personnalis&eacute;
         </label>
-        <textarea class="form-control" cols="50" id="M_NOTES" name="M_NOTES" placeholder="saisir des instructions ou des notes sp&eacute;cifiques" rows="5">
-         <field>M_NOTES</field>
-        </textarea>
+        <textarea class="form-control" cols="50" id="M_NOTES" name="M_NOTES" placeholder="saisir des instructions ou des notes sp&eacute;cifiques" rows="5"><field>M_NOTES</field></textarea>
        </div>
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-       <input id="MT_SEQ" maxlength="30" name="MT_SEQ" readonly="true" size="30" type="hidden" value="<field>MT_SEQ</field>"/>
+       <input id="MT_SEQ" name="MT_SEQ" readonly="true" type="hidden" value="<field>MT_SEQ</field>"/>
        <input class="btn btn-success" name="btnPassAmountAccept" onclick="process()" type="submit" value="Ajouter au panier"/>
        <input class="btn btn-danger" name="btnPassAmountCancel" type="submit" value="Annuler l'achat"/>
       </form>

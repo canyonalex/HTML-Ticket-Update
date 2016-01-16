@@ -38,13 +38,13 @@
        <label for="DD_AMOUNT_PLEDGE">
         Montant du don
        </label>
-       <input class="form-control" id="DD_AMOUNT_PLEDGE" maxlength="15" name="DD_AMOUNT_PLEDGE" size="30" type="text" value="<field>DD_AMOUNT_PLEDGE</field>"/>
+       <input class="form-control" id="DD_AMOUNT_PLEDGE" min="1" max="99999999.99" name="DD_AMOUNT_PLEDGE" step="any" type="number" value="<field>DD_AMOUNT_PLEDGE</field>"/>
       </div>
       <div class="form-group">
        <label for="DD_NAME_OF">
         Comment souhaitez-vous que votre nom apparaisse dans le programme?
        </label>
-       <input class="form-control" id="DD_NAME_OF" maxlength="100" name="DD_NAME_OF" size="50" type="text" value="<field>DD_NAME_OF</field>"/>
+       <input class="form-control" id="DD_NAME_OF" maxlength="100" name="DD_NAME_OF" type="text" value="<field>DD_NAME_OF</field>"/>
       </div>
       <div class="form-group">
        <label for="Anonymous">
