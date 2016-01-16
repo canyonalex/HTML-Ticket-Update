@@ -5,20 +5,35 @@
    <label for="CI_CONTENTS_<field>F_HTML_ROW</field>">
     <field>pick(MKT_PRIMARY_EMAIL_CI_SEQ=0,con(F_HTML_CONTACT_LOCATION,' ',F_HTML_CONTACT_TYPE),'Adresse courriel')</field>
    </label>
-   <input class="form-control" id="CI_CONTENTS_<field>F_HTML_ROW</field>" maxlength="100" name="CI_CONTENTS_<field>F_HTML_ROW</field>" placeholder="Adresse courriel <field>F_HTML_REQUIRE_EMAIL</field>" type="text" value="<field>CI_CONTENTS</field>" <field>pick(F_HTML_ALLOW_PASSWORD_CHANGE,'readonly')</field>/>
-   <field>pick(CI_SEQ>0&F_HTML_ALLOW_PASSWORD_CHANGE,'<!-- comment: when editing, change password button','')</field>
+   <input class="form-control" id="CI_CONTENTS_<field>F_HTML_ROW</field>" maxlength="100" name="CI_CONTENTS_<field>F_HTML_ROW</field>" placeholder="Adresse courriel <field>F_HTML_REQUIRE_EMAIL</field>" type="email" value="<field>CI_CONTENTS</field>" <field>pick(F_HTML_ALLOW_PASSWORD_CHANGE,'readonly')</field>/>
+   <field>pick(CI_SEQ>0&F_HTML_ALLOW_PASSWORD_CHANGE,'<!-- comment: when editing, change password is a button','')</field>
    <a class="btn btn-warning btn-xs" href="<field>F_HTML_FIREWALL</field>login?<field>F_HTML_PASSWORD_RESET</field>">
     Changer mot de passe
    </a>
    <field>pick(CI_SEQ>0&F_HTML_ALLOW_PASSWORD_CHANGE,'-->','')</field>
   </div>
-  <field>pick(CI_SEQ<=0,'<!-- comment: if inserting, password is an entry field in the row','')</field>
-  <div class="form-group">
+  <field>pick(CI_SEQ<=0,'<!-- comment: if inserting, password is an entry field','')</field>
+  <div class="form-group" id="new_password_group_<field>F_HTML_ROW</field>">
    <label for="CI_PASSWORD_<field>F_HTML_ROW</field>">
     Mot de Passe
+    <div class="control-label" style="display:inline">
+     <div class="figure" id="new_password_strength_<field>F_HTML_ROW</field>">
+      &nbsp;
+     </div>
+     <div class="figure" id="new_password_score_<field>F_HTML_ROW</field>">
+      &nbsp;
+     </div>
+    </div>
    </label>
    <input autocomplete="off" class="form-control" id="CI_PASSWORD_<field>F_HTML_ROW</field>" maxlength="<field>SPR_PASSWORD_MAX_LENGTH</field>" name="CI_PASSWORD_<field>F_HTML_ROW</field>" placeholder="<field>F_HTML_REQUIRE_PASSWORD</field>" type="password" value="<field>CI_PASSWORD</field>"/>
   </div>
+  <script type="text/javascript">
+   <!--
+$(document).ready(function() {
+	addPasswordCheck($('#CI_PASSWORD_<field>F_HTML_ROW</field>'), $('#new_password_strength_<field>F_HTML_ROW</field>'), $('#new_password_score_<field>F_HTML_ROW</field>'), $('#new_password_group_<field>F_HTML_ROW</field>'));
+})
+//-->
+  </script>
   <div class="form-group">
    <label for="p_<field>F_HTML_ROW</field>">
     Re-tapez pour la v&eacute;rification
