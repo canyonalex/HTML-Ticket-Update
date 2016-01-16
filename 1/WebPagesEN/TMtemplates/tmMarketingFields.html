@@ -46,24 +46,26 @@
    </select>
   </div>
   -->
-  <!-- comment: gender as radio buttons (alternate)
-   <div class="form-group form-inline">
+  <!-- comment: gender as radio buttons (alternate) -->
+  <div class="form-group">
    <label for="C_SEX">
     Gender
    </label>
-  <div class="radio">
-   <label>
-    <input id="Female" name="C_SEX" type="radio" value="F" <field>pick(C_SEX='F','','checked')</field>/>
-    Female
-   </label>
-   &nbsp;&nbsp;
-   <label>
-    <input id="Male" name="C_SEX" type="radio" value="M" <field>pick(C_SEX='F','checked','')</field>/>
-    Male
-   </label>
+   <div class="form-inline">
+    <div class="radio">
+     <label>
+      <input id="Female" name="C_SEX" type="radio" value="F" <field>pick(C_SEX='F','','checked')</field>/>
+      Female
+     </label>
+     &nbsp;&nbsp;
+     <label>
+      <input id="Male" name="C_SEX" type="radio" value="M" <field>pick(C_SEX='F','checked','')</field>/>
+      Male
+     </label>
+    </div>
+   </div>
   </div>
-  </div>
-  -->
+  <!-- comment: -->
   <!-- comment: Age Code
   <div class="form-group">
    <label for="MKT_AGE_CODE_FC_SEQ">
@@ -87,7 +89,7 @@
    <label for="MKT_FIELD_1">
     <field>D_MKT1</field>
    </label>
-   <input class="form-control" id="MKT_FIELD_1" name="MKT_FIELD_1" placeholder="<field>D_MKT1</field> <field>F_HTML_REQUIRE_MARKETING_1</field> (numbers only)" type="number" value="<field>MKT_FIELD_1</field>"/>
+   <input class="form-control" id="MKT_FIELD_1" max="9999999999" min="0" name="MKT_FIELD_1" placeholder="<field>D_MKT1</field> <field>F_HTML_REQUIRE_MARKETING_1</field> (numbers only)" type="number" value="<field>MKT_FIELD_1</field>"/>
   </div>
   -->
   <!-- comment: Marketing #2 (numbers)
@@ -95,7 +97,7 @@
    <label for="MKT_FIELD_2">
     <field>D_MKT2</field>
    </label>
-   <input class="form-control" id="MKT_FIELD_2" name="MKT_FIELD_2" placeholder="<field>D_MKT2</field> <field>F_HTML_REQUIRE_MARKETING_2</field> (numbers only)" type="text" value="<field>MKT_FIELD_2</field>"/>
+   <input class="form-control" id="MKT_FIELD_2" max="9999999999" min="0" name="MKT_FIELD_2" placeholder="<field>D_MKT2</field> <field>F_HTML_REQUIRE_MARKETING_2</field> (numbers only)" type="number" value="<field>MKT_FIELD_2</field>"/>
   </div>
   -->
   <!-- comment: Marketing #3 (upper case text)
@@ -153,21 +155,25 @@
   </div>
   -->
   <!-- comment: the do not trade checkbox if you are using it for some reason
-       you make give it a different name and decide what to use it for in Theatre Manager
-  <h4>
-   Do Not Trade
-  </h4>
-  <div class="radio">
-   <label>
-    <input id="tradeyes" name="MKT_DO_NOT_TRADE" type="radio" value="NO" <field>pick(MKT_DO_NOT_TRADE='YES','checked','')</field>/>
-    Do not give my information to other venues
+  you make give it a different name and decide what to use it for in Theatre Manager
+  <div class="form-group">
+   <label for="MKT_DO_NOT_TRADE">
+    Do Not Trade
    </label>
-  </div>
-  <div class="radio">
-   <label>
-    <input id="tradeno" name="MKT_DO_NOT_TRADE" type="radio" value="YES" <field>pick(MKT_DO_NOT_TRADE='YES','','checked')</field>/>
-    Other venues may send me information about their events
-   </label>
+   <div class="form-inline">
+    <div class="radio">
+     <label>
+      <input id="tradeyes" name="MKT_DO_NOT_TRADE" type="radio" value="NO" <field>pick(MKT_DO_NOT_TRADE='YES','checked','')</field>/>
+      Do not give my information to other venues
+     </label>
+    </div>
+    <div class="radio">
+     <label>
+      <input id="tradeno" name="MKT_DO_NOT_TRADE" type="radio" value="YES" <field>pick(MKT_DO_NOT_TRADE='YES','','checked')</field>/>
+      Other venues may send me information about their events
+     </label>
+    </div>
+   </div>
   </div>
   -->
   <!-- comment: ending div tag for the well, if it is used
