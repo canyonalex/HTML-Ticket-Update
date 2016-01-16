@@ -25,7 +25,7 @@
        <label for="e">
         Email
        </label>
-       <input class="form-control" id="e" maxlength="100" name="e" type="email" value="<field>F_EMAIL_ADDRESS</field>"/>
+       <input class="form-control" id="e" maxlength="100" name="e" placeholder="email address" type="email" value="<field>F_EMAIL_ADDRESS</field>"/>
       </div>
       <div class="form-group">
        <label for="p">
@@ -64,8 +64,8 @@
        <input class="form-control btn btn-primary" name="btnGetEventList" type="submit" value="Browse Anonymously"/>
        <p class="help-block">
         If you wish to browse for tickets without logging in yet.  
-              Please note that you will be required to sign in with a valid Email ID (or create an account) prior to completing your 
-              <field>low(D_ORDER_DESC)</field>.
+        Please note that you will be required to sign in with a valid Email ID (or create an account)
+        prior to completing your <field>low(D_ORDER_DESC)</field>.
        </p>
        <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"-->","")</field>
       </div>

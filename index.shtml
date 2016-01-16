@@ -3,7 +3,7 @@
 <html>
  <head>
   <script>
-   window.location.href="<!--#echo var="ticketURL" -->/TheatreManager/1/login&event=0"
+   window.location.href="<!--#echo var="ticketURL" -->/TheatreManager/1/login?event=0"
   </script>
   <title>
    Theatre Manager Online Ticket Sales
