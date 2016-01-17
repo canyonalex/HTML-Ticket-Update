@@ -23,16 +23,9 @@
     </a>
     <br/>
     <field>D_COURSE_DESC</field>
-<field>pick(D_WEB_SHOW_PROMOTION,'',con(' ',SC_DESCRIPTION))</field>
-<field>pick(D_WEB_SHOW_PRICE_CODE,'',con(' ',PC_DESCRIPTION))</field>
-<field>pick(F_HTML_SHOW_GIFT_SELECTION,'<!-- comment: trick. If only one patron in the household then do not show the selection list','')</field>
-    <p>
-     Attendee:
-     <select name="SCD_INTENDED_FOR_C_SEQ_<field>SCD_SEQ</field>" onchange="submitForm('TMForm','btnCartIntendedFor','YES');" size="1">
-      <field>$cinst.$getHtmlHouseholdPatronSelectionList(SCD_SEQ)</field>
-     </select>
-    </p>
-    <field>pick(F_HTML_SHOW_GIFT_SELECTION,'-->','')</field>
+    <field>pick(D_WEB_SHOW_PROMOTION,'',con(' ',SC_DESCRIPTION))</field>
+    <field>pick(D_WEB_SHOW_PRICE_CODE,'',con(' ',PC_DESCRIPTION))</field>
+    <!--#include virtual="TMtemplates/rowCartGiftedPatronSelection.html" -->
     <!--#include virtual="TMtemplates/cellCartPassMaxRedemptionExceeded.html" -->
     <br/>
     <field>PB_PERF_NOTES</field>
