@@ -10,8 +10,8 @@
 10009	Service de billetterie en ligne temporairement indisponible, pendant l'ex&eacute;cution des sauvegardes
 10010	Nombre maximal d'articles pour une commande atteint
 10011	Bienvenue sur le site Web de vente en ligne de {company}. {br} {br}Veuillez entrer votre adresse courriel et votre mot de passe OU {br}choisir l'une des options ci-dessous.
-10012	Erreur - Veuillez entrer une adresse courriel et un mot de passe valides.
-10013	Erreur - adresse courriel ou mot de passe non valide {br}(remarque le mot de passe est sensible &agrave; la casse.)
+10012	Veuillez entrer une adresse courriel et un mot de passe valides.{br}Utilisez 'oubli&eacute; mon mot de passe' si n&eacute;cessaire.
+10013	Veuillez entrer une adresse courriel et un mot de passe valides.{br}Utilisez 'oubli&eacute; mon mot de passe' si n&eacute;cessaire.
 10014	Le mot de passe doit &ecirc;tre chang&eacute; pour pouvoir poursuivre l'ouverture de la session.
 10015	Remplissez les champs voulus.
 10016	Veuillez s&eacute;lectionner la repr&eacute;sentation pour lequel vous achetez des billets.
@@ -30,9 +30,9 @@
 10029	Erreur - Votre mot de passe doit comporter au moins {passwordminlength} caract&egrave;res
 10030	Nouveau mot de passe identique &agrave; l'ancien. {br}Le mot de passe n'a pas &eacute;t&eacute; chang&eacute;.
 10031	Mot de passe mis &agrave; jour avec succ&egrave;s.
-10032	Votre mot de passe a &eacute;t&eacute; envoy&eacute; &agrave; votre adresse courriel.
+10032	Un e-mail a &eacute;t&eacute; envoy&eacute; &agrave; {email} d&eacute;crivant comment réinitialiser votre mot de passe.{br}<small>S'il vous pla&icirc;t chercher le courriel et suivez les instructions &agrave; ce sujet.</small>
 10033	Une erreur SMTP s'est produite lors de l'envoi de votre mot de de passe &agrave; votre adresse courriel.
-10034	Nous sommes d&eacute;sol&eacute;s, aucun compte n'est associ&eacute; &agrave; cette adresse courriel.  Veuillez v&eacute;rifier cette derni&egrave;re.
+10034	Un e-mail a &eacute;t&eacute; envoy&eacute; &agrave; {email} d&eacute;crivant comment réinitialiser votre mot de passe.{br}<small>S'il vous pla&icirc;t chercher le courriel et suivez les instructions &agrave; ce sujet.</small>
 10035	Veuillez s&eacute;lectionner les listes de diffusion auxquelles vous souhaitez vous abonner.
 10036	Veuillez s&eacute;lectionner une liste de diffusion &agrave; laquelle vous souhaitez vous abonner.
 10037	Votre nom a &eacute;t&eacute; ajout&eacute; aux listes de diffusions choisies.
@@ -253,9 +253,9 @@
 10252	"{contents}" appears to be a phone number, but it isn't in a phone number field.
 10253	"{contents}" appears to be an email address, but it isn't in an email address field.
 10254	"{contents}" appears to be a website, but it isn't in a website field.
-10255	"{contents}" appears invalid.  Unable to lookup the mail exchange server for that email address.
-10256	"{contents}" appears invalid.  Unable to lookup the DNS server for that email address.
-10257	"{contents}" is currently in use and cannot be used for the creation of a new account.{br}If this is your email address, please request your password instead.
+10255	"{contents}" ne peuvent pas &ecirc;tre utilis&eacute;s - s'il vous pla&icirc;t appelez le box-office {mainphone}.
+10256	"{contents}" ne peuvent pas &ecirc;tre utilis&eacute;s - s'il vous pla&icirc;t appelez le box-office {mainphone}.
+10257	"{contents}" ne peuvent pas &ecirc;tre utilis&eacute;s - s'il vous pla&icirc;t appelez le box-office {mainphone}.
 10258	"{contents}" is already associated with your account.
 10259	S'il vous pla&icirc;t retaper le mot de passe de v&eacute;rifier.
 10260	"{contents}" has a missing area code.

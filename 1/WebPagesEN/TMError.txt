@@ -10,8 +10,8 @@ ErrorNumber	ErrorText
 10009	Online ticketing is temporarily unavailable while backups run.
 10010	The maximum number of items has been reached for the {order}.
 10011	Welcome to the {company} online sales site.{br}{br}Please enter your login ID and password -or-{br}choose from one of the following options.
-10012	Error - Please enter a valid email address and password combination.
-10013	Error - invalid email address and password combination{br}(note: password is case sensitive).
+10012	Email and password combination is invalid.{br}<small>Use 'Forgot my Password' if needed.</small>
+10013	Email and password combination is invalid.{br}<small>Use 'Forgot my Password' if needed.</small>
 10014	Your password must be changed before logon can proceed.
 10015	Enter the required fields.
 10016	Select the {performance} to purchase tickets for.
@@ -21,7 +21,7 @@ ErrorNumber	ErrorText
 10020	Please fill in all required fields:{br}{error}
 10021	Welcome {patronname}.
 10022	Account updated.
-10023	Enter in your existing password and your new password preference.
+10023	Enter in your existing password and your new password.
 10024	Please enter the email address that you need to reset the password for
 10025	Changing of password cancelled.
 10026	Error - Your current password must be entered in correctly.
@@ -30,9 +30,9 @@ ErrorNumber	ErrorText
 10029	Error - Password must be at least {passwordminlength} characters.
 10030	Old password is same as new.{br}No changes made to password.
 10031	Password has been successfully updated.
-10032	A password reset has been sent to your email address at {email}.{br}Please look for the email and follow the instructions on it.
+10032	An email was sent to {email} describing how to reset your password.{br}<small>Please look for the email and follow the instructions on it.</small>
 10033	An SMTP error occurred trying to send your password via email.
-10034	We're sorry, there are no accounts associated with the email address {email}.  Please verify it.
+10034	An email was sent to {email} describing how to reset your password.{br}<small>Please look for the email and follow the instructions on it.</small>
 10035	Select the email notification lists you wish to subscribe to.
 10036	Please select an email notification list to subscribe to.
 10037	You have been added to the selected email notification lists.
@@ -253,9 +253,9 @@ ErrorNumber	ErrorText
 10252	"{contents}" appears to be a phone number, but it isn't in a phone number field.
 10253	"{contents}" appears to be an email address, but it isn't in an email address field.
 10254	"{contents}" appears to be a website, but it isn't in a website field.
-10255	"{contents}" appears invalid.  Unable to lookup the mail exchange server for that email address.
-10256	"{contents}" appears invalid.  Unable to lookup the DNS server for that email address.
-10257	"{contents}" is currently in use and cannot be used for the creation of a new account.{br}If this is your email address, please request your password instead.
+10255	"{contents}" cannot be used - please call the box office {mainphone}.
+10256	"{contents}" cannot be used - please call the box office {mainphone}.
+10256	"{contents}" cannot be used - please call the box office {mainphone}.
 10258	"{contents}" is already associated with your account.
 10259	Please retype the verify password.
 10260	"{contents}" has a missing area code.
