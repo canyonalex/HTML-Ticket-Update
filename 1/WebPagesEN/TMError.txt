@@ -255,7 +255,7 @@ ErrorNumber	ErrorText
 10254	"{contents}" appears to be a website, but it isn't in a website field.
 10255	"{contents}" cannot be used - please call the box office {mainphone}.
 10256	"{contents}" cannot be used - please call the box office {mainphone}.
-10256	"{contents}" cannot be used - please call the box office {mainphone}.
+10257	"{contents}" cannot be used - please call the box office {mainphone}.
 10258	"{contents}" is already associated with your account.
 10259	Please retype the verify password.
 10260	"{contents}" has a missing area code.
