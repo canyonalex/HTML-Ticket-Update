@@ -66,7 +66,10 @@
       </p>
       <field>pick(len(P_SALES_NOTES)>0,'-->')</field>
       <p class="text-muted">
-       Dur&eacute;e approximative&nbsp;: <field>int(P_PLAY_DURATION/60)</field> heures <field>P_PLAY_DURATION % 60</field> minutes
+       Dur&eacute;e approximative&nbsp;: <field>int(P_PLAY_DURATION/60)</field> heures
+       <field>pick(P_PLAY_DURATION % 60>0,'<!-- comment:')</field>
+       et <field>P_PLAY_DURATION % 60</field> minutes
+       <field>pick(P_PLAY_DURATION % 60>0,'-->')</field>
       </p>
       <p>
        <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>login?event=<field>P_SEQ</field>">
