@@ -4,9 +4,9 @@
        <field>pick(F_SOLD_PERCENT<95,'<!-- comment:')</field>
     <i class="fa fa-ticket">
     </i>
-    Buy
-       <field>pick(F_SOLD_PERCENT<95,' -->')</field>
-       <field>pick(F_SOLD_PERCENT>=95&F_SOLD_PERCENT<100,'<!-- comment:')</field>
+     <field>pick(PB_SALES_METHOD=6,'Buy','Register')</field>
+     <field>pick(F_SOLD_PERCENT<95,' -->')</field>
+     <field>pick(F_SOLD_PERCENT>=95&F_SOLD_PERCENT<100,'<!-- comment:')</field>
     <i class="fa fa-ticket">
     </i>
     <field>pick(PB_SEATS_AVAIL-PB_TOTAL_SOLD-PB_TOTAL_HELD>0,'0',PB_SEATS_AVAIL-PB_TOTAL_SOLD-PB_TOTAL_HELD)</field> Remain
