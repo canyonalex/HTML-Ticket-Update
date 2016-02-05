@@ -38,4 +38,6 @@
   <input class="btn btn-danger" id="btnSubscriptionCancel" name="btnSubscriptionCancel" onclick="process()" type="submit" value="Annuler l'abonnement"/>
   &nbsp;
   <field>pick((SS_RENEWAL_STATUS_FC_SEQ<=2|SS_RENEWAL_STATUS_FC_SEQ=7)&F_HTML_SUBSCRIPTION_SEATS_ARE_OK,' -->')</field>
-  <input class="btn btn-warning" id="btnSubscription" name="btnSubscription" onclick="process()" type="submit" value="Retour &agrave; la fen&ecirc;tre principale de souscriptiont"/>
+  <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?subscription=0">
+   Autres Abonnements
+  </a>
