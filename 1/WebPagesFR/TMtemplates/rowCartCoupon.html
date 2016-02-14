@@ -8,7 +8,11 @@
    </td>
    <td align="left">
     <field>CH_NAME_EXTERNAL</field>
-<field>pick(SCD_SAVINGS<>0,'<!-- comment:')</field>
+    <field>pick(len(CH_NOTES)>0,'<!-- comment:')</field>
+    <br/>
+    <field>CH_NOTES</field>
+    <field>pick(len(CH_NOTES)>0,'-->')</field>
+    <field>pick(SCD_SAVINGS<>0,'<!-- comment:')</field>
 - &Eacute;conomies de
     <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmOrderFee<field>FEE_SEQ</field>.html" onclick="return popup(this, 'notes')">
      <field>FEE_DESCRIPTION_EXTERNAL</field>
