@@ -272,3 +272,10 @@
 10271	Il n'a pas &eacute;t&eacute; possible de retenir les billets - Saison paquet n&eacute;cessite un certain nombre de &eacute;v&eacute;nements &agrave; &ecirc;tre s&eacute;lectionn&eacute;.
 10272	Il n'a pas &eacute;t&eacute; possible de retenir les billets - &Eacute;v&eacute;nements inattendus dans le paquet de saison tout en ajoutant abonnement au panier.
 10273	Il n'a pas &eacute;t&eacute; possible de retenir les billets - Erreur dans la v&eacute;rification de l'abonnement de saison. {br}Veuillez prendre contact avec la billetterie {mainphone}.
+10274	Ajoutés à la Liste de Diffusion
+10275	Compte a été ajouté
+10276	Compte a été mis à jour
+10277	{company} Merci pour votre commande (#{order_number})
+10278	Demande de réinitialisation de mot de passe
+10279	Demande de mot de passe à la configuration et à la création de compte complet
+10280	Mot de passe a été mis à jour
