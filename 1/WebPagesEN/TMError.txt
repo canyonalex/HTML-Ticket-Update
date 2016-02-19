@@ -273,9 +273,11 @@ ErrorNumber	ErrorText
 10272	Tickets could not be held - Unexpected {events} in season package while adding subscription to shopping cart.
 10273	Tickets could not be held - Error in verifying season subscription.  Contact the box office at {mainphone}.
 10274	Added to Mailing List
-10275	Account has been added
+10275	Account has been created
 10276	Account has been updated
 10277	{company} Thanks for your order (#{order_number})
 10278	Request for password reset
 10279	Request for password to be setup and complete account creation
 10280	Password has been updated
+10281	Account has been locked
+10282	Would you like to create an account?

@@ -279,3 +279,5 @@
 10278	Demande de réinitialisation de mot de passe
 10279	Demande de mot de passe à la configuration et à la création de compte complet
 10280	Mot de passe a été mis à jour
+10281	Compte a été bloqué
+10282	Voulez-vous créer un compte?
