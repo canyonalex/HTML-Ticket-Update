@@ -13,8 +13,8 @@
         $(document).ready(function() {
             // Function to determine if this is a touch device or not
             var is_touch_device = function () {
-              return 'ontouchstart' in window       // Most browsers 
-                  || 'onmsgesturechange' in window; // Internet Explorer 10
+              return !!('ontouchstart' in window       // Most browsers 
+                  || navigator.msMaxTouchPoints);      // Internet Explorer
             };
 
             // Function to hide all the SVG controls
