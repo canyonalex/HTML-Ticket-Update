@@ -3,6 +3,9 @@
     <field>P_PLAY_TITLE</field>
    </a>
    <span class="pull-right text-muted">
-    <field>cap(dat(PB_PERFORM_DATE,'w m D y'))</field> <field>dat(PB_PERFORM_TIME, 'h:N A')</field>
+    <field>cap(dat(PB_PERFORM_DATE,'w m D y'))</field>
+    <field>pick(PB_PERFORM_TIME=0,'','<!-- comment: time is midnight, so ignore')</field>
+    <field>dat(PB_PERFORM_TIME, 'h:N A')</field>
+    <field>pick(PB_PERFORM_TIME=0,'','-->')</field>
    </span>
   </h4>

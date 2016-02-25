@@ -14,8 +14,7 @@
     </b>
     <br/>
     <field>pick(PB_SALES_METHOD=2,D_FESTIVAL_DESC,con(MS_SECTION,'/',MS_ROW_NUMBER,'/',MS_SEAT_NUMBER))</field>
-<field>pick(D_WEB_SHOW_PROMOTION,'',con(' ',SC_DESCRIPTION))</field>
-<field>pick(D_WEB_SHOW_PRICE_CODE,'',con(' ',PC_DESCRIPTION))</field>
+    <!--#include virtual="TMtemplates/rowPromotionPriceCode.html" -->
     <em>
      <field>pick(MS_NOTE_USE_FLAG,'',MS_SEAT_NOTE)</field>
     </em>

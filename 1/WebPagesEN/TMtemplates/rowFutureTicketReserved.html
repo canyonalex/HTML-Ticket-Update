@@ -8,8 +8,7 @@
     <field>pick(MS_NOTE_USE_FLAG,'-->')</field>
    </td>
    <td>
-    <field>pick(D_WEB_SHOW_PROMOTION,'',con(SC_DESCRIPTION,' '))</field>
-<field>pick(D_WEB_SHOW_PRICE_CODE,'',PC_DESCRIPTION)</field>
+    <!--#include virtual="TMtemplates/rowPromotionPriceCode.html" -->
    </td>
    <td class="text-right">
     $<field>PS_TOTAL_COST</field>
