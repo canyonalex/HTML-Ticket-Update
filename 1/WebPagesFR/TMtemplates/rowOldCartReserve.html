@@ -20,8 +20,7 @@
     </a>
     <br/>
     <field>MS_SECTION</field>/<field>MS_ROW_NUMBER</field>/<field>MS_SEAT_NUMBER</field>
-<field>pick(D_WEB_SHOW_PROMOTION,'',con(' ',SC_DESCRIPTION))</field>
-<field>pick(D_WEB_SHOW_PRICE_CODE,'',con(' ',PC_DESCRIPTION))</field>
+    <!--#include virtual="TMtemplates/rowPromotionPriceCode.html" -->
     <em>
      <field>pick(MS_NOTE_USE_FLAG,'',MS_SEAT_NOTE)</field>
     </em>
