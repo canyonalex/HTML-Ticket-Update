@@ -281,3 +281,7 @@
 10280	Mot de passe a été mis à jour
 10281	Compte a été bloqué
 10282	Voulez-vous créer un compte?
+10283	Mot de passe a besion d'au moins un chiffre (0-9)
+10284	Mot de passe a besoin d'au moins un supérieur et un caractère en minuscule
+10285	Mot de passe a besoin d'au moins un caractère spécial
+10286	Mot de passe ne peut pas contenir des caractères répéter

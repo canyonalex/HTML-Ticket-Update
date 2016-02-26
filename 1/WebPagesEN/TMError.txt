@@ -281,3 +281,7 @@ ErrorNumber	ErrorText
 10280	Password has been updated
 10281	Account has been locked
 10282	Would you like to create an account?
+10283	Password needs at least one digit (0-9)
+10284	Password needs at least one upper and one lower case character
+10285	Password needs at least one special character
+10286	Password cannot contain repeating characters
