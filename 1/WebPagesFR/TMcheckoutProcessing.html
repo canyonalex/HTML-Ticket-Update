@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Traitement du paiment
+   <field>D_COMPANY_LONG</field> | Autorisation de paiment
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -18,9 +18,9 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      &Eacute;tape 2 sur 3:
+      &Eacute;tape 2 de 3:
       <span class="text-muted">
-       d&eacute;biter votre carte imm&eacute;diatement
+       autorisez le d&eacute;bit de votre carte maintenant
       </span>
      </h1>
     </div>
@@ -28,7 +28,7 @@
      <div class="col-md-4">
       <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
       <div class="alert alert-info">
-       VOTRE CARTE n'a pas &eacute;t&eacute; inculp&eacute; ENCORE
+       VOTRE CARTE n'a pas encore &eacute;t&eacute; d&eacute;bit&eacute;e.
       </div>
       <!--#include virtual="TMtemplates/tmCheckoutPostDatedPaymentsAccepted.html" -->
       <!--#include virtual="TMtemplates/tmProcessingDelivery.html" -->
@@ -38,15 +38,15 @@
       <form action="<field>F_HTML_FIREWALL</field>ccauth" method="POST">
        <input name="cc" type="hidden" value="<field>F_HTML_CHECKOUT_INFO</field>"/>
        <input name="pg" type="hidden" value="checkout"/>
-       <input class="btn btn-success" name="btnCheckoutAccept" onclick="process()" type="submit" value="Chargez $<field>pick(F_POST_DATED_PLAN_ACCEPTED,SCH_TOTAL_COST,F_POST_DATED_AMOUNT_DUE_TODAY)</field> <field>F_HTML_CURRENCY</field> &agrave; ma carte de cr&eacute;dit"/>
+       <input class="btn btn-success" name="btnCheckoutAccept" onclick="process()" type="submit" value="D&eacute;bitez $<field>pick(F_POST_DATED_PLAN_ACCEPTED,SCH_TOTAL_COST,F_POST_DATED_AMOUNT_DUE_TODAY)</field> <field>F_HTML_CURRENCY</field> sur ma carte de cr&eacute;dit"/>
        <div class="alert alert-text">
-        Si cette page n'est pas modifi&eacute;e au bout de 60&nbsp;secondes, veuillez
+        Si cette page n'est pas modifi&eacute;e au bout de 60&nbsp;secondes apr&egrave;s avoir cliqu&eacute; sur le bouton, veuillez
         prendre contact avec notre
         <a class="link" href="mailto:<field>D_EMAIL_ADDR</field>?subject=Checkout%20Issue%20with%20Cart%20<field>SCH_SEQ</field>">
          service de billetterie en ligne
         </a>
         pour v&eacute;rifier si votre commande a &eacute;t&eacute; trait&eacute;e et
-        &eacute;viter des frais co&ucirc;teux sur votre carte de cr&eacute;dit.
+        &eacute;viter ainsi des erreurs de d&eacute;bit sur votre carte.
         <b>
          Ne cliquez pas
         </b>
@@ -54,7 +54,7 @@
         soumettez pas &agrave; nouveau votre commande pour traitement.
         <br/>
         <br/>
-        Une fois le traitement de votre paiement termin&eacute;, un message de confirmation s'affichera. Vous recevrez &eacute;galement un courriel confirmant votre commande et vous indiquant la marche &agrave; suivre pour acc&eacute;der ult&eacute;rieurement en tout temps aux renseignements relatifs &agrave; votre billet.
+        Une fois le traitement de votre paiement termin&eacute;, un message de confirmation s'affichera. Vous recevrez &eacute;galement un courriel confirmant votre commande et vous indiquant la marche &agrave; suivre pour acc&eacute;der ult&eacute;rieurement aux renseignements concernant vos billets.
        </div>
        <!-- comment: the cancel button must be in the form to send back the hidden fields -->
        <input class="btn btn-danger" name="btnCheckout" onclick="process()" type="submit" value="Retour &agrave; l'&eacute;tape 1 pour consulter les informations de paiement"/>

@@ -16,20 +16,20 @@
   <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
    <field>MT_DESCRIPTION_EXTERNAL</field>
   </a>
-  est valide et peut &ecirc;tre utilis&eacute; pour offrir des prix r&eacute;duits.
+  est valide et peut &ecirc;tre utilis&eacute; pour offrir des r&eacute;ductions.
 <field>pick(M_PASS_METHOD=4,'-->','')</field>
 
 <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0,'<!-- comment: No quantity, no value','')</field>
   <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
    <field>MT_DESCRIPTION_EXTERNAL</field>
   </a>
-  a &eacute;t&eacute; enti&egrave;rement rachet&eacute;s.
+  a &eacute;t&eacute; enti&egrave;rement utilis&eacute;e.
 <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0,'-->','')</field>
 
 <field>pick(len(M_DATE_EXPIRY)>0,'<!-- comment: Expire date on pass','')</field>
- Cette expire le <field>cap(dat(M_DATE_EXPIRY,'D m y'))</field>.
+ Cette passe expire le <field>dat(M_DATE_EXPIRY,'D m y')</field>.
 <field>pick(len(M_DATE_EXPIRY)>0,'-->','')</field>
 
 <field>pick(len(M_DATE_EXPIRY)=0,'<!-- comment: No expiration date on pass','')</field>
- Il n'y a aucune date d'expiration et est valide jusqu'&agrave; ce qu'il a &eacute;t&eacute; enti&egrave;rement rachet&eacute;s.
+ Il n'y a aucune date d'expiration, cette passe est valide jusqu'&agrave; ce qu'elle ait &eacute;t&eacute; enti&egrave;rement utilis&eacute;e.
 <field>pick(len(M_DATE_EXPIRY)-0,'-->','')</field>

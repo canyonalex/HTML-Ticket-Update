@@ -34,12 +34,12 @@
        </h1>
       </div>
       <h3>
-       Quand
+       Dates
       </h3>
       <p>
        <field>pick(P_PERFORMANCES=1,'Du','Le')</field>
-        <field>cap(dat(P_SHOW_FIRST,'w D n y'))</field>
-        <field>pick(P_PERFORMANCES=1,con('au ',cap(dat(P_SHOW_LAST,'w D n y'))))</field>
+        <field>dat(P_SHOW_FIRST,'w D n y')</field>
+        <field>pick(P_PERFORMANCES=1,con('au ',dat(P_SHOW_LAST,'w D n y')))</field>
       </p>
       <h3>
        Lieu

@@ -1,5 +1,5 @@
-#	Entrez la valeur ci-dessous, qui représente 'Toutes années'
+#	Entrez la valeur ci-dessous, qui représente 'Toutes les années'
 
 #	Enter the value below that represents 'All Years'
 
-Toutes les années
+toutes les années

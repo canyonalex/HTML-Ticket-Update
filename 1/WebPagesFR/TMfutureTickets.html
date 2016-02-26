@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Billets pour <field>tEditCheck.$setPlural(D_EVENT)</field> &agrave; venir
+   <field>D_COMPANY_LONG</field> | Billets pour &eacute;v&eacute;nements &agrave; venir
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -18,8 +18,8 @@
    <div id="content">
     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
     <div class="alert alert-info">
-     La liste ci-dessous &eacute;num&egrave;re les billets figurant &agrave; votre nom dans nos dossiers pour des <field>low(D_PERF_DESC)</field> &agrave; venir.
-     Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.  Si vous avez des questions au sujet de vos billets ou si vous souhaitez les &eacute;changer conform&eacute;ment aux
+     Voici la liste des billets &agrave; votre nom pour des <field>low(D_PERF_DESC)</field> &agrave; venir.
+     Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.  Si vous avez des questions ou souhaitez faire un &eacute;change conform&eacute;ment aux
      <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
       politiques du service de billetterie en ligne,
      </a>
@@ -29,16 +29,16 @@
      </a>
      <br/>
      <br/>
-     Remarque&nbsp;: seules les ventes finalis&eacute;es de billets figurent
+     Remarque: seules les ventes de billets finalis&eacute;es figurent
      dans cette liste. Les ventes qui se trouvent actuellement dans votre
-    panier d'achat n'y appara&icirc;tront qu'une fois achev&eacute;es.
+    panier n'y appara&icirc;tront qu'une fois achev&eacute;es.
     </div>
     <field>F_HTML_HISTORICAL_CART_LIST</field>
     <p>
      &nbsp;
     </p>
     <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>online?btnHome=Home">
-     Revenir &agrave; la page principale
+     Revenir &agrave; la page d'acceuil
     </a>
     <field>pick(F_HTML_HISTORICAL_CART_LIST_PRINTABLE_COUNT>1,'<!-- comment: hide button if not able to print at home')</field>
     <a class="btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?futureticketsprint" target="_blank">

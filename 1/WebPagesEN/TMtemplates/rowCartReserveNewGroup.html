@@ -14,10 +14,7 @@
     <br/>
     on
     <b>
-     <field>cap(dat(PB_PERFORM_DATE,'w n D y'))</field>
-     <field>pick(len(dat(PB_PERFORM_TIME,'h:N A'))>0,'<!-- comment:')</field>
-     at <field>dat(PB_PERFORM_TIME,'h:N A')</field>
-     <field>pick(len(dat(PB_PERFORM_TIME,'h:N A'))>0,'-->')</field>
+     <!--#include virtual="TMtemplates/rowPerformanceDateTime.html" -->
     </b>
     <br/>
     in the

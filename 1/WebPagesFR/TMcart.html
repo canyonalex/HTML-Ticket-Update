@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Panier d'achat
+   <field>D_COMPANY_LONG</field> | Panier
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -19,7 +19,7 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      Panier d'achat
+      Panier
         <field>pick(SCH_SEQ>0,'<!-- comment:')</field>
          #<field>SCH_SEQ</field>
         <field>pick(SCH_SEQ>0,'-->')</field>
@@ -53,9 +53,9 @@
          <input class="btn btn-success" name="btnCheckout" onclick="process()" type="submit" value="Payer"/>
          <input name="pf" type="hidden" value="1"/>
          <field>pick(F_REMOVE_CART_ITEM_ALLOWED,'-->')</field>
-         <input class="btn btn-primary" id="btnGetEventList" name="btnGetEventList" onclick="process()" type="submit" value="Continuer vos achats"/>
+         <input class="btn btn-primary" id="btnGetEventList" name="btnGetEventList" onclick="process()" type="submit" value="Continuer mes achats"/>
          <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if enabled to redeem passes','')</field>
-         <input class="btn btn-primary" name="btnPassRemainingValues" onclick="process()" type="submit" value="&Eacute;changez Mes Passes / Ch&egrave;ques cadeaux"/>
+         <input class="btn btn-primary" name="btnPassRemainingValues" onclick="process()" type="submit" value="Utiliser mes passes / certificats-cadeaux"/>
          <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
          <!-- comment: Update the hidden "fee" field with the Fee Number with the matching Mailing Fee Number 
                               in Theatre Manager.  If you do not want the mailing option at all on your web pages, 
@@ -65,7 +65,7 @@
                               D_WEB_MAIL_FEE_SEQ input field.
                 -->
          <field>pick(F_MAIL_FEE_ALLOWED,'<!-- comment: only show mail button if required')</field>
-         <input class="btn btn-primary" name="btnMailFeeAdd" onclick="process()" type="submit" value="Ecrivez-moi mes billets"/>
+         <input class="btn btn-primary" name="btnMailFeeAdd" onclick="process()" type="submit" value="Recevoir mes billets par la poste"/>
          <input name="fee" type="hidden" value="<field>D_WEB_MAIL_FEE_SEQ</field>"/>
          <field>pick(F_MAIL_FEE_ALLOWED,'-->')</field>
          <br/>
@@ -93,7 +93,7 @@
       <div class="text-muted" style="margin: 10px 0;">
        Si vous souhaitez acheter un autre billet, un <field>low(D_MEMBER_DESC)</field>
        ou encore faire un <field>low(D_DONATION_DESC)</field>, veuillez s&eacute;lectionner
-       l'option voulue dans le menu ci-dessus.
+       l'option voulue en haut dans le menu principal.
       </div>
      </div>
      <!-- comment: .col-md-8 -->

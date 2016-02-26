@@ -5,7 +5,7 @@
    <label for="CI_CONTENTS_<field>F_HTML_ROW</field>">
     Adresse courriel
    </label>
-   <input class="form-control" id="CI_CONTENTS_<field>F_HTML_ROW</field>" maxlength="100" name="CI_CONTENTS_<field>F_HTML_ROW</field>" placeholder="adresse e-mail pour envoyer confirmation <field>F_HTML_REQUIRE_EMAIL</field>" type="email" value="<field>CI_CONTENTS</field>"/>
+   <input class="form-control" id="CI_CONTENTS_<field>F_HTML_ROW</field>" maxlength="100" name="CI_CONTENTS_<field>F_HTML_ROW</field>" placeholder="adresse courriel pour envoyer confirmation <field>F_HTML_REQUIRE_EMAIL</field>" type="email" value="<field>CI_CONTENTS</field>"/>
    <field>pick(CI_SEQ>0,'<!-- comment: when editing, change password is a button','')</field>
    <input class="btn btn-warning btn-xs" name="btnPassword" type="submit" value="Changer le mot de passe"/>
    <field>pick(CI_SEQ>0,'-->','')</field>
@@ -15,8 +15,8 @@
    <b>
     Les mots de passe sont facultatifs.
    </b>
-   Fournir on peut acc&eacute;l&eacute;rer les achats futurs et permet l'acc&egrave;s
-   &agrave; ce panier pour les billets de r&eacute;impression ou confirmations.
+   En fournir un peut acc&eacute;l&eacute;rer les achats futurs et permettre l'acc&egrave;s
+   &agrave; ce panier pour r&eacute;imprimer vos billets et confirmations.
   </div>
   <div class="form-group" id="new_password_group_<field>F_HTML_ROW</field>">
    <label for="CI_PASSWORD_<field>F_HTML_ROW</field>">
@@ -45,5 +45,5 @@ $(document).ready(function() {
    </label>
    <input autocomplete="off" class="form-control" id="p_<field>F_HTML_ROW</field>" maxlength="<field>SPR_PASSWORD_MAX_LENGTH</field>" name="p_<field>F_HTML_ROW</field>" type="password" value="<field>F_WEBPAGE_PASSWORD</field>"/>
   </div>
-  <input class="btn btn-success" name="btnAccountLimitedProfileAdd" onclick="process()" type="submit" value="Accepter et Aller au Paiement"/>
+  <input class="btn btn-success" name="btnAccountLimitedProfileAdd" onclick="process()" type="submit" value="Accepter et passer au paiement"/>
   <field>pick(CI_SEQ=0,'-->','')</field>

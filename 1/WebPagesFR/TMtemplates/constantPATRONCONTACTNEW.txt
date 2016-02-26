@@ -23,7 +23,7 @@
 #	2 = Téléphone
 #	3 = Télécopieur
 #	4 = Courriel
-#	5 = Site Web
+#	5 = Site web
 #	
 # Type	Lieu
 #
