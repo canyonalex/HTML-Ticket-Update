@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | <field>D_PERF_DESC</field> Vendu Compl&egrave;tement
+   <field>D_COMPANY_LONG</field> | <field>D_PERF_DESC</field> Enti&egrave;rement vendu
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -19,10 +19,10 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      <field>P_PLAY_TITLE</field> Vendu Compl&egrave;tement
+      <field>P_PLAY_TITLE</field> Enti&egrave;rement vendu
       <br/>
       <small class="text-muted">
-       <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> at <field>dat(PB_PERFORM_TIME, 'h:N A')</field>
+       <!--#include virtual="TMtemplates/rowPerformanceDateTime.html" -->
       </small>
      </h1>
     </div>
@@ -35,12 +35,13 @@
       <div class="text">
        Nous sommes d&eacute;sol&eacute;s, mais les billets que vous souhaitiez
        pour la <field>low(D_PERF_DESC)</field> de <field>P_PLAY_TITLE</field> le
-       <field>cap(dat(PB_PERFORM_DATE,'w D n y'))</field> &agrave;
-       <field>dat(PB_PERFORM_TIME, 'h:N A')</field> ont tous &eacute;t&eacute; vendus OU ne sont plus en vente sur Internet en raison de la proximit&eacute; du d&eacute;but de la repr&eacute;sentation.
+       <!--#include virtual="TMtemplates/rowPerformanceDateTime.html" -->
+       ont tous &eacute;t&eacute; vendus OU ne sont plus en vente sur internet en raison
+       de la proximit&eacute; du d&eacute;but de la repr&eacute;sentation.
        <br/>
        <br/>
-       Si il ya une autre <field>low(D_PERF_DESC)</field> que vous souhaitez
-       participer, s'il vous pla&icirc;t cliquez sur le bouton 'Changer Date'.
+       S'il ya une autre <field>low(D_PERF_DESC)</field> que vous souhaitez
+       voir, cliquez sur le bouton 'Changer de date'.
        <br/>
        <br/>
        Si vous souhaitez prendre contact avec la billetterie, au 
