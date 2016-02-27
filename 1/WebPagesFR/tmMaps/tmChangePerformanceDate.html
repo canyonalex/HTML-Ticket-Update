@@ -6,10 +6,10 @@
    Vous avez choisi
   </h4>
   <p>
-   <field>cap(dat(PB_PERFORM_DATE,'w D n, y'))</field> at <field>dat(PB_PERFORM_TIME, 'h:N A')</field>
+   <!--#include virtual="TMtemplates/rowPromotionPriceCode.html" -->
    <br/>
    <a class="btn btn-info btn-sm" href="<field>F_HTML_FIREWALL</field>login?event=<field>P_SEQ</field>">
-    Changez date
+    Changer de date
    </a>
   </p>
   <field>pick(isclear(P_SALES_NOTES),'','<!-- comment:')</field>

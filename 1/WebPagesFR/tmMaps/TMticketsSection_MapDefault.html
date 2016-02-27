@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Options de billets de recherche
+   <field>D_COMPANY_LONG</field> | Recherche de billets
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -49,7 +49,7 @@
         <label for="PS_QUANTITY">
          <h4>
           <img src="tmGifs/step2.gif" width="24"/>
-          Combien de billets vous voulez?
+          Combien de billets voulez vous?
          </h4>
         </label>
         <br/>
@@ -63,7 +63,7 @@
         <strong>
          <h4>
           <img src="tmGifs/step3.gif" width="24"/>
-          Gardez si&egrave;ges ensemble ou peuvent-ils &ecirc;tre s&eacute;par&eacute;s?
+          Voulez-vous des si&egrave;ges c&ocirc;te &agrave; c&ocirc;te ou peuvent-ils &ecirc;tre s&eacute;par&eacute;s?
          </h4>
         </strong>
        </div>
@@ -71,7 +71,7 @@
         <div class="radio">
          <label>
           <input id="together" name="F_TOGETHER" type="radio" value="0" <field>pick(F_TOGETHER,"checked","")</field>/>
-          Garder mes si&egrave;ges ensemble
+          Garder mes si&egrave;ges c&ocirc;te &agrave; c&ocirc;te
          </label>
         </div>
         <div class="radio">
@@ -89,7 +89,7 @@
       <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN,'<!-- comment: when it is pick your own venue')</field>
         <input class="btn btn-success" name="btnBestAvail" onclick="process()" type="submit" value="Choisissez vos Si&egrave;ges"/>
         <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN,'-->')</field>
-        <input class="btn btn-danger" name="btnBestAvailCancel" type="submit" value="Annuler et Recommencer"/>
+        <input class="btn btn-danger" name="btnBestAvailCancel" type="submit" value="Annuler et recommencer"/>
        </div>
       </form>
       <!--#include virtual="TMtemplates/tmPerformanceSalesNotes.html" -->

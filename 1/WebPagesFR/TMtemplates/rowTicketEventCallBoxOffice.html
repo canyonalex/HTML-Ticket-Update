@@ -3,18 +3,18 @@
 			<field>pick(PB_ONSALE_INTERNET<F_CURRENT_DATETIME,'', '<!-- comment: past onsale date')</field>
    <div>
     <font color="red">
-     Commencent de vente <field>dat(PB_ONSALE_INTERNET, 'D m y h:N A')</field>
+     Commencent de vente <field>dat(PB_ONSALE_INTERNET, 'D m y H:N')</field>
     </font>
    </div>
    <field>pick(PB_ONSALE_INTERNET<F_CURRENT_DATETIME,'', '-->')</field>
 <field>pick(isclear(PB_ONSALE_INTERNET),'', '-->')</field>
    <div>
-    Appeler le Box-Office au
+    Appelez la billeterie au
     <a href="tel:<field>D_SWITCH_BOARD</field>">
      <field>D_SWITCH_BOARD</field>
     </a>
-    ou
-    <a href="mailto:<field>D_EMAIL_ADDR</field>?subject=Online%20Sales%20Inquiry%20-%20<field>P_PLAY_TITLE</field>%20(<field>PB_PERFORM_DATE</field>%20at%20<field>PB_PERFORM_TIME</field>)">
+    ou envoyez un courriel &agrave;
+    <a href="mailto:<field>D_EMAIL_ADDR</field>?subject=Online%20Sales%20Inquiry%20-%20<field>P_PLAY_TITLE</field>%20(<field>PB_PERFORM_DATE</field>%20at%20<field>tim(PB_PERFORM_TIME,'H:N')</field>)">
      <field>D_EMAIL_ADDR</field>
     </a>
    </div>

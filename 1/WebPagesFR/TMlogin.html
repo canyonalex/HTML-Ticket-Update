@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Ouverture de session
+   <field>D_COMPANY_LONG</field> | Ouvrir une session
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -16,7 +16,7 @@
   <div class="container">
    <div class="page-header">
     <h1>
-     <field>D_COMPANY_LONG</field> Login
+     <field>D_COMPANY_LONG</field> Ouvrir une session
     </h1>
    </div>
    <div class="row">
@@ -43,11 +43,11 @@
      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
      <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
       <div class="form-group">
-       <input class="form-control btn btn-primary" name="btnAccountRequest" type="submit" value="Nouveau <field>D_PATRON</field>"/>
+       <input class="form-control btn btn-primary" name="btnAccountRequest" type="submit" value="Nouveau <field>low(D_PATRON)</field>"/>
        <input name="C_SEQ" type="hidden" value="<field>C_SEQ</field>"/>
        <input name="param" type="hidden" value="<field>F_HTML_PARAMETER</field>"/>
        <p class="help-block">
-        Nouveau <field>D_PATRON</field>
+        Nouveau <field>low(D_PATRON)</field>
        </p>
       </div>
      </form>
@@ -62,12 +62,10 @@
      <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
       <div class="form-group" style="margin-top: 15px;">
        <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"<!-- comment:","")</field>
-       <input class="form-control btn btn-primary" name="btnGetEventList" type="submit" value="Naviguer Anonymement"/>
+       <input class="form-control btn btn-primary" name="btnGetEventList" type="submit" value="Naviguer anonymement"/>
        <p class="help-block">
-        Cliquez si vous souhaitez chercher des billets sans se connecter encore.
-        S'il vous pla&icirc;t noter que vous aurez besoin de vous connecter en utilisant un
-        Email ID valide (ou cr&eacute;er un compte) avant de remplir votre
-        <field>low(D_ORDER_DESC)</field>.
+        Cliquez ci-dessus si vous souhaitez chercher des billets sans ouvrir de session.
+                  Notez que lorsque vous voudrez compl&eacute;ter votre <field>low(D_ORDER_DESC)</field>, il voud faudra vous connecter ou cr&eacute;er un compte.
        </p>
        <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"-->","")</field>
       </div>

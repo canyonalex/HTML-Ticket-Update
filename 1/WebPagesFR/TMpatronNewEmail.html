@@ -22,24 +22,24 @@
      </h1>
     </div>
     <div class="alert">
-     Vous avez &eacute;t&eacute; ajout&eacute; &agrave; notre syst&egrave;me de billetterie en ligne &agrave; la suite de votre r&eacute;cente visite &agrave; notre site Web.
-     Votre adresse email est utilis&eacute;e pour acc&eacute;der &agrave; votre compte.
-     Si vous ne vous souvenez pas de cr&eacute;er un compte en ligne, contacter la billetterie par t&eacute;l&eacute;phone avec les pr&eacute;occupations que vous pourriez avoir.
+     Vous avez &eacute;t&eacute; ajout&eacute; &agrave; notre syst&egrave;me de billetterie en ligne &agrave; la suite de votre r&eacute;cente visite de notre site Web.
+     Votre adresse courriel est utilis&eacute;e pour acc&eacute;der &agrave; votre compte.
+     Si vous ne vous souvenez avoir cr&eacute;er un compte en ligne, contactez notre billetterie par t&eacute;l&eacute;phone pour plus d'informations.
     </div>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
     <p>
      &nbsp;
     </p>
     <div class="alert">
-     Vous avez &eacute;galement cliqu&eacute; quelques cases &agrave; cocher pour nous dire comment vous voulez que nous vous informerons sur nos programmes et &eacute;v&eacute;nements.
+     Vous avez &eacute;galement cliqu&eacute; quelques cases &agrave; cocher pour nous dire comment vous voulez que nous vous informions sur nos programmes et &eacute;v&eacute;nements.
      <field>D_COMPANY_LONG</field> utilise une approche double opt-in confirmation pour les notifications.
-        Cela signifie que vous devez confirmer votre choix en cliquant sur le bouton ci-dessous.
+        Pri&egrave;re de confirmer votre choix en cliquant sur le bouton ci-dessous.
      <br/>
      <br/>
-     Si vous ne cliquez pas sur le lien, puis notre syst&egrave;me respectera vos souhaits et vous retirer de ces notifications environ <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures apr&egrave;s que vous avez cr&eacute;&eacute; votre compte.
+     Si vous ne cliquez pas sur le lien, notre syst&egrave;me respectera vos souhaits et vous serez retir&eacute; de nos listes d'envoi environ <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures apr&egrave;s la cr&eacute;ation de votre compte.
     </div>
     <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-     Confirmer ma configuration de notification
+     Confirmer mon inscription aux listes d'envoi
     </a>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
     <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>login?e=<field>F_EMAIL_ADDRESS</field>&tmsource=accountnew">

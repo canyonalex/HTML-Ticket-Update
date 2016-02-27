@@ -29,11 +29,11 @@
      <div class="row">
       <div class="col-md-6">
        <form action="<field>F_HTML_FIREWALL</field>online" id="TMadd" method="POST" role="form">
-        <input class="btn btn-primary" name="btnMailListAdd" type="submit" value="Ajouter les Notifications s&eacute;lectionn&eacute;s"/>
+        <input class="btn btn-primary" name="btnMailListAdd" type="submit" value="Ajouter les notifications s&eacute;lectionn&eacute;es"/>
         <input name="hiddenSubmit" type="hidden" value=""/>
         <div class="form-group">
          <label for="F_HTML_SUBSCRIBE_LIST">
-          Notifications vous pouvez ajouter
+          Notifications que vous pouvez ajouter:
          </label>
          <select class="form-control" id="PM_SEQ" multiple="" name="PM_SEQ" ondblclick="submitForm('TMadd','btnMailListAdd','YES');" size="10">
           <field>F_HTML_SUBSCRIBE_LIST</field>
@@ -41,19 +41,19 @@
         </div>
        </form>
        <div class="alert alert-warning">
-        S&eacute;lectionnez les &eacute;l&eacute;ments que vous souhaitez recevoir
-        des courriels, puis cliquez sur le bouton 'Ajouter les Notifications
-        s&eacute;lectionn&eacute;s'.
+        S&eacute;lectionnez les listes auxquelles que vous voulez vous inscrire
+       et cliquez sur le bouton 'Ajouter les notifications
+        s&eacute;l&eacute;ctionn&eacute;es'.
        </div>
       </div>
       <!-- comment: .col-md-6 -->
       <div class="col-md-6">
        <form action="<field>F_HTML_FIREWALL</field>online" id="TMremove" method="POST" role="form">
-        <input class="btn btn-primary" name="btnMailListRemove" type="submit" value="Retirez les Notifications s&eacute;lectionn&eacute;s"/>
+        <input class="btn btn-primary" name="btnMailListRemove" type="submit" value="Retirez les notifications s&eacute;l&eacute;ctionn&eacute;es"/>
         <input name="hiddenSubmit" type="hidden" value=""/>
         <div class="form-group">
          <label for="F_HTML_UNSUBSCRIBE_LIST">
-          Notifications vous recevez d&eacute;j&agrave;
+          Notifications que vous recevez d&eacute;j&agrave;:
          </label>
          <select class="form-control" id="ML_PM_SEQ" multiple="" name="ML_PM_SEQ" ondblclick="submitForm('TMremove','btnMailListRemove','YES');" size="10">
           <field>F_HTML_UNSUBSCRIBE_LIST</field>
@@ -61,20 +61,18 @@
         </div>
        </form>
        <div class="alert alert-warning">
-        S&eacute;lectionnez les &eacute;l&eacute;ments que vous ne souhaitez plus
-        &ecirc;tre envoy&eacute; sur, puis cliquez sur le bouton 'Ajouter les
-        Notifications s&eacute;lectionn&eacute;s'.
+        S&eacute;lectionnez les listes dont vous voulez &ecirc;tre retir&eacute;(e) et cliquez sur le bouton 'Retirez les notifications s&eacute;l&eacute;ctionn&eacute;es'.
        </div>
       </div>
       <!-- comment: .col-md-6 -->
      </div>
      <!-- comment: .row -->
      <div class="alert">
-      S'il vous pla&icirc;t lire notre politique de confidentialit&eacute; qui explique comment
-      l'information peut &ecirc;tre utilis&eacute;e.
+      S'il vous pla&icirc;t, prenez le temps de lire notre politique de confidentialit&eacute; qui explique comment
+      vos renseignements peuvent &ecirc;tre utilis&eacute;s.
      </div>
      <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>tmFee/tmPrivacyPolicy.html" onclick="return popup(this, 'notes')">
-      Politique de Confidentialit&eacute;
+      Politique de confidentialit&eacute;
      </a>
     </div>
     <!-- comment: .col-md-8 -->

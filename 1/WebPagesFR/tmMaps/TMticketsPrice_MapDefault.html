@@ -70,11 +70,11 @@
        </table>
        <!--#include virtual="tmMaps/tmViewFromSeat.html" -->
        <!--#include virtual="TMtemplates/pleaseWaitMessage.html" -->
-       <input class="btn btn-success" name="btnReserveTicket" onclick="process()" type="submit" value="Acheter des Billets"/>
+       <input class="btn btn-success" name="btnReserveTicket" onclick="process()" type="submit" value="Acheter des billets"/>
        <field>pick(PB_SALES_METHOD=2&not(F_HTML_ALLOW_PICK_YOUR_OWN),'<!-- comment:')</field>
        <input class="btn btn-info" name="btnBestAvail" onclick="process()" type="submit" value="Sugg&eacute;rer d'autres si&egrave;ges"/>
        <field>pick(PB_SALES_METHOD=2&not(F_HTML_ALLOW_PICK_YOUR_OWN),'-->')</field>
-       <input class="btn btn-danger" name="btnReserveCancel" type="submit" value="Annuler et Recommencer"/>
+       <input class="btn btn-danger" name="btnReserveCancel" type="submit" value="Annuler et recommencer"/>
        <!--#include virtual="tmMaps/tmPickYourSeatButtons.html" -->
       </form>
       <div>

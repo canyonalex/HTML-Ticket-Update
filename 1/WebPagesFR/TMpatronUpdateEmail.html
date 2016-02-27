@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Renseignements du compte mis &agrave; jour
+   <field>D_COMPANY_LONG</field> | Mise &agrave; jour de votre compte
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -15,7 +15,7 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      Renseignements du compte mis &agrave; jour
+      Mise &agrave; jour de votre compte
       <br/>
       <small class="text-muted">
        <field>C_FIRST_NAME</field> <field>C_LAST_NAME</field>
@@ -23,25 +23,25 @@
      </h1>
     </div>
     <div class="alert">
-     R&eacute;cemment, des informations de votre compte a &eacute;t&eacute; mis &agrave; jour lorsque vous avez visit&eacute; notre site web en ligne ou parl&eacute; au personnel au <field>D_COMPANY_LONG</field>.  Si vous n'&ecirc;tes pas au courant de cette activit&eacute; r&eacute;cente, s'il vous pla&icirc;t contacter la billetterie ou vous connecter, v&eacute;rifiez votre compte et changer votre mot de passe
+     R&eacute;cemment, les informations de votre compte ont &eacute;t&eacute; mises &agrave; jour quand vous avez visit&eacute; notre site web ou parl&eacute; &agrave; un membre de notre personnel.  Si vous n'&ecirc;tes pas au courant de cette activit&eacute; r&eacute;cente, s'il vous pla&icirc;t contactez la billetterie ou connectez vous pour changer votre mot de passe.
      <br/>
      <br/>
-     Vous pouvez taper directement l'adresse URL du site dans votre navigateur si vous pr&eacute;f&eacute;rez une s&eacute;curit&eacute; suppl&eacute;mentaire de navigation.
+     Vous pouvez taper directement l'adresse URL du site dans votre navigateur pour un niveau de s&eacute;curit&eacute; suppl&eacute;mentaire.
     </div>
     <a class="btn btn-warning" href="<field>F_HTML_FIREWALL</field>login?e=<field>CI_CONTENTS</field>&tmsource=accountupdate">
-     Revoir Mon compte
+     Revoir mon compte
     </a>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
     <div class="alert alert-info">
-     Vous avez &eacute;galement cliqu&eacute; quelques cases &agrave; cocher pour nous dire comment vous voulez que nous vous informerons sur nos programmes et &eacute;v&eacute;nements.
+     Vous avez &eacute;galement coch&eacute; certaines cases pour nous dire comment vous voulez &ecirc;tre inform&eacute; de nos programmes et &eacute;v&eacute;nements.
      <field>D_COMPANY_LONG</field> utilise une approche double opt-in confirmation pour les notifications.
         Cela signifie que vous devez confirmer votre choix en cliquant sur le bouton ci-dessous.
      <br/>
      <br/>
-     Si vous ne cliquez pas sur le lien, puis notre syst&egrave;me respectera vos souhaits et vous retirer de ces notifications environ <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures apr&egrave;s que vous avez cr&eacute;&eacute; votre compte.
+     Si vous ne cliquez pas sur le lien, notre syst&egrave;me respectera vos souhaits et vous retirera des listes <field>D_WEB_PENDING_MAIL_LIST_TIMEOUT</field> heures apr&egrave;s la cr&eacute;ation de votre compte.
     </div>
     <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>opt-in?<field>F_HTML_DOUBLE_OPT_IN</field>">
-     Confirmer ma configuration de notification
+     Confirmer ma configuration de notifications
     </a>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'-->')</field>
     <p>

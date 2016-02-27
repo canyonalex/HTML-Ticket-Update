@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Contenu du panier d'achat
+   <field>D_COMPANY_LONG</field> | Contenu du panier
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -17,10 +17,10 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      Panier #<field>SCH_SEQ</field>
+      Panier num&eacute;ro<field>SCH_SEQ</field>
       <br/>
       <small class="text-muted">
-       Afin <field>SCH_ORD_SEQ</field> Achet&eacute; en <field>cap(dat(SCH_DATE_CHECKOUT,'w n D, y'))</field>
+       Commande <field>SCH_ORD_SEQ</field> pass&eacute;e le <field>dat(SCH_DATE_CHECKOUT,'w D m, y')</field>
       </small>
      </h1>
     </div>

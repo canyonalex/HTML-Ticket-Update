@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <base href="<field>F_HTML_IMAGE_SERVER</field>"/>
   <title>
-   <field>D_COMPANY_LONG</field> | Contenu du panier d&iacute;achat
+   <field>D_COMPANY_LONG</field> | Contenu du panier
   </title>
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
@@ -18,10 +18,10 @@
    <div id="content">
     <div class="page-header">
      <h1>
-      Panier d'achat #<field>SCH_SEQ</field>
+      Panier num&eacute;ro <field>SCH_SEQ</field>
       <br/>
       <small class="text-muted">
-       Article <field>SCH_ORD_SEQ</field> a achet&eacute; <field>cap(dat(SCH_DATE_CHECKOUT,'w n D, y'))</field>
+       Commande <field>SCH_ORD_SEQ</field> pass&eacute;e le <field>dat(SCH_DATE_CHECKOUT,'w D m, y')</field>
       </small>
      </h1>
     </div>
@@ -92,10 +92,10 @@
        </table>
       </div>
       <a class="btn btn-success" href="<field>F_HTML_FIREWALL</field>online?btnHistoricalCart=History">
-       Revenir &agrave; l'historique du panier d'achat
+       Revenir &agrave; l'historique du panier
       </a>
       <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>login?historicalprint=<field>SCH_SEQ</field>" target="_blank">
-       Imprimer le contenu du panier d'achat
+       Imprimer le contenu du panier
       </a>
      </div>
      <!-- comment: .col-md-8 -->
