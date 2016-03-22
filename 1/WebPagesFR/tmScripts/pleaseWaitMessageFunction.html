@@ -1,27 +1,20 @@
   <script language="JavaScript">
    <!--
+  var isAMSsubmitting = false;
   function process() {
-  var processingMessage = '<b>Traitement en cours, veuillez patienter... Le processus demande quelques instants.</b>';
+  if (isAMSsubmitting) return false;
+  $(this).disabled = true;
+  $(this).attr('disabled', 'disabled')
+  var processingMessage = '<b>Veuillez patienter... Le processus demande quelques instants.</b>';
   var messageHeight = '50px';
   
-  if (navigator.appName=="Microsoft Internet Explorer") {
-    pleaseWait.innerHTML = processingMessage;
-    document.all.pleaseWait.style.height = messageHeight;
-    document.all.pleaseWait.style.visibility = 'visible';
-    }
-
-  if (navigator.appName=="Netscape") {
-    document.getElementById("pleaseWait").innerHTML = processingMessage;
-    document.getElementById("pleaseWait").style.height = messageHeight;
-    document.getElementById("pleaseWait").style.visibility = 'visible';
-
-    }
-    
-   if (navigator.appName=="Safari") {
-    document.getElementById("pleaseWait").innerHTML = processingMessage;
-    document.getElementById("pleaseWait").style.height = messageHeight;
-    document.getElementById("pleaseWait").style.visibility = 'visible';
-    }
+  $("#pleaseWait").html(processingMessage);
+  $("#pleaseWait").height(messageHeight);
+  $("#pleaseWait").css('visibility', 'visible');
+  
+  isAMSSubmitting = true;
+  return true;
+  
   } 
   //-->
   </script>
