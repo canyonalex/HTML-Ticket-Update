@@ -91,9 +91,11 @@
       <br/>
       <input name="PM_SEQ" type="checkbox" value="35"/>
       2008 subscribers (should be able to add)
-      <!--       	<select name="PM_SEQ" size="10" multiple id="PM_SEQ">
-       		<field>F_HTML_SUBSCRIBE_LIST</field>         		                                                                          
-       	</select> -->
+      <!-- comment:
+       <select class="form-control" name="PM_SEQ" size="10" multiple id="PM_SEQ">
+        <field>F_HTML_SUBSCRIBE_LIST</field>                                                                          
+       </select>
+       -->
       <!--comment: 
     The location of the email address is set to code table default, however it can be specified here by passing a hidden parameter:
     	<input type=hidden name="CCL_LOCATION_FC_SEQ" value="5"> 
@@ -109,7 +111,7 @@
   		<input type=checkbox name="PM_SEQ" value="10"> Add me to mail list #10<br>
   		
   	List support (The below would display a list of options for mail list #5 and #10):
-  		<select name="PM_SEQ" size="10" multiple id="PM_SEQ">
+  		<select class="form-control" name="PM_SEQ" size="10" multiple id="PM_SEQ">
   			<option value="5">Mail List #5</option>
   			<option value="10">Mail List #10</option>
   		</select>
@@ -117,8 +119,8 @@
   		If you wish Theatre Manager to build the list of available mail lists you can use
         the following construct almost anywhere in the web pages as long as the button sent is the
         one to join selected mail lists:
-  		<select name="PM_SEQ" size="10" multiple id="PM_SEQ">
-        	<field>F_HTML_SUBSCRIBE_LIST</field>         		                                                                          
+  		<select class="form-control" name="PM_SEQ" size="10" multiple id="PM_SEQ">
+        	<field>F_HTML_SUBSCRIBE_LIST</field>                                                                          
         </select>
   -->
      </td>
