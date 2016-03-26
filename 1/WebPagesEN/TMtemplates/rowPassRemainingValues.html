@@ -8,13 +8,21 @@
      <field>MT_DESCRIPTION_EXTERNAL</field>
     </a>
     <field>pick(len(M_NOTES)>0,'<!-- comment: pass notes')</field>
-    <br/>
-    <field>M_NOTES</field>
-    	 <field>pick(len(M_NOTES)>0,'-->')</field>
+    <div class="alert alert-text fade in">
+     <a aria-label="close" class="close" data-dismiss="alert" href="#">
+      &times;
+     </a>
+     <field>M_NOTES</field>
+    </div>
+    <field>pick(len(M_NOTES)>0,'-->')</field>
 	 <field>pick(len(MT_NOTES)>0,'<!-- comment: pass type notes')</field>
-    <br/>
-    <field>MT_NOTES</field>
-    	 <field>pick(len(MT_NOTES)>0,'-->')</field>
+    <div class="alert alert-text fade in">
+     <a aria-label="close" class="close" data-dismiss="alert" href="#">
+      &times;
+     </a>
+     <field>MT_NOTES</field>
+    </div>
+    <field>pick(len(MT_NOTES)>0,'-->')</field>
    </td>
    <td>
     <field>pick(len(M_DATE_EXPIRY)>0,'<!-- comment: Expiry date on pass','')</field>

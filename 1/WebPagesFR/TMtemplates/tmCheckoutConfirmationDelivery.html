@@ -1,5 +1,8 @@
   <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)>0&SCH_TIX_PRINT_STATUS=0,'<!-- comment:')</field>
-  <div class="alert alert-success">
+  <div class="alert alert-success fade in">
+   <a aria-label="close" class="close" data-dismiss="alert" href="#">
+    &times;
+   </a>
    Vous devez t&eacute;l&eacute;charger vos billets &agrave; code-barres au format PDF, les imprimer, et de les amener &agrave; l'&eacute;v&eacute;nement afin d' &ecirc;tre admis.
   </div>
   <div>
@@ -13,7 +16,10 @@
   <field>pick((SCH_TIX_QUANTITY+SCH_PASS_QUANTITY)>0&SCH_TIX_PRINT_STATUS=0,'-->')</field>
   <div>
    <br/>
-   <div class="alert alert-warning">
+   <div class="alert alert-warning fade in">
+    <a aria-label="close" class="close" data-dismiss="alert" href="#">
+     &times;
+    </a>
     Vous pouvez imprimer un re&ccedil;u pour vos dossiers. Ce n'est pas un billet d'admission.
    </div>
    <a action="<field>F_HTML_FIREWALL</field>online" class="btn btn-info" onclick="window.print()">

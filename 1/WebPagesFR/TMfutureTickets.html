@@ -17,7 +17,10 @@
   <div class="container">
    <div id="content">
     <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
-    <div class="alert alert-info">
+    <div class="alert alert-info fade in">
+     <a aria-label="close" class="close" data-dismiss="alert" href="#">
+      &times;
+     </a>
      Voici la liste des billets &agrave; votre nom pour des <field>low(D_PERF_DESC)</field> &agrave; venir.
      Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.  Si vous avez des questions ou souhaitez faire un &eacute;change conform&eacute;ment aux
      <a class="link" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">

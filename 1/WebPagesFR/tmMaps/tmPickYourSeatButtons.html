@@ -5,7 +5,10 @@
   <!-- comment: if not IE, show pick your own or next best -->
   <!--[if !IE]><!-->
   <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN,'<!-- comment:')</field>
-  <div>
+  <div class="alert fade in">
+   <a aria-label="close" class="close" data-dismiss="alert" href="#">
+    &times;
+   </a>
    <h4>
     Pr&eacute;f&eacute;rez diff&eacute;rents si&egrave;ges?
    </h4>
@@ -20,10 +23,8 @@
      Quand vous avez les si&egrave;ges que vous voulez , cliquez sur 'Acheter des Billets'.
     </li>
    </ul>
-   <div>
-    <input class="btn btn-success" id="btnBestAvailSwap" name="btnBestAvailSwap" onclick="process()" type="submit" value="Changez de nouveaux si&egrave;ges s&eacute;lectionn&eacute;s"/>
-    <input class="btn btn-info" name="btnBestAvail" onclick="process()" type="submit" value="Sugg&eacute;rer d'autres si&egrave;ges"/>
-   </div>
   </div>
+  <input class="btn btn-success" id="btnBestAvailSwap" name="btnBestAvailSwap" onclick="process()" type="submit" value="Changez de nouveaux si&egrave;ges s&eacute;lectionn&eacute;s"/>
+  <input class="btn btn-info" name="btnBestAvail" onclick="process()" type="submit" value="Sugg&eacute;rer d'autres si&egrave;ges"/>
   <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN,'-->')</field>
   <!--<![endif]-->

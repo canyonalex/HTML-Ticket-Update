@@ -3,6 +3,11 @@
     <field>VE_NAME</field>
    </a>
   </div>
-  <div class="col-sm-9">
+  <field>pick(len(PB_PERF_NOTES)>0,'<!-- comment:')</field>
+  <div class="alert col-sm-9 fade in">
+   <a aria-label="close" class="close" data-dismiss="alert" href="#">
+    &times;
+   </a>
    <field>PB_PERF_NOTES</field>
   </div>
+  <field>pick(len(PB_PERF_NOTES)>0,'-->')</field>

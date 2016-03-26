@@ -198,7 +198,7 @@ ErrorNumber	ErrorText
 10197	(required, if no last name)
 10198	Error - Your account has been locked due to too many failed login attempts.  Please use the Forgot my Password button to set a new password and regain access.
 10199	Unable to reserve selected {seats} due to availability or {seat} rules.{br}For instance, you may not leave a single empty seat.{br}Your previous {seats} are still held.
-10200	Successfully changed {seats}.{br}If these are what you wish, click "Add Tickets to Shopping Cart."
+10200	Successfully changed {seats}.{br}If these are what you wish, click "Add Tickets to Cart."
 10201	Ticket #{ticketnumber} belongs to a {patron} other than the one associated with this ticket.
 10202	Barcode is associated with {patron} #{patronnumber}, but that {patron} could not be found in the database.
 10203	An error occurred while verifying the pricing of the cart.  Please try again later.

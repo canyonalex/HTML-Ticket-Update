@@ -26,7 +26,10 @@
     <div class="row">
      <div class="col-md-4">
       <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
-      <div class="alert alert-info">
+      <div class="alert alert-info fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
        Click the 'Charge my card NOW' button to begin charging your card.
       </div>
       <!--#include virtual="TMtemplates/tmCheckoutPostDatedPaymentsAccepted.html" -->
@@ -38,7 +41,10 @@
        <input name="cc" type="hidden" value="<field>F_HTML_CHECKOUT_INFO</field>"/>
        <input name="pg" type="hidden" value="checkout"/>
        <input class="btn btn-success" name="btnCheckoutAccept" onclick="process()" type="submit" value="Charge $<field>pick(F_POST_DATED_PLAN_ACCEPTED,SCH_TOTAL_COST,F_POST_DATED_AMOUNT_DUE_TODAY)</field> <field>F_HTML_CURRENCY</field> to my credit card NOW"/>
-       <div class="alert alert-text">
+       <div class="alert alert-text fade in">
+        <a aria-label="close" class="close" data-dismiss="alert" href="#">
+         &times;
+        </a>
         If this page does not change within one minute (1) after clicking the 
 					'Charge my card NOW' button above, please contact our
         <a class="link" href="mailto:<field>D_EMAIL_ADDR</field>?subject=Checkout%20Issue%20with%20Cart%20<field>SCH_SEQ</field>">

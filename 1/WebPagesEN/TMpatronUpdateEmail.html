@@ -21,7 +21,7 @@
       </small>
      </h1>
     </div>
-    <div class="alert">
+    <div class="alert alert-text">
      Recently, your account information was updated when you visited our online web site
   or talked to the staff at <field>D_COMPANY_LONG</field>.  If you are not aware of this recent activity,
   please contact the box office or log in, verify your account and change your password.
@@ -33,7 +33,10 @@
      Review My Account
     </a>
     <field>pick(len(F_HTML_DOUBLE_OPT_IN)>0,'<!-- comment: no double opt in mail list items')</field>
-    <div class="alert alert-info">
+    <div class="alert alert-info fade in">
+     <a aria-label="close" class="close" data-dismiss="alert" href="#">
+      &times;
+     </a>
      You made some selections asking to be kept informed about our programs and events.
      <field>D_COMPANY_LONG</field> uses a double opt-in confirmation so you must confirm 
      your choices by clicking the button.  If you do not, our system respects your wishes and removes you from those notifications

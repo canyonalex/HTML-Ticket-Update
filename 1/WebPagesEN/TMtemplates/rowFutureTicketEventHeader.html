@@ -26,13 +26,9 @@
    <field>P_SALES_NOTES</field>
   </small>
   <field>pick(isclear(P_SALES_NOTES),'',' -->')</field>
-
-	
-         <field>pick(isclear(PB_PERF_NOTES),'','<!-- comment:')</field>
   <small>
-   <field>PB_PERF_NOTES</field>
+   <!--#include virtual="TMtemplates/rowPerformanceSalesNotes.html" -->
   </small>
-  <field>pick(isclear(PB_PERF_NOTES),'',' -->')</field>
   <h4>
    Venue
   </h4>

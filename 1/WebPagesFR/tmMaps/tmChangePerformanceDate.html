@@ -6,14 +6,17 @@
    Vous avez choisi
   </h4>
   <p>
-   <!--#include virtual="TMtemplates/rowPromotionPriceCode.html" -->
+   <!--#include virtual="TMtemplates/rowPerformanceDateTime.html" -->
    <br/>
    <a class="btn btn-info btn-sm" href="<field>F_HTML_FIREWALL</field>login?event=<field>P_SEQ</field>">
     Changer de date
    </a>
   </p>
   <field>pick(isclear(P_SALES_NOTES),'','<!-- comment:')</field>
-  <div class="well">
+  <div class="well alert fade in">
+   <a aria-label="close" class="close" data-dismiss="alert" href="#">
+    &times;
+   </a>
    <small>
     <field>P_SALES_NOTES</field>
    </small>
