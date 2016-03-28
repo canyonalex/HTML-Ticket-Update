@@ -62,7 +62,7 @@
         <label class="col-sm-2 control-label" for="PAY_METHOD_FC_SEQ">
          Payment Method
         </label>
-        <div class="col-sm-4">
+        <div class="<field>pick(len(F_HTML_MERCHANT_LIST)>0&D_ENABLE_INTERNET_PASS_REDEMPTION=1,'col-sm-4','col-sm-3')</field>">
          <div>
           <select class="form-control" id="PAY_METHOD_FC_SEQ" name="PAY_METHOD_FC_SEQ">
            <field>F_HTML_PAYMENT_LIST</field>
@@ -79,11 +79,9 @@
          </select>
         </div>
         <field>pick(len(F_HTML_MERCHANT_LIST)>0,' -->')</field>
-	
-
-    <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if redeem passes ok','')</field>
+        <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if redeem passes ok','')</field>
         <div class="col-sm-3">
-         <input class="btn btn-info" name="btnPassRemainingValues" type="submit" value="Redeem My Passes/Gift Certificates"/>
+         <input class="btn btn-info" name="btnPassRemainingValues" type="submit" value="Redeem a Pass/Gift Certificate"/>
         </div>
         <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'-->','')</field>
         <!--/div-->
@@ -129,7 +127,7 @@
        <!-- comment: CVV2 or CID number on the back of the card -->
        <div class="form-group">
         <label class="col-sm-2 control-label" for="PAY_CARD_CID_NO">
-         CVV
+         CVV2
         </label>
         <div class="col-sm-10">
          <input class="form-control" id="PAY_CARD_CID_NO" maxlength="4" name="PAY_CARD_CID_NO" placeholder="3 or 4 digit security code on the back of your card" type="text" value="<field>PAY_CARD_CID_NO</field>"/>

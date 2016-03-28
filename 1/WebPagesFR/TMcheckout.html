@@ -63,7 +63,7 @@
         <label class="col-sm-2 control-label" for="PAY_METHOD_FC_SEQ">
          Mode de paiement
         </label>
-        <div class="col-sm-4">
+        <div class="<field>pick(len(F_HTML_MERCHANT_LIST)>0&D_ENABLE_INTERNET_PASS_REDEMPTION=1,'col-sm-4','col-sm-3')</field>">
          <div>
           <select class="form-control" id="PAY_METHOD_FC_SEQ" name="PAY_METHOD_FC_SEQ">
            <field>F_HTML_PAYMENT_LIST</field>
@@ -80,7 +80,7 @@
          </select>
         </div>
         <field>pick(len(F_HTML_MERCHANT_LIST)>0,' -->')</field>
-    <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if redeem passes ok','')</field>
+        <field>pick(D_ENABLE_INTERNET_PASS_REDEMPTION=1,'<!-- comment: only show if redeem passes ok','')</field>
         <div class="col-sm-3">
          <input class="btn btn-info" name="btnPassRemainingValues" type="submit" value="&Eacute;changez Certificats-cadeaux"/>
         </div>
