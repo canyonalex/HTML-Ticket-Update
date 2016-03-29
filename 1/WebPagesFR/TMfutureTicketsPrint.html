@@ -6,52 +6,77 @@
   <title>
    <field>D_COMPANY_LONG</field> | Billets &agrave; imprimer chez soi
   </title>
-  <meta content="no-cache" http-equiv="Pragma"/>
-  <!-- Pragma content set to no-cache tells the browser not to cache the page
-		This may or may not work in IE -->
-  <meta content="0" http-equiv="expires"/>
-  <!-- Setting the page to expire at 0 means the page is immediately expired
-		Any values less then one will set the page to expire some time in past and
-		not be cached. This may not work with Navigator -->
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/PDFstyles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background" onload="window.print()">
-  <div align="center">
-   <b class="messageprint">
-    <field>D_COMPANY_LONG</field>
-   </b>
-   <p>
-    <b class="messageprint">
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
-   </p>
-   <table border="0" cellpadding="10" cellspacing="0" class="tablerowdetailprint" width="700">
-    <tr>
-     <td>
-      <div align="left">
-       <p align="left" class="message">
-        LES BILLETS DOIVENT &Ecirc;TRE IMPRIM&Eacute;S SUR PAPIER BLANC
-        <br/>
-       </p>
-       <p align="left" class="mainprint">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Print your tickets
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">   
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+       <div class="alert alert-info fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       Billets
+       <b>
+        &agrave; imprimer sur des pages s&eacute;par&eacute;es
+       </b>
+       et, en fonction de votre navigateur, pourraient ne pas figurer sur cette page.
+       </div>
+      <div class="alert alert-danger fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+        Les billets doivent &ecirc;tre imprim&eacute;s sur PAPIER BLANC
+      </div>
+       <div class="alert alert-warning fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       Si la bo&icirc;te de dialogue d'impression ne s'ouvre pas (ou si vous la fermez), utilisez le bouton ci-dessous pour ouvrir la bo&icirc;te de dialogue de l'imprimante pour imprimer vos billets.
+       </div>
+      <input class="btn btn-success" onclick="window.print()" type="button" value="Imprimez vos billets"/>
+      <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html"  onclick="return popup(this, 'notes')">
+       Politiques du service
+      </a>
+     </div>
+     <div class="col-md-8">
+      <div class="well alert fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       <h3>
+         Billets &agrave; imprimer chez soi
+        </h3>
+       <p>
         La liste ci-dessous &eacute;num&egrave;re les billets figurant &agrave; votre nom pour des <field>low(D_PERF_DESC)</field> &agrave; venir. Ils sont class&eacute;s par <field>low(D_PERF_DESC)</field>.
        </p>
        <p>
-        Si vous avez des questions au sujet de vos billets ou si vous souhaitez les &eacute;changer conform&eacute;ment aux
-        <a class="linkprint" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
-         politiques du service de billetterie en ligne,
-        </a>
-        nous contacter en utilisant les informations ci-dessous.
+        Si vous avez des questions au sujet de vos billets ou si vous souhaitez les &eacute;changer
+        conform&eacute;ment aux politiques du service de billetterie en ligne, nous contacter en utilisant
+        les informations ci-dessous.
        </p>
-       <p>
-        <b>
-         Observations:
-        </b>
-       </p>
+      </div>
+      <div class="well alert fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       <h3>
+         Observations
+        </h3>
        <ul>
         <li>
          Seuls les billets dont la vente est compl&eacute;t&eacute;e sont imprim&eacute;s -ET- seulement si le billet peut &ecirc;tre imprim&eacute; chez soi
@@ -69,26 +94,15 @@
          Les billets sont num&eacute;ris&eacute;s/v&eacute;rifi&eacute;s au guichet, s'il vous pla&icirc;t assurez-vous de les imprimer de fa&ccedil;on lisible et que le code barre apparaisse en entier
         </li>
        </ul>
-       Billets
-       <b>
-        &agrave; imprimer sur des pages s&eacute;par&eacute;es
-       </b>
-       et, en fonction de votre navigateur, pourraient ne pas figurer sur cette page. Si la bo&icirc;te de dialogue d'impression ne s'ouvre pas (ou si vous la fermez), utilisez le bouton ci-dessous pour ouvrir la bo&icirc;te de dialogue de l'imprimante pour imprimer vos billets.
-       <p>
-       </p>
+       </div>
+       <!--#include virtual="TMtemplates/tmContactHours.html" -->
       </div>
-      <div align="center">
-       <input onclick="window.print()" type="button" value="Imprimez vos billets maintenant!"/>
-       <p>
-        <!--#include virtual="TMtemplates/tmContactHours.html" -->
-       </p>
-      </div>
-     </td>
-    </tr>
-   </table>
+     </div>
+    </div>
    <p style="page-break-after:always;">
    </p>
-   <field>F_HTML_HISTORICAL_CART_LIST</field>
   </div>
+  </div>
+  <field>F_HTML_HISTORICAL_CART_LIST</field>
  </body>
 </html>

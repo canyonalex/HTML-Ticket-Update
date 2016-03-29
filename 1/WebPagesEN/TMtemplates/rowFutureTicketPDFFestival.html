@@ -1,35 +1,37 @@
   <div align="center" class="page-break" width="700">
-   <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/pageHeader.gif"/>
-   <p>
-   </p>
-   <p>
-   </p>
-   <table border="1" cellpadding="5" cellspacing="0" width="700">
+   <table border="0" cellpadding="5" cellspacing="0" width="700">
     <tr>
-     <td align="center" rowspan="6" valign="top">
+     <td colspan="3">
+      <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/pageHeader.gif"/>
+     </td>
+    </tr>
+    <tr>
+     <td align="center" rowspan="7" valign="top" width="150">
       <field>pick(PB_PRINT_AT_HOME,'<!-- comment: not printing at home, do not show bar code to avoid server hits')</field>
       <img src="<field>F_HTML_TIX_BAR_CODE</field>&img_angle=270"/>
+      <field>pick(PB_PRINT_AT_HOME,'-->')</field>
+      <field>pick(PB_PRINT_AT_HOME&D_WEB_USE_QRCODES,'<!-- comment: only show if qr codes')</field>
       <br/>
       <center>
        <field>con(PS_SEQ,'-',PS_C_SEQ)</field>
       </center>
-      <field>pick(PB_PRINT_AT_HOME,'-->')</field>
+      <field>pick(PB_PRINT_AT_HOME&D_WEB_USE_QRCODES,'-->')</field>
      </td>
-     <td align="center" valign="top">
-      <div class="ticketline">
+     <td class="ticketlineprint" width="50">
        event
-      </div>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" onclick="return popup(this, 'notes')">
+     </td>
+     <td class="tablerowticketprint">
+      <a href="<field>F_HTML_FIREWALL</field>tmEvent/tmEvent<field>PB_P_SEQ</field>.html" target="_blank">
        <field>P_PLAY_TITLE</field>
       </a>
      </td>
     </tr>
     <tr>
-     <td align="center" valign="top">
-      <div class="ticketline">
+     <td class="ticketlineprint">
        venue
-      </div>
-      <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" onclick="return popup(this, 'notes')">
+     </td>
+     <td class="tablerowticketprint">
+      <a class="link" href="<field>F_HTML_FIREWALL</field>tmVenue/tmVenue<field>TM_SEQ</field>.html" target="_blank">
        <field>VE_NAME</field>
       </a>
       <br/>
@@ -39,49 +41,57 @@
      </td>
     </tr>
     <tr>
-     <td align="center" valign="top">
-      <div class="ticketline">
+     <td class="ticketlineprint">
        date
-      </div>
+     </td>
+     <td class="tablerowticketprint">
       <!--#include virtual="TMtemplates/rowPerformanceDateTime.html" -->
      </td>
     </tr>
     <tr>
-     <td align="center" valign="top">
-      <div class="ticketline">
+     <td class="ticketlineprint">
        seat
-      </div>
+     </td>
+     <td class="tablerowticketprint">
       <field>D_FESTIVAL_DESC</field>
      </td>
     </tr>
     <tr>
-     <td align="center" valign="top">
-      <div class="ticketline">
+     <td class="ticketlineprint">
        price
-      </div>
+     </td>
+     <td class="tablerowticketprint">
       <!--#include virtual="TMtemplates/rowPromotionPriceCode.html" -->
      </td>
     </tr>
     <tr>
-     <td align="center" valign="top">
-      <div class="ticketline">
+     <td class="ticketlineprint">
        patron
-      </div>
+     </td>
+     <td class="tablerowticketprint">
       <field>con(C_FIRST_NAME,' ',C_LAST_NAME)</field>
      </td>
     </tr>
     <tr>
-     <td colspan="2">
-      Please print this ticket and bring it with you to the event
+     <td class="ticketlineprint">
+     </td>
+     <td align="center" valign="middle">
+       Please print this ticket and bring it with you to the event
+     </td>
+    </tr>
     <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'<!-- comment: do not show bar code to avoid server hits')</field>
-      <img align="right" src="<field>F_HTML_TIX_BAR_CODE</field>"/>
-      <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'-->')</field>
+     <tr>
+      <td colspan="3" valign="middle">
+       <img align="right" src="<field>F_HTML_TIX_BAR_CODE</field>"/>
+      </td>
+     </tr>
+    <field>pick(PB_PRINT_AT_HOME&not(D_WEB_USE_QRCODES),'-->')</field>
+    <tr>
+     <td colspan="3">
+      <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/ticketAd.png"/>
      </td>
     </tr>
    </table>
-   <p>
-    <img border="0" src="<field>F_HTML_IMAGE_SERVER</field>/tmGifs/ticketAd.png"/>
-   </p>
   </div>
   <!-- comment: parameters to F_HTML_TIX_BAR_CODE
 quiet_zone			spate to left and right of bar code.  default is 2

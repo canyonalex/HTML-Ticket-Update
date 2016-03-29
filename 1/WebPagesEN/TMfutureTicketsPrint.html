@@ -5,54 +5,77 @@
   <title>
    <field>D_COMPANY_LONG</field> | Print at Home Tickets
   </title>
-  <meta content="no-cache" http-equiv="Pragma"/>
-  <!-- Pragma content set to no-cache tells the browser not to cache the page
-		This may or may not work in IE -->
-  <meta content="0" http-equiv="expires"/>
-  <!-- Setting the page to expire at 0 means the page is immediately expired
-		Any values less then one will set the page to expire some time in past and
-		not be cached. This may not work with Navigator -->
   <!--#include virtual="tmScripts/disclaimer.html" -->
   <!--#include virtual="tmScripts/styles.html" -->
+  <!--#include virtual="tmScripts/PDFstyles.html" -->
   <!--#include virtual="tmScripts/buttonRollover.html" -->
   <!--#include virtual="tmScripts/pleaseWaitMessageFunction.html" -->
+  <!--#include virtual="tmScripts/dropDownMenuFunction.html" -->
   <!--#include virtual="tmScripts/googleHeader.html" -->
  </head>
  <body class="background" onload="window.print()">
-  <div align="center">
-   <b class="messageprint">
-    <field>D_COMPANY_LONG</field>
-   </b>
-   <p>
-    <b class="messageprint">
-     <field>F_HTML_PAGE_MESSAGE</field>
-    </b>
-   </p>
-   <table border="0" cellpadding="10" cellspacing="0" class="tablerowdetailprint" width="700">
-    <tr>
-     <td>
-      <div align="left">
-       <p align="left" class="message">
-        TICKETS MUST BE PRINTED ON WHITE PAPER
-        <br/>
-       </p>
-       <p align="left" class="mainprint">
+  <!--#include virtual="TMtemplates/tmnavButtons.html" -->
+  <div class="container">
+   <div id="content">
+    <div class="page-header">
+     <h1>
+      Print your tickets
+     </h1>
+    </div>
+    <div class="row">
+     <div class="col-md-4">   
+      <!--#include virtual="TMtemplates/tmErrorMessageInfo.html" -->
+       <div class="alert alert-info fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       Tickets
+       <b>
+        print on separate pages
+       </b>
+       and, depending on your browser, may not appear on this window.
+       </div>
+      <div class="alert alert-danger fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+        Tickets must be printed on WHITE PAPER
+      </div>
+       <div class="alert alert-warning fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       If the printer dialog does not appear (or if you close it), 
+       click the 'Print Tickets' button.
+       </div>
+      <input class="btn btn-success" onclick="window.print()" type="button" value="Print Tickets"/>
+      <a class="btn btn-info" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html"  onclick="return popup(this, 'notes')">
+       Policies
+      </a>
+     </div>
+     <div class="col-md-8">
+      <div class="well alert fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       <h3>
+         Print at Home Tickets
+        </h3>
+       <p>
         These 'print-at-home' tickets are on file under your name for upcoming <field>low(tEditCheck.$setPlural(D_EVENT))</field> and are organized by <field>low(D_PERF_DESC)</field> and date.  If you have tickets for multiple <field>low(tEditCheck.$setPlural(D_PERF_DESC))</field>, please make sure to bring the correct tickets to the correct <field>low(D_PERF_DESC)</field>.
        </p>
        <p>
         If you have any questions of concerns about the tickets or would like to exchange any of them
-		   pursuant to our
-        <a class="linkprint" href="<field>F_HTML_FIREWALL</field>tmFee/tmBoxOfficePolicy.html" onclick="return popup(this, 'notes')">
-         box office policies
-        </a>
-        ,
-		   please contact us using the information below.
+        pursuant to our box office policies, please contact us using the information below.
        </p>
-       <p>
-        <b>
-         Notes:
-        </b>
-       </p>
+      </div>
+      <div class="well alert fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       <h3>
+         Notes
+        </h3>
        <ul>
         <li>
          Only completed ticket sales are printed -AND- only if the ticket may be printed at home.
@@ -70,26 +93,15 @@
          Tickets are scanned/verified at the box office for validity, please make sure to print them legibly and show the entire bar code on the page.
         </li>
        </ul>
-       The tickets
-       <b>
-        print on separate pages
-       </b>
-       and, depending on your browser, may not appear on this window.  If the printer dialog does not appear (or if you close it), use the button below to open the printer dialog to print your tickets.
-       <p>
-       </p>
+       </div>
+       <!--#include virtual="TMtemplates/tmContactHours.html" -->
       </div>
-      <div align="center">
-       <input onclick="window.print()" type="button" value="Print your tickets now!"/>
-       <p>
-        <!--#include virtual="TMtemplates/tmContactHours.html" -->
-       </p>
-      </div>
-     </td>
-    </tr>
-   </table>
+     </div>
+    </div>
    <p style="page-break-after:always;">
    </p>
-   <field>F_HTML_HISTORICAL_CART_LIST</field>
   </div>
+  </div>
+  <field>F_HTML_HISTORICAL_CART_LIST</field>
  </body>
 </html>
