@@ -1,7 +1,7 @@
   <div class="container">
-   <footer>
-    <p class="pull-left">
-     <field>D_WEB_PAGE_FOOTER</field>
-    </p>
-   </footer>
+   <field>pick(len(D_WEB_PAGE_FOOTER)>0,'<!-- comment:')</field>
+   <div class="footer navbar-fixed-bottom">
+    <field>D_WEB_PAGE_FOOTER</field>
+   </div>
+   <field>pick(len(D_WEB_PAGE_FOOTER)>0,'-->')</field>
   </div>
