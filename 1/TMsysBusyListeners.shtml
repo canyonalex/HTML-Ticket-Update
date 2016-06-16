@@ -4,10 +4,10 @@
   <title>
    Online Ticketing | Waiting Room
   </title>
-  <!--#include virtual="/TheatreManager/1/tmScripts/styles.html" -->
+  <!--#include virtual="${templatePath}/tmScripts/styles.html" -->
  </head>
  <body class="background">
-  <!--#include virtual="/tmnavButtonsNoServer.shtml" -->
+  <!--#include virtual="/${outlet}/tmnavButtonsNoServer.shtml" -->
   <div class="container">
    <div id="content">
     <div class="page-header">
@@ -23,17 +23,13 @@
      <div class="col-md-4">
      </div>
      <div class="col-md-8">
-      <div class="alert alert-warning fade in">
-       <a aria-label="close" class="close" data-dismiss="alert" href="#">
-        &times;
-       </a>
+      <div class="alert alert-warning">
        We are experiencing an unusually high volume of requests at the moment.
-       If you have already added tickets to your shopping cart, they will still
-       be there if you to connect to the web site again within a reasonable
-       time frame (10 minutes or so).
+          If you have already added tickets to your shopping cart, they will still be there
+          if you to connect to the web site again within a reasonable time frame (10 minutes or so).
       </div>
       <!-- comment: *** variables are set within balancer-manager.conf *** -->
-      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/1/login?btnCart">
+      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/1/login&btnCart">
        View my current shopping cart
       </a>
       <a class="btn btn-info" href="<!--#echo var="webURL" -->" target="_blank">
