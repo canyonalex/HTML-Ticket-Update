@@ -27,12 +27,10 @@
        <a aria-label="close" class="close" data-dismiss="alert" href="#">
         &times;
        </a>
-       The online ticketing service has encountered an unknown
-       problem. Please contact our box office using information
-       on our main web site and our representatives will be more
-       than happy to assist you -or- try again in a moment or two.
+       The online ticketing service has encountered an unknown problem. Please
+       contact our box office and our representatives will be more than happy
+       to assist you -or- try again in a moment or two.
       </div>
-      <!-- comment: *** variables are set within balancer-manager.conf *** -->
       <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/<!--#echo var="outlet" -->/login?event=0">
        Event list
       </a>
