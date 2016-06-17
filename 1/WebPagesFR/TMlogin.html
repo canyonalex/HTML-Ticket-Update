@@ -51,25 +51,28 @@
        </p>
       </div>
      </form>
-     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
       <div class="form-group">
-       <input class="form-control btn btn-primary" name="btnPasswordRequest" type="submit" value="J'ai oubli&eacute; mon mot de passe"/>
+       <a class="form-control btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?btnPasswordRequest=btnPasswordRequest">
+        J'ai oubli&eacute; mon mot de passe
+       </a>
        <p class="help-block">
         J'ai oubli&eacute; mon mot de passe
        </p>
       </div>
-     </form>
-     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
-      <div class="form-group" style="margin-top: 15px;">
        <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"<!-- comment:","")</field>
-       <input class="form-control btn btn-primary" name="btnGetEventList" type="submit" value="Naviguer anonymement"/>
+       <div class="form-group">
+        <a class="form-control btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?event=0">
+        <i class="fa fa-ticket">
+        </i>
+        Naviguer anonymement
+       </a>
        <p class="help-block">
         Cliquez ci-dessus si vous souhaitez chercher des billets sans ouvrir de session.
-                  Notez que lorsque vous voudrez compl&eacute;ter votre <field>low(D_ORDER_DESC)</field>, il voud faudra vous connecter ou cr&eacute;er un compte.
+        Notez que lorsque vous voudrez compl&eacute;ter votre <field>low(D_ORDER_DESC)</field>,
+        il voud faudra vous connecter ou cr&eacute;er un compte.
        </p>
+       </div>
        <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"-->","")</field>
-      </div>
-     </form>
      <!--#include virtual="TMtemplates/tmPoweredBy.html" -->
     </div>
    </div>

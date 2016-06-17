@@ -23,14 +23,15 @@
      <div class="col-md-4">
      </div>
      <div class="col-md-8">
-      <div class="alert alert-warning">
-       The online ticketing service has encountered an unknown
-       problem. Please contact our box office using information
-       on our main web site and our representatives will be more
-       than happy to assist you -or- try again in a moment or two.
+      <div class="alert alert-warning fade in">
+       <a aria-label="close" class="close" data-dismiss="alert" href="#">
+        &times;
+       </a>
+       The online ticketing service has encountered an unknown problem. Please
+       contact our box office and our representatives will be more than happy
+       to assist you -or- try again in a moment or two.
       </div>
-      <!-- comment: *** variables are set within balancer-manager.conf *** -->
-      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/1/login?event=0">
+      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/${outlet}/login?event=0">
        Event list
       </a>
       <a class="btn btn-info" href="<!--#echo var="webURL" -->" target="_blank">

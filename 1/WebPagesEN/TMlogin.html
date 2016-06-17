@@ -50,26 +50,28 @@
        </p>
       </div>
      </form>
-     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
       <div class="form-group">
-       <input class="form-control btn btn-primary" name="btnPasswordRequest" type="submit" value="Forgot My Password"/>
+       <a class="form-control btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?btnPasswordRequest=btnPasswordRequest">
+        Forgot My Password
+       </a>
        <p class="help-block">
         Reset your password.
        </p>
       </div>
-     </form>
-     <form action="<field>F_HTML_FIREWALL</field>login" method="POST" role="form">
-      <div class="form-group" style="margin-top: 15px;">
        <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"<!-- comment:","")</field>
-       <input class="form-control btn btn-primary" name="btnGetEventList" type="submit" value="Browse Anonymously"/>
+       <div class="form-group">
+        <a class="form-control btn btn-primary" href="<field>F_HTML_FIREWALL</field>login?event=0">
+        <i class="fa fa-ticket">
+        </i>
+        Browse Anonymously
+       </a>
        <p class="help-block">
         If you wish to browse for tickets without logging in yet.  
         Please note that you will be required to sign in with a valid Email ID (or create an account)
         prior to completing your <field>low(D_ORDER_DESC)</field>.
        </p>
+       </div>
        <field>pick(D_WEB_VIEW_EVENTS_WITHOUT_LOGIN,"-->","")</field>
-      </div>
-     </form>
      <!--#include virtual="TMtemplates/tmPoweredBy.html" -->
     </div>
    </div>
