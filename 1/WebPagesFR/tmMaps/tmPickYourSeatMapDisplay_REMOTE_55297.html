@@ -1,0 +1,96 @@
+  <!--[if lte IE 9]>
+  <!-- comment: disable for for internet explorer 9 -->
+  <br/>
+  <img class="img-responsive" src="<field>F_HTML_SEATMAP</field>&reserved_colour=007700&reserved_boundary=true&reserved_seat_border=5&format=svg"/>
+  <![endif]-->
+  <!-- comment: if not IE, allow full map support -->
+  <!--[if !IE]><!-->
+  <div align="center">
+   <!-- comment:
+		Parameters for Maps:
+
+			reserved_only = if true, the image returned is a blown up version around the reserved seats (can be yes,y,no,n,1 or 0)
+			reserved_boundary = if true, the image returned has a rectangle representing the viewable area that would be shown with reserved_only. (Not recommended with pick your own)
+			reserved_seat_border = specifies the extra space around the reserved seats in approximate seats (e.g. 2 seats around the reserved seat or 4 seats around the reserved seats.)
+			
+			selected_color = specifies the stroke color of the selected seats as a RGB hex string, i.e. FF0000 means bright red  007700 is green
+			reserved_color = specifies the fill color of the temporarily held best seats as a RGB hex string, i.e. FF0000 means bright red  007700 is green
+			unavailable_color = specifies the fill color of the unavailable seats as a RGB hex string, i.e. FF0000 means bright red  007700 is green
+
+      seat_font = Font to use for seat labels
+      seat_font_size = Font size to use for seat labels
+      seat_font_scale = SVG scaling factor to apply to the font size (depends on the scale used when constructing the SVG map)
+		-->
+   <!-- comment: RESERVED SEATING WITH PICK YOUR OWN -->
+   <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN, '<!-- comment:')</field>
+   <div id="venue_map_fallback">
+   </div>
+   <div class="embed-responsive embed-responsive-4by3">
+    <!-- comment: 
+      reserved_colour is set to green=00FF00 (black is 000000)
+      unavailable_text is set to the fa-user icon (&#xf007;) from FontAwesome instead of the '*'  (To use other FontAwesome icons get the "Unicode HTML Entity" code from: http://fontawesome.bootstrapcheatsheets.com/#)
+    -->
+    <object class="embed-responsive-item" data="<field>F_HTML_SEATMAP</field>&reserved_colour=00FF00&reserved_only=false&format=pick&unavailable_color=FFFFFF&unavailable_text=&#xf007;&seat_font=FontAwesome" id="venue_map">
+    </object>
+   </div>
+   <div class="text-center">
+    <img class="" src="<field>F_HTML_IMAGE_SERVER</field>tmGifs/theatre-manager-seat-key.png" style="height: 28px;"/>
+   </div>
+   <div align="center" class="desktop_navigation">
+    <div>
+     <div class="btn-group" role="group">
+      <button class="btn btn-default" id="left" type="button">
+       <span aria-hidden="true" class="glyphicon glyphicon-arrow-left">
+       </span>
+      </button>
+     </div>
+     <div class="btn-group-vertical" role="group">
+      <button class="btn btn-default" id="up" type="button">
+       <span aria-hidden="true" class="glyphicon glyphicon-arrow-up">
+       </span>
+      </button>
+      <button class="btn btn-default" id="down" type="button">
+       <span aria-hidden="true" class="glyphicon glyphicon-arrow-down">
+       </span>
+      </button>
+     </div>
+     <div class="btn-group" role="group">
+      <button class="btn btn-default" id="right" type="button">
+       <span aria-hidden="true" class="glyphicon glyphicon-arrow-right">
+       </span>
+      </button>
+     </div>
+     <span>
+      &nbsp;&nbsp;
+     </span>
+     <div class="btn-group" role="group">
+      <button class="btn btn-default" id="out" type="button">
+       <span aria-hidden="true" class="glyphicon glyphicon-zoom-out">
+       </span>
+      </button>
+      <button class="btn btn-default" id="in" type="button">
+       <span aria-hidden="true" class="glyphicon glyphicon-zoom-in">
+       </span>
+      </button>
+     </div>
+    </div>
+    <br/>
+    <button class="btn btn-info" id="reset">
+     <span aria-hidden="true" class="glyphicon glyphicon-fullscreen">
+     </span>
+     Effacer la zoom/pan
+    </button>
+    <button class="btn btn-info" id="clear">
+     <span aria-hidden="true" class="glyphicon glyphicon-transfer">
+     </span>
+     Effacer la s&eacute;lection
+    </button>
+   </div>
+   <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN,'-->')</field>
+   <!-- comment: NOT RESERVED SEATING AND NOT PICK YOUR OWN -->
+   <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN, '', '<!-- comment:')</field>
+   <br/>
+   <img class="img-responsive" src="<field>F_HTML_SEATMAP</field>&reserved_colour=007700&reserved_boundary=true&reserved_seat_border=5&format=svg"/>
+   <field>pick(PB_SALES_METHOD=2&F_HTML_ALLOW_PICK_YOUR_OWN, '', '-->')</field>
+  </div>
+  <!--<![endif]-->
