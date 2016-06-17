@@ -28,11 +28,11 @@
         &times;
        </a>
        We are experiencing an unusually high volume of requests at the moment.
-       If you have already added tickets to your shopping cart, they will still
-       be there if you to connect to the web site again within a reasonable
-       time frame (10 minutes or so).
+          If you have already added tickets to your shopping cart, they will still be there
+          if you to connect to the web site again within a reasonable time frame (10 minutes or so).
       </div>
-      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/${outlet}/login?btnCart">
+      <!-- comment: *** variables are set within balancer-manager.conf *** -->
+      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/<!--#echo var="outlet" -->/login&btnCart">
        View my current shopping cart
       </a>
       <a class="btn btn-info" href="<!--#echo var="webURL" -->" target="_blank">

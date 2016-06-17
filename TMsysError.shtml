@@ -37,7 +37,7 @@
        box office ASAP and let us know.
       </div>
       <!-- comment: *** variables are set within balancer-manager.conf *** -->
-      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/${outlet}/login?event=0">
+      <a class="btn btn-success" href="<!--#echo var="ticketURL" -->/TheatreManager/<!--#echo var="outlet" -->/login?event=0">
        Event list
       </a>
       <a class="btn btn-info" href="<!--#echo var="webURL" -->" target="_blank">
