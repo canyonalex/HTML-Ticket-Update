@@ -1,9 +1,10 @@
-  <!-- comment: sample from proctors.  the key is that there is a field called MS_SEAT_VIEW.   
-      use that to define what the image file is for the name of the seats -->
+  <!-- comment: the key is that there is a field called MS_SEAT_VIEW.   
+      use that to define what the image file is for the name of the seats,
+      it is assumed to be in the 'tmSeatView' directory in tmGifs.  if you want
+      another URL, you'll need to update the URL
+      -->
   <field>pick(len(MS_SEAT_VIEW)>1,'<!-- comment: view from your seat')</field>
-  <div class="controls view-from-seat" style="background-image: url('https://s3.amazonaws.com/tourwrist/tours/<field>MS_SEAT_VIEW</field>/images/1280x640/equirect.jpg');">
-   <a class="link" href="https://www.thesphere.com/direct_embed/<field>MS_SEAT_VIEW</field>?autoplay=true" onclick="return popup(this, 'notes')" target="_blank">
-    <img src="https://www.proctors.org/sites/all/themes/tickets/view-sphere.png"/>
+   <a class="btn btn-info btn-xs" href="tmGifs/tmSeatView/<field>MS_SEAT_VIEW</field>" target="_blank">
+    Seat View (approx)
    </a>
-  </div>
   <field>pick(len(MS_SEAT_VIEW)>1,'-->')</field>
