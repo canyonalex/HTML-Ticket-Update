@@ -11,25 +11,25 @@
 
     2) Generate a hash of the downloaded file with the OpenSSL command line tool:
       
-    $ openssl dgst -sha384 -binary bootstrap.min.css | openssl base64 -A
-    BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u
+      $ openssl dgst -sha384 -binary bootstrap.min.css | openssl base64 -A
+      BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u
 
-  2) Add hash into appropriate link tag
+    3) Add hash into appropriate link tag
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 
 
   Web Service (srihash.org)
 
     1) Generate hash by pasting in the URL of your bootstrap.min.css file to the SRI Hash Generator:
 
-    https://www.srihash.org/
+      https://www.srihash.org/
 
-  2) Paste the <link ... /> tag given by the service into this file:
+    2) Paste the <link ... /> tag given by the service into this file:
       
       (Based on pasting in:  maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css)
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 
 -->
 
