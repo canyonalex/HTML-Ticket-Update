@@ -6,8 +6,6 @@
 		the format for the image must be 16x16 pixels or 32x32 pixels, 
 		using either 8-bit or 24-bit colors. The format of the image must be one of 
 		PNG (a W3C standard), GIF, or ICO.
-		
-		A global
 		-->
   <link href="tmGifs/favicon.ico" rel="icon" type="image/png"/>
 
@@ -17,37 +15,25 @@
                 implications.  To help make those trade-offs more clear, you may select
                 from the asset loading strategies below  
 
-                If using Sub-Resource Integrity (SRI), hashes can be generated with the following openssl command:
+    STRATEGY 1: Use files server from the local web server only.  This strategy is good for 
+                sites that want 100% certainty that all files are the corect version and that those
+                files do not include any malicious content, but at the expense of higher bandwidth usage.
 
-                    $ openssl dgst -sha384 -binary jquery-2.2.4.min.js | openssl base64 -A
-                    rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB
+       INCLUDE: tmScripts/stylesLocal.html 
+    
 
-                Alternatively you can use:
-
-                   https://www.srihash.org/
-
-                Copy and paste the hash, prefixed by the hash method (sha384) and a hyphen, into the link:
-
-                  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
-
-
-                Only one strategy may be used at a time.
-
-
-    STRATEGY 1: Use CDN only (with Sub-Resource Integrity (SRI) hashing).  This strategy
-                is good for a low-bandwidth internet connections.  It outsources all
-                requests to an external Content Delivery Network (CDN).
+    STRATEGY 2: Use a Content Delivery Network (CDN) with Sub-Resource Integrity (SRI) hashing.  
+                This strategy is good for a low-bandwidth internet connection, or a sales pattern
+                that could include very high traffic spikes of new users.  This strategy outsources 
+                all asset requests to an external Content Delivery Network (CDN) that will likely have 
+                web servers that are both faster, and potentially physically closer to the user.
 
       
        INCLUDE: tmScripts/stylesCDN.html 
 
-
-
-    STRATEGY 2: Use local files only.  This strategy is good for sites that want 100%
-                certainty that all files are the corect version and do not include
-                any malicious content, but at the expense of higher bandwidth usage.
-
-       INCLUDE: tmScripts/stylesLocal.html 
-
   -->
   <!--#include virtual="tmScripts/stylesLocal.html" -->
+
+
+  <!-- comment: custom css overrides for this site -->
+  <link href="tmGifs/custom.css" rel="stylesheet" type="text/css"/>
