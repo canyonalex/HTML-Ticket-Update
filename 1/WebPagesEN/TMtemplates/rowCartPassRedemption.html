@@ -37,13 +37,13 @@
     remain on this pass to provide special pricing towards applicable tickets.
   <field>pick(M_PASS_METHOD=4,'-->','')</field>
   
-  <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0,'<!-- comment: No quantity, no value','')</field>
+  <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0&M_PASS_METHOD<>4,'<!-- comment: No quantity, no value','')</field>
   - This pass/certificate has been
     <strong>
      fully redeemed
     </strong>
     and is unable be applied to this cart.
-  <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0,'-->','')</field>
+  <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0&M_PASS_METHOD<>4,'-->','')</field>
    </td>
    <td align="right">
     <field>SCD_TOTAL_COST</field>

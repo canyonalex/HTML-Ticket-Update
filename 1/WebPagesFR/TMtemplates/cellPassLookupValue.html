@@ -1,35 +1,37 @@
-  <field>pick(M_PASS_METHOD=1&M_REMAIN_PASS_AMOUNT>0,'<!-- comment: Dollar Value','')</field>
+<div>
+ <field>pick(M_PASS_METHOD=1&M_REMAIN_PASS_AMOUNT>0,'<!-- comment: Dollar Value','')</field>
    <field>jst(M_REMAIN_PASS_AMOUNT,'N2$')</field> reste sur cette
   <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
    <field>MT_DESCRIPTION_EXTERNAL</field>.
   </a>
-  <field>pick(M_PASS_METHOD=1&M_REMAIN_PASS_AMOUNT>0,'-->','')</field>
+ <field>pick(M_PASS_METHOD=1&M_REMAIN_PASS_AMOUNT>0,'-->','')</field>
 
-<field>pick(M_REMAIN_PASS_QTY>0,'<!-- comment: Quantity remaining','')</field>
+ <field>pick(M_REMAIN_PASS_QTY>0,'<!-- comment: Quantity remaining','')</field>
   <field>M_REMAIN_PASS_QTY</field> admissions restent sur cette
   <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
    <field>MT_DESCRIPTION_EXTERNAL</field>.
   </a>
-  <field>pick(M_REMAIN_PASS_QTY>0,'-->','')</field>
+ <field>pick(M_REMAIN_PASS_QTY>0,'-->','')</field>
 
-<field>pick(M_PASS_METHOD=4,'<!-- comment: Free Admission','')</field>
+ <field>pick(M_PASS_METHOD=4,'<!-- comment: Free Admission','')</field>
   <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
    <field>MT_DESCRIPTION_EXTERNAL</field>
   </a>
   est valide et peut &ecirc;tre utilis&eacute; pour offrir des r&eacute;ductions.
-<field>pick(M_PASS_METHOD=4,'-->','')</field>
+ <field>pick(M_PASS_METHOD=4,'-->','')</field>
 
-<field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0,'<!-- comment: No quantity, no value','')</field>
+ <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0&M_PASS_METHOD<>4,'<!-- comment: No quantity, no value','')</field>
   <a class="link" href="<field>F_HTML_FIREWALL</field>tmPass/tmPass<field>M_MT_SEQ</field>.html" onclick="return popup(this, 'notes')">
    <field>MT_DESCRIPTION_EXTERNAL</field>
   </a>
   a &eacute;t&eacute; enti&egrave;rement utilis&eacute;e.
-<field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0,'-->','')</field>
+ <field>pick(M_REMAIN_PASS_AMOUNT=0&M_REMAIN_PASS_QTY=0,&M_PASS_METHOD<>4'-->','')</field>
 
-<field>pick(len(M_DATE_EXPIRY)>0,'<!-- comment: Expire date on pass','')</field>
- Cette passe expire le <field>dat(M_DATE_EXPIRY,'D m y')</field>.
-<field>pick(len(M_DATE_EXPIRY)>0,'-->','')</field>
+ <field>pick(len(M_DATE_EXPIRY)>0,'<!-- comment: Expire date on pass','')</field>
+  Cette passe expire le <field>dat(M_DATE_EXPIRY,'D m y')</field>.
+ <field>pick(len(M_DATE_EXPIRY)>0,'-->','')</field>
 
-<field>pick(len(M_DATE_EXPIRY)=0,'<!-- comment: No expiration date on pass','')</field>
- Il n'y a aucune date d'expiration, cette passe est valide jusqu'&agrave; ce qu'elle ait &eacute;t&eacute; enti&egrave;rement utilis&eacute;e.
-<field>pick(len(M_DATE_EXPIRY)-0,'-->','')</field>
+ <field>pick(len(M_DATE_EXPIRY)=0,'<!-- comment: No expiration date on pass','')</field>
+  Il n'y a aucune date d'expiration, cette passe est valide jusqu'&agrave; ce qu'elle ait &eacute;t&eacute; enti&egrave;rement utilis&eacute;e.
+ <field>pick(len(M_DATE_EXPIRY)-0,'-->','')</field>
+</div>

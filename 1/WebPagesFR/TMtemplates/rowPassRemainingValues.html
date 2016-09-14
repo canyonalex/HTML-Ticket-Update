@@ -36,7 +36,12 @@
     <field>M_ISSUED_PASS_AMOUNT</field>
    </td>
    <td class="text-right">
+   <field>pick(M_PASS_METHOD=4,'<!-- comment: unlimited use pass types')</field>
+    Illimit&eacute;s
+   <field>pick(M_PASS_METHOD=4,'-->')</field>
+   <field>pick(M_PASS_METHOD<>4,'<!-- comment: passes issued with quantity')</field>
     <field>M_ISSUED_PASS_QTY</field>
+   <field>pick(M_PASS_METHOD<>4,'-->')</field>
    </td>
    <!-- comment:  the used amounts
    <td class="text-right">
@@ -47,10 +52,20 @@
    </td>
    -->
    <td class="text-right">
+   <field>pick(M_PASS_METHOD=4,'<!-- comment: unlimited use pass types')</field>
+    Illimit&eacute;s
+   <field>pick(M_PASS_METHOD=4,'-->')</field>
+   <field>pick(M_PASS_METHOD<>4,'<!-- comment: passes issued with amounts')</field>
     <field>M_REMAIN_PASS_AMOUNT-M_IN_CART_REDEEM_AMOUNT</field>
+   <field>pick(M_PASS_METHOD<>4,'-->')</field>
    </td>
    <td class="text-right">
+   <field>pick(M_PASS_METHOD=4,'<!-- comment: unlimited use pass types')</field>
+    Illimit&eacute;s
+   <field>pick(M_PASS_METHOD=4,'-->')</field>
+   <field>pick(M_PASS_METHOD<>4,'<!-- comment: passes issued with quantity')</field>
     <field>M_REMAIN_PASS_QTY-M_IN_CART_REDEEM_QTY</field>
+   <field>pick(M_PASS_METHOD<>4,'-->')</field>
    </td>
    <td class="text-center">
     <form action="<field>F_HTML_FIREWALL</field>online" method="POST">
