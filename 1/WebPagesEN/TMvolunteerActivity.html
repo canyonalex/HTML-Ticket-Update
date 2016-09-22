@@ -25,7 +25,7 @@
             changeMonth: true,
             changeYear: true,
             numberOfMonths: 2,
-            dateFormat: "mm/dd/yy",
+            dateFormat: "yy/mm/dd",
             onClose: function( selectedDate ) {
                 $( "#enddate" ).datepicker( "option", "minDate", selectedDate );
             }
@@ -38,7 +38,7 @@
             showOn: "button",
             changeMonth: true,
             changeYear: true,
-            dateFormat: "mm/dd/yy",
+            dateFormat: "yy/mm/dd",
             numberOfMonths: 2,
             onClose: function( selectedDate ) {
                 $( "#startdate" ).datepicker( "option", "maxDate", selectedDate );
@@ -72,7 +72,7 @@
           <label for="start_date">
            Start Date
           </label>
-          <input class="form-control" id="start_date" maxlength="10" name="start_date" placeholder="format mm/dd/yyyy" type="text" value="<field>start_date</field>"/>
+          <input class="form-control" id="start_date" maxlength="10" name="start_date" placeholder="yyyy-mm-dd" type="text" value="<field>start_date</field>"/>
          </div>
         </div>
         <div class="col-md-3">
@@ -80,7 +80,7 @@
           <label for="end_date">
            End Date
           </label>
-          <input class="form-control" id="end_date" maxlength="10" name="end_date" placeholder="format mm/dd/yyyy" type="text" value="<field>end_date</field>"/>
+          <input class="form-control" id="end_date" maxlength="10" name="end_date" placeholder="yyyy-mm-dd" type="text" value="<field>end_date</field>"/>
          </div>
         </div>
         <div class="col-md-4">
