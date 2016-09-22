@@ -197,7 +197,7 @@ ErrorNumber	ErrorText
 10196	(required, if no first and last name)
 10197	(required, if no last name)
 10198	Error - Your account has been locked due to too many failed login attempts.  Please use the Forgot my Password button to set a new password and regain access.
-10199	Unable to reserve selected {seats} due to availability or {seat} rules.{br}For instance, you may not leave a single empty seat.{br}Your previous {seats} are still held.
+10199	Cannot reserve the selected {seats}.  Someone else may have picked them first or it leaves an empty {seat}.{br}{br}Your previous {seats} are still held.
 10200	Successfully changed {seats}.{br}If these are what you wish, click "Add Tickets to Cart."
 10201	Ticket #{ticketnumber} belongs to a {patron} other than the one associated with this ticket.
 10202	Barcode is associated with {patron} #{patronnumber}, but that {patron} could not be found in the database.
@@ -209,7 +209,7 @@ ErrorNumber	ErrorText
 10208	The contents of the cart prevents checkout.{br}{error}
 10209	{title} ({date} at {time}): Current and past carts contain {current} tickets, which exceeds the maximum amount of {allowed}.
 10210	The name on the credit card is missing.
-10211	Here are the Best Available {seats}.  If you would prefer different {seats}, select any available seats on the map below.
+10211	Here are some good {seats}.  If you prefer different ones, select some on the map below and then 'Change to newly selected {seats}'.
 10212	First and Last Name OR Company must be entered
 10213	Last Name OR Company must be entered.
 10214	First name must be entered
